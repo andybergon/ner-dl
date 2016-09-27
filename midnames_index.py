@@ -13,10 +13,10 @@ def parse_row(row):
     return row.split('\t')[0], row
 
 
-# TODO: check if always working for all ids
 def get_row_by_id(searched_row_id):
     step = os.path.getsize(mid_name_file) / 2.
     step_dimension = step
+    last_row_id = ""
     with open(mid_name_file, 'r') as f:
         while True:
             f.seek(int(step), 0)  # absolute position
@@ -24,6 +24,12 @@ def get_row_by_id(searched_row_id):
             seek_to(f, '\n')
             row = parse_row(f.readline())
             row_id = row[0]
+
+            if row_id == last_row_id:
+                raise ValueError(searched_row_id)
+            else:
+                last_row_id = row_id
+
             if row_id == searched_row_id:
                 return row[1]  # ritorno l'intera riga
             elif searched_row_id < row_id:

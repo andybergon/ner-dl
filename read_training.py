@@ -38,65 +38,83 @@ def substitute_midname_in_phrase(phrase):
 
 
 def get_entity_name_by_token(token):
-    id = get_id_by_token(token)
-    return get_entity_name_by_id(id)
+    entity_id = get_id_by_token(token)
+    return get_entity_name_by_id(entity_id)
 
 
 def get_all_entity_properties_by_token(token):
-    id = get_id_by_token(token)
-    return get_all_entity_properties_by_id(id)
+    entity_id = get_id_by_token(token)
+    return get_all_entity_properties_by_id(entity_id)
 
 
 def get_id_by_token(token):
     r = re.compile('m\.(.*?):')
     m = r.search(token)
     if m:
-        id = m.group(0).replace(':', '')
-        return id
+        entity_id = m.group(0).replace(':', '')
+        return entity_id
+
 
 # {m.01000036} => {m.01000036|God Has Given Me|music.single,music.recording,common.topic}
-def get_all_entity_properties_formatted_by_id(id):
-    entity_id, entity_name, entity_type = get_all_entity_properties_by_id(id)
+def get_all_entity_properties_formatted_by_id(entity_id):
+    entity_id, entity_name, entity_type = get_all_entity_properties_by_id(entity_id)
     return "{" + entity_id + "|" + entity_name + "|" + entity_type + "}"
 
+
 # {m.01000036} => ('m.01000036', 'God Has Given Me' 'music.single,music.recording,common.topic')
-def get_all_entity_properties_by_id(id):
-    row = mi.get_row_by_id(id)
+def get_all_entity_properties_by_id(entity_id):
+    try:
+        row = mi.get_row_by_id(entity_id)
+    except ValueError:
+        raise
     entity_id, entity_name, entity_type = row.replace('\n', '').split('\t')
-    return (entity_id, entity_name, entity_type)
+    return entity_id, entity_name, entity_type
+
 
 # {m.01000036} => God Has Given Me
-def get_entity_name_by_id(id):
-    return get_all_entity_properties_by_id(id)[1]
+def get_entity_name_by_id(entity_id):
+    return get_all_entity_properties_by_id(entity_id)[1]
+
 
 # {m.01000036} => music.single,music.recording,common.topic
-def get_entity_types_by_id(id):
-    return get_all_entity_properties_by_id(id)[2]
+def get_entity_types_by_id(entity_id):
+    return get_all_entity_properties_by_id(entity_id)[2]
 
-# # {m.01000036} => {God Has Given Me}
-# def get_entity_name_by_id_not_opt(id):
-#     with open(mid_name_file, "rt") as f:
-#         for line in f:
-#             if line.startswith(id):
-#                 entity_id, entity_name, entity_type = line.split('\t')
-#                 return entity_name
+
+# {m.01000036} => {God Has Given Me}
+def get_entity_name_by_id_not_opt(entity_id):
+    with open(mid_name_file, "rt") as f:
+        for line in f:
+            if line.startswith(entity_id):
+                entity_id, entity_name, entity_type = line.split('\t')
+                return entity_name
 
 
 # {m.01000036} => {m.01000036|God Has Given Me|music.single,music.recording,common.topic}
-def get_all_entity_properties_by_id_not_opt(id):
+def get_all_entity_properties_by_id_not_opt(entity_id):
     with open(mid_name_file, "rt") as f:
         for line in f:
-            if line.startswith(id + "\t"):
+            if line.startswith(entity_id + "\t"):
                 entity_id, entity_name, entity_type = line.replace('\n', '').split('\t')
                 return "{" + entity_id + "|" + entity_name + "|" + entity_type + "}"
 
 
+def get_tokens_in_phrase(phrase):
+    return re.findall('{m.*?}', phrase)
+
+
 def get_types_in_phrase(phrase):
     types_in_phrase = {}
-    matches = re.findall('{.*?}', phrase)
+    matches = get_tokens_in_phrase(phrase)
+
     for token in matches:
-        id = get_id_by_token(token)
-        types_string = get_all_entity_properties_by_id(id)[2]
+        entity_id = get_id_by_token(token)
+
+        try:
+            types_string = get_all_entity_properties_by_id(entity_id)[2]
+        except ValueError:
+            raise
+
         entity_types = types_string.split(',')
         types_in_phrase = merge_two_dicts(types_in_phrase, entity_types)
     return types_in_phrase
@@ -106,7 +124,7 @@ def merge_two_dicts(a, b):
     return dict(Counter(a) + Counter(b))
 
 
-### IN MEMORY (needs 3GB+ RAM)
+# IN MEMORY (needs 3GB+ RAM)
 def substitute_midnames_in_memory():
     midnames = load_midnames_dictionary(mid_name_file)
 
