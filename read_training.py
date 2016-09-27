@@ -100,7 +100,7 @@ def get_all_entity_properties_by_id_not_opt(entity_id):
 
 
 def get_tokens_in_phrase(phrase):
-    return re.findall('{m.*?}', phrase)
+    return re.findall('{[m].*?}', phrase)
 
 
 def get_types_in_phrase(phrase):

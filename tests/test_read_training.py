@@ -4,4 +4,4 @@ phrase1 = "I'm {Kevin John} president of Kevin medical Supplies Limited our comp
 
 print rt.get_tokens_in_phrase(phrase1)
 
-print rt.get_types_in_phrase(phrase1)
+# print rt.get_types_in_phrase(phrase1)
