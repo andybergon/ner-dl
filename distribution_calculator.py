@@ -3,9 +3,9 @@ import pickle
 import json
 import read_training as rt
 
-# corpus_file = os.path.join(os.path.dirname(__file__), 'data/cw_1_sentences.tsv')
+corpus_file = os.path.join(os.path.dirname(__file__), 'data/cw_1_sentences.tsv')
 # corpus_file = os.path.join(os.path.dirname(__file__), 'data/cw_1_sentences_example.tsv')
-corpus_file = os.path.join(os.path.dirname(__file__), 'data/cw_1_sentences_1k.tsv')
+# corpus_file = os.path.join(os.path.dirname(__file__), 'data/cw_1_sentences_1k.tsv')
 mid_name_file = os.path.join(os.path.dirname(__file__), 'data/mid_name_types.tsv')
 checkpoint_file = os.path.join(os.path.dirname(__file__), 'data/checkpoint_type_distribution.tsv')
 
@@ -15,7 +15,7 @@ def count_types():
     line_number = 0
     missing_id_occ = 0
     open(checkpoint_file, 'w').close()  # clean checkpoint file
-    with open(corpus_file, "rt") as f:
+    with open(corpus_file, "rb") as f:
         for line in f:
             line_number += 1
 
@@ -27,7 +27,7 @@ def count_types():
                     cf.write(str(sorted_types_list))
                     cf.write('\n')
 
-            warc, phrase = line.split('\t')
+            _, phrase = line.split('\t')
 
             try:
                 types_in_phrase = rt.get_types_in_phrase(phrase)
