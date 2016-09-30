@@ -1,21 +1,46 @@
+from __future__ import division
+
 import os
 import pickle
 import json
+import ast
+
 import read_training as rt
 
-# corpus_file = os.path.join(os.path.dirname(__file__), 'data/cw_1_sentences.tsv')
+corpus_file = os.path.join(os.path.dirname(__file__), 'data/cw_1_sentences.tsv')
 # corpus_file = os.path.join(os.path.dirname(__file__), 'data/cw_1_sentences_example.tsv')
-corpus_file = os.path.join(os.path.dirname(__file__), 'data/cw_1_sentences_1k.tsv')
+# corpus_file = os.path.join(os.path.dirname(__file__), 'data/cw_1_sentences_1k.tsv')
 mid_name_file = os.path.join(os.path.dirname(__file__), 'data/mid_name_types.tsv')
 checkpoint_file = os.path.join(os.path.dirname(__file__), 'data/checkpoint_type_distribution.tsv')
+
+
+def count_entities():
+    entity_occ = 0
+    line_number = 0
+
+    with open(corpus_file, "rb") as f:
+        for line in f:
+            line_number += 1
+
+            if line_number % 10000 == 0:
+                with open(checkpoint_file, "a") as cf:
+                    print 'line #: ' + str(line_number) + ', entity #: ' + str(entity_occ)
+
+            _, phrase = line.split('\t')
+
+            entity_occ_in_phrase = rt.count_entities_in_phrase(phrase)
+            entity_occ += entity_occ_in_phrase
+
+        return entity_occ
 
 
 def count_types():
     types = {}
     line_number = 0
     missing_id_occ = 0
+
     open(checkpoint_file, 'w').close()  # clean checkpoint file
-    with open(corpus_file, "rt") as f:
+    with open(corpus_file, "rb") as f:
         for line in f:
             line_number += 1
 
@@ -27,14 +52,14 @@ def count_types():
                     cf.write(str(sorted_types_list))
                     cf.write('\n')
 
-            warc, phrase = line.split('\t')
+            _, phrase = line.split('\t')
 
             try:
                 types_in_phrase = rt.get_types_in_phrase(phrase)
                 types = rt.merge_two_dicts(types, types_in_phrase)
             except ValueError as e:
                 missing_id_occ += 1
-                print('entity id missing: ' + e.message)
+                # print('entity id missing: ' + e.message)
                 print('# phrases skipped: ' + str(missing_id_occ))
                 continue
 
@@ -43,7 +68,7 @@ def count_types():
 
 def sort_dict_by_value_ascending_into_list(dict_to_sort):
     # return sorted(dict_to_sort, key=key=operator.itemgetter(1), reverse=True)  # non mostra numeri
-    return sorted(dict_to_sort.items(), key=lambda x:x[1], reverse=True)
+    return sorted(dict_to_sort.items(), key=lambda x: x[1], reverse=True)
 
 
 def dict_to_string(dict_to_convert):
@@ -86,4 +111,21 @@ def write_dict_as_json_to_file(dict_to_write):
         json.dump(dict_to_write, f)
 
 
-print count_types()
+def calculate_percentages(occurrences):
+    occ_sum = 0
+    percentages = []
+    for pair in occurrences:
+        occ_sum += pair[1]
+    for pair in occurrences:
+        percentage = pair[1]/occ_sum
+        # percentage = round(pair[1]/occ_sum, 4)
+        triple = (pair[0], percentage, pair[1])
+        percentages.append(triple)
+
+    return percentages
+
+
+def calculate_percentage_on_file(filename):
+    with open(filename, 'r') as f:
+        occ_list = list(ast.literal_eval(f.readline()))
+        return calculate_percentages(occ_list)
