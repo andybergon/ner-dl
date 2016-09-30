@@ -4,6 +4,7 @@ from collections import Counter
 from itertools import islice
 import midnames_index as mi
 
+
 # corpus_file = os.path.join(os.path.dirname(__file__), 'data/cw_1_sentences.tsv')
 corpus_file = os.path.join(os.path.dirname(__file__), 'data/cw_1_sentences_example.tsv')
 mid_name_file = os.path.join(os.path.dirname(__file__), 'data/mid_name_types.tsv')
@@ -15,7 +16,7 @@ def substitute_midnames():
         with open(corpus_file, "rt") as fin:
             for line in fin:
                 warc, phrase = line.split('\t')
-                fout.write(substitute_midname_in_phrase(phrase))
+                fout.write(substitute_midnames_in_phrase(phrase))
 
 
 def substitute_midnames_partial():
@@ -24,16 +25,14 @@ def substitute_midnames_partial():
             head = list(islice(fin, 1))
             for line in head:
                 warc, phrase = line.split('\t')
-                fout.write(substitute_midname_in_phrase(phrase))
+                fout.write(substitute_midnames_in_phrase(phrase))
 
 
-def substitute_midname_in_phrase(phrase):
-    print 'old: ' + phrase
-    m = re.findall('{.*?}', phrase)
+def substitute_midnames_in_phrase(phrase):
+    m = get_tokens_in_phrase(phrase)
     for match in m:
         match_name = get_entity_name_by_token(match)
         phrase = phrase.replace(match, match_name)
-    print 'new: ' + phrase
     return phrase
 
 
@@ -124,6 +123,10 @@ def merge_two_dicts(a, b):
     return dict(Counter(a) + Counter(b))
 
 
+def count_entities_in_phrase(phrase):
+    return len(get_tokens_in_phrase(phrase))
+
+
 # IN MEMORY (needs 3GB+ RAM)
 def substitute_midnames_in_memory():
     midnames = load_midnames_dictionary(mid_name_file)
@@ -145,16 +148,14 @@ def load_midnames_dictionary(midnames_file):
             entity_id, entity_name, entity_type = line.split('\t')
             midnames[entity_id] = (entity_name, entity_type)
             if line_number % 100000 == 0:
-                print str(line_number / 1000000.0) + 'M'
+                print(str(line_number / 1000000.0) + 'M')
             line_number += 1
     return midnames
 
 
 def substitute_midname_in_phrase_in_memory(phrase, midnames):
-    print 'original: ' + phrase
     m = re.findall('{.*?}', phrase)
     for match in m:
         match_name = midnames[match][0]
         phrase = phrase.replace(match, match_name)
-    print 'new: ' + phrase
     return phrase
