@@ -17,6 +17,9 @@ def create_training_from_dataset(corpus_file, training_file, lines_num=0, remove
                 lines_num = sum(1 for _ in open(corpus_file))
 
             for i in range(1, lines_num):
+                if i % 10000 == 0:
+                    print('# {}/{}'.format(i, lines_num))
+
                 line = fin.readline()
                 _, phrase = line.replace('\n', '').split('\t')
 
