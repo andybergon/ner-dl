@@ -1,31 +1,125 @@
-import os
 import re
 from collections import Counter
 from itertools import islice
+
 import midnames_index as mi
 
 
-# corpus_file = os.path.join(os.path.dirname(__file__), 'data/cw_1_sentences.tsv')
-corpus_file = os.path.join(os.path.dirname(__file__), 'data/cw_1_sentences_example.tsv')
-mid_name_file = os.path.join(os.path.dirname(__file__), 'data/mid_name_types.tsv')
-new_corpus_file = corpus_file.split('.tsv')[0] + '_replaced.tsv'
+def create_training_from_dataset(corpus_file, training_file, lines_num=0, remove_duplicate_lines=True):
+    prev_phrase = ''
 
-
-def substitute_midnames():
-    with open(new_corpus_file, "wt") as fout:
+    with open(training_file, "wt") as fout:
         with open(corpus_file, "rt") as fin:
-            for line in fin:
-                warc, phrase = line.split('\t')
-                fout.write(substitute_midnames_in_phrase(phrase))
+
+            fout.write('-DOCSTART-	O')
+
+            if lines_num <= 0:
+                lines_num = sum(1 for _ in open(corpus_file))
+
+            for i in range(1, lines_num):
+                line = fin.readline()
+                _, phrase = line.replace('\n', '').split('\t')
+
+                if remove_duplicate_lines and (phrase == prev_phrase):
+                    continue
+                prev_phrase = phrase
+
+                try:
+                    tagged_words = tag_phrase(phrase)
+                except ValueError:
+                    continue
+
+                fout.write('\n')
+
+                for word_and_tag in tagged_words:
+                    word = word_and_tag[0]
+                    tag = word_and_tag[1]
+                    line_to_write = word + '\t' + tag + '\n'
+                    fout.write(line_to_write)
+
+                fout.write('\n')
 
 
-def substitute_midnames_partial():
-    with open(new_corpus_file, "wt") as fout:
-        with open(corpus_file, "rt") as fin:
-            head = list(islice(fin, 1))
-            for line in head:
-                warc, phrase = line.split('\t')
-                fout.write(substitute_midnames_in_phrase(phrase))
+def tag_phrase(phrase):
+    tagged_words = []
+    words = phrase.split(' ')  # TODO: use tokenizer
+
+    for word in words:
+        if is_entity(word):
+            mid = get_id_by_token(word)
+
+            try:
+                entity_name = get_entity_name_by_id(mid)
+                entity_types = get_entity_types_by_id(mid)
+                entity_type = simplify_types(entity_types)
+
+                # TODO: use BIO/BILOU NER tags
+                for entity_part in entity_name.split(' '):  # TODO: use tokenizer
+                    tagged_words.append((entity_part, entity_type))
+
+            except ValueError:
+                raise
+
+        else:
+            if word != '':  # double whitespace that remains after split()
+                tagged_words.append((word, '0'))
+
+    return tagged_words
+
+
+# TODO: oppure usare regex?
+def is_entity(word):
+    return word.startswith('{m.')
+
+
+def simplify_types(entity_types):
+    entity_domain = get_types_domain(entity_types)
+
+    if 'location' in entity_domain:
+        return 'LOC'
+    elif 'organization' in entity_domain:
+        return 'ORG'
+    elif 'people' in entity_domain:
+        return 'PER'
+    else:
+        return 'MISC'
+
+
+def get_types_domain(entity_types):
+    entity_domains = set()
+
+    for entity_type in entity_types:
+        entity_domains.add(entity_type)
+
+    return entity_domains
+
+
+def substitute_midnames(corpus_file, new_corpus_file, lines_num=0, remove_duplicate_lines=True):
+        prev_phrase = ''
+
+        with open(new_corpus_file, "wt") as fout:
+            with open(corpus_file, "rt") as fin:
+
+                if lines_num <= 0:
+                    lines_num = sum(1 for _ in open(corpus_file))
+
+                # head = list(islice(fin, lines_num))
+                # for line in head:
+                for i in range(1, lines_num):
+                    if i % 10000 == 0:
+                        print('# {}/{}'.format(i, lines_num))
+
+                    line = fin.readline()
+                    warc, phrase = line.split('\t')
+
+                    if remove_duplicate_lines and (phrase == prev_phrase):
+                        continue
+                    prev_phrase = phrase
+
+                    try:
+                        fout.write(substitute_midnames_in_phrase(phrase))
+                    except ValueError:
+                        continue
 
 
 def substitute_midnames_in_phrase(phrase):
@@ -36,9 +130,18 @@ def substitute_midnames_in_phrase(phrase):
     return phrase
 
 
+def get_tokens_in_phrase(phrase):
+    return re.findall('{[m].*?}', phrase)
+
+
 def get_entity_name_by_token(token):
     entity_id = get_id_by_token(token)
     return get_entity_name_by_id(entity_id)
+
+
+# {m.01000036} => God Has Given Me
+def get_entity_name_by_id(entity_id):
+    return get_all_entity_properties_by_id(entity_id)[1]
 
 
 def get_all_entity_properties_by_token(token):
@@ -54,10 +157,9 @@ def get_id_by_token(token):
         return entity_id
 
 
-# {m.01000036} => {m.01000036|God Has Given Me|music.single,music.recording,common.topic}
-def get_all_entity_properties_formatted_by_id(entity_id):
-    entity_id, entity_name, entity_type = get_all_entity_properties_by_id(entity_id)
-    return "{" + entity_id + "|" + entity_name + "|" + entity_type + "}"
+# {m.01000036} => music.single,music.recording,common.topic
+def get_entity_types_by_id(entity_id):
+    return get_all_entity_properties_by_id(entity_id)[2]
 
 
 # {m.01000036} => ('m.01000036', 'God Has Given Me' 'music.single,music.recording,common.topic')
@@ -66,40 +168,15 @@ def get_all_entity_properties_by_id(entity_id):
         row = mi.get_row_by_id(entity_id)
     except ValueError:
         raise
+
     entity_id, entity_name, entity_type = row.replace('\n', '').split('\t')
     return entity_id, entity_name, entity_type
 
 
-# {m.01000036} => God Has Given Me
-def get_entity_name_by_id(entity_id):
-    return get_all_entity_properties_by_id(entity_id)[1]
-
-
-# {m.01000036} => music.single,music.recording,common.topic
-def get_entity_types_by_id(entity_id):
-    return get_all_entity_properties_by_id(entity_id)[2]
-
-
-# {m.01000036} => {God Has Given Me}
-def get_entity_name_by_id_not_opt(entity_id):
-    with open(mid_name_file, "rt") as f:
-        for line in f:
-            if line.startswith(entity_id):
-                entity_id, entity_name, entity_type = line.split('\t')
-                return entity_name
-
-
 # {m.01000036} => {m.01000036|God Has Given Me|music.single,music.recording,common.topic}
-def get_all_entity_properties_by_id_not_opt(entity_id):
-    with open(mid_name_file, "rt") as f:
-        for line in f:
-            if line.startswith(entity_id + "\t"):
-                entity_id, entity_name, entity_type = line.replace('\n', '').split('\t')
-                return "{" + entity_id + "|" + entity_name + "|" + entity_type + "}"
-
-
-def get_tokens_in_phrase(phrase):
-    return re.findall('{[m].*?}', phrase)
+def get_all_entity_properties_formatted_by_id(entity_id):
+    entity_id, entity_name, entity_type = get_all_entity_properties_by_id(entity_id)
+    return "{" + entity_id + "|" + entity_name + "|" + entity_type + "}"
 
 
 def get_types_in_phrase(phrase):
@@ -127,35 +204,9 @@ def count_entities_in_phrase(phrase):
     return len(get_tokens_in_phrase(phrase))
 
 
-# IN MEMORY (needs 3GB+ RAM)
-def substitute_midnames_in_memory():
-    midnames = load_midnames_dictionary(mid_name_file)
-
+def sample_dataset(corpus_file, new_corpus_file, lines_num):
     with open(new_corpus_file, "wt") as fout:
         with open(corpus_file, "rt") as fin:
-            for line in fin:
-                warc, phrase = line.split('\t')
-                new_phrase = substitute_midname_in_phrase_in_memory(phrase, midnames)
-                fout.write(new_phrase)
-
-
-# 45M entities - 44789550
-def load_midnames_dictionary(midnames_file):
-    midnames = {}
-    line_number = 1
-    with open(midnames_file, "rt") as f:
-        for line in f:
-            entity_id, entity_name, entity_type = line.split('\t')
-            midnames[entity_id] = (entity_name, entity_type)
-            if line_number % 100000 == 0:
-                print(str(line_number / 1000000.0) + 'M')
-            line_number += 1
-    return midnames
-
-
-def substitute_midname_in_phrase_in_memory(phrase, midnames):
-    m = re.findall('{.*?}', phrase)
-    for match in m:
-        match_name = midnames[match][0]
-        phrase = phrase.replace(match, match_name)
-    return phrase
+            head = list(islice(fin, lines_num))
+            for line in head:
+                fout.write(line)
