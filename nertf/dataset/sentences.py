@@ -2,10 +2,12 @@ import re
 from collections import Counter
 from itertools import islice
 
-import midnames_index as mi
+import midnames as mi
 
 
 def create_training_from_dataset(corpus_file, training_file, lines_num=0, remove_duplicate_lines=True):
+    duplicate_lines_num = 0
+    mid_not_found = 0
     prev_phrase = ''
 
     with open(training_file, "wt") as fout:
@@ -17,19 +19,21 @@ def create_training_from_dataset(corpus_file, training_file, lines_num=0, remove
                 lines_num = sum(1 for _ in open(corpus_file))
 
             for i in range(1, lines_num):
-                if i % 10000 == 0:
+                if i % 1000 == 0:
                     print('# {}/{}'.format(i, lines_num))
 
                 line = fin.readline()
                 _, phrase = line.replace('\n', '').split('\t')
 
                 if remove_duplicate_lines and (phrase == prev_phrase):
+                    duplicate_lines_num += 1
                     continue
                 prev_phrase = phrase
 
                 try:
                     tagged_words = tag_phrase(phrase)
                 except ValueError:
+                    mid_not_found += 1
                     continue
 
                 fout.write('\n')
@@ -42,6 +46,9 @@ def create_training_from_dataset(corpus_file, training_file, lines_num=0, remove
 
                 fout.write('\n')
 
+    print('duplicate sentences: {}/{}'.format(duplicate_lines_num, lines_num))
+    print('mid not found sentences: {}/{}'.format(mid_not_found, lines_num))
+
 
 def tag_phrase(phrase):
     tagged_words = []
@@ -52,13 +59,12 @@ def tag_phrase(phrase):
             mid = get_id_by_token(word)
 
             try:
-                entity_name = get_entity_name_by_id(mid)
-                entity_types = get_entity_types_by_id(mid)
-                entity_type = simplify_types(entity_types)
+                _, entity_name, entity_types = get_all_entity_properties_by_id(mid)
+                entity_tag = get_tag_from_types(entity_types)
 
                 # TODO: use BIO/BILOU NER tags
                 for entity_part in entity_name.split(' '):  # TODO: use tokenizer
-                    tagged_words.append((entity_part, entity_type))
+                    tagged_words.append((entity_part, entity_tag))
 
             except ValueError:
                 raise
@@ -75,7 +81,7 @@ def is_entity(word):
     return word.startswith('{m.')
 
 
-def simplify_types(entity_types):
+def get_tag_from_types(entity_types):
     entity_domain = get_types_domain(entity_types)
 
     if 'location' in entity_domain:
@@ -92,37 +98,46 @@ def get_types_domain(entity_types):
     entity_domains = set()
 
     for entity_type in entity_types:
-        entity_domains.add(entity_type)
+        entity_domain = entity_type.split('.')[0]
+        entity_domains.add(entity_domain)
 
     return entity_domains
 
 
 def substitute_midnames(corpus_file, new_corpus_file, lines_num=0, remove_duplicate_lines=True):
-        prev_phrase = ''
+    duplicate_lines_num = 0
+    mid_not_found = 0
+    prev_phrase = ''
 
-        with open(new_corpus_file, "wt") as fout:
-            with open(corpus_file, "rt") as fin:
+    with open(new_corpus_file, "wt") as fout:
+        with open(corpus_file, "rt") as fin:
 
-                if lines_num <= 0:
-                    lines_num = sum(1 for _ in open(corpus_file))
+            if lines_num <= 0:
+                lines_num = sum(1 for _ in open(corpus_file))
 
-                # head = list(islice(fin, lines_num))
-                # for line in head:
-                for i in range(1, lines_num):
-                    if i % 10000 == 0:
-                        print('# {}/{}'.format(i, lines_num))
+            # head = list(islice(fin, lines_num))
+            # for line in head:
+            for i in range(1, lines_num):
+                if i % 1000 == 0:
+                    print('# {}/{}'.format(i, lines_num))
 
-                    line = fin.readline()
-                    warc, phrase = line.split('\t')
+                line = fin.readline()
+                warc, phrase = line.split('\t')
 
-                    if remove_duplicate_lines and (phrase == prev_phrase):
-                        continue
-                    prev_phrase = phrase
+                if remove_duplicate_lines and (phrase == prev_phrase):
+                    duplicate_lines_num += 1
+                    continue
 
-                    try:
-                        fout.write(substitute_midnames_in_phrase(phrase))
-                    except ValueError:
-                        continue
+                prev_phrase = phrase
+
+                try:
+                    fout.write(substitute_midnames_in_phrase(phrase))
+                except ValueError:
+                    mid_not_found += 1
+                    continue
+
+    print('duplicate sentences: {}/{}'.format(duplicate_lines_num, lines_num))
+    print('mid not found sentences: {}/{}'.format(mid_not_found, lines_num))
 
 
 def substitute_midnames_in_phrase(phrase):
@@ -172,8 +187,9 @@ def get_all_entity_properties_by_id(entity_id):
     except ValueError:
         raise
 
-    entity_id, entity_name, entity_type = row.replace('\n', '').split('\t')
-    return entity_id, entity_name, entity_type
+    entity_id, entity_name, entity_types = row.replace('\n', '').split('\t')
+    entity_types = entity_types.split(',')
+    return entity_id, entity_name, entity_types
 
 
 # {m.01000036} => {m.01000036|God Has Given Me|music.single,music.recording,common.topic}

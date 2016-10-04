@@ -1,11 +1,11 @@
 from __future__ import division
 
+import ast
+import json
 import os
 import pickle
-import json
-import ast
 
-import read_training as rt
+import nertf.dataset.sentences as rt
 
 corpus_file = os.path.join(os.path.dirname(__file__), 'data/cw_1_sentences.tsv')
 # corpus_file = os.path.join(os.path.dirname(__file__), 'data/cw_1_sentences_example.tsv')

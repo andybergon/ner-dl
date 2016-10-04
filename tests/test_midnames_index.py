@@ -1,4 +1,4 @@
-import midnames_index as mi
+from nertf.dataset import midnames as mi
 
 # print mi.get_row_by_id('m.02jvg4')
 print mi.get_row_by_id('m.03t0vr')
