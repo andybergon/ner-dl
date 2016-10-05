@@ -10,10 +10,11 @@ def create_training_from_dataset(corpus_file, training_file, lines_num=0, remove
     mid_not_found = 0
     prev_phrase = ''
 
-    with open(training_file, "wt") as fout:
-        with open(corpus_file, "rt") as fin:
+    with open(training_file, 'wt') as fout:
+        with open(corpus_file, 'rt') as fin:
 
             fout.write('-DOCSTART-	O')
+            fout.write('\n')
 
             if lines_num <= 0:
                 lines_num = sum(1 for _ in open(corpus_file))
@@ -35,8 +36,6 @@ def create_training_from_dataset(corpus_file, training_file, lines_num=0, remove
                 except ValueError:
                     mid_not_found += 1
                     continue
-
-                fout.write('\n')
 
                 for word_and_tag in tagged_words:
                     word = word_and_tag[0]
@@ -71,7 +70,7 @@ def tag_phrase(phrase):
 
         else:
             if word != '':  # double whitespace that remains after split()
-                tagged_words.append((word, '0'))
+                tagged_words.append((word, 'O'))
 
     return tagged_words
 
@@ -109,8 +108,8 @@ def substitute_midnames(corpus_file, new_corpus_file, lines_num=0, remove_duplic
     mid_not_found = 0
     prev_phrase = ''
 
-    with open(new_corpus_file, "wt") as fout:
-        with open(corpus_file, "rt") as fin:
+    with open(new_corpus_file, 'wt') as fout:
+        with open(corpus_file, 'rt') as fin:
 
             if lines_num <= 0:
                 lines_num = sum(1 for _ in open(corpus_file))
@@ -224,8 +223,8 @@ def count_entities_in_phrase(phrase):
 
 
 def sample_dataset(corpus_file, new_corpus_file, lines_num):
-    with open(new_corpus_file, "wt") as fout:
-        with open(corpus_file, "rt") as fin:
+    with open(new_corpus_file, 'wt') as fout:
+        with open(corpus_file, 'rt') as fin:
             head = list(islice(fin, lines_num))
             for line in head:
                 fout.write(line)
