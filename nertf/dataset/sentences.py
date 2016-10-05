@@ -13,7 +13,7 @@ def create_training_from_dataset(corpus_file, training_file, lines_num=0, remove
     with open(training_file, 'wt') as fout:
         with open(corpus_file, 'rt') as fin:
 
-            fout.write('-DOCSTART-	O')
+            fout.write('-DOCSTART-	O\n')
             fout.write('\n')
 
             if lines_num <= 0:
@@ -40,7 +40,7 @@ def create_training_from_dataset(corpus_file, training_file, lines_num=0, remove
                 for word_and_tag in tagged_words:
                     word = word_and_tag[0]
                     tag = word_and_tag[1]
-                    line_to_write = word + '\t' + tag + '\n'
+                    line_to_write = '{}\t{}\n'.format(word, tag)
                     fout.write(line_to_write)
 
                 fout.write('\n')
