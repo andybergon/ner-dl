@@ -3,7 +3,7 @@ import os
 import settings
 
 
-mid_name_file = settings.MIDNAMES_ROOT
+mid_name_file = settings.MIDNAMES_FILE
 
 
 def get_row_by_id(searched_row_id):

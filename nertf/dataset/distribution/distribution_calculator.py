@@ -8,8 +8,6 @@ import pickle
 import nertf.dataset.sentences as rt
 
 corpus_file = os.path.join(os.path.dirname(__file__), 'data/cw_1_sentences.tsv')
-# corpus_file = os.path.join(os.path.dirname(__file__), 'data/cw_1_sentences_example.tsv')
-# corpus_file = os.path.join(os.path.dirname(__file__), 'data/cw_1_sentences_1k.tsv')
 mid_name_file = os.path.join(os.path.dirname(__file__), 'data/mid_name_types.tsv')
 checkpoint_file = os.path.join(os.path.dirname(__file__), 'data/checkpoint_type_distribution.tsv')
 
