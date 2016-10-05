@@ -1,7 +1,9 @@
 import os
 
+import settings
 
-mid_name_file = os.path.join(os.path.dirname(__file__), 'data/mid/mid_name_types.tsv')
+
+mid_name_file = settings.MIDNAMES_ROOT
 
 
 def get_row_by_id(searched_row_id):
