@@ -1,15 +1,8 @@
-import os
 import gensim
 import logging
 
-import settings
-
 
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
-
-sentences_cw_file = os.path.join(settings.DATA_ROOT, 'replaced', 'cw_1_sentences_1k.tsv')
-w2v_file = os.path.join(settings.WORD2VEC_ROOT, 'w2v')
-w2v_txt_file = os.path.join(settings.WORD2VEC_ROOT, 'w2v.txt')
 
 
 class MySentences(object):
@@ -21,14 +14,13 @@ class MySentences(object):
             yield line.split()
 
 
-def generate_word2vec(sentences_file):
-    sentences = MySentences(sentences_file)  # memory-friendly iterator
+def generate_word2vec(sentences_filepath, word2vec_filepath, word2vec_txt_filepath=None):
+
+    sentences = MySentences(sentences_filepath)  # memory-friendly iterator
 
     model = gensim.models.Word2Vec(sentences, min_count=1, iter=10, size=300, window=5, workers=4)
 
-    model.save(w2v_file)
-    model.save_word2vec_format(w2v_txt_file, binary=False)
+    model.save(word2vec_filepath)
 
-
-if __name__ == '__main__':
-    generate_word2vec(sentences_cw_file)
+    if word2vec_txt_filepath is not None:
+        model.save_word2vec_format(word2vec_txt_filepath, binary=False)
