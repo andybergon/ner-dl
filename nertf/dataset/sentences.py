@@ -13,9 +13,6 @@ def create_training_from_dataset(corpus_file, training_file, lines_num=0, remove
     with open(training_file, 'wt') as fout:
         with open(corpus_file, 'rt') as fin:
 
-            fout.write('-DOCSTART-	O\n')
-            fout.write('\n')
-
             if lines_num <= 0:
                 lines_num = sum(1 for _ in open(corpus_file))
 
