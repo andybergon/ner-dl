@@ -2,7 +2,7 @@ import re
 from collections import Counter
 from itertools import islice
 
-import midnames as mi
+import midnames
 
 
 def create_training_from_dataset(corpus_file, training_file, lines_num=0, remove_duplicate_lines=True):
@@ -58,8 +58,10 @@ def tag_phrase(phrase):
                 _, entity_name, entity_types = get_all_entity_properties_by_id(mid)
                 entity_tag = get_tag_from_types(entity_types)
 
+                entity_name_list = filter(None, entity_name.split(' '))  # filter empty strings
+
                 # TODO: use BIO/BILOU NER tags
-                for entity_part in entity_name.split(' '):  # TODO: use tokenizer
+                for entity_part in entity_name_list:  # TODO: use tokenizer
                     tagged_words.append((entity_part, entity_tag))
 
             except ValueError:
@@ -179,7 +181,7 @@ def get_entity_types_by_id(entity_id):
 # {m.01000036} => ('m.01000036', 'God Has Given Me' 'music.single,music.recording,common.topic')
 def get_all_entity_properties_by_id(entity_id):
     try:
-        row = mi.get_row_by_id(entity_id)
+        row = midnames.get_row_by_id(entity_id)
     except ValueError:
         raise
 
