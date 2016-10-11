@@ -5,10 +5,13 @@ from itertools import islice
 import midnames
 
 
-def create_training_from_dataset(corpus_file, training_file, lines_num=0, remove_duplicate_lines=True):
+def create_training_from_dataset(corpus_file, training_file, lines_num=0, remove_duplicate_lines=True,
+                                 remove_duplicate_lines_after_sub=True):
     duplicate_lines_num = 0
+    duplicate_lines_after_sub = 0
     mid_not_found = 0
     prev_phrase = ''
+    prev_phrase_after_sub = ''
 
     with open(training_file, 'wt') as fout:
         with open(corpus_file, 'rt') as fin:
@@ -29,10 +32,16 @@ def create_training_from_dataset(corpus_file, training_file, lines_num=0, remove
                 prev_phrase = phrase
 
                 try:
-                    tagged_words = tag_phrase(phrase)
+                    tagged_words, phrase_after_sub = tag_phrase(phrase)
                 except ValueError:
                     mid_not_found += 1
                     continue
+
+                # don't use (prev_phrase = phrase) because already updated
+                if remove_duplicate_lines_after_sub and (phrase_after_sub == prev_phrase_after_sub):
+                    duplicate_lines_after_sub += 1
+                    continue
+                prev_phrase_after_sub = phrase_after_sub
 
                 for word_and_tag in tagged_words:
                     word = word_and_tag[0]
@@ -42,8 +51,9 @@ def create_training_from_dataset(corpus_file, training_file, lines_num=0, remove
 
                 fout.write('\n')
 
-    print('duplicate sentences: {}/{}'.format(duplicate_lines_num, lines_num))
     print('mid not found sentences: {}/{}'.format(mid_not_found, lines_num))
+    print('duplicate sentences: {}/{}'.format(duplicate_lines_num, lines_num))
+    print('duplicate only after substitution sentences: {}/{}'.format(duplicate_lines_after_sub, lines_num))
 
 
 def tag_phrase(phrase):
@@ -55,7 +65,7 @@ def tag_phrase(phrase):
             mid = get_id_by_token(word)
 
             try:
-                _, entity_name, entity_types = get_all_entity_properties_by_id(mid)
+                entity_mid, entity_name, entity_types = get_all_entity_properties_by_id(mid)
                 entity_tag = get_tag_from_types(entity_types)
 
                 entity_name_list = filter(None, entity_name.split(' '))  # filter empty strings
@@ -64,6 +74,8 @@ def tag_phrase(phrase):
                 for entity_part in entity_name_list:  # TODO: use tokenizer
                     tagged_words.append((entity_part, entity_tag))
 
+                phrase.replace(word, entity_name)
+
             except ValueError:
                 raise
 
@@ -71,7 +83,7 @@ def tag_phrase(phrase):
             if word != '':  # double whitespace that remains after split()
                 tagged_words.append((word, 'O'))
 
-    return tagged_words
+    return tagged_words, phrase
 
 
 # TODO: oppure usare regex?
@@ -102,40 +114,48 @@ def get_types_domain(entity_types):
     return entity_domains
 
 
-def substitute_midnames(corpus_file, new_corpus_file, lines_num=0, remove_duplicate_lines=True):
+def substitute_midnames(corpus_file, training_file, lines_num=0, remove_duplicate_lines=True,
+                        remove_duplicate_lines_after_sub=True):
     duplicate_lines_num = 0
+    duplicate_lines_after_sub = 0
     mid_not_found = 0
     prev_phrase = ''
+    prev_phrase_after_sub = ''
 
-    with open(new_corpus_file, 'wt') as fout:
+    with open(training_file, 'wt') as fout:
         with open(corpus_file, 'rt') as fin:
 
             if lines_num <= 0:
                 lines_num = sum(1 for _ in open(corpus_file))
 
-            # head = list(islice(fin, lines_num))
-            # for line in head:
             for i in range(1, lines_num):
                 if i % 1000 == 0:
                     print('# {}/{}'.format(i, lines_num))
 
                 line = fin.readline()
-                warc, phrase = line.split('\t')
+                _, phrase = line.replace('\n', '').split('\t')
 
                 if remove_duplicate_lines and (phrase == prev_phrase):
                     duplicate_lines_num += 1
                     continue
-
                 prev_phrase = phrase
 
                 try:
-                    fout.write(substitute_midnames_in_phrase(phrase))
+                    phrase_after_sub = substitute_midnames_in_phrase(phrase)
+                    # don't use (prev_phrase = phrase) because already updated
+                    if remove_duplicate_lines_after_sub and (phrase_after_sub == prev_phrase_after_sub):
+                        duplicate_lines_after_sub += 1
+                        continue
+                    prev_phrase_after_sub = phrase_after_sub
+
+                    fout.write(phrase_after_sub)
                 except ValueError:
                     mid_not_found += 1
                     continue
 
-    print('duplicate sentences: {}/{}'.format(duplicate_lines_num, lines_num))
     print('mid not found sentences: {}/{}'.format(mid_not_found, lines_num))
+    print('duplicate sentences: {}/{}'.format(duplicate_lines_num, lines_num))
+    print('duplicate only after substitution sentences: {}/{}'.format(duplicate_lines_after_sub, lines_num))
 
 
 def substitute_midnames_in_phrase(phrase):
