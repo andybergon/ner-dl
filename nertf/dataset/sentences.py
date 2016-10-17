@@ -1,64 +1,82 @@
+import random
 import re
 from collections import Counter
 from itertools import islice
 
 import midnames
+from too_long_exception import TooLongException
 
 
-def create_training_from_dataset(corpus_file, training_file, lines_num=0, remove_duplicate_lines=True,
-                                 remove_duplicate_lines_after_sub=True):
+def create_training_and_test(corpus_file, training_file, test_file, lines_num=0, skip_sentences_longer_than=80,
+                             remove_duplicate_lines=True,
+                             remove_duplicate_lines_after_sub=True, test_percentage=0.2):
     duplicate_lines_num = 0
     duplicate_lines_after_sub = 0
     mid_not_found = 0
+    too_long_sentence = 0
     prev_phrase = ''
     prev_phrase_after_sub = ''
 
-    with open(training_file, 'wt') as fout:
-        with open(corpus_file, 'rt') as fin:
+    with open(training_file, 'wt') as training_f:
+        with open(test_file, 'wt') as test_f:
+            with open(corpus_file, 'rt') as dataset_f:
 
-            if lines_num <= 0:
-                lines_num = sum(1 for _ in open(corpus_file))
+                if lines_num <= 0:
+                    lines_num = sum(1 for _ in open(corpus_file))
 
-            for i in range(1, lines_num):
-                if i % 1000 == 0:
-                    print('# {}/{}'.format(i, lines_num))
+                for current_line in range(1, lines_num):
+                    if current_line % 1000 == 0:
+                        print('# {}/{}'.format(current_line, lines_num))
 
-                line = fin.readline()
-                _, phrase = line.replace('\n', '').split('\t')
+                    line = dataset_f.readline()
+                    _, phrase = line.replace('\n', '').split('\t')
 
-                if remove_duplicate_lines and (phrase == prev_phrase):
-                    duplicate_lines_num += 1
-                    continue
-                prev_phrase = phrase
+                    if remove_duplicate_lines and (phrase == prev_phrase):
+                        duplicate_lines_num += 1
+                        continue
+                    prev_phrase = phrase
 
-                try:
-                    tagged_words, phrase_after_sub = tag_phrase(phrase)
-                except ValueError:
-                    mid_not_found += 1
-                    continue
+                    try:
+                        tagged_words, phrase_after_sub = tag_phrase(phrase, skip_sentences_longer_than)
+                    except TooLongException:
+                        too_long_sentence += 1
+                        continue
+                    except ValueError:
+                        mid_not_found += 1
+                        continue
 
-                # don't use (prev_phrase = phrase) because already updated
-                if remove_duplicate_lines_after_sub and (phrase_after_sub == prev_phrase_after_sub):
-                    duplicate_lines_after_sub += 1
-                    continue
-                prev_phrase_after_sub = phrase_after_sub
+                    # don't use (prev_phrase = phrase) because already updated
+                    if remove_duplicate_lines_after_sub and (phrase_after_sub == prev_phrase_after_sub):
+                        duplicate_lines_after_sub += 1
+                        continue
+                    prev_phrase_after_sub = phrase_after_sub
 
-                for word_and_tag in tagged_words:
-                    word = word_and_tag[0]
-                    tag = word_and_tag[1]
-                    line_to_write = '{}\t{}\n'.format(word, tag)
-                    fout.write(line_to_write)
+                    if random.uniform(0, 1) > test_percentage:
+                        to_write_f = training_f
+                    else:
+                        to_write_f = test_f
 
-                fout.write('\n')
+                    for word_and_tag in tagged_words:
+                        word = word_and_tag[0]
+                        tag = word_and_tag[1]
+                        line_to_write = '{}\t{}\n'.format(word, tag)
+                        to_write_f.write(line_to_write)
+
+                    to_write_f.write('\n')
 
     print('mid not found sentences: {}/{}'.format(mid_not_found, lines_num))
     print('duplicate sentences: {}/{}'.format(duplicate_lines_num, lines_num))
     print('duplicate only after substitution sentences: {}/{}'.format(duplicate_lines_after_sub, lines_num))
+    print('too long sentences: {}/{}'.format(too_long_sentence, lines_num))
 
 
-def tag_phrase(phrase):
+def tag_phrase(phrase, skip_sentences_longer_than):
     tagged_words = []
     words = phrase.split(' ')  # TODO: use tokenizer
+
+    sentence_len = len(words)
+    if sentence_len > skip_sentences_longer_than:
+        raise TooLongException('Too long sentence. Found {} tokens.'.format(sentence_len))
 
     for word in words:
         if is_entity(word):
