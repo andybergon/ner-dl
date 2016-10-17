@@ -13,7 +13,7 @@ np.random.seed(0)  # for debugging
 
 
 class NERModel:
-    def __init__(self, reader, generator):
+    def __init__(self, reader=None, generator=None):
 
         self.w2v_reader = reader
         self.batch_generator = generator
@@ -72,10 +72,10 @@ class NERModel:
             for X_batch, Y_batch in self.batch_generator.generate_training_batch():
                 self.model.fit(X_batch, Y_batch, batch_size=batch_size, nb_epoch=1)
 
-    def train_on_generator(self, samples_per_epoch, nb_epoch, max_q_size):
+    def train_on_generator(self, samples_per_epoch, nb_epoch, max_q_size, nb_worker, pickle_safe):
         generator = self.batch_generator.generate_training_batch()
         self.model.fit_generator(generator, samples_per_epoch=samples_per_epoch, nb_epoch=nb_epoch,
-                                 max_q_size=max_q_size, verbose=1)
+                                 max_q_size=max_q_size, nb_worker=nb_worker, pickle_safe=pickle_safe, verbose=1)
 
     def evaluate_on_generator(self, samples_to_test):
         scores = self.model.evaluate_generator(self.batch_generator.generate_test_batch(), val_samples=samples_to_test)

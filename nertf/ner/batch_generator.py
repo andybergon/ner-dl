@@ -91,6 +91,10 @@ class BatchGenerator:
                     # print('yielding sentence #{}\t{}'.format(sentence_num, word_tag_list))
 
                     X, Y = self.convert_tagged_sentence_to_vectors(word_tag_list)
+
+                    # if X.shape[1] != 80:
+                    #     print('X Shape: {}\t{}'.format(X.shape, len(word_tag_list)))
+
                     word_tag_list = []
 
                     yield (X, Y)

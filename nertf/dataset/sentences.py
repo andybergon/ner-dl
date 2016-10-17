@@ -74,10 +74,6 @@ def tag_phrase(phrase, skip_sentences_longer_than):
     tagged_words = []
     words = phrase.split(' ')  # TODO: use tokenizer
 
-    sentence_len = len(words)
-    if sentence_len > skip_sentences_longer_than:
-        raise TooLongException('Too long sentence. Found {} tokens.'.format(sentence_len))
-
     for word in words:
         if is_entity(word):
             mid = get_id_by_token(word)
@@ -100,6 +96,10 @@ def tag_phrase(phrase, skip_sentences_longer_than):
         else:
             if word != '':  # double whitespace that remains after split()
                 tagged_words.append((word, 'O'))
+
+    sentence_len = len(tagged_words)
+    if sentence_len > skip_sentences_longer_than:
+        raise TooLongException('Too long sentence. Found {} tokens.'.format(sentence_len))
 
     return tagged_words, phrase
 
@@ -265,3 +265,26 @@ def sample_dataset(corpus_file, new_corpus_file, lines_num):
             head = list(islice(fin, lines_num))
             for line in head:
                 fout.write(line)
+
+
+def count_sentence_length(filepath):
+    sentence_num = 0
+    words, tags = [], []
+    lengths = []
+
+    with open(filepath, 'r') as f:
+        for line in f:
+            if line == '\n':
+                sentence_num += 1
+                length = len(words)
+                # lengths.append(length)
+
+                if length > 80:
+                    print('Length: {}.\nSentence: {}\n'.format(length, words))
+
+                words, tags = [], []
+            else:
+                word, tag = line.replace('\n', '').split('\t')
+                words.append(word)
+                tags.append(tag)
+    return lengths
