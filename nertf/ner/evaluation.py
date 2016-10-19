@@ -1,55 +1,69 @@
+import settings
 from model import NERModel
+from stanford_ner import StanfordNERModel
 
 
-def evaluate_model(test_filepath, ner_model_filepath, w2v_reader_file, batch_gen_file):
-    sentence_num = 0
-    nb_total_correct = 0
-    nb_total_correct_entity = 0
-    nb_total_error = 0
-    nb_total_error_entity = 0
-    words, tags = [], []
+class Evaluator:
+    def __init__(self, own_model=True):
+        self.test_filepath = settings.TEST_FILE
 
-    ner_model = NERModel()
-    ner_model.load(ner_model_filepath, w2v_reader_file, batch_gen_file)
+        if own_model:
+            ner_model_file = settings.MODEL_FILE
+            w2v_reader_file = settings.W2V_READER_FILE
+            batch_gen_file = settings.BATCH_GEN_FILE
 
-    with open(test_filepath, 'r') as f:
-        for line in f:
-            if line != '\n':
-                word, tag = line.replace('\n', '').split('\t')
-                words.append(word)
-                tags.append(tag)
-            else:
-                sentence_num += 1
+            self.ner_model = NERModel()
+            self.ner_model.load(ner_model_file, w2v_reader_file, batch_gen_file)
+        else:
+            self.ner_model = StanfordNERModel
 
-                nb_correct = 0
-                nb_correct_entity = 0
-                nb_error = 0
-                nb_error_entity = 0
+    def evaluate_model(self):
+        sentence_num = 0
+        nb_total_correct = 0
+        nb_total_correct_entity = 0
+        nb_total_error = 0
+        nb_total_error_entity = 0
+        words, tags = [], []
 
-                sentence = ' '.join(words)
+        with open(self.test_filepath, 'r') as f:
+            for line in f:
+                if line != '\n':
+                    word, tag = line.replace('\n', '').split('\t')
+                    words.append(word)
+                    tags.append(tag)
+                else:
+                    sentence_num += 1
 
-                predicted_tags = ner_model.predict_sentence(sentence)
+                    nb_correct = 0
+                    nb_correct_entity = 0
+                    nb_error = 0
+                    nb_error_entity = 0
 
-                # zip ok if lists not so big
-                for correct, predicted in zip(tags, predicted_tags):
-                    if correct == predicted:
-                        nb_correct += 1
-                        if correct != 'NIL' and correct != 'O':
-                            nb_correct_entity += 1
-                    else:
-                        nb_error += 1
-                        if correct != 'NIL' and correct != 'O':
-                            nb_error_entity += 1
+                    sentence = ' '.join(words)  # TODO: use detokenizer
 
-                words = []
-                tags = []
+                    predicted_tags = self.ner_model.predict_sentence(sentence)
 
-                nb_total_correct += nb_correct
-                nb_total_correct_entity += nb_correct_entity
-                nb_total_error += nb_error
-                nb_total_error_entity += nb_error_entity
+                    # zip ok if lists not so big
+                    for correct, predicted in zip(tags, predicted_tags):
+                        if correct == predicted:
+                            nb_correct += 1
+                            if correct != 'NIL' and correct != 'O':
+                                nb_correct_entity += 1
+                        else:
+                            nb_error += 1
+                            if correct != 'NIL' and correct != 'O':
+                                nb_error_entity += 1
 
-                if sentence_num % 100 == 0:
-                    print(
-                        'Correct: {}\nCorrect Entities: {}\nErrors: {}\nErrors Entities: {}\nTotal: {}\n'.format(
-                            nb_total_correct, nb_correct_entity, nb_total_error, nb_total_error_entity, sentence_num))
+                    words = []
+                    tags = []
+
+                    nb_total_correct += nb_correct
+                    nb_total_correct_entity += nb_correct_entity
+                    nb_total_error += nb_error
+                    nb_total_error_entity += nb_error_entity
+
+                    if sentence_num % 100 == 0:
+                        print(
+                            'Correct: {}\nCorrect Entities: {}\nErrors: {}\nErrors Entities: {}\nTotal: {}\n'.format(
+                                nb_total_correct, nb_correct_entity, nb_total_error, nb_total_error_entity,
+                                sentence_num))
