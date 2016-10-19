@@ -1,16 +1,16 @@
 import string.punctuation
-from nltk.tokenize import word_tokenize
+from nltk.tokenize import word_tokenize, sent_tokenize
 
 
-def word_tokenize(text):
+def tokenize_word(text):
     return word_tokenize(text)
 
 
-def word_untokenize(tokens):
+def untokenize_word(tokens):
     return "".join([" " + i if not i.startswith("'") and i not in string.punctuation else i for i in tokens]).strip()
 
 
-def word_untokenize_2(tokens):
+def untokenize_word_custom(tokens):
     result = ' '.join(tokens)
     result = result.replace(' , ', ',')
     result = result.replace(' .', '.')
@@ -21,5 +21,5 @@ def word_untokenize_2(tokens):
     return result
 
 
-def sentence_tokenize(text):
-    return sentence_tokenize(text)
+def tokenize_sentence(text):
+    return sent_tokenize(text)
