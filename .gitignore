@@ -5,3 +5,5 @@ data/*
 !data/.gitkeep
 
 runner.py
+
+stanford-ner-2014-08-27
