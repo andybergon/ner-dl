@@ -1,5 +1,6 @@
-import numpy as np
+import cPickle as pickle
 
+import numpy as np
 from keras.layers import Dense  # TODO: slow. necessary to load on import?
 from keras.layers import LSTM
 from keras.layers.core import Dropout
@@ -20,19 +21,12 @@ class NERModel:
 
         self.model = None
 
-    def load(self, filepath):
-        self.model = load_model(filepath)
-
-    def save(self, filepath):
-        self.model.save(filepath)
-
     def print_summary(self):
         print(self.model.summary())
 
     def compile(self, dropout=0.2, reg_alpha=0.0, units=128, layers=1):
 
         # (max_length, w2v_length), e.g. (95,300)
-        # input_shape = (self.batch_generator.batch_size, self.batch_generator.max_sentence_len, self.w2v_reader.n_features)
         input_shape = (self.batch_generator.max_sentence_len, self.w2v_reader.n_features)
         # e.g. (6)
         output_dim = self.batch_generator.nb_classes
@@ -82,10 +76,10 @@ class NERModel:
         print("Accuracy: %.2f%%" % (scores[1] * 100))
 
     def predict_sentence(self, sentence, pad=False):
+        tokenized_sentence = sentence.split()  # TODO use tokenizer
 
         # Look up the embeddings for the words
-        sentence = sentence[:self.w2v_reader.max_sentence_len + 1]  # TODO: check if correct position
-        X = self.w2v_reader.encode_sentence(sentence)
+        X = self.w2v_reader.encode_sentence(tokenized_sentence)
 
         # Predict the labels
         predictions = self.model.predict(X, batch_size=1)
@@ -94,10 +88,35 @@ class NERModel:
         tags = self.w2v_reader.decode_prediction_sequence(predictions[0])
 
         if not pad:
-            tags = tags[-len(sentence):]
-
-        tag_str = ''
-        for t in tags:
-            tag_str += t + ' '
+            tags = tags[-len(tokenized_sentence):]
 
         return tags
+
+    def save(self, model_fp, w2v_reader_file, batch_gen_file):
+        print('Saving model...')
+        self.model.save(model_fp)
+        self.save_w2v_reader(w2v_reader_file)
+        self.save_batch_generator(batch_gen_file)
+
+    def load(self, model_fp, w2v_reader_file, batch_gen_file):
+        print('Loading model...')
+        self.model = load_model(model_fp)
+        self.load_w2v_reader(w2v_reader_file)
+        self.load_batch_generator(batch_gen_file)
+        self.w2v_reader.tag_vector_map = self.batch_generator.tag_vector_map  # TODO: workaround
+
+    def save_w2v_reader(self, fp):
+        with open(fp, 'wb') as output_f:
+            pickle.dump(self.w2v_reader, output_f, -1)
+
+    def load_w2v_reader(self, fp):
+        with open(fp, 'rb') as in_f:
+            self.w2v_reader = pickle.load(in_f)
+
+    def save_batch_generator(self, fp):
+        with open(fp, 'wb') as output_f:
+            pickle.dump(self.batch_generator, output_f, -1)
+
+    def load_batch_generator(self, fp):
+        with open(fp, 'rb') as in_f:
+            self.batch_generator = pickle.load(in_f)

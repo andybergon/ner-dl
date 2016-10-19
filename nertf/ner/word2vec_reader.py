@@ -4,14 +4,14 @@ from keras.preprocessing import sequence
 
 
 class Word2VecReader:
-    def __init__(self, word2vec_filepath=None):
+    def __init__(self, word2vec_filepath=None, max_sentence_len=80, n_tag_classes=6):
 
         self.wordvecs = None
         self.word_to_ix_map = {}
 
         self.n_features = 0
-        self.n_tag_classes = 0
-        self.max_sentence_len = 0
+        self.n_tag_classes = n_tag_classes
+        self.max_sentence_len = max_sentence_len
 
         self.n_sentences_all = 0
         self.tag_vector_map = {}
@@ -46,7 +46,6 @@ class Word2VecReader:
         outer_X = []
 
         for word in sentence:
-
             if word in self.word_to_ix_map:
                 X.append(self.wordvecs[self.word_to_ix_map[word]])
             elif skip_unknown_words:

@@ -4,13 +4,13 @@ from word2vec_reader import Word2VecReader
 
 
 def train_evaluate_save(word2vec_filepath, training_filepath, test_filepath, ner_model_filepath, class_list,
-                        max_sentence_len, evaluate_model=True, save_model=True):
+                        max_sentence_len, w2v_reader_file, batch_gen_file, evaluate_model=True, save_model=True):
     dropout = 0.5
     reg_alpha = 0.000
     layers = 1
 
-    nb_epoch = 100
-    batch_size = 64
+    nb_epoch = 10
+    batch_size = 32
     max_q_size = 1
     nb_worker = 1
     pickle_safe = False
@@ -35,6 +35,6 @@ def train_evaluate_save(word2vec_filepath, training_filepath, test_filepath, ner
 
     if save_model:
         print(">> Saving model...")
-        ner_model.save(ner_model_filepath)
+        ner_model.save(ner_model_filepath, w2v_reader_file, batch_gen_file)
 
     print(">> Done.")
