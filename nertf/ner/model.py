@@ -10,6 +10,8 @@ from keras.models import Sequential
 from keras.models import load_model
 from keras.regularizers import l2
 
+import tokenizer
+
 np.random.seed(0)  # for debugging
 
 
@@ -76,7 +78,7 @@ class NERModel:
         print("Accuracy: %.2f%%" % (scores[1] * 100))
 
     def predict_sentence(self, sentence, pad=False):
-        tokenized_sentence = sentence.split()  # TODO use tokenizer
+        tokenized_sentence = tokenizer.tokenize_word(sentence)
 
         # Look up the embeddings for the words
         X = self.w2v_reader.encode_sentence(tokenized_sentence)
@@ -90,7 +92,7 @@ class NERModel:
         if not pad:
             tags = tags[-len(tokenized_sentence):]
 
-        return tags
+        return zip(tokenized_sentence, tags)
 
     def save(self, model_fp, w2v_reader_file, batch_gen_file):
         print('Saving model...')

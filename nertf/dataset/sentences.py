@@ -4,6 +4,7 @@ from collections import Counter
 from itertools import islice
 
 import midnames
+from nertf.ner import tokenizer
 from too_long_exception import TooLongException
 
 
@@ -72,7 +73,61 @@ def create_training_and_test(corpus_file, training_file, test_file, lines_num=0,
 
 def tag_phrase(phrase, skip_sentences_longer_than):
     tagged_words = []
-    words = phrase.split(' ')  # TODO: use tokenizer
+    skip_token_mid = False  # for double continue on token found
+    skip_token_end = False  # for double continue on token found
+
+    words = tokenizer.tokenize_word(phrase)
+    words_len = len(words)
+
+    for idx, word in enumerate(words):
+
+        if skip_token_mid:
+            skip_token_mid = False
+            continue
+
+        if skip_token_end:
+            skip_token_end = False
+            continue
+
+        if word == '{':
+            if idx + 1 < words_len and words[idx + 1].startswith('m.'):
+                mid = words[idx + 1].split(':')[0]
+                if idx + 2 < words_len and words[idx + 2] == '}':
+
+                    try:
+                        entity_mid, entity_name, entity_types = get_all_entity_properties_by_id(mid)
+                        entity_tag = get_tag_from_types(entity_types)
+
+                        entity_name_list = tokenizer.tokenize_word(entity_name)
+                        for entity_part in entity_name_list:
+                            tagged_words.append((entity_part, entity_tag))
+
+                        word_to_replace = '{' + words[idx + 1] + '}'
+                        phrase.replace(word_to_replace, entity_name)
+
+                    except ValueError:
+                        raise
+
+                    skip_token_mid = True
+                    skip_token_end = True
+
+                else:  # rare case
+                    tagged_words.append((word, 'O'))
+            else:
+                tagged_words.append((word, 'O'))
+        else:
+            tagged_words.append((word, 'O'))
+
+    tagged_words_len = len(tagged_words)
+    if tagged_words_len > skip_sentences_longer_than:
+        raise TooLongException('Too long sentence. Found {} tokens.'.format(tagged_words_len))
+
+    return tagged_words, phrase
+
+
+def tag_phrase_split_tokenizer(phrase, skip_sentences_longer_than):
+    tagged_words = []
+    words = phrase.split(' ')
 
     for word in words:
         if is_entity(word):
@@ -84,8 +139,7 @@ def tag_phrase(phrase, skip_sentences_longer_than):
 
                 entity_name_list = filter(None, entity_name.split(' '))  # filter empty strings
 
-                # TODO: use BIO/BILOU NER tags
-                for entity_part in entity_name_list:  # TODO: use tokenizer
+                for entity_part in entity_name_list:
                     tagged_words.append((entity_part, entity_tag))
 
                 phrase.replace(word, entity_name)
@@ -104,7 +158,6 @@ def tag_phrase(phrase, skip_sentences_longer_than):
     return tagged_words, phrase
 
 
-# TODO: oppure usare regex?
 def is_entity(word):
     return word.startswith('{m.')
 

@@ -1,6 +1,7 @@
 from nltk.tag.stanford import StanfordNERTagger
 
 import settings
+import tokenizer
 
 
 class StanfordNERModel:
@@ -15,7 +16,8 @@ class StanfordNERModel:
         self.classifier = StanfordNERTagger(classifier_file, settings.STANFORD_NER_JAR)
 
     def predict_sentence(self, sentence):
-        tags = self.classifier.tag(sentence.split())  # TODO: use tokenizer
+        tokenized_sentence = tokenizer.tokenize_word(sentence)
+        tags = self.classifier.tag(tokenized_sentence)
         mapped_tags = [(i[0], map_tag(i[1])) for i in tags]
         print mapped_tags  # TODO: remove
         return mapped_tags
@@ -34,5 +36,5 @@ def map_tag(tag):
         return 'ORG'
     else:
         print("Don't know how to map tag {}".format(tag))
-        return '---'
+        return 'O'
         # raise ValueError("Don't know how to map tag {}".format(tag))

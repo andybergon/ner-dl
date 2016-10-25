@@ -1,6 +1,7 @@
 from __future__ import division
 
 import settings
+import tokenizer
 from model import NERModel
 from stanford_ner import StanfordNERModel
 
@@ -51,7 +52,7 @@ class Evaluator:
                     wrong_entity = 0
                     nil_false_positive = 0
 
-                    sentence = ' '.join(words)  # TODO: use untokenizer
+                    sentence = tokenizer.untokenize_word(words)
 
                     predicted_tags_tuples = self.ner_model.predict_sentence(sentence)
                     predicted_tags = (i[1] for i in predicted_tags_tuples)  # can use generator (...) for performance

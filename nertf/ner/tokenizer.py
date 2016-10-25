@@ -1,4 +1,5 @@
-import string.punctuation
+import string
+
 from nltk.tokenize import word_tokenize, sent_tokenize
 
 
