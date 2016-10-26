@@ -4,7 +4,7 @@ from keras.preprocessing import sequence
 
 
 class Word2VecReader:
-    def __init__(self, word2vec_filepath=None, max_sentence_len=80, n_tag_classes=6):
+    def __init__(self, word2vec_txt_filepath=None, max_sentence_len=80, n_tag_classes=6):
 
         self.wordvecs = None
         self.word_to_ix_map = {}
@@ -16,8 +16,8 @@ class Word2VecReader:
         self.n_sentences_all = 0
         self.tag_vector_map = {}
 
-        if word2vec_filepath:
-            self.read_word2vec(word2vec_filepath)
+        if word2vec_txt_filepath:
+            self.read_word2vec(word2vec_txt_filepath)
 
     def read_word2vec(self, word2vec_filepath):
         print('Loading Word2Vec...')
