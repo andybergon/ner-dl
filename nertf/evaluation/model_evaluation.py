@@ -1,9 +1,8 @@
 from __future__ import division
 
 import settings
-import tokenizer
-from model import NERModel
-from stanford_ner import StanfordNERModel
+from nertf.ner.external_models.stanford_ner_model import StanfordNERModel
+from nertf.ner.model import NERModel
 
 
 class Evaluator:
@@ -13,7 +12,7 @@ class Evaluator:
         if own_model:
             ner_model_file = settings.MODEL_FILE
             w2v_reader_file = settings.W2V_READER_FILE
-            batch_gen_file = settings.BATCH_GEN_FILE
+            batch_gen_file = settings.BATCH_GENERATOR_FILE
 
             self.ner_model = NERModel()
             self.ner_model.load(ner_model_file, w2v_reader_file, batch_gen_file)
@@ -52,9 +51,7 @@ class Evaluator:
                     wrong_entity = 0
                     nil_false_positive = 0
 
-                    sentence = tokenizer.untokenize_word(words)
-
-                    predicted_tags_tuples = self.ner_model.predict_sentence(sentence)
+                    predicted_tags_tuples = self.ner_model.predict_tokenized_sentence(words)
                     predicted_tags = (i[1] for i in predicted_tags_tuples)  # can use generator (...) for performance
 
                     # zip ok if lists not too big
