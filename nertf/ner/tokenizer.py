@@ -7,6 +7,7 @@ def tokenize_word(text):
     return word_tokenize(text)
 
 
+# N.B. Remember that tokenization isn't a fully reversable process. Information is lost in tokenization.
 def untokenize_word(tokens):
     return "".join([" " + i if not i.startswith("'") and i not in string.punctuation else i for i in tokens]).strip()
 

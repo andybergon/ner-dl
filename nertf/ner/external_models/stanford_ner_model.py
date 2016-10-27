@@ -1,7 +1,7 @@
 from nltk.tag.stanford import StanfordNERTagger
 
 import settings
-import tokenizer
+import nertf.ner.tokenizer
 
 
 class StanfordNERModel:
@@ -15,12 +15,16 @@ class StanfordNERModel:
 
         self.classifier = StanfordNERTagger(classifier_file, settings.STANFORD_NER_JAR)
 
-    def predict_sentence(self, sentence):
-        tokenized_sentence = tokenizer.tokenize_word(sentence)
+    def predict_tokenized_sentence(self, tokenized_sentence):
         tags = self.classifier.tag(tokenized_sentence)
         mapped_tags = [(i[0], map_tag(i[1])) for i in tags]
-        print mapped_tags  # TODO: remove
+
         return mapped_tags
+
+    def predict_sentence(self, sentence):
+        tokenized_sentence = nertf.ner.tokenizer.tokenize_word(sentence)
+
+        return self.predict_tokenized_sentence(tokenized_sentence)
 
 
 def map_tag(tag):

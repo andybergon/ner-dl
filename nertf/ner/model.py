@@ -77,22 +77,22 @@ class NERModel:
         scores = self.model.evaluate_generator(self.batch_generator.generate_test_batch(), val_samples=samples_to_test)
         print("Accuracy: %.2f%%" % (scores[1] * 100))
 
-    def predict_sentence(self, sentence, pad=False):
-        tokenized_sentence = tokenizer.tokenize_word(sentence)
-
-        # Look up the embeddings for the words
+    def predict_tokenized_sentence(self, tokenized_sentence, pad=False):
         X = self.w2v_reader.encode_sentence(tokenized_sentence)
 
-        # Predict the labels
         predictions = self.model.predict(X, batch_size=1)
 
-        # Lookup the tags given the class embeddings
         tags = self.w2v_reader.decode_prediction_sequence(predictions[0])
 
         if not pad:
             tags = tags[-len(tokenized_sentence):]
 
         return zip(tokenized_sentence, tags)
+
+    def predict_sentence(self, sentence, pad=False):
+        tokenized_sentence = tokenizer.tokenize_word(sentence)
+
+        return self.predict_sentence_tokenized(tokenized_sentence, pad)
 
     def save(self, model_fp, w2v_reader_file, batch_gen_file):
         print('Saving model...')
