@@ -62,11 +62,16 @@ class NERModel:
 
         self.model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-    def train_on_batches(self, nb_epoch, batch_size):
+    def train_on_batches(self, nb_epoch, batch_size, save_every_x_batches=1):
+        nb_batch = 0
+
         for epoch in range(nb_epoch):
             print('epoch {}'.format(epoch))
             for X_batch, Y_batch in self.batch_generator.generate_training_batch():
                 self.model.fit(X_batch, Y_batch, batch_size=batch_size, nb_epoch=1)
+                nb_batch += 1
+                if nb_batch % save_every_x_batches == 0:
+                    self.save_model()
 
     def train_on_generator(self, samples_per_epoch, nb_epoch, max_q_size, nb_worker, pickle_safe):
         generator = self.batch_generator.generate_training_batch()
@@ -93,6 +98,9 @@ class NERModel:
         tokenized_sentence = tokenizer.tokenize_word(sentence)
 
         return self.predict_sentence_tokenized(tokenized_sentence, pad)
+
+    def save_model(self):
+        pass  # TODO: implement
 
     def save(self, model_fp, w2v_reader_file, batch_gen_file):
         print('Saving model...')
