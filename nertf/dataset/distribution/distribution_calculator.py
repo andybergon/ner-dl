@@ -5,7 +5,7 @@ import json
 import os
 import pickle
 
-import nertf.dataset.sentences as rt
+import nertf.dataset.train_test_generator as rt
 
 corpus_file = os.path.join(os.path.dirname(__file__), 'data/cw_1_sentences.tsv')
 mid_name_file = os.path.join(os.path.dirname(__file__), 'data/mid_name_types.tsv')
