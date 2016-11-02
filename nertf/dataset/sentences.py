@@ -4,13 +4,20 @@ from collections import Counter
 from itertools import islice
 
 import midnames
+import settings
 from nertf.ner import tokenizer
 from too_long_exception import TooLongException
 
 
-def create_training_and_test(corpus_file, training_file, test_file, lines_num=0, skip_sentences_longer_than=80,
+def create_training_and_test(lines_num=0,
+                             skip_sentences_longer_than=80,
                              remove_duplicate_lines=True,
-                             remove_duplicate_lines_after_sub=True, test_percentage=0.2):
+                             remove_duplicate_lines_after_sub=True,
+                             test_percentage=0.2):
+    corpus_file = settings.CORPUS_FILE
+    training_file = settings.TRAINING_FILE
+    test_file = settings.TEST_FILE
+
     duplicate_lines_num = 0
     duplicate_lines_after_sub = 0
     mid_not_found = 0
@@ -21,6 +28,7 @@ def create_training_and_test(corpus_file, training_file, test_file, lines_num=0,
     with open(training_file, 'wt') as training_f:
         with open(test_file, 'wt') as test_f:
             with open(corpus_file, 'rt') as dataset_f:
+                lines_num = int(lines_num)
 
                 if lines_num <= 0:
                     lines_num = sum(1 for _ in open(corpus_file))
