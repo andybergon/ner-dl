@@ -9,7 +9,9 @@ from keras.layers.wrappers import TimeDistributed
 from keras.models import Sequential
 from keras.models import load_model
 from keras.regularizers import l2
+from keras.callbacks import ModelCheckpoint
 
+import settings
 import tokenizer
 
 np.random.seed(0)  # for debugging
@@ -17,11 +19,14 @@ np.random.seed(0)  # for debugging
 
 class NERModel:
     def __init__(self, reader=None, generator=None):
+        self.model = None
 
         self.w2v_reader = reader
         self.batch_generator = generator
 
-        self.model = None
+        self.ner_model_fp = settings.MODEL_FILE
+        self.word2vec_reader_fp = settings.W2V_READER_FILE
+        self.batch_generator_fp = settings.BATCH_GENERATOR_FILE
 
     def print_summary(self):
         print(self.model.summary())
@@ -62,21 +67,39 @@ class NERModel:
 
         self.model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-    def train_on_batches(self, nb_epoch, batch_size, save_every_x_batches=1):
-        nb_batch = 0
+    def train_on_batches(self, batch_size, nb_epoch, save_every_nb_iterations=0):
+        nb_curr_iteration = 0
+
+        print('Saving initial model, w2v reader and batch generator...')
+        self.save()
 
         for epoch in range(nb_epoch):
-            print('epoch {}'.format(epoch))
-            for X_batch, Y_batch in self.batch_generator.generate_training_batch():
-                self.model.fit(X_batch, Y_batch, batch_size=batch_size, nb_epoch=1)
-                nb_batch += 1
-                if nb_batch % save_every_x_batches == 0:
-                    self.save_model()
+            print('Epoch {}'.format(epoch + 1))
+
+            for X_batch, Y_batch in self.batch_generator.generate_multiple_training_batch(batch_size=batch_size):
+                self.model.fit(X_batch, Y_batch, batch_size=batch_size, nb_epoch=nb_epoch)
+
+                nb_curr_iteration += 1
+
+                if save_every_nb_iterations != 0 and nb_curr_iteration % save_every_nb_iterations == 0:
+                    print('Saving weights... (every {} iterations)'.format(save_every_nb_iterations))
+                    self.save_only_model()
 
     def train_on_generator(self, samples_per_epoch, nb_epoch, max_q_size, nb_worker, pickle_safe):
         generator = self.batch_generator.generate_training_batch()
-        self.model.fit_generator(generator, samples_per_epoch=samples_per_epoch, nb_epoch=nb_epoch,
-                                 max_q_size=max_q_size, nb_worker=nb_worker, pickle_safe=pickle_safe, verbose=1)
+
+        cp_fp = settings.MODEL_FILE
+        checkpoint = ModelCheckpoint(cp_fp, monitor='val_acc', verbose=1, save_best_only=False, mode='max')
+        callbacks = [checkpoint]
+
+        self.model.fit_generator(generator=generator,
+                                 samples_per_epoch=samples_per_epoch,
+                                 nb_epoch=nb_epoch,
+                                 verbose=1,
+                                 callbacks=callbacks,
+                                 max_q_size=max_q_size,
+                                 nb_worker=nb_worker,
+                                 pickle_safe=pickle_safe)
 
     def evaluate_on_generator(self, samples_to_test):
         scores = self.model.evaluate_generator(self.batch_generator.generate_test_batch(), val_samples=samples_to_test)
@@ -99,34 +122,37 @@ class NERModel:
 
         return self.predict_sentence_tokenized(tokenized_sentence, pad)
 
-    def save_model(self):
-        pass  # TODO: implement
+    # SAVE & LOAD
+    def save_only_model(self):
+        print('Saving model only...')
+        self.model.save(self.ner_model_fp)
 
-    def save(self, model_fp, w2v_reader_file, batch_gen_file):
+    def save(self):
         print('Saving model...')
-        self.model.save(model_fp)
-        self.save_w2v_reader(w2v_reader_file)
-        self.save_batch_generator(batch_gen_file)
+        self.model.save(self.ner_model_fp)
+        self.save_w2v_reader()
+        self.save_batch_generator()
 
-    def load(self, model_fp, w2v_reader_file, batch_gen_file):
+    def load(self):
         print('Loading model...')
-        self.model = load_model(model_fp)
-        self.load_w2v_reader(w2v_reader_file)
-        self.load_batch_generator(batch_gen_file)
+        self.model = load_model(self.model_fp)
+        self.load_w2v_reader()
+        self.load_batch_generator()
+
         self.w2v_reader.tag_vector_map = self.batch_generator.tag_vector_map  # TODO: workaround
 
-    def save_w2v_reader(self, fp):
-        with open(fp, 'wb') as output_f:
+    def save_w2v_reader(self):
+        with open(self.word2vec_reader_fp, 'wb') as output_f:
             pickle.dump(self.w2v_reader, output_f, -1)
 
-    def load_w2v_reader(self, fp):
-        with open(fp, 'rb') as in_f:
+    def load_w2v_reader(self):
+        with open(self.word2vec_reader_fp, 'rb') as in_f:
             self.w2v_reader = pickle.load(in_f)
 
-    def save_batch_generator(self, fp):
-        with open(fp, 'wb') as output_f:
+    def save_batch_generator(self):
+        with open(self.batch_generator_fp, 'wb') as output_f:
             pickle.dump(self.batch_generator, output_f, -1)
 
-    def load_batch_generator(self, fp):
-        with open(fp, 'rb') as in_f:
+    def load_batch_generator(self):
+        with open(self.batch_generator_fp, 'rb') as in_f:
             self.batch_generator = pickle.load(in_f)

@@ -5,8 +5,11 @@ PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 DATA_ROOT = os.path.join(PROJECT_ROOT, 'data')
 
 MODEL_ROOT = os.path.join(DATA_ROOT, 'model')
+CORPUS_FILE = os.path.join(DATA_ROOT, 'sentences', 'cw_1_sentences.tsv')
+
 BATCH_GENERATOR_FILE = os.path.join(MODEL_ROOT, 'batch_gen.pkl')
 MODEL_FILE = os.path.join(MODEL_ROOT, 'model.h5')
+MODEL_CHECKPOINT_FILE = os.path.join(MODEL_ROOT, 'model-checkpoint.hdf5')  # using MODEL_FILE for now
 W2V_READER_FILE = os.path.join(MODEL_ROOT, 'w2v_reader.pkl')
 
 TEST_ROOT = os.path.join(DATA_ROOT, 'test')
