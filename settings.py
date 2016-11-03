@@ -6,6 +6,7 @@ DATA_ROOT = os.path.join(PROJECT_ROOT, 'data')
 
 MODEL_ROOT = os.path.join(DATA_ROOT, 'model')
 CORPUS_FILE = os.path.join(DATA_ROOT, 'sentences', 'cw_1_sentences.tsv')
+CORPUS_FILE_EXAMPLE = os.path.join(DATA_ROOT, 'sentences', 'cw_1_sentences_example.tsv')
 
 BATCH_GENERATOR_FILE = os.path.join(MODEL_ROOT, 'batch_gen.pkl')
 MODEL_FILE = os.path.join(MODEL_ROOT, 'model.h5')
@@ -20,7 +21,10 @@ TRAINING_FILE = os.path.join(TRAINING_ROOT, 'training.txt')
 
 WORD2VEC_ROOT = os.path.join(DATA_ROOT, 'word2vec')
 
-MIDNAMES_FILE = os.path.join(DATA_ROOT, 'mid', 'mid_name_types.tsv')
+MID_ROOT = os.path.join(DATA_ROOT, 'mid')
+MIDNAMES_FILE = os.path.join(MID_ROOT, 'mid_name_types.tsv')
+FIGER_ENTITY_MAPPING = os.path.join(MID_ROOT, 'entity-types-mapping')
+
 WORD2VEC_TXT_FILE = os.path.join(WORD2VEC_ROOT, 'w2v.txt')
 
 STANFORD_NER_FOLDER = os.path.join(PROJECT_ROOT, 'stanford-ner-2014-08-27')
