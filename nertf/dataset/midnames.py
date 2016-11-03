@@ -1,8 +1,8 @@
 import os
 
-import settings
+import path_settings
 
-mid_name_file = settings.MIDNAMES_FILE
+mid_name_file = path_settings.MIDNAMES_FILE
 
 
 def get_row_by_id(searched_row_id):

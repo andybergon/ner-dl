@@ -11,7 +11,7 @@ from keras.models import load_model
 from keras.regularizers import l2
 from keras.callbacks import ModelCheckpoint
 
-import settings
+import path_settings
 import tokenizer
 
 np.random.seed(0)  # for debugging
@@ -24,9 +24,9 @@ class NERModel:
         self.w2v_reader = reader
         self.batch_generator = generator
 
-        self.ner_model_fp = settings.MODEL_FILE
-        self.word2vec_reader_fp = settings.W2V_READER_FILE
-        self.batch_generator_fp = settings.BATCH_GENERATOR_FILE
+        self.ner_model_fp = path_settings.MODEL_FILE
+        self.word2vec_reader_fp = path_settings.W2V_READER_FILE
+        self.batch_generator_fp = path_settings.BATCH_GENERATOR_FILE
 
     def print_summary(self):
         print(self.model.summary())
@@ -88,7 +88,7 @@ class NERModel:
     def train_on_generator(self, samples_per_epoch, nb_epoch, max_q_size, nb_worker, pickle_safe):
         generator = self.batch_generator.generate_training_batch()
 
-        cp_fp = settings.MODEL_FILE
+        cp_fp = path_settings.MODEL_FILE
         checkpoint = ModelCheckpoint(cp_fp, monitor='val_acc', verbose=1, save_best_only=False, mode='max')
         callbacks = [checkpoint]
 

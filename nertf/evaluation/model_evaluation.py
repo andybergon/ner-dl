@@ -1,18 +1,18 @@
 from __future__ import division
 
-import settings
+import path_settings
 from nertf.ner.external_models.stanford_ner_model import StanfordNERModel
 from nertf.ner.model import NERModel
 
 
 class Evaluator:
     def __init__(self, own_model=True):
-        self.test_filepath = settings.TEST_FILE
+        self.test_filepath = path_settings.TEST_FILE
 
         if own_model:
-            ner_model_file = settings.MODEL_FILE
-            w2v_reader_file = settings.W2V_READER_FILE
-            batch_gen_file = settings.BATCH_GENERATOR_FILE
+            ner_model_file = path_settings.MODEL_FILE
+            w2v_reader_file = path_settings.W2V_READER_FILE
+            batch_gen_file = path_settings.BATCH_GENERATOR_FILE
 
             self.ner_model = NERModel()
             self.ner_model.load(ner_model_file, w2v_reader_file, batch_gen_file)

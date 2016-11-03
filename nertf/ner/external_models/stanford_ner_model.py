@@ -1,19 +1,19 @@
 from nltk.tag.stanford import StanfordNERTagger
 
-import settings
+import path_settings
 import nertf.ner.tokenizer
 
 
 class StanfordNERModel:
     def __init__(self, nb_classes=4):
         if nb_classes == 4:
-            classifier_file = settings.STANFORD_NER_CLASSIFIER_4C
+            classifier_file = path_settings.STANFORD_NER_CLASSIFIER_4C
         elif nb_classes == 3:
-            classifier_file = settings.STANFORD_NER_CLASSIFIER_3C
+            classifier_file = path_settings.STANFORD_NER_CLASSIFIER_3C
         else:
             raise ValueError('Number of classes not supported')
 
-        self.classifier = StanfordNERTagger(classifier_file, settings.STANFORD_NER_JAR)
+        self.classifier = StanfordNERTagger(classifier_file, path_settings.STANFORD_NER_JAR)
 
     def predict_tokenized_sentence(self, tokenized_sentence):
         tags = self.classifier.tag(tokenized_sentence)

@@ -1,5 +1,5 @@
 import net_settings as ns
-import settings as s
+import path_settings as s
 from batch_generator import BatchGenerator
 from model import NERModel
 from word2vec_reader import Word2VecReader
@@ -21,8 +21,7 @@ class ModelRunner:
 
         print(">> Loading word2vec vectors from file...")
         w2v_reader = Word2VecReader(word2vec_txt_filepath)
-        batch_generator = BatchGenerator(w2v_reader, training_filepath, test_filepath, class_list,
-                                         max_sentence_len)
+        batch_generator = BatchGenerator(w2v_reader, training_filepath, test_filepath, class_list, max_sentence_len)
 
         dropout = ns.DROPOUT
         reg_alpha = ns.REG_ALPHA
@@ -64,6 +63,6 @@ class ModelRunner:
         print(">> Evaluating model...")
         self.ner_model.evaluate_on_generator(samples_to_test=samples_to_test)
 
-    def save_model(self):
+    def save(self):
         print(">> Saving model...")
         self.ner_model.save()

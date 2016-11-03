@@ -4,7 +4,7 @@ import numpy as np
 class BatchGenerator:
     def __init__(self, word2vec_reader, training_filepath, test_filepath, class_list, max_sentence_len):
         """
-        :param class_list: List of classes, NIL included. If empty, calculates from training
+        :param class_list: List of classes, NIL included. If empty, it's calculated from training data
         """
 
         self.word2vec_reader = word2vec_reader
@@ -15,7 +15,7 @@ class BatchGenerator:
         self.tag_vector_map = {}
         self.nb_classes = 0
 
-        if len(class_list) == 0:
+        if len(class_list) == 0 or not class_list:
             print('Calculating output labels...')
             self.calculate_output_labels()
         else:
@@ -84,7 +84,7 @@ class BatchGenerator:
 
     def generate_batch(self, filepath):
         sentence_num = 0
-        word_tag_list = []
+        word_tags_list = []
 
         while 1:
             f = open(filepath)
@@ -95,18 +95,19 @@ class BatchGenerator:
 
                     # print('yielding sentence #{}\t{}'.format(sentence_num, word_tag_list))
 
-                    X, Y = self.convert_tagged_sentence_to_vectors(word_tag_list)
+                    X, Y = self.convert_tagged_sentence_to_vectors(word_tags_list)
 
                     # if X.shape[1] != 80:
                     #     print('X Shape: {}\t{}'.format(X.shape, len(word_tag_list)))
 
-                    word_tag_list = []
+                    word_tags_list = []
 
                     yield (X, Y)
                 else:
                     try:
-                        word, tag = line.replace('\n', '').split('\t')
-                        word_tag_list.append((word, tag))
+                        word, tags = line.replace('\n', '').split('\t')
+                        tags = tags.split(',')
+                        word_tags_list.append((word, tags))
                     except ValueError as e:
                         print(
                             'Error at sentence #{}.\nError message: {}.\nLine: {}.'.format(sentence_num, e.message,
@@ -118,7 +119,7 @@ class BatchGenerator:
         w2v_reader = self.word2vec_reader
         sentence_words_vec, sentence_tags_vec = [], []
 
-        for word, tag in word_tag_list:
+        for word, tags in word_tag_list:
             if word in self.word2vec_reader.word_to_ix_map:
                 word_vec = w2v_reader.wordvecs[w2v_reader.word_to_ix_map[word]]
             else:
@@ -130,7 +131,11 @@ class BatchGenerator:
                 word_vec = new_wv
 
             sentence_words_vec.append(word_vec)
-            sentence_tags_vec.append(list(self.tag_vector_map[tag]))
+            if len(tags) <= 1:
+                tags_vector = self.tag_vector_map[tags[0]]
+            else:
+                tags_vector = self.tags_to_vector(tags)
+            sentence_tags_vec.append(list(tags_vector))
 
         # Pad the sequences for missing entries to make them all the same length
         nil_X = np.zeros(w2v_reader.n_features)
@@ -143,6 +148,14 @@ class BatchGenerator:
         Y = np.array([Y])
 
         return X, Y
+
+    def tags_to_vector(self, tags):
+        vector = [0] * self.nb_classes
+        for tag in tags:
+            current_vector = list(self.tag_vector_map[tag])
+            vector = map(sum, zip(vector, current_vector))
+
+        return vector
 
     # TODO: merge w/ generate_batch
     def generate_batch_multiple(self, filepath, batch_size=1):

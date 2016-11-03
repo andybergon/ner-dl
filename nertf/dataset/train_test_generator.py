@@ -4,7 +4,7 @@ from collections import Counter
 from itertools import islice
 
 import midnames
-import settings
+import path_settings
 from nertf.ner import tokenizer
 from too_long_exception import TooLongException
 
@@ -21,9 +21,9 @@ class TestTrainingGenerator:
                                  remove_duplicate_lines=True,
                                  remove_duplicate_lines_after_sub=True,
                                  test_percentage=0.2):
-        corpus_file = settings.CORPUS_FILE
-        training_file = settings.TRAINING_FILE
-        test_file = settings.TEST_FILE
+        corpus_file = path_settings.CORPUS_FILE
+        training_file = path_settings.TRAINING_FILE
+        test_file = path_settings.TEST_FILE
 
         duplicate_lines_num = 0
         duplicate_lines_after_sub = 0
@@ -141,15 +141,17 @@ class TestTrainingGenerator:
 
 
 # support functions
-def substitute_midnames(corpus_file, training_file, lines_num=0, remove_duplicate_lines=True,
-                        remove_duplicate_lines_after_sub=True):
+def substitute_midnames(lines_num=0, remove_duplicate_lines=True, remove_duplicate_lines_after_sub=True):
+    corpus_file = path_settings.CORPUS_FILE
+    replaced_file = path_settings.REPLACED_CORPUS_FILE
+
     duplicate_lines_num = 0
     duplicate_lines_after_sub = 0
     mid_not_found = 0
     prev_phrase = ''
     prev_phrase_after_sub = ''
 
-    with open(training_file, 'wt') as fout:
+    with open(replaced_file, 'wt') as fout:
         with open(corpus_file, 'rt') as fin:
 
             if lines_num <= 0:

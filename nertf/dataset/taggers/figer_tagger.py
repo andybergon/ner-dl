@@ -1,10 +1,10 @@
-import settings
+import path_settings
 from tagger import Tagger
 
 
 class FigerTagger(Tagger):
     def __init__(self):
-        self.mapping_file = settings.FIGER_ENTITY_MAPPING
+        self.mapping_file = path_settings.FIGER_ENTITY_MAPPING
 
     def tag(self, entity_types):
         figer_types = self.convert_freebase_to_figer_types(entity_types)
