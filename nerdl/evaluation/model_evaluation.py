@@ -1,8 +1,8 @@
 from __future__ import division
 
 import path_settings
-from nertf.ner.external_models.stanford_ner_model import StanfordNERModel
-from nertf.ner.model import NERModel
+from nerdl.ner.external_models.stanford_ner_model import StanfordNERModel
+from nerdl.ner.keras_model.model import NERModel
 
 
 class Evaluator:

@@ -1,4 +1,4 @@
-from nertf.dataset.distribution import distribution_calculator as dc
+from nerdl.dataset.distribution import distribution_calculator as dc
 
 # print dc.count_types()
 

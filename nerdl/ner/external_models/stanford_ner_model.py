@@ -1,7 +1,7 @@
 from nltk.tag.stanford import StanfordNERTagger
 
+import nerdl.ner.utils.tokenizer
 import path_settings
-import nertf.ner.tokenizer
 
 
 class StanfordNERModel:
@@ -22,7 +22,7 @@ class StanfordNERModel:
         return mapped_tags
 
     def predict_sentence(self, sentence):
-        tokenized_sentence = nertf.ner.tokenizer.tokenize_word(sentence)
+        tokenized_sentence = nerdl.ner.utils.tokenizer.tokenize_word(sentence)
 
         return self.predict_tokenized_sentence(tokenized_sentence)
 

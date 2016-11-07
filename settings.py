@@ -1,4 +1,4 @@
-from nertf.dataset.figer import types_lister
+from nerdl.dataset.figer import types_lister
 
 MAX_SENTENCE_LEN = 80
 

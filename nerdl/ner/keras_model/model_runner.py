@@ -2,7 +2,7 @@ import net_settings as ns
 import path_settings as s
 from batch_generator import BatchGenerator
 from model import NERModel
-from word2vec_reader import Word2VecReader
+from nerdl.ner.w2v.word2vec_reader import Word2VecReader
 
 
 class ModelRunner:

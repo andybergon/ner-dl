@@ -1,6 +1,7 @@
 import cPickle as pickle
 
 import numpy as np
+from keras.callbacks import ModelCheckpoint
 from keras.layers import Dense  # TODO: slow. necessary to load on import?
 from keras.layers import LSTM
 from keras.layers.core import Dropout
@@ -9,10 +10,9 @@ from keras.layers.wrappers import TimeDistributed
 from keras.models import Sequential
 from keras.models import load_model
 from keras.regularizers import l2
-from keras.callbacks import ModelCheckpoint
 
 import path_settings
-import tokenizer
+from nerdl.ner.utils import tokenizer
 
 np.random.seed(0)  # for debugging
 

@@ -2,7 +2,7 @@ import sys
 import time
 
 from model import NERModel
-from word2vec_reader import Word2VecReader
+from nerdl.ner.w2v.word2vec_reader import Word2VecReader
 
 
 def run_interactive_session(word2vec_filepath, training_filepath, model_filepath):

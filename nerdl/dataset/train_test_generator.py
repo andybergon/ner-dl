@@ -5,7 +5,7 @@ from itertools import islice
 
 import midnames
 import path_settings
-from nertf.ner import tokenizer
+from nerdl.ner.utils import tokenizer
 from too_long_exception import TooLongException
 
 random.seed(0)
