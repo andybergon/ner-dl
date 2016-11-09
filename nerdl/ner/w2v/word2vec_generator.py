@@ -1,10 +1,11 @@
-import gensim
 import logging
+
+import gensim
 
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
 
-class MySentences(object):
+class Word2VecGenerator(object):
     def __init__(self, dirname):
         self.dirname = dirname
 
@@ -14,7 +15,7 @@ class MySentences(object):
 
 
 def generate_word2vec(sentences_filepath, word2vec_filepath, word2vec_txt_filepath=None):
-    sentences = MySentences(sentences_filepath)  # memory-friendly iterator
+    sentences = Word2VecGenerator(sentences_filepath)  # memory-friendly iterator
 
     model = gensim.models.Word2Vec(sentences, min_count=1, iter=10, size=300, window=5, workers=4)
 

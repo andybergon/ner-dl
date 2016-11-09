@@ -1,5 +1,6 @@
 DROPOUT = 0.5
 REG_ALPHA = 0.000
+UNITS = 128
 LAYERS = 1
 
 # fit

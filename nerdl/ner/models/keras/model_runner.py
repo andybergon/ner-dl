@@ -1,7 +1,7 @@
 import net_settings as ns
 import path_settings as s
 from batch_generator import BatchGenerator
-from model import NERModel
+from keras_model import KerasNERModel
 from nerdl.ner.w2v.word2vec_reader import Word2VecReader
 
 
@@ -28,7 +28,7 @@ class ModelRunner:
         layers = ns.LAYERS
 
         print(">> Compiling model... dropout = {}, reg_alpha = {}, layers = {}".format(dropout, reg_alpha, layers))
-        self.ner_model = NERModel(w2v_reader, batch_generator)
+        self.ner_model = KerasNERModel(w2v_reader, batch_generator)
         self.ner_model.compile(dropout=dropout, reg_alpha=reg_alpha, layers=layers)
 
         # ner_model.print_summary()

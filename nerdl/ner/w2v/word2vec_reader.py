@@ -2,34 +2,32 @@ import numpy as np
 import pandas as pd
 from keras.preprocessing import sequence
 
+import path_settings
+import settings
+
 
 class Word2VecReader:
-    def __init__(self, word2vec_txt_filepath=None, max_sentence_len=80, n_tag_classes=6):
+    def __init__(self):
+        self.word2vec_txt_filepath = path_settings.WORD2VEC_TXT_FILE
+        self.max_sentence_len = settings.MAX_SENTENCE_LEN
 
         self.wordvecs = None
-        self.word_to_ix_map = {}
-
+        self.word2vec_map = {}
         self.n_features = 0
-        self.n_tag_classes = n_tag_classes
-        self.max_sentence_len = max_sentence_len
 
-        self.n_sentences_all = 0
-        self.tag_vector_map = {}
+        if self.word2vec_txt_filepath:
+            self.load_word2vec()
 
-        if word2vec_txt_filepath:
-            self.read_word2vec(word2vec_txt_filepath)
-
-    def read_word2vec(self, word2vec_filepath):
+    def load_word2vec(self):
         print('Loading Word2Vec...')
 
         # skiprows=1 to skip first line
-        self.wordvecs = pd.read_table(word2vec_filepath, sep=' ', header=None, skiprows=1)
+        self.wordvecs = pd.read_table(self.word2vec_txt_filepath, sep=' ', header=None, skiprows=1)
         # <class 'pandas.core.frame.DataFrame'>
         # print(self.wordvecs.shape)
 
-        self.word_to_ix_map = {}
         for ix, row in self.wordvecs.iterrows():
-            self.word_to_ix_map[row[0]] = ix
+            self.word2vec_map[row[0]] = ix
 
         print('Word2Vec loaded.')
 
@@ -46,28 +44,26 @@ class Word2VecReader:
         outer_X = []
 
         for word in sentence:
-            if word in self.word_to_ix_map:
-                X.append(self.wordvecs[self.word_to_ix_map[word]])
-            elif skip_unknown_words:
+            if skip_unknown_words:
                 continue
             else:
-                new_wv = 2 * np.random.randn(self.n_features) - 1  # sample from normal distribution
-                norm_const = np.linalg.norm(new_wv)
-                new_wv /= norm_const
-                X.append(new_wv)
+                encoded_word = self.encode_word(word)
+                X.append(encoded_word)
 
         outer_X.append(X)
 
         return sequence.pad_sequences(outer_X, maxlen=self.max_sentence_len, dtype=np.float64)
 
-    def decode_prediction_sequence(self, pred_seq):
-        pred_tags = []
+    def encode_word(self, word):
+        if word in self.word2vec_map:
+            encoded_wv = self.wordvecs[self.word2vec_map[word]]
+        else:
+            encoded_wv = 2 * np.random.randn(self.n_features) - 1  # sample from normal distribution
+            norm_const = np.linalg.norm(encoded_wv)
+            encoded_wv /= norm_const
 
-        for class_prs in pred_seq:
-            class_vec = np.zeros(self.n_tag_classes, dtype=np.int32)
-            class_vec[np.argmax(class_prs)] = 1
+            # TODO: check if needed and correct, add unknown words
+            # self.word2vec_map[word] = self.wordvecs.shape[0]
+            # self.wordvecs = np.vstack((self.wordvecs, encoded_wv))
 
-            if tuple(class_vec.tolist()) in self.tag_vector_map:
-                pred_tags.append(self.tag_vector_map[tuple(class_vec.tolist())])
-
-        return pred_tags
+        return encoded_wv

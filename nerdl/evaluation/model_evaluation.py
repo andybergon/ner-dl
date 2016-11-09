@@ -1,8 +1,8 @@
 from __future__ import division
 
 import path_settings
-from nerdl.ner.external_models.stanford_ner_model import StanfordNERModel
-from nerdl.ner.keras_model.model import NERModel
+from nerdl.ner.models.keras.keras_model import KerasNERModel
+from nerdl.ner.models.stanford.stanford_ner_model import StanfordNERModel
 
 
 class Evaluator:
@@ -14,7 +14,7 @@ class Evaluator:
             w2v_reader_file = path_settings.W2V_READER_FILE
             batch_gen_file = path_settings.BATCH_GENERATOR_FILE
 
-            self.ner_model = NERModel()
+            self.ner_model = KerasNERModel()
             self.ner_model.load(ner_model_file, w2v_reader_file, batch_gen_file)
         else:
             self.ner_model = StanfordNERModel()

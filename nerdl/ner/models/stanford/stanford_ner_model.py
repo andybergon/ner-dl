@@ -2,9 +2,10 @@ from nltk.tag.stanford import StanfordNERTagger
 
 import nerdl.ner.utils.tokenizer
 import path_settings
+from nerdl.ner.models.model import Model
 
 
-class StanfordNERModel:
+class StanfordNERModel(Model):
     def __init__(self, nb_classes=4):
         if nb_classes == 4:
             classifier_file = path_settings.STANFORD_NER_CLASSIFIER_4C
