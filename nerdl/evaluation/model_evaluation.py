@@ -1,8 +1,8 @@
 from __future__ import division
 
-import path_settings
 from nerdl.ner.models.keras.keras_model import KerasNERModel
 from nerdl.ner.models.stanford.stanford_ner_model import StanfordNERModel
+from settings import path_settings
 
 
 class Evaluator:

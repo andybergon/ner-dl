@@ -1,5 +1,3 @@
-import cPickle as pickle
-
 import numpy as np
 from keras.callbacks import ModelCheckpoint
 from keras.layers import Dense  # TODO: slow. necessary to load on import?
@@ -11,13 +9,13 @@ from keras.models import Sequential
 from keras.models import load_model
 from keras.regularizers import l2
 
-import net_settings as ns
-import path_settings
 from batch_generator import BatchGenerator
 from nerdl.ner.models.model import Model
 from nerdl.ner.utils import tokenizer
 from nerdl.ner.w2v.tag2vec_reader import Tag2VecReader
 from nerdl.ner.w2v.word2vec_reader import Word2VecReader
+from settings import net_settings as ns
+from settings import path_settings
 
 np.random.seed(0)  # for debugging
 
@@ -75,7 +73,7 @@ class KerasNERModel(Model):
         self.model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
     # TRAINING
-    def train(self, use_generator=False):
+    def train(self, use_generator=True):
         w2v_reader = Word2VecReader()
         t2v_reader = Tag2VecReader()
         batch_generator = BatchGenerator(w2v_reader, t2v_reader)
@@ -121,6 +119,22 @@ class KerasNERModel(Model):
                                   nb_epoch=nb_epoch,
                                   save_every_nb_iterations=save_every_nb_iterations)
 
+    def train_on_generator(self, samples_per_epoch, nb_epoch, max_q_size, nb_worker, pickle_safe):
+        generator = self.batch_generator.generate_training_batch()
+
+        cp_fp = path_settings.MODEL_FILE
+        checkpoint = ModelCheckpoint(cp_fp, monitor='val_acc', verbose=1, save_best_only=False, mode='max')
+        callbacks = [checkpoint]
+
+        self.model.fit_generator(generator=generator,
+                                 samples_per_epoch=samples_per_epoch,
+                                 nb_epoch=nb_epoch,
+                                 verbose=1,
+                                 callbacks=callbacks,
+                                 max_q_size=max_q_size,
+                                 nb_worker=nb_worker,
+                                 pickle_safe=pickle_safe)
+
     def train_on_batches(self, batch_size, nb_epoch, save_every_nb_iterations=0):
         nb_curr_iteration = 0
 
@@ -138,22 +152,6 @@ class KerasNERModel(Model):
                 if save_every_nb_iterations != 0 and nb_curr_iteration % save_every_nb_iterations == 0:
                     print('Saving weights... (every {} iterations)'.format(save_every_nb_iterations))
                     self.save_only_model()
-
-    def train_on_generator(self, samples_per_epoch, nb_epoch, max_q_size, nb_worker, pickle_safe):
-        generator = self.batch_generator.generate_training_batch()
-
-        cp_fp = path_settings.MODEL_FILE
-        checkpoint = ModelCheckpoint(cp_fp, monitor='val_acc', verbose=1, save_best_only=False, mode='max')
-        callbacks = [checkpoint]
-
-        self.model.fit_generator(generator=generator,
-                                 samples_per_epoch=samples_per_epoch,
-                                 nb_epoch=nb_epoch,
-                                 verbose=1,
-                                 callbacks=callbacks,
-                                 max_q_size=max_q_size,
-                                 nb_worker=nb_worker,
-                                 pickle_safe=pickle_safe)
 
     # PREDICTION
     def predict_sentence(self, sentence, pad=False):
@@ -215,10 +213,10 @@ class KerasNERModel(Model):
         print('Loading model only...')
         self.model = load_model(self.ner_model_fp)
 
-    # def load_w2v_reader(self):
-    #     with open(self.word2vec_reader_fp, 'rb') as in_f:
-    #         self.w2v_reader = pickle.load(in_f)
-    #
-    # def load_batch_generator(self):
-    #     with open(self.batch_generator_fp, 'rb') as in_f:
-    #         self.batch_generator = pickle.load(in_f)
+        # def load_w2v_reader(self):
+        #     with open(self.word2vec_reader_fp, 'rb') as in_f:
+        #         self.w2v_reader = pickle.load(in_f)
+        #
+        # def load_batch_generator(self):
+        #     with open(self.batch_generator_fp, 'rb') as in_f:
+        #         self.batch_generator = pickle.load(in_f)

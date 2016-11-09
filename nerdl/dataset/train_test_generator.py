@@ -4,8 +4,8 @@ from collections import Counter
 from itertools import islice
 
 import midnames
-import path_settings
 from nerdl.ner.utils import tokenizer
+from settings import path_settings
 from too_long_exception import TooLongException
 
 random.seed(0)

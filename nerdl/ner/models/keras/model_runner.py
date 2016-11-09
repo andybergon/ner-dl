@@ -1,8 +1,8 @@
-import net_settings as ns
-import path_settings as s
 from batch_generator import BatchGenerator
 from keras_model import KerasNERModel
 from nerdl.ner.w2v.word2vec_reader import Word2VecReader
+from settings import net_settings as ns
+from settings import path_settings as s
 
 
 class ModelRunner:

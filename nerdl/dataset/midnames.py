@@ -1,6 +1,6 @@
 import os
 
-import path_settings
+from settings import path_settings
 
 mid_name_file = path_settings.MIDNAMES_FILE
 

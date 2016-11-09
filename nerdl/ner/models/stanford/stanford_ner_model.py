@@ -1,8 +1,8 @@
 from nltk.tag.stanford import StanfordNERTagger
 
 import nerdl.ner.utils.tokenizer
-import path_settings
 from nerdl.ner.models.model import Model
+from settings import path_settings
 
 
 class StanfordNERModel(Model):

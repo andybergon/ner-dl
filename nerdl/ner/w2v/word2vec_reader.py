@@ -2,8 +2,8 @@ import numpy as np
 import pandas as pd
 from keras.preprocessing import sequence
 
-import path_settings
-import settings
+from settings import path_settings
+from settings import settings
 
 
 class Word2VecReader:

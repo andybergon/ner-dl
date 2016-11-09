@@ -1,4 +1,4 @@
-import path_settings
+from settings import path_settings
 
 
 def list_figer_types():

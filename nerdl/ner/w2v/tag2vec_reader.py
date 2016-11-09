@@ -1,7 +1,7 @@
 import numpy as np
 
-import path_settings
-import settings
+from settings import path_settings
+from settings import settings
 
 
 class Tag2VecReader:
