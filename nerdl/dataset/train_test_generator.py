@@ -16,74 +16,98 @@ class TestTrainingGenerator:
         self.tagger = tagger
 
     def create_training_and_test(self,
-                                 lines_num=0,
+                                 sentence_nb=0,
                                  skip_sentences_longer_than=80,
                                  remove_duplicate_lines=True,
                                  remove_duplicate_lines_after_sub=True,
                                  test_percentage=0.2):
-        corpus_file = path_settings.CORPUS_FILE
-        training_file = path_settings.TRAINING_FILE
-        test_file = path_settings.TEST_FILE
+        """
+        :param sentence_nb: Number of sentences needed. If 0, process all corpus file.
+        :param skip_sentences_longer_than:
+        :param remove_duplicate_lines:
+        :param remove_duplicate_lines_after_sub:
+        :param test_percentage:
+        :return:
+        """
 
+        corpus_fp = path_settings.CORPUS_FILE
+        training_fp = path_settings.TRAINING_FILE
+        test_fp = path_settings.TEST_FILE
+
+        current_line_nb = 0
+        effective_sentences_nb = 0
         duplicate_lines_num = 0
         duplicate_lines_after_sub = 0
         mid_not_found = 0
         too_long_sentence = 0
+
         prev_phrase = ''
         prev_phrase_after_sub = ''
 
-        with open(training_file, 'wt') as training_f:
-            with open(test_file, 'wt') as test_f:
-                with open(corpus_file, 'rt') as dataset_f:
-                    lines_num = int(lines_num)
+        with open(training_fp, 'wt') as training_f, open(test_fp, 'wt') as test_f, open(corpus_fp, 'rt') as corpus_f:
+            for line in corpus_f:
+                current_line_nb += 1
+                if current_line_nb % 1000 == 0:
+                    print('Processing line #{} - Effective sentences: #{}/{}'
+                          .format(current_line_nb, effective_sentences_nb, sentence_nb))
 
-                    if lines_num <= 0:
-                        lines_num = sum(1 for _ in open(corpus_file))
+                _, phrase = line.rstrip().split('\t')
 
-                    for current_line in range(1, lines_num):
-                        if current_line % 1000 == 0:
-                            print('# {}/{}'.format(current_line, lines_num))
+                if remove_duplicate_lines and (phrase == prev_phrase):
+                    duplicate_lines_num += 1
+                    continue
+                prev_phrase = phrase
 
-                        line = dataset_f.readline()
-                        _, phrase = line.replace('\n', '').split('\t')
+                try:
+                    tagged_words, phrase_after_sub = self.tag_phrase(phrase, skip_sentences_longer_than)
+                except TooLongException:
+                    too_long_sentence += 1
+                    continue
+                except ValueError:
+                    mid_not_found += 1
+                    continue
 
-                        if remove_duplicate_lines and (phrase == prev_phrase):
-                            duplicate_lines_num += 1
-                            continue
-                        prev_phrase = phrase
+                # don't use (prev_phrase = phrase), already updated
+                if remove_duplicate_lines_after_sub and (phrase_after_sub == prev_phrase_after_sub):
+                    duplicate_lines_after_sub += 1
+                    continue
+                prev_phrase_after_sub = phrase_after_sub
 
-                        try:
-                            tagged_words, phrase_after_sub = self.tag_phrase(phrase, skip_sentences_longer_than)
-                        except TooLongException:
-                            too_long_sentence += 1
-                            continue
-                        except ValueError:
-                            mid_not_found += 1
-                            continue
+                # WRITE SENTENCE TO FILE
+                if random.uniform(0, 1) > test_percentage:
+                    to_write_f = training_f
+                else:
+                    to_write_f = test_f
 
-                        # don't use (prev_phrase = phrase) because already updated
-                        if remove_duplicate_lines_after_sub and (phrase_after_sub == prev_phrase_after_sub):
-                            duplicate_lines_after_sub += 1
-                            continue
-                        prev_phrase_after_sub = phrase_after_sub
+                for word_and_tag in tagged_words:
+                    word = word_and_tag[0]
+                    tag = word_and_tag[1]
+                    line_to_write = '{}\t{}\n'.format(word, tag)
+                    to_write_f.write(line_to_write)
 
-                        if random.uniform(0, 1) > test_percentage:
-                            to_write_f = training_f
-                        else:
-                            to_write_f = test_f
+                to_write_f.write('\n')
 
-                        for word_and_tag in tagged_words:
-                            word = word_and_tag[0]
-                            tag = word_and_tag[1]
-                            line_to_write = '{}\t{}\n'.format(word, tag)
-                            to_write_f.write(line_to_write)
+                effective_sentences_nb += 1
 
-                        to_write_f.write('\n')
+                if effective_sentences_nb == sentence_nb and sentence_nb != 0:
+                    print('Wrote all {} sentences.'.format(sentence_nb))
+                    break
 
-        print('mid not found sentences: {}/{}'.format(mid_not_found, lines_num))
-        print('duplicate sentences: {}/{}'.format(duplicate_lines_num, lines_num))
-        print('duplicate only after substitution sentences: {}/{}'.format(duplicate_lines_after_sub, lines_num))
-        print('too long sentences: {}/{}'.format(too_long_sentence, lines_num))
+            if sentence_nb == 0:  # EOF reached
+                print('Corpus file ended. Wrote #{} effective sentences after #{} lines.'
+                      .format(effective_sentences_nb, current_line_nb))
+
+        print('Skipped Sentences - Mid not found: {}/{} {}'
+              .format(mid_not_found, effective_sentences_nb, mid_not_found / (mid_not_found + effective_sentences_nb)))
+        print('Skipped Sentences - Duplicate: {}/{} {}'
+              .format(duplicate_lines_num, effective_sentences_nb,
+                      duplicate_lines_num / (duplicate_lines_num + effective_sentences_nb)))
+        print('Skipped Sentences - Duplicate (only after substitution): {}/{}'
+              .format(duplicate_lines_after_sub, effective_sentences_nb,
+                      duplicate_lines_after_sub / (duplicate_lines_after_sub + effective_sentences_nb)))
+        print('Skipped Sentences - Too Long: {}/{}'
+              .format(too_long_sentence, effective_sentences_nb,
+                      too_long_sentence / (too_long_sentence + effective_sentences_nb)))
 
     def tag_phrase(self, phrase, skip_sentences_longer_than):
         tagged_words = []
