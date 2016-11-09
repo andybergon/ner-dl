@@ -24,7 +24,6 @@ class BatchGenerator:
 
     def generate_batch_multiple(self, filepath, batch_size):
         sentence_num = 0
-        nb_sentences_curr_batch = 0
         sentences_curr_batch = []
         word_tag_list = []
 
@@ -33,14 +32,12 @@ class BatchGenerator:
             for line in f:
                 if line == '\n':  # blank line
                     sentence_num += 1
-                    nb_sentences_curr_batch += 1
 
                     sentences_curr_batch.append(word_tag_list)
                     word_tag_list = []
 
-                    if nb_sentences_curr_batch == batch_size:
+                    if len(sentences_curr_batch) == batch_size:
                         X, Y = self.convert_multiple_tagged_sentence_to_vectors(sentences_curr_batch)
-                        nb_sentences_curr_batch = 0
                         sentences_curr_batch = []
                         yield (X, Y)
                 else:

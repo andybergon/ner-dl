@@ -24,12 +24,9 @@ class KerasNERModel(Model):
     def __init__(self):
         self.model = None
 
-        self.class_list = None
-        self.max_sentence_len = None
-
         self.w2v_reader = None
         self.t2v_reader = None
-        self.batch_generator = None
+        self.batch_generator = None  # can be a parameter of methods
 
         self.ner_model_fp = path_settings.MODEL_FILE
 
@@ -41,7 +38,7 @@ class KerasNERModel(Model):
         # (max_length, w2v_length), e.g. (95,300)
         input_shape = (self.batch_generator.max_sentence_len, self.w2v_reader.n_features)
         # e.g. (6)
-        output_dim = self.batch_generator.nb_classes
+        output_dim = self.t2v_reader.nb_classes
         print('Input Shape: {}'.format(input_shape))
         print('Output Dimension: {}'.format(output_dim))
 

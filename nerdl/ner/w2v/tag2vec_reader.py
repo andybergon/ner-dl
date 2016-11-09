@@ -83,7 +83,7 @@ class Tag2VecReader:
     def encode_multiple_tags(self, tags):
         vector = [0] * self.nb_classes
 
-        for tag in tags:
+        for tag in tags.split(','):
             current_vector = list(self.tag2vec_map[tag])
             vector = map(sum, zip(vector, current_vector))
 
