@@ -1,24 +1,12 @@
 from __future__ import division
 
-from nerdl.ner.models.keras.keras_model import KerasNERModel
-from nerdl.ner.models.stanford.stanford_ner_model import StanfordNERModel
 from settings import path_settings
 
 
-class Evaluator:
-    def __init__(self, own_model=True):
+class EvaluatorMonoLabel:
+    def __init__(self, model):
+        self.ner_model = model
         self.test_filepath = path_settings.TEST_FILE
-
-        if own_model:
-            ner_model_file = path_settings.MODEL_FILE
-            w2v_reader_file = path_settings.W2V_READER_FILE
-            batch_gen_file = path_settings.BATCH_GENERATOR_FILE
-
-            self.ner_model = KerasNERModel()
-            self.ner_model.load(ner_model_file, w2v_reader_file, batch_gen_file)
-        else:
-            self.ner_model = StanfordNERModel()
-
         self.stats = {}
 
     def evaluate_model(self):

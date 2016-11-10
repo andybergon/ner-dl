@@ -6,10 +6,13 @@ from settings import path_settings
 
 
 class Comparator:
-    def __init__(self, class_list):
+    def __init__(self, class_list, model_1, model_2):
+        self.class_list = class_list
+        self.model_1 = model_1
+        self.model_2 = model_2
+
         self.test_filepath = path_settings.TEST_FILE
 
-        self.class_list = class_list
         self.sentence_num = 0
         self.stats_1 = {}
         self.stats_2 = {}
@@ -25,18 +28,6 @@ class Comparator:
         for entity_class in self.class_list:
             # (only_1_correct, only_2_correct, both_correct, both_error, total_found)
             self.stats[entity_class] = [0, 0, 0, 0, 0]
-
-        ner_model_file = path_settings.MODEL_FILE
-        w2v_reader_file = path_settings.W2V_READER_FILE
-        batch_gen_file = path_settings.BATCH_GENERATOR_FILE
-
-        nn_ner_model = KerasNERModel()
-        nn_ner_model.load(ner_model_file, w2v_reader_file, batch_gen_file)
-
-        stanford_ner_model = StanfordNERModel()
-
-        self.model_1 = nn_ner_model
-        self.model_2 = stanford_ner_model
 
     def compare_models(self, print_every=100):
         words, tags = [], []
