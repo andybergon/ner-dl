@@ -20,8 +20,8 @@ class EvaluatorMultiLabel:
 
     def initialize_stats(self):
         for tag_class in self.class_list:
-            self.lmi_correct[tag_class] = 0, 0
-            self.lmi_predict[tag_class] = 0, 0
+            self.lmi_correct[tag_class] = [0, 0]
+            self.lmi_predict[tag_class] = [0, 0]
 
     def evaluate_model(self, print_every=100):
         sentence_num = 0
@@ -67,9 +67,9 @@ class EvaluatorMultiLabel:
 
             for predicted_tag in predicted:
                 if predicted_tag in correct:
-                    self.lmi_predicted[predicted_tag][1] += 1
+                    self.lmi_predict[predicted_tag][1] += 1
                 else:
-                    self.lmi_predicted[predicted_tag][0] += 1
+                    self.lmi_predict[predicted_tag][0] += 1
 
     def print_stats(self):
         self.print_loose_micro_stats()
@@ -85,11 +85,11 @@ class EvaluatorMultiLabel:
                 correct_yes += self.lmi_correct[tag_class][1]
                 correct_no += self.lmi_correct[tag_class][0]
                 predict_yes += self.lmi_predict[tag_class][1]
-                predict_no += self.lmi_correct[tag_class][0]
+                predict_no += self.lmi_predict[tag_class][0]
 
-        correct_perc = correct_yes / correct_yes + correct_no
-        predict_perc = predict_yes / predict_yes + predict_no
-        f1_score = 2 * (predict_perc + correct_perc) / (predict_perc + correct_perc)
+        correct_perc = correct_yes / (correct_yes + correct_no)
+        predict_perc = predict_yes / (predict_yes + predict_no)
+        f1_score = 2 * (predict_perc * correct_perc) / (predict_perc + correct_perc)
 
         o_fp = self.lmi_predict['O'][0]
         o_tn = 0  # TODO: complicated and expensive to calculate, must count total number of entities
@@ -98,8 +98,10 @@ class EvaluatorMultiLabel:
         o_tp = self.lmi_correct['O'][1]
         o_fnr = o_fn / (o_tp + o_fn)
 
+        print('--------------------------------------------------')
         print('LOOSE MICRO STATS')
         print('Correct entities found: {}/{} - {:.0%}'.format(correct_yes, correct_no, correct_perc))
         print('Predicted entities correct: {}/{} - {:.0%}'.format(predict_yes, predict_no, predict_perc))
         print('Precision: {}\nRecall: {}\nF1 Score: {}'.format(predict_perc, correct_perc, f1_score))
         print('O Tag - FP: {} {}, FN: {} {}'.format(o_fp, o_fpr, o_fn, o_fnr))
+        print('--------------------------------------------------')

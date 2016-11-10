@@ -95,9 +95,9 @@ class Tag2VecReader:
         decoder = settings.KERAS_DECODER
 
         if decoder == 'max':
-            self.decode_prediction_max(pred_seq, settings.KERAS_MAX_DECODER_NB)
+            return self.decode_prediction_max(pred_seq, settings.KERAS_MAX_DECODER_NB)
         elif decoder == 'top':
-            self.decode_prediction_top(pred_seq, settings.KERAS_TOP_DECODER_NB)
+            return self.decode_prediction_top(pred_seq, settings.KERAS_TOP_DECODER_NB)
         else:
             raise (NameError, 'Decoder not found!')
 
@@ -114,14 +114,17 @@ class Tag2VecReader:
                 word_pred_tags.append(self.tag2vec_map[tuple(class_vec.tolist())])
 
             # can be cleaner but more expensive # indexes = np.argsort(class_vec)[::-1]
-            if top_nb > 1:
+            # NIL and O should be single labels
+            if top_nb > 1 and 'NIL' not in word_pred_tags and 'O' not in word_pred_tags:
                 while top_nb != 1:
                     class_vec[np.argmax(pred_word)] = 0
                     pred_word[np.argmax(pred_word)] = 0
                     class_vec[np.argmax(pred_word)] = 1
 
                     if tuple(class_vec.tolist()) in self.tag2vec_map:
-                        word_pred_tags.append(self.tag2vec_map[tuple(class_vec.tolist())])
+                        tag = self.tag2vec_map[tuple(class_vec.tolist())]
+                        if tag != 'NIL' and tag != 'O':
+                            word_pred_tags.append(tag)
 
                     top_nb -= 1
 
@@ -130,17 +133,50 @@ class Tag2VecReader:
         return sentence_pred_tags
 
     def decode_prediction_top(self, pred_seq, cutoff_perc=0.95):
-        pass  # TODO
+        sentence_pred_tags = []
 
-    # OLD
-    def decode_prediction_max_one(self, pred_seq):
-        pred_tags = []
+        for pred_word in pred_seq:
+            word_pred_tags = []
+            pred_cum_perc = 0
 
-        for class_prs in pred_seq:
-            class_vec = np.zeros(self.nb_classes, dtype=np.int32)
-            class_vec[np.argmax(class_prs)] = 1
+            for ix in np.argsort(pred_word)[::-1]:
+                class_vec = np.zeros(self.nb_classes, dtype=np.int32)
+                class_vec[ix] = 1
 
-            if tuple(class_vec.tolist()) in self.tag2vec_map:
-                pred_tags.append(self.tag2vec_map[tuple(class_vec.tolist())])
+                if tuple(class_vec.tolist()) in self.tag2vec_map:
+                    predicted_tag = self.tag2vec_map[tuple(class_vec.tolist())]
+                    word_pred_tags.append(predicted_tag)
 
-        return pred_tags  # list and not list of lists
+                pred_cum_perc += pred_word[ix]
+
+                if pred_cum_perc > cutoff_perc:
+                    break
+
+            if len(word_pred_tags) > 1:
+                word_pred_tags = clean_tags(word_pred_tags)
+
+            sentence_pred_tags.append(word_pred_tags)
+
+        return sentence_pred_tags
+
+
+def clean_tags(predicted_tags):
+    """
+    Manage O and NIL tags. Removes other tags if first. Removes O/NIL tag if not first.
+    :param predicted_tags:
+    :return:
+    """
+
+    if 'O' in predicted_tags:
+        if predicted_tags[0] == 'O':
+            predicted_tags = ['O']  # can remove all other elements so we don't need to return a new list
+        else:
+            predicted_tags.remove('O')
+
+    if 'NIL' in predicted_tags:
+        if predicted_tags[0] == 'NIL':
+            predicted_tags = ['NIL']  # can remove all other elements so we don't need to return a new list
+        else:
+            predicted_tags.remove('NIL')
+
+    return predicted_tags
