@@ -9,10 +9,10 @@ CORPUS_FILE = os.path.join(DATA_ROOT, 'sentences', 'cw_1_sentences.tsv')
 CORPUS_FILE_EXAMPLE = os.path.join(DATA_ROOT, 'sentences', 'cw_1_sentences_example.tsv')
 REPLACED_CORPUS_FILE = os.path.join(DATA_ROOT, 'replaced', 'cw_1_replaced.tsv')
 
-BATCH_GENERATOR_FILE = os.path.join(MODEL_ROOT, 'batch_gen.pkl')
+# BATCH_GENERATOR_FILE = os.path.join(MODEL_ROOT, 'batch_gen.pkl')
 MODEL_FILE = os.path.join(MODEL_ROOT, 'model.h5')
 MODEL_CHECKPOINT_FILE = os.path.join(MODEL_ROOT, 'model-checkpoint.hdf5')  # using MODEL_FILE for now
-W2V_READER_FILE = os.path.join(MODEL_ROOT, 'w2v_reader.pkl')
+# W2V_READER_FILE = os.path.join(MODEL_ROOT, 'w2v_reader.pkl')
 
 TEST_ROOT = os.path.join(DATA_ROOT, 'test')
 TEST_FILE = os.path.join(TEST_ROOT, 'test.txt')

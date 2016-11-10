@@ -69,6 +69,7 @@ class Tag2VecReader:
 
         self.nb_classes = tag_class_id
 
+    # ENCODE
     def encode_tag(self, tag):
         return self.tag2vec_map[tag]
 
@@ -89,7 +90,50 @@ class Tag2VecReader:
 
         return vector
 
-    def decode_prediction_max(self, pred_seq):
+    # DECODE
+    def decode_prediction(self, pred_seq):
+        decoder = settings.KERAS_DECODER
+
+        if decoder == 'max':
+            self.decode_prediction_max(pred_seq, settings.KERAS_MAX_DECODER_NB)
+        elif decoder == 'top':
+            self.decode_prediction_top(pred_seq, settings.KERAS_TOP_DECODER_NB)
+        else:
+            raise (NameError, 'Decoder not found!')
+
+    def decode_prediction_max(self, pred_seq, top_nb=1):
+        sentence_pred_tags = []
+
+        for pred_word in pred_seq:
+            word_pred_tags = []
+
+            class_vec = np.zeros(self.nb_classes, dtype=np.int32)
+            class_vec[np.argmax(pred_word)] = 1
+
+            if tuple(class_vec.tolist()) in self.tag2vec_map:
+                word_pred_tags.append(self.tag2vec_map[tuple(class_vec.tolist())])
+
+            # can be cleaner but more expensive # indexes = np.argsort(class_vec)[::-1]
+            if top_nb > 1:
+                while top_nb != 1:
+                    class_vec[np.argmax(pred_word)] = 0
+                    pred_word[np.argmax(pred_word)] = 0
+                    class_vec[np.argmax(pred_word)] = 1
+
+                    if tuple(class_vec.tolist()) in self.tag2vec_map:
+                        word_pred_tags.append(self.tag2vec_map[tuple(class_vec.tolist())])
+
+                    top_nb -= 1
+
+            sentence_pred_tags.append(word_pred_tags)
+
+        return sentence_pred_tags
+
+    def decode_prediction_top(self, pred_seq, cutoff_perc=0.95):
+        pass  # TODO
+
+    # OLD
+    def decode_prediction_max_one(self, pred_seq):
         pred_tags = []
 
         for class_prs in pred_seq:
@@ -99,7 +143,4 @@ class Tag2VecReader:
             if tuple(class_vec.tolist()) in self.tag2vec_map:
                 pred_tags.append(self.tag2vec_map[tuple(class_vec.tolist())])
 
-        return pred_tags
-
-    def decode_prediction_percentage(self, pred_seq, cutoff_perc=0.95):
-        pass  # TODO
+        return pred_tags  # list and not list of lists

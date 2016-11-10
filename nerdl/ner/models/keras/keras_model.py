@@ -16,6 +16,7 @@ from nerdl.ner.w2v.tag2vec_reader import Tag2VecReader
 from nerdl.ner.w2v.word2vec_reader import Word2VecReader
 from settings import net_settings as ns
 from settings import path_settings
+from settings import settings
 
 np.random.seed(0)  # for debugging
 
@@ -158,10 +159,8 @@ class KerasNERModel(Model):
 
     def predict_tokenized_sentence(self, tokenized_sentence, pad=False):
         X = self.w2v_reader.encode_sentence(tokenized_sentence)
-
         predictions = self.model.predict(X, batch_size=1)
-
-        tags = self.t2v_reader.decode_prediction_max(predictions[0])
+        tags = self.t2v_reader.decode_prediction(predictions[0])
 
         if not pad:
             tags = tags[-len(tokenized_sentence):]
