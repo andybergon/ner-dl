@@ -23,7 +23,13 @@ class EvaluatorMultiLabel:
             self.lmi_correct[tag_class] = [0, 0]
             self.lmi_predict[tag_class] = [0, 0]
 
-    def evaluate_model(self, print_every=100):
+    def evaluate_model(self, test_sentences_nb=1000, print_every=100):
+        """
+
+        :param test_sentences_nb: Sentences to test. 0 for all test file.
+        :param print_every: Print stats frequency. 0 never print.
+        :return: Precision, Recall, F1 Score
+        """
         sentence_num = 0
 
         words, tags = [], []
@@ -47,8 +53,11 @@ class EvaluatorMultiLabel:
                     words = []
                     tags = []
 
-                    if print_every != 0 and sentence_num % print_every == 0:
-                        self.print_stats()
+                    if sentence_num % print_every == 0:
+                        p, r, f1 = self.print_stats()
+
+                    if sentence_num == test_sentences_nb:
+                        return p, r, f1
 
     def calculate_strict_micro(self, correct_tags, predicted_tags):
         pass
@@ -72,7 +81,7 @@ class EvaluatorMultiLabel:
                     self.lmi_predict[predicted_tag][0] += 1
 
     def print_stats(self):
-        self.print_loose_micro_stats()
+        return self.print_loose_micro_stats()
 
     def print_loose_micro_stats(self):
         correct_yes = 0
@@ -105,3 +114,5 @@ class EvaluatorMultiLabel:
         print('Precision: {}\nRecall: {}\nF1 Score: {}'.format(predict_perc, correct_perc, f1_score))
         print('O Tag - FP: {} {}, FN: {} {}'.format(o_fp, o_fpr, o_fn, o_fnr))
         print('--------------------------------------------------')
+
+        return predict_perc, correct_perc, f1_score  # precision, recall, f1 score
