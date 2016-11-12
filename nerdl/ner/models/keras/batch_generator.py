@@ -9,46 +9,60 @@ class BatchGenerator:
         self.word2vec_reader = word2vec_reader
         self.tag2vec_reader = tag2vec_reader
 
-        training_filepath = path_settings.TRAINING_FILE
-        test_filepath = path_settings.TEST_FILE
-        self.training_filepath = training_filepath
-        self.test_filepath = test_filepath
+        self.training_fp = path_settings.TRAINING_FILE
+        self.test_fp = path_settings.TEST_FILE
+        self.training_checkpoint_fp = path_settings.TRAINING_CHECKPOINT_FILE
+        self.test_checkpoint_fp = path_settings.TEST_CHECKPOINT_FILE
 
         self.max_sentence_len = settings.MAX_SENTENCE_LEN  # to calculate padding length
 
-    def generate_training_batch(self, batch_size=1):
-        return self.generate_batch_multiple(self.training_filepath, batch_size)
+    def generate_training_batch(self, batch_size=1, resume_gen=False):
+        return self.generate_batch(self.training_fp, self.training_checkpoint_fp, batch_size, resume_gen)
 
-    def generate_test_batch(self, batch_size=1):
-        return self.generate_batch_multiple(self.test_filepath, batch_size)
+    def generate_test_batch(self, batch_size=1, resume_gen=False):
+        return self.generate_batch(self.test_fp, self.test_checkpoint_fp, batch_size, resume_gen)
 
-    def generate_batch_multiple(self, filepath, batch_size):
+    def generate_batch(self, filepath, checkpoint_fp, batch_size, resume_gen, cp_frequency=1000):
         sentence_num = 0
+        first_loop_end = False
         sentences_curr_batch = []
         word_tag_list = []
 
         while 1:
-            f = open(filepath)
-            for line in f:
-                if line == '\n':  # blank line
-                    sentence_num += 1
+            with open(filepath) as f, open(checkpoint_fp, 'r+') as c_f:
 
-                    sentences_curr_batch.append(word_tag_list)
-                    word_tag_list = []
+                initial_position = c_f.readline()
+                if not initial_position or not resume_gen or first_loop_end:
+                    initial_position = 0
 
-                    if len(sentences_curr_batch) == batch_size:
-                        X, Y = self.convert_multiple_tagged_sentence_to_vectors(sentences_curr_batch)
-                        sentences_curr_batch = []
-                        yield (X, Y)
-                else:
-                    try:
-                        word, tag = line.replace('\n', '').split('\t')
-                        word_tag_list.append((word, tag))
-                    except ValueError as e:
-                        print('Error at sentence #{}.\nError message: {}.\nLine: {}.'
-                              .format(sentence_num, e.message, line))
+                f.seek(initial_position)
 
-            f.close()
+                for line in f:  # starts from seek?
+                    if line == '\n':  # blank line
+                        sentence_num += 1
+
+                        if sentence_num % cp_frequency == 0:
+                            c_f.seek(0)
+                            c_f.truncate()
+                            current_position = f.tell()
+                            c_f.write(current_position)
+
+                        sentences_curr_batch.append(word_tag_list)
+                        word_tag_list = []
+
+                        if len(sentences_curr_batch) == batch_size:
+                            X, Y = self.convert_multiple_tagged_sentence_to_vectors(sentences_curr_batch)
+                            sentences_curr_batch = []
+                            yield (X, Y)
+                    else:
+                        try:
+                            word, tag = line.replace('\n', '').split('\t')
+                            word_tag_list.append((word, tag))
+                        except ValueError as e:
+                            print('Error at sentence #{}.\nError message: {}.\nLine: {}.'
+                                  .format(sentence_num, e.message, line))
+
+            first_loop_end = True
 
     def convert_multiple_tagged_sentence_to_vectors(self, sentences_curr_batch):
         w2v_r = self.word2vec_reader
@@ -89,7 +103,7 @@ class BatchGenerator:
     # def generate_test_batch(self):
     #     return self.generate_batch(self.test_filepath)
 
-    def generate_batch(self, filepath):
+    def generate_batch_single(self, filepath):
         sentence_num = 0
         word_tags_list = []
 

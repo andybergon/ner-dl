@@ -71,7 +71,7 @@ class KerasNERModel(Model):
         self.model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
     # TRAINING
-    def train(self, use_generator=True):
+    def train(self, use_generator=True, resume_train=False):
         w2v_reader = Word2VecReader()
         t2v_reader = Tag2VecReader()
         batch_generator = BatchGenerator(w2v_reader, t2v_reader)
@@ -101,7 +101,8 @@ class KerasNERModel(Model):
 
             print('>> Training model... (using fit_generator) - epochs = {}, batch_size = {}'
                   .format(nb_epoch, batch_size))
-            self.train_on_generator(nb_epoch=nb_epoch,
+            self.train_on_generator(resume_train=resume_train,
+                                    nb_epoch=nb_epoch,
                                     samples_per_epoch=batch_size,
                                     max_q_size=max_q_size,
                                     nb_worker=nb_worker,
@@ -117,8 +118,11 @@ class KerasNERModel(Model):
                                   nb_epoch=nb_epoch,
                                   save_every_nb_iterations=save_every_nb_iterations)
 
-    def train_on_generator(self, samples_per_epoch, nb_epoch, max_q_size, nb_worker, pickle_safe):
-        generator = self.batch_generator.generate_training_batch()
+    def train_or_resume_train(self):
+        self.train(resume_train=True)
+
+    def train_on_generator(self, resume_train, samples_per_epoch, nb_epoch, max_q_size, nb_worker, pickle_safe):
+        generator = self.batch_generator.generate_training_batch(resume_gen=resume_train)
 
         cp_fp = path_settings.MODEL_FILE
         checkpoint = ModelCheckpoint(cp_fp, monitor='val_acc', verbose=1, save_best_only=False, mode='max')
