@@ -22,22 +22,24 @@ class BatchGenerator:
     def generate_test_batch(self, batch_size=1, resume_gen=False):
         return self.generate_batch(self.test_fp, self.test_checkpoint_fp, batch_size, resume_gen)
 
-    def generate_batch(self, filepath, checkpoint_fp, batch_size, resume_gen, cp_frequency=1000):
+    def generate_batch(self, filepath, checkpoint_fp, batch_size, resume_gen):
+        cp_frequency = settings.KERAS_TRAIN_CP_FREQ
         sentence_num = 0
         first_loop_end = False
         sentences_curr_batch = []
         word_tag_list = []
 
         while 1:
-            with open(filepath) as f, open(checkpoint_fp, 'r+') as c_f:
+            with open(filepath) as f, open(checkpoint_fp, 'a+') as c_f:
 
+                c_f.seek(0)
                 initial_position = c_f.readline()
                 if not initial_position or not resume_gen or first_loop_end:
                     initial_position = 0
 
-                f.seek(initial_position)
+                f.seek(int(initial_position))
 
-                for line in f:  # starts from seek?
+                for line in iter(f.readline, ''):  # f: otherwise f.tell() not consistent
                     if line == '\n':  # blank line
                         sentence_num += 1
 
@@ -45,7 +47,8 @@ class BatchGenerator:
                             c_f.seek(0)
                             c_f.truncate()
                             current_position = f.tell()
-                            c_f.write(current_position)
+                            c_f.write(str(current_position))
+                            c_f.flush()  # can be omitted
 
                         sentences_curr_batch.append(word_tag_list)
                         word_tag_list = []

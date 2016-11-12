@@ -16,7 +16,6 @@ from nerdl.ner.w2v.tag2vec_reader import Tag2VecReader
 from nerdl.ner.w2v.word2vec_reader import Word2VecReader
 from settings import net_settings as ns
 from settings import path_settings
-from settings import settings
 
 np.random.seed(0)  # for debugging
 
@@ -25,11 +24,13 @@ class KerasNERModel(Model):
     def __init__(self):
         self.model = None
 
-        self.w2v_reader = None
-        self.t2v_reader = None
+        self.w2v_reader = Word2VecReader()  # TODO: compare with saving python object that is less flexible
+        self.t2v_reader = Tag2VecReader()
+
         self.batch_generator = None  # can be a parameter of methods
 
         self.ner_model_fp = path_settings.MODEL_FILE
+        self.ner_model_load_fp = path_settings.MODEL_TO_LOAD_FILE
 
     def print_summary(self):
         print(self.model.summary())
@@ -72,12 +73,8 @@ class KerasNERModel(Model):
 
     # TRAINING
     def train(self, use_generator=True, resume_train=False):
-        w2v_reader = Word2VecReader()
-        t2v_reader = Tag2VecReader()
-        batch_generator = BatchGenerator(w2v_reader, t2v_reader)
 
-        self.w2v_reader = w2v_reader
-        self.t2v_reader = t2v_reader
+        batch_generator = BatchGenerator(self.w2v_reader, self.t2v_reader)
         self.batch_generator = batch_generator
 
         dropout = ns.DROPOUT
@@ -118,7 +115,8 @@ class KerasNERModel(Model):
                                   nb_epoch=nb_epoch,
                                   save_every_nb_iterations=save_every_nb_iterations)
 
-    def train_or_resume_train(self):
+    def resume_train(self):
+        self.load()
         self.train(resume_train=True)
 
     def train_on_generator(self, resume_train, samples_per_epoch, nb_epoch, max_q_size, nb_worker, pickle_safe):
@@ -186,37 +184,15 @@ class KerasNERModel(Model):
     def save(self):
         print('Saving entire model object...')
         self.save_only_model()
-        # self.save_w2v_reader()
-        # self.save_batch_generator()
 
     def save_only_model(self):
         print('Saving model only...')
         self.model.save(self.ner_model_fp)
 
-    # def save_w2v_reader(self):
-    #     with open(self.word2vec_reader_fp, 'wb') as output_f:
-    #         pickle.dump(self.w2v_reader, output_f, -1)
-    #
-    # def save_batch_generator(self):
-    #     with open(self.batch_generator_fp, 'wb') as output_f:
-    #         pickle.dump(self.batch_generator, output_f, -1)
-
     def load(self):
         print('Loading entire model object...')
-        self.w2v_reader = Word2VecReader()  # TODO: compare with saving python object that is less flexible
-        self.t2v_reader = Tag2VecReader()
         self.load_only_model()
-        # self.load_w2v_reader()
-        # self.load_batch_generator()
 
     def load_only_model(self):
         print('Loading model only...')
-        self.model = load_model(self.ner_model_fp)
-
-        # def load_w2v_reader(self):
-        #     with open(self.word2vec_reader_fp, 'rb') as in_f:
-        #         self.w2v_reader = pickle.load(in_f)
-        #
-        # def load_batch_generator(self):
-        #     with open(self.batch_generator_fp, 'rb') as in_f:
-        #         self.batch_generator = pickle.load(in_f)
+        self.model = load_model(self.ner_model_load_fp)

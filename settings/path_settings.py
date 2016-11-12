@@ -10,15 +10,16 @@ CORPUS_FILE_EXAMPLE = os.path.join(DATA_ROOT, 'sentences', 'cw_1_sentences_examp
 REPLACED_CORPUS_FILE = os.path.join(DATA_ROOT, 'replaced', 'cw_1_replaced.tsv')
 
 MODEL_FILE = os.path.join(MODEL_ROOT, 'model.h5')
+MODEL_TO_LOAD_FILE = os.path.join(MODEL_ROOT, 'model-to-load.h5')
 MODEL_CHECKPOINT_FILE = os.path.join(MODEL_ROOT, 'model-checkpoint.hdf5')  # using MODEL_FILE for now
 
-TEST_ROOT = os.path.join(DATA_ROOT, 'test')
-TEST_FILE = os.path.join(TEST_ROOT, 'test.txt')
-TEST_CHECKPOINT_FILE = os.path.join(TEST_ROOT, 'test-checkpoint.txt')
-
 TRAINING_ROOT = os.path.join(DATA_ROOT, 'training')
-TRAINING_FILE = os.path.join(TRAINING_ROOT, 'training.txt')
+TRAINING_FILE = os.path.join(TRAINING_ROOT, 'training.tsv')
 TRAINING_CHECKPOINT_FILE = os.path.join(TRAINING_ROOT, 'training-checkpoint.txt')
+
+TEST_ROOT = os.path.join(DATA_ROOT, 'test')
+TEST_FILE = os.path.join(TEST_ROOT, 'test.tsv')
+TEST_CHECKPOINT_FILE = os.path.join(TEST_ROOT, 'test-checkpoint.txt')
 
 WORD2VEC_ROOT = os.path.join(DATA_ROOT, 'word2vec')
 
