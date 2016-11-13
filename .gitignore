@@ -2,7 +2,7 @@
 .idea/
 
 data/*
-!data/.gitkeep
+!.gitkeep
 
 runner.py
 settings/net_settings.py

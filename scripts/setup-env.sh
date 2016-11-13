@@ -8,6 +8,8 @@ conda upgrade --all
 conda create -n py27 python=2.7 anaconda
 conda create -n py35 python=3.5 anaconda
 
+source activate py27
+
 conda install nltk -n py27
 
 
