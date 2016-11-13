@@ -1,11 +1,13 @@
 *.pyc
 .idea/
 
-data/*
+!data/*
+data/*/*
 !.gitkeep
 
-runner.py
 settings/net_settings.py
 settings/settings.py
+
+runner.py
 
 stanford-ner-2014-08-27
