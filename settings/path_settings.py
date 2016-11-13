@@ -22,12 +22,12 @@ TEST_FILE = os.path.join(TEST_ROOT, 'test.tsv')
 TEST_CHECKPOINT_FILE = os.path.join(TEST_ROOT, 'test-checkpoint.txt')
 
 WORD2VEC_ROOT = os.path.join(DATA_ROOT, 'word2vec')
+WORD2VEC_FILE = os.path.join(WORD2VEC_ROOT, 'w2v')
+WORD2VEC_TXT_FILE = os.path.join(WORD2VEC_ROOT, 'w2v.txt')
 
 MID_ROOT = os.path.join(DATA_ROOT, 'mid')
 MIDNAMES_FILE = os.path.join(MID_ROOT, 'mid_name_types.tsv')
 FIGER_ENTITY_MAPPING = os.path.join(MID_ROOT, 'entity-types-mapping')
-
-WORD2VEC_TXT_FILE = os.path.join(WORD2VEC_ROOT, 'w2v.txt')
 
 STANFORD_NER_FOLDER = os.path.join(PROJECT_ROOT, 'stanford-ner-2014-08-27')
 # [LOCATION, PERSON, ORGANIZATION]
