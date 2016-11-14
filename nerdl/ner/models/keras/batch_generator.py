@@ -36,6 +36,8 @@ class BatchGenerator:
                 initial_position = c_f.readline()
                 if not initial_position or not resume_gen or first_loop_end:
                     initial_position = 0
+                else:
+                    print('Initial Position: {} Byte'.format(initial_position))
 
                 f.seek(int(initial_position))
 
