@@ -37,7 +37,7 @@ def format_prediction(prediction):
         for tag_score in tags_scores.split(','):
             if tag_score == '':
                 tag = 'O'
-                score = 1
+                score = 1.0
             else:
                 tag, score = tag_score.split('@')
                 tag = tag.replace('/', '', 1)
