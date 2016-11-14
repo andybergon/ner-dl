@@ -13,6 +13,7 @@ class FigerNERModel(Model):
 
         if len(prediction) != len(tokenized_sentence):
             print('Prediction and tokenized sentence have different lengths!')
+            raise(ValueError, 'Sentence and Prediction have different lengths. Probably worng tokenization of FIGER.')
 
         prediction = cutoff_top(prediction)
 
@@ -50,14 +51,6 @@ def normalize_scores(prediction):
         for type, score in types_scores:
             new_type_score = (type, float(score) / sum_score)
             new_types_scores.append(new_type_score)
-    normalized_prediction.append((word, new_types_scores))
-
-    # for pred_tuple in prediction:
-    #     word, types_scores = pred_tuple
-    #     new_types_scores = []
-    #     for type, score in types_scores:
-    #         new_score = float(score) / sum_score
-    #         new_types_scores.append((type, new_score))
-    #     normalized_prediction.append(word, new_types_scores)
+        normalized_prediction.append((word, new_types_scores))
 
     return normalized_prediction

@@ -41,9 +41,12 @@ class EvaluatorMultiLabel:
                     words.append(word)
                     tags.append(tag.split(','))
                 else:
-                    sentence_num += 1
-
-                    predicted_tags_tuples = self.ner_model.predict_tokenized_sentence(words)
+                    try:
+                        predicted_tags_tuples = self.ner_model.predict_tokenized_sentence(words)
+                    except ValueError:
+                        words = []
+                        tags = []
+                        continue
                     predicted_tags = (i[1] for i in predicted_tags_tuples)  # can use generator (...) for performance
 
                     # self.calculate_strict(tags, predicted_tags)
@@ -52,6 +55,8 @@ class EvaluatorMultiLabel:
 
                     words = []
                     tags = []
+
+                    sentence_num += 1
 
                     if sentence_num % print_every == 0:
                         p, r, f1 = self.print_stats()
