@@ -4,16 +4,15 @@ from nerdl.ner.utils import tokenizer
 
 
 class FigerNERModel(Model):
-    def __init__(self, nb_classes=4):
+    def __init__(self):
         self.socket = FigerSocket()
 
     def predict_tokenized_sentence(self, tokenized_sentence):
         untokenized_sentence = tokenizer.untokenize_word(tokenized_sentence)
+
         prediction = self.socket.request_prediction(untokenized_sentence)
 
-        if len(prediction) != len(tokenized_sentence):
-            print('Prediction and tokenized sentence have different lengths!')
-            raise(ValueError, 'Sentence and Prediction have different lengths. Probably worng tokenization of FIGER.')
+        prediction = align_sentences(tokenized_sentence, prediction)
 
         prediction = cutoff_top(prediction)
 
@@ -23,6 +22,27 @@ class FigerNERModel(Model):
         tokenized_sentence = tokenizer.tokenize_word(sentence)
 
         return self.predict_tokenized_sentence(tokenized_sentence)
+
+
+def align_sentences(tokenized_sentence, prediction):
+    if len(tokenized_sentence) > len(prediction):
+        raise (ValueError, 'Sentence length > Prediction length. Probably wrong tokenization of FIGER.')
+    elif len(tokenized_sentence) < len(prediction):
+        raise (ValueError, 'Sentence length < Prediction length.')
+    else:
+        correct = True
+        for el in zip(tokenized_sentence, prediction):
+            if el[0] != el[1][0]:
+                correct = False
+
+        if not correct:
+            raise (ValueError, 'Sentence length == Prediction length, but different tokens.')
+            print('Equal length but not the same')
+
+
+    # TODO: try to allign sentences
+
+    return prediction
 
 
 def cutoff_top(prediction):

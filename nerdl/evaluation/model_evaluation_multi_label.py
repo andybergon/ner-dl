@@ -31,6 +31,7 @@ class EvaluatorMultiLabel:
         :return: Precision, Recall, F1 Score
         """
         sentence_num = 0
+        sentence_eval_num = 0
 
         words, tags = [], []
 
@@ -41,28 +42,31 @@ class EvaluatorMultiLabel:
                     words.append(word)
                     tags.append(tag.split(','))
                 else:
-                    try:
-                        predicted_tags_tuples = self.ner_model.predict_tokenized_sentence(words)
-                    except ValueError:
-                        words = []
-                        tags = []
-                        continue
-                    predicted_tags = (i[1] for i in predicted_tags_tuples)  # can use generator (...) for performance
-
-                    # self.calculate_strict(tags, predicted_tags)
-                    # self.calculate_loose_macro(tags, predicted_tags)
-                    self.calculate_loose_micro(tags, predicted_tags)
-
-                    words = []
-                    tags = []
-
                     sentence_num += 1
 
-                    if sentence_num % print_every == 0:
-                        p, r, f1 = self.print_stats()
+                    try:
+                        predicted_tags_tuples = self.ner_model.predict_tokenized_sentence(words)
 
-                    if sentence_num == test_sentences_nb:
-                        return p, r, f1
+                        predicted_tags = (i[1] for i in
+                                          predicted_tags_tuples)  # can use generator (...) for performance
+
+                        # self.calculate_strict(tags, predicted_tags)
+                        # self.calculate_loose_macro(tags, predicted_tags)
+                        self.calculate_loose_micro(tags, predicted_tags)
+                        sentence_eval_num += 1
+
+                    except ValueError:
+                        continue
+                    finally:
+                        words = []
+                        tags = []
+
+                        if sentence_num % print_every == 0:
+                            print('Evaluated sentences: {}/{}'.format(sentence_eval_num, sentence_num))
+                            p, r, f1 = self.print_stats()
+
+                        if sentence_num == test_sentences_nb:
+                            return p, r, f1
 
     def calculate_strict_micro(self, correct_tags, predicted_tags):
         pass
