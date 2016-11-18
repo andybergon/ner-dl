@@ -22,7 +22,7 @@ TEST_FILE = os.path.join(TEST_ROOT, 'test.tsv')
 TEST_CHECKPOINT_FILE = os.path.join(TEST_ROOT, 'test-checkpoint.txt')
 
 WORD2VEC_ROOT = os.path.join(DATA_ROOT, 'word2vec')
-WORD2VEC_FILE = os.path.join(WORD2VEC_ROOT, 'w2v')
+WORD2VEC_FILE = os.path.join(WORD2VEC_ROOT, 'w2v')  # not needed
 WORD2VEC_TXT_FILE = os.path.join(WORD2VEC_ROOT, 'w2v.txt')
 
 MID_ROOT = os.path.join(DATA_ROOT, 'mid')
