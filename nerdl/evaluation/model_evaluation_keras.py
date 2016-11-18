@@ -18,7 +18,8 @@ class EvaluatorKerasMultiLabel(EvaluatorMultiLabel):
             self.initialize_stats()  # resets stats
             cutoffs_stats[cutoff] = p, r, f1
 
+        print('Easy Excel Import:')
         for k, v in sorted(cutoffs_stats.items()):
-            print(k, v)
+            print('{}\t{}\t{}\t{}'.format(k, v[0], v[1], v[2]))
 
         return cutoffs_stats
