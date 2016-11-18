@@ -1,8 +1,8 @@
 #!/bin/bash
 # set -x;
 
-# copy nltk_download.py, keras.json, data/
-
+sudo yum install git
+git clone https://github.com/andybergon/ner-dl.git
 
 wget https://repo.continuum.io/archive/Anaconda2-4.2.0-Linux-x86_64.sh
 bash Anaconda2-4.2.0-Linux-x86_64.sh -b -p $HOME/anaconda2
@@ -12,7 +12,7 @@ export PATH=$HOME/anaconda2/bin:$PATH
 conda upgrade --all
 
 conda install nltk
-./nltk_download.py
+ner-dl/scripts/nltk_download.py
 
 conda install scipy numpy wheel pandas matplotlib scikit-learn -y # All requested packages already installed.
 
@@ -24,10 +24,6 @@ conda install -c conda-forge keras -y # 1.0.7
 # pip install keras
 
 mkdir $HOME/.keras
-mv keras.json $HOME/.keras/keras.json # get from git folder
+cp ner-dl/scripts/keras.json $HOME/.keras/keras.json # get from git folder
 
-
-sudo yum install git
-git clone https://github.com/andybergon/ner-dl.git
-
-ner-dl/scripts/nltk_download.py
+# data/ from s3
