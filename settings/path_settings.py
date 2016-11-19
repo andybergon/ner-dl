@@ -21,6 +21,10 @@ TEST_ROOT = os.path.join(DATA_ROOT, 'test')
 TEST_FILE = os.path.join(TEST_ROOT, 'test.tsv')
 TEST_CHECKPOINT_FILE = os.path.join(TEST_ROOT, 'test-checkpoint.txt')
 
+FIGER_ROOT = MODEL_ROOT = os.path.join(DATA_ROOT, 'figer')
+FIGER_DATASET_FILE = os.path.join(FIGER_ROOT, 'figer-dataset.tsv')
+FIGER_DATASET_CONVERTED_FILE = os.path.join(TRAINING_ROOT, 'figer', 'training-figer.tsv')
+
 WORD2VEC_ROOT = os.path.join(DATA_ROOT, 'word2vec')
 WORD2VEC_FILE = os.path.join(WORD2VEC_ROOT, 'w2v')  # not needed
 WORD2VEC_TXT_FILE = os.path.join(WORD2VEC_ROOT, 'w2v.txt')
