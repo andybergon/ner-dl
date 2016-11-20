@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 from keras.preprocessing import sequence
+from pandas.parser import QUOTE_NONE
 
 from settings import path_settings
 from settings import settings
@@ -22,7 +23,11 @@ class Word2VecReader:
         print('Loading Word2Vec...')
 
         # skiprows=1 to skip first line
-        self.wordvecs = pd.read_table(self.word2vec_txt_filepath, sep=' ', header=None, skiprows=1)
+        self.wordvecs = pd.read_table(self.word2vec_txt_filepath,
+                                      sep=' ',
+                                      header=None,
+                                      skiprows=1,
+                                      quoting=QUOTE_NONE)
         # <class 'pandas.core.frame.DataFrame'>
         # print(self.wordvecs.shape)
 
