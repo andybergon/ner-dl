@@ -114,7 +114,7 @@ class TestTrainingGenerator:
         skip_token_mid = False  # for double continue on token found
         skip_token_end = False  # for double continue on token found
 
-        words = tokenizer.tokenize_word(phrase)
+        words = tokenizer.tokenize_in_words(phrase)
         words_len = len(words)
 
         for idx, word in enumerate(words):
@@ -136,7 +136,7 @@ class TestTrainingGenerator:
                             entity_mid, entity_name, entity_types = get_all_entity_properties_by_id(mid)
                             entity_tag = self.tagger.tag(entity_types)
 
-                            entity_name_list = tokenizer.tokenize_word(entity_name)
+                            entity_name_list = tokenizer.tokenize_in_words(entity_name)
 
                             for entity_part in entity_name_list:
                                 tagged_words.append((entity_part, entity_tag))

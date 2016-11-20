@@ -155,7 +155,7 @@ class KerasNERModel(Model):
 
     # PREDICTION
     def predict_sentence(self, sentence, pad=False):
-        tokenized_sentence = tokenizer.tokenize_word(sentence)
+        tokenized_sentence = tokenizer.tokenize_in_words(sentence)
 
         return self.predict_tokenized_sentence(tokenized_sentence, pad)
 

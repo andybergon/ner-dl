@@ -27,7 +27,7 @@ class StanfordNERModel(Model):
         return mapped_tags
 
     def predict_sentence(self, sentence):
-        tokenized_sentence = nerdl.ner.utils.tokenizer.tokenize_word(sentence)
+        tokenized_sentence = nerdl.ner.utils.tokenizer.tokenize_in_words(sentence)
 
         return self.predict_tokenized_sentence(tokenized_sentence)
 

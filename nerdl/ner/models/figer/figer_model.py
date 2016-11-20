@@ -8,7 +8,7 @@ class FigerNERModel(Model):
         self.socket = FigerSocket()
 
     def predict_tokenized_sentence(self, tokenized_sentence):
-        untokenized_sentence = tokenizer.untokenize_word(tokenized_sentence)
+        untokenized_sentence = tokenizer.untokenize_words(tokenized_sentence)
 
         prediction = self.socket.request_prediction(untokenized_sentence)
 
@@ -19,7 +19,7 @@ class FigerNERModel(Model):
         return prediction
 
     def predict_sentence(self, sentence):
-        tokenized_sentence = tokenizer.tokenize_word(sentence)
+        tokenized_sentence = tokenizer.tokenize_in_words(sentence)
 
         return self.predict_tokenized_sentence(tokenized_sentence)
 
