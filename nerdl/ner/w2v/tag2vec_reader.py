@@ -98,6 +98,8 @@ class Tag2VecReader:
             return self.decode_prediction_max(pred_seq, settings.KERAS_MAX_DECODER_NB)
         elif decoder == 'top':
             return self.decode_prediction_top(pred_seq, settings.KERAS_TOP_DECODER_NB)
+        elif decoder == 'threshold':
+            return self.decode_prediction_threshold(pred_seq, settings.KERAS_THRESHOLD_NB)
         else:
             raise (NameError, 'Decoder not found!')
 
@@ -128,11 +130,14 @@ class Tag2VecReader:
 
                     top_nb -= 1
 
+            if len(word_pred_tags) > 1:
+                word_pred_tags = clean_tags(word_pred_tags)
+
             sentence_pred_tags.append(word_pred_tags)
 
         return sentence_pred_tags
 
-    def decode_prediction_top(self, pred_seq, cutoff_perc=0.95):
+    def decode_prediction_top(self, pred_seq, cutoff_perc=0.7):
         sentence_pred_tags = []
 
         for pred_word in pred_seq:
@@ -154,6 +159,33 @@ class Tag2VecReader:
 
             if len(word_pred_tags) > 1:
                 word_pred_tags = clean_tags(word_pred_tags)
+
+            sentence_pred_tags.append(word_pred_tags)
+
+        return sentence_pred_tags
+
+    def decode_prediction_threshold(self, pred_seq, threshold_value=0.3):
+        sentence_pred_tags = []
+
+        for pred_word in pred_seq:
+            word_pred_tags = []
+
+            for ix in np.argsort(pred_word)[::-1]:
+                class_vec = np.zeros(self.nb_classes, dtype=np.int32)
+                class_vec[ix] = 1
+
+                if tuple(class_vec.tolist()) in self.tag2vec_map:
+                    predicted_tag = self.tag2vec_map[tuple(class_vec.tolist())]
+
+                if pred_word[ix] > threshold_value:
+                    word_pred_tags.append(predicted_tag)
+                else:
+                    break
+
+            if len(word_pred_tags) > 1:
+                word_pred_tags = clean_tags(word_pred_tags)
+            elif len(word_pred_tags) < 1:
+                word_pred_tags = ['O']
 
             sentence_pred_tags.append(word_pred_tags)
 

@@ -61,17 +61,19 @@ class EvaluatorMultiLabel:
                         words = []
                         tags = []
 
-                        if sentence_num % print_every == 0 and print_every != 0:
+                        if print_every != 0 and sentence_num % print_every == 0:
                             print('Evaluated sentences: {}/{}'.format(sentence_eval_num, sentence_num))
                             self.print_stats()
 
-                        if sentence_num == test_sentences_nb and test_sentences_nb != 0:
+                        if test_sentences_nb != 0 and sentence_num == test_sentences_nb:
                             print('Evaluated sentences: {}/{}'.format(sentence_eval_num, sentence_num))
                             p, r, f1 = self.print_stats()
                             return p, r, f1
 
+            # if test_sentences_nb == 0 or sentence_num < print_every:
             print('Evaluated sentences: {}/{}'.format(sentence_eval_num, sentence_num))
             p, r, f1 = self.print_stats()
+
             return p, r, f1
 
     def calculate_strict_micro(self, correct_tags, predicted_tags):
