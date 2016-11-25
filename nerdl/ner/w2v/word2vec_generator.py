@@ -10,16 +10,19 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=lo
 
 
 class Word2VecGenerator(object):
-    def __init__(self, dirname):
-        self.dirname = dirname
+    def __init__(self, filepath, use_tokenizer=True):
+        self.filepath = filepath
+        self.use_tokenizer = use_tokenizer
 
     def __iter__(self):
-        for line in open(self.dirname):
-            yield tokenizer.tokenize_sentence(line)
-            # yield line.split()  # faster but not accurate
+        for line in open(self.filepath):
+            if self.use_tokenizer:
+                yield tokenizer.tokenize_in_words(line)
+            else:
+                yield line.split()  # faster but not accurate
 
 
-def generate_word2vec():
+def generate_word2vec(use_tokenizer=True, also_pickle_save=False):
     sentences_filepath = path_settings.REPLACED_CORPUS_FILE
     word2vec_filepath = path_settings.WORD2VEC_FILE
     word2vec_txt_filepath = path_settings.WORD2VEC_TXT_FILE
@@ -30,8 +33,14 @@ def generate_word2vec():
     window = settings.W2V_WINDOW
     workers = settings.W2V_WORKERS
 
-    sentences = Word2VecGenerator(sentences_filepath)  # memory-friendly iterator
-    model = gensim.models.Word2Vec(sentences, min_count, iter, size, window, workers)
+    sentences = Word2VecGenerator(sentences_filepath, use_tokenizer)  # memory-friendly iterator
+    model = gensim.models.Word2Vec(sentences=sentences,
+                                   min_count=min_count,
+                                   iter=iter,
+                                   size=size,
+                                   window=window,
+                                   workers=workers)
 
-    model.save(word2vec_filepath)
-    model.save_word2vec_format(word2vec_txt_filepath, binary=False)
+    model.save_word2vec_format(word2vec_txt_filepath)
+    if also_pickle_save:
+        model.save(word2vec_filepath)  # pickle-save
