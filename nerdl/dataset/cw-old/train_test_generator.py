@@ -3,10 +3,11 @@ import re
 from collections import Counter
 from itertools import islice
 
-import midnames
+import nerdl.dataset.midnames
+
+from nerdl.dataset.too_long_exception import TooLongException
 from nerdl.ner.utils import tokenizer
 from settings import path_settings
-from too_long_exception import TooLongException
 
 random.seed(0)
 
@@ -30,7 +31,7 @@ class TestTrainingGenerator:
         :return:
         """
 
-        corpus_fp = path_settings.CORPUS_FILE
+        corpus_fp = path_settings.CW_CORPUS_FILE
         training_fp = path_settings.TRAINING_FILE
         test_fp = path_settings.TEST_FILE
 
@@ -166,7 +167,7 @@ class TestTrainingGenerator:
 
 # support functions
 def substitute_midnames(lines_num=0, remove_duplicate_lines=True, remove_duplicate_lines_after_sub=True):
-    corpus_file = path_settings.CORPUS_FILE
+    corpus_file = path_settings.CW_CORPUS_FILE
     replaced_file = path_settings.REPLACED_CORPUS_FILE
 
     duplicate_lines_num = 0
@@ -254,7 +255,7 @@ def get_entity_types_by_id(entity_id):
 # {m.01000036} => ('m.01000036', 'God Has Given Me' [music.single,music.recording,common.topic])
 def get_all_entity_properties_by_id(entity_id):
     try:
-        row = midnames.get_row_by_id(entity_id)
+        row = nerdl.dataset.midnames.get_row_by_id(entity_id)
     except ValueError:
         raise
 
