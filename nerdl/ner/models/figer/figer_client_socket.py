@@ -9,9 +9,13 @@ class FigerSocket:
     def request_prediction(self, sentence, recv_byte=2048, debug=0):
         sentence += '\n'  # needed for TCP protocol
 
-        self.figer_socket.send(sentence)
+        encoded_sentence = unicode(sentence, 'utf-8').encode('utf-8')  # workaround
+        try:
+            self.figer_socket.send(encoded_sentence)
+        except ValueError as e:
+            print('Value Error - {}'.format(e))
         if debug != 0:
-            print('Sent: {}'.format(sentence))
+            print('Sent: {}'.format(encoded_sentence))
 
         response = self.figer_socket.recv(recv_byte)
         if debug != 0:
@@ -44,7 +48,7 @@ def format_prediction(prediction):
                 tag = tag.replace('/', '.')
                 tag = tag.upper()
 
-            tags_scores_formatted.append((tag,score))
+            tags_scores_formatted.append((tag, score))
 
         formatted_prediction.append((word, tags_scores_formatted))
 

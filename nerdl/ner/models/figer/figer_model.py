@@ -7,6 +7,9 @@ class FigerNERModel(Model):
     def __init__(self):
         self.socket = FigerSocket()
 
+    def __del__(self):
+        self.socket.close()
+
     def predict_tokenized_sentence(self, tokenized_sentence):
         untokenized_sentence = tokenizer.untokenize_words(tokenized_sentence)
 
@@ -26,9 +29,10 @@ class FigerNERModel(Model):
 
 def align_sentences(tokenized_sentence, prediction):
     if len(tokenized_sentence) > len(prediction):
+        # TODO: last '.' is not splitted in prediction
         raise (ValueError, 'Sentence length > Prediction length. Probably wrong tokenization of FIGER.')
     elif len(tokenized_sentence) < len(prediction):
-        raise (ValueError, 'Sentence length < Prediction length.')
+        raise (ValueError, 'Sentence length < Prediction length.')  # rare
     else:
         correct = True
         for el in zip(tokenized_sentence, prediction):
@@ -36,11 +40,8 @@ def align_sentences(tokenized_sentence, prediction):
                 correct = False
 
         if not correct:
-            raise (ValueError, 'Sentence length == Prediction length, but different tokens.')
+            raise (ValueError, 'Sentence length == Prediction length, but different tokens.')  # rare
             print('Equal length but not the same')
-
-
-    # TODO: try to allign sentences
 
     return prediction
 
