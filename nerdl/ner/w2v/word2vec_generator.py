@@ -23,7 +23,7 @@ class Word2VecGenerator(object):
 
 
 def generate_word2vec(use_tokenizer=True, also_pickle_save=False):
-    sentences_filepath = path_settings.REPLACED_CORPUS_FILE
+    sentences_filepath = path_settings.SENTENCES_FILE
     word2vec_filepath = path_settings.WORD2VEC_FILE
     word2vec_txt_filepath = path_settings.WORD2VEC_TXT_FILE
 

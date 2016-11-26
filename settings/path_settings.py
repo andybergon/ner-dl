@@ -17,6 +17,7 @@ MODEL_CHECKPOINT_FILE = os.path.join(MODEL_ROOT, 'model-checkpoint.hdf5')  # usi
 
 DATASET_ROOT = os.path.join(DATA_ROOT, 'dataset')
 CW_DATASET_CW_TAGS_FILE = os.path.join(DATASET_ROOT, 'cw-dataset', 'cw-dataset-cw-tags.tsv')
+CW_DATASET_FG_TAGS_FILE = os.path.join(DATASET_ROOT, 'cw-dataset', 'cw-dataset-figer-tags.tsv')
 FIGER_DATASET_CW_TAGS_FILE = os.path.join(DATASET_ROOT, 'figer-dataset', 'figer-dataset-cw-tags.tsv')
 FIGER_DATASET_FG_TAGS_FILE = os.path.join(DATASET_ROOT, 'figer-dataset', 'figer-dataset-figer-tags.tsv')
 
@@ -38,9 +39,14 @@ FIGER_TRAIN_FILE = os.path.join(TRAINING_ROOT, 'figer', 'figer-train.tsv')
 FIGER_TEST_FILE = os.path.join(TEST_ROOT, 'figer', 'figer-test.tsv')
 FIGER_ENTITY_MAPPING = os.path.join(FIGER_ROOT, 'entity-types-mapping')
 FIGER_W2V_TXT_FILE = os.path.join(WORD2VEC_ROOT, 'figer', 'w2v.txt')
+FIGER_GOLD_FILE = os.path.join(FIGER_ROOT, 'exp.label')
+
+FIGER_GOLD_BIO_FILE = os.path.join(TEST_ROOT, 'figer-gold', 'figer-gold-bio.tsv')
+FIGER_GOLD_NOT_BIO_FILE = os.path.join(TEST_ROOT, 'figer-gold', 'figer-gold-not-bio.tsv')
 
 FIGER_SENTENCES_FILE = os.path.join(DATA_ROOT, 'sentences', 'figer', 'figer-sentences.txt')
 CW_SENTENCES_FILE = os.path.join(DATA_ROOT, 'sentences', 'cw', 'cw-sentences.txt')
+SENTENCES_FILE = CW_SENTENCES_FILE
 
 STANFORD_NER_FOLDER = os.path.join(PROJECT_ROOT, 'stanford-ner-2014-08-27')
 # [LOCATION, PERSON, ORGANIZATION]
