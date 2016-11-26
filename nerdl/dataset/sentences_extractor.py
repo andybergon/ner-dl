@@ -21,3 +21,5 @@ class SentencesExtractor:
 
                     if current_sentence == sentence_nb:
                         return
+
+            print('Extracted ALL #{} Sentences'.format(current_sentence))
