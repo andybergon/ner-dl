@@ -1,3 +1,5 @@
+import time
+
 import numpy as np
 import pandas as pd
 from keras.preprocessing import sequence
@@ -20,7 +22,8 @@ class Word2VecReader:
             self.load_word2vec()
 
     def load_word2vec(self):
-        print('Loading Word2Vec...')
+        print('> Loading Word2Vec...')
+        start = time.time()
 
         # skiprows=1 to skip first line
         self.wordvecs = pd.read_table(self.word2vec_txt_filepath,
@@ -34,7 +37,8 @@ class Word2VecReader:
         for ix, row in self.wordvecs.iterrows():
             self.word2vec_map[row[0]] = ix
 
-        print('Word2Vec loaded.')
+        end = time.time()
+        print('< Word2Vec loaded in {} seconds.'.format(str(end - start)))
 
         # axis=1 for columns
         self.wordvecs = self.wordvecs.drop(self.wordvecs.columns[0], axis=1).as_matrix()
