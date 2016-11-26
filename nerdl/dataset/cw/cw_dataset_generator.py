@@ -128,9 +128,9 @@ class CWDatasetGenerator:
 
                             for i, entity_name_part in enumerate(entity_name_list):
                                 if i == 0:
-                                    entity_tag = ''.join(['B-', ','.join(entity_types)])
+                                    entity_tag = ''.join(['B-', ','.join(entity_types).upper()])
                                 else:
-                                    entity_tag = ''.join(['I-', ','.join(entity_types)])
+                                    entity_tag = ''.join(['I-', ','.join(entity_types).upper()])
 
                                 tagged_words.append((entity_name_part, entity_tag))
 
