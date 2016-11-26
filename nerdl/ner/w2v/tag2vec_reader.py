@@ -164,26 +164,33 @@ class Tag2VecReader:
 
         return sentence_pred_tags
 
-    def decode_prediction_threshold(self, pred_seq, threshold_value=0.3):
+    def decode_prediction_threshold(self, pred_seq, threshold_value=0.1):
         sentence_pred_tags = []
 
         for pred_word in pred_seq:
             word_pred_tags = []
 
-            for ix in np.argsort(pred_word)[::-1]:
-                class_vec = np.zeros(self.nb_classes, dtype=np.int32)
-                class_vec[ix] = 1
+            sorted_indexes = np.argsort(pred_word)[::-1]
 
-                if tuple(class_vec.tolist()) in self.tag2vec_map:
-                    predicted_tag = self.tag2vec_map[tuple(class_vec.tolist())]
+            # for debugging
+            # index_score_type = zip(sorted_indexes, pred_word[sorted_indexes], map(self.index_to_type, sorted_indexes))
 
+            for ix in sorted_indexes:
                 if pred_word[ix] > threshold_value:
-                    word_pred_tags.append(predicted_tag)
+                    class_vec = np.zeros(self.nb_classes, dtype=np.int32)
+                    class_vec[ix] = 1
+
+                    if tuple(class_vec.tolist()) in self.tag2vec_map:
+                        predicted_tag = self.tag2vec_map[tuple(class_vec.tolist())]
+                        word_pred_tags.append(predicted_tag)
+                    else:
+                        print('Can\'t decode tag!')
                 else:
                     break
 
             if len(word_pred_tags) > 1:
-                word_pred_tags = clean_tags(word_pred_tags)
+                pass
+                # word_pred_tags = clean_tags(word_pred_tags)
             elif len(word_pred_tags) < 1:
                 word_pred_tags = ['O']
 
@@ -191,19 +198,78 @@ class Tag2VecReader:
 
         return sentence_pred_tags
 
+    # used in debugging
+    def index_to_type(self, index):
+        class_vec = np.zeros(self.nb_classes, dtype=np.int32)
+        class_vec[index] = 1
+
+        if tuple(class_vec.tolist()) in self.tag2vec_map:
+            predicted_tag = self.tag2vec_map[tuple(class_vec.tolist())]
+
+        return predicted_tag
+
 
 def clean_tags(predicted_tags):
+    tag_cleaner = settings.KERAS_TAG_CLEANER
+
+    if tag_cleaner == 'O-prevail-or-remove':
+        return clean_tags_o_prevail_or_remove(predicted_tags)
+    elif tag_cleaner == 'remove-O-not-alone-and-less':
+        return clean_tags_remove_o_not_alone_and_less(predicted_tags)
+    elif tag_cleaner == 'remove-O-not-alone':
+        return clean_tags_remove_o_not_alone(predicted_tags)
+    else:
+        return predicted_tags
+
+
+def clean_tags_o_prevail_or_remove(predicted_tags):
     """
     Manage O and NIL tags. Removes other tags if first. Removes O/NIL tag if not first.
     :param predicted_tags:
     :return:
     """
-
     if 'O' in predicted_tags:
         if predicted_tags[0] == 'O':
             predicted_tags = ['O']  # can remove all other elements so we don't need to return a new list
         else:
             predicted_tags.remove('O')
+
+    if 'NIL' in predicted_tags:
+        if predicted_tags[0] == 'NIL':
+            predicted_tags = ['NIL']  # can remove all other elements so we don't need to return a new list
+        else:
+            predicted_tags.remove('NIL')
+
+    return predicted_tags
+
+
+def clean_tags_remove_o_not_alone_and_less(predicted_tags):
+    """
+    Removes O tag if not alone and other tags with less score.
+    :param predicted_tags:
+    :return:
+    """
+    if len(predicted_tags) > 1 and 'O' in predicted_tags:
+        o_ix = predicted_tags.index('O')
+        predicted_tags[:o_ix]
+
+    if 'NIL' in predicted_tags:
+        if predicted_tags[0] == 'NIL':
+            predicted_tags = ['NIL']  # can remove all other elements so we don't need to return a new list
+        else:
+            predicted_tags.remove('NIL')
+
+    return predicted_tags
+
+
+def clean_tags_remove_o_not_alone(predicted_tags):
+    """
+    Removes always O tag if not alone.
+    :param predicted_tags:
+    :return:
+    """
+    if len(predicted_tags) > 1 and 'O' in predicted_tags:
+        predicted_tags.remove('O')
 
     if 'NIL' in predicted_tags:
         if predicted_tags[0] == 'NIL':

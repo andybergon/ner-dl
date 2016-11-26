@@ -45,10 +45,12 @@ EVALUATION_CLASS_LIST = FIGER_CLASS_LIST
 KERAS_DECODER = 'threshold'  # 'max' or 'top' or 'threshold'
 KERAS_MAX_DECODER_NB = 1
 KERAS_TOP_DECODER_NB = 0.7
-KERAS_THRESHOLD_NB = 0.3
+KERAS_THRESHOLD_NB = 0.1
+
+KERAS_TAG_CLEANER = 'O-prevail-or-remove'  # 'O-prevail-or-remove', 'remove-O-not-alone-and-less', 'remove-O-not-alone'
 
 # keras training
-KERAS_TRAIN_CP_FREQ = 10
+KERAS_TRAIN_CP_FREQ = 10  # batch generator checkpoint frequency
 
 # keras testing
 KERAS_TEST_MAXS = [1, 2, 3]
