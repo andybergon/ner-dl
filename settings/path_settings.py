@@ -40,6 +40,7 @@ FIGER_TEST_FILE = os.path.join(TEST_ROOT, 'figer', 'figer-test.tsv')
 FIGER_ENTITY_MAPPING = os.path.join(FIGER_ROOT, 'entity-types-mapping')
 FIGER_W2V_TXT_FILE = os.path.join(WORD2VEC_ROOT, 'figer', 'w2v.txt')
 FIGER_GOLD_FILE = os.path.join(FIGER_ROOT, 'exp.label')
+FIGER_GOLD_OUTPUT_FILE = os.path.join(FIGER_ROOT, 'exp.out')
 
 FIGER_GOLD_BIO_FILE = os.path.join(TEST_ROOT, 'figer-gold', 'figer-gold-bio.tsv')
 FIGER_GOLD_NOT_BIO_FILE = os.path.join(TEST_ROOT, 'figer-gold', 'figer-gold-not-bio.tsv')
