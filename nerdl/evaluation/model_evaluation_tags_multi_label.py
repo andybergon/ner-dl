@@ -46,16 +46,17 @@ class EvaluatorMultiLabel:
 
                     try:
                         predicted_tags_tuples = self.ner_model.predict_tokenized_sentence(words)
+                        predicted_tags = (i[1] for i in predicted_tags_tuples)  # generator (...) for performance
 
-                        predicted_tags = (i[1] for i in
-                                          predicted_tags_tuples)  # can use generator (...) for performance
+                        word_tag_prediction = zip(words, tags, predicted_tags)
 
-                        # self.calculate_strict(tags, predicted_tags)
-                        # self.calculate_loose_macro(tags, predicted_tags)
-                        self.calculate_loose_micro(tags, predicted_tags)
+                        # self.calculate_strict(word_tag_prediction)
+                        # self.calculate_loose_macro(word_tag_prediction)
+                        self.calculate_loose_micro(word_tag_prediction)
                         sentence_eval_num += 1
 
-                    except ValueError:
+                    except ValueError as e:
+                        print('ValueError - {}'.format(e))
                         continue
                     finally:
                         words = []
@@ -76,15 +77,15 @@ class EvaluatorMultiLabel:
 
             return p, r, f1
 
-    def calculate_strict_micro(self, correct_tags, predicted_tags):
+    def calculate_strict_micro(self, word_tag_prediction):
         pass
 
-    def calculate_loose_macro(self, correct_tags, predicted_tags):
+    def calculate_loose_macro(self, word_tag_prediction):
         pass
 
-    def calculate_loose_micro(self, correct_tags, predicted_tags):
-        # zip ok if lists not too big
-        for correct, predicted in zip(correct_tags, predicted_tags):
+    def calculate_loose_micro(self, word_tag_prediction):
+        for word, correct, predicted in word_tag_prediction:
+
             for correct_tag in correct:
                 if correct_tag in predicted:
                     self.lmi_correct[correct_tag][1] += 1
