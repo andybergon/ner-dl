@@ -7,9 +7,10 @@ DATA_ROOT = os.path.join(PROJECT_ROOT, 'data')
 MID_ROOT = os.path.join(DATA_ROOT, 'mid')
 MIDNAMES_FILE = os.path.join(MID_ROOT, 'mid_name_types.tsv')
 
-CW_CORPUS_FILE = os.path.join(DATA_ROOT, 'cw', 'cw_1_corpus.tsv')
-CW_CORPUS_FILE_EXAMPLE = os.path.join(DATA_ROOT, 'cw', 'cw_1_corpus_example.tsv')
-CW_TOP250_TYPES_FILE = os.path.join(DATA_ROOT, 'cw', 'cw-top275-annotated-types.tsv')
+CW_ROOT = os.path.join(DATA_ROOT, 'cw')
+CW_CORPUS_FILE = os.path.join(CW_ROOT, 'cw_1_corpus.tsv')
+CW_CORPUS_FILE_EXAMPLE = os.path.join(CW_ROOT, 'cw_1_corpus_example.tsv')
+CW_TOP250_TYPES_FILE = os.path.join(CW_ROOT, 'cw-top275-annotated-types.tsv')
 
 MODEL_ROOT = os.path.join(DATA_ROOT, 'model')
 MODEL_FILE = os.path.join(MODEL_ROOT, 'model.h5')
@@ -25,26 +26,28 @@ FIGER_DATASET_FG_TAGS_FILE = os.path.join(DATASET_ROOT, 'figer-dataset', 'figer-
 TRAINING_ROOT = os.path.join(DATA_ROOT, 'training')
 TRAINING_FILE = os.path.join(TRAINING_ROOT, 'training.tsv')
 TRAINING_CHECKPOINT_FILE = os.path.join(TRAINING_ROOT, 'training-checkpoint.txt')
+CW_TRAIN_FILE = os.path.join(TRAINING_ROOT, 'cw', 'cw-train.tsv')
+FIGER_TRAIN_FILE = os.path.join(TRAINING_ROOT, 'figer', 'figer-train.tsv')
 
 TEST_ROOT = os.path.join(DATA_ROOT, 'test')
 TEST_FILE = os.path.join(TEST_ROOT, 'test.tsv')
-TEST_CHECKPOINT_FILE = os.path.join(TEST_ROOT, 'test-checkpoint.txt')
+TEST_CHECKPOINT_FILE = os.path.join(TEST_ROOT, 'test-checkpoint.txt')  # not needed?
+CW_TEST_FILE = os.path.join(TEST_ROOT, 'cw', 'cw-train.tsv')
+FIGER_TEST_FILE = os.path.join(TEST_ROOT, 'figer', 'figer-test.tsv')
+
+FIGER_GOLD_BIO_FILE = os.path.join(TEST_ROOT, 'figer-gold', 'figer-gold-bio.tsv')
+FIGER_GOLD_NOT_BIO_FILE = os.path.join(TEST_ROOT, 'figer-gold', 'figer-gold-not-bio.tsv')
 
 WORD2VEC_ROOT = os.path.join(DATA_ROOT, 'word2vec')
 WORD2VEC_FILE = os.path.join(WORD2VEC_ROOT, 'w2v')  # not needed
 WORD2VEC_TXT_FILE = os.path.join(WORD2VEC_ROOT, 'w2v.txt')
 CW_W2V_TXT_FILE = os.path.join(WORD2VEC_ROOT, 'cw', 'w2v.txt')
+FIGER_W2V_TXT_FILE = os.path.join(WORD2VEC_ROOT, 'figer', 'w2v.txt')
 
 FIGER_ROOT = os.path.join(DATA_ROOT, 'figer')
-FIGER_TRAIN_FILE = os.path.join(TRAINING_ROOT, 'figer', 'figer-train.tsv')
-FIGER_TEST_FILE = os.path.join(TEST_ROOT, 'figer', 'figer-test.tsv')
 FIGER_ENTITY_MAPPING = os.path.join(FIGER_ROOT, 'entity-types-mapping')
-FIGER_W2V_TXT_FILE = os.path.join(WORD2VEC_ROOT, 'figer', 'w2v.txt')
 FIGER_GOLD_FILE = os.path.join(FIGER_ROOT, 'exp.label')
 FIGER_GOLD_OUTPUT_FILE = os.path.join(FIGER_ROOT, 'exp.out')
-
-FIGER_GOLD_BIO_FILE = os.path.join(TEST_ROOT, 'figer-gold', 'figer-gold-bio.tsv')
-FIGER_GOLD_NOT_BIO_FILE = os.path.join(TEST_ROOT, 'figer-gold', 'figer-gold-not-bio.tsv')
 
 FIGER_SENTENCES_FILE = os.path.join(DATA_ROOT, 'sentences', 'figer', 'figer-sentences.txt')
 CW_SENTENCES_FILE = os.path.join(DATA_ROOT, 'sentences', 'cw', 'cw-sentences.txt')
