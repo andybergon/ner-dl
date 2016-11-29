@@ -18,11 +18,13 @@ class CWDatasetConverter:
                             tags = tags.replace('/', '', 1).replace(',/', ',').replace('/', '.').upper()
                             tags = tags.split(',')
                             tags = self.tagger.tag(tags)
+                            tags = ','.join(tags)
                             tags = bio + '-' + tags
                         else:
                             tags = tags.replace('/', '', 1).replace(',/', ',').replace('/', '.').upper()
                             tags = tags.split(',')
                             tags = self.tagger.tag(tags)
+                            tags = ','.join(tags)
 
                     f_out.write('{}\t{}\n'.format(word, tags))
                 else:

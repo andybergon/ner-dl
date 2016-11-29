@@ -7,7 +7,6 @@ class StanfordFourTagger(Tagger):
 
     def tag(self, entity_types):
         stanford_types = convert_freebase_to_stanford_types(entity_types)
-        stanford_types = ','.join(stanford_types)
         return stanford_types
 
 

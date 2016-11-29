@@ -19,7 +19,6 @@ class FigerTagger(Tagger):
 
     def tag(self, entity_types):
         figer_types = self.convert_freebase_to_figer_types(entity_types)
-        figer_types = ','.join(figer_types)
         return figer_types
 
     def convert_freebase_to_figer_types(self, freebase_types):

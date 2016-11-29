@@ -136,6 +136,7 @@ class TestTrainingGenerator:
                         try:
                             entity_mid, entity_name, entity_types = get_all_entity_properties_by_id(mid)
                             entity_tag = self.tagger.tag(entity_types)
+                            entity_tag = ','.join(entity_tag)
 
                             entity_name_list = tokenizer.tokenize_in_words(entity_name)
 

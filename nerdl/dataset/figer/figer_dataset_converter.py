@@ -16,6 +16,7 @@ class FigerDatasetConverter:
                         tags = tags.replace('/', '', 1).replace(',/', ',').replace('/', '.')
                         tags = tags.split(',')
                         tags = self.tagger.tag(tags)
+                        tags = ','.join(tags)
                     f_out.write('{}\t{}\n'.format(word, tags))
                 else:
                     f_out.write('\n')
