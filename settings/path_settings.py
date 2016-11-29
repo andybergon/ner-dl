@@ -32,7 +32,7 @@ FIGER_TRAIN_FILE = os.path.join(TRAINING_ROOT, 'figer', 'figer-train.tsv')
 TEST_ROOT = os.path.join(DATA_ROOT, 'test')
 TEST_FILE = os.path.join(TEST_ROOT, 'test.tsv')
 TEST_CHECKPOINT_FILE = os.path.join(TEST_ROOT, 'test-checkpoint.txt')  # not needed?
-CW_TEST_FILE = os.path.join(TEST_ROOT, 'cw', 'cw-train.tsv')
+CW_TEST_FILE = os.path.join(TEST_ROOT, 'cw', 'cw-test.tsv')
 FIGER_TEST_FILE = os.path.join(TEST_ROOT, 'figer', 'figer-test.tsv')
 
 FIGER_GOLD_BIO_FILE = os.path.join(TEST_ROOT, 'figer-gold', 'figer-gold-bio.tsv')

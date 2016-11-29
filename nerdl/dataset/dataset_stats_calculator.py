@@ -23,7 +23,7 @@ class DatasetStatsCalculator:
                     current_sentence += 1
                     current_sentence_length = 0
 
-                    if current_sentence % print_every == 0:
+                    if print_every != 0 and current_sentence % print_every == 0:
                         print_sentences_length_stats(len2occ)
 
                     if current_sentence == sentence_nb:
