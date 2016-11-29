@@ -126,13 +126,13 @@ class KerasNERModel(Model):
         generator = self.batch_generator.generate_training_batch(resume_gen=resume_train)
 
         cp_fp = path_settings.MODEL_FILE
-        checkpoint = ModelCheckpoint(cp_fp, monitor='val_acc', verbose=1, save_best_only=False, mode='max')
+        checkpoint = ModelCheckpoint(cp_fp, monitor='val_acc', verbose=2, save_best_only=False, mode='max')
         callbacks = [checkpoint]
 
         self.model.fit_generator(generator=generator,
                                  samples_per_epoch=samples_per_epoch,
                                  nb_epoch=nb_epoch,
-                                 verbose=1,
+                                 verbose=2,
                                  callbacks=callbacks,
                                  max_q_size=max_q_size,
                                  nb_worker=nb_worker,
