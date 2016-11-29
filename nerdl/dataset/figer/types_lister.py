@@ -1,5 +1,4 @@
 from settings import path_settings
-import operator
 
 
 def list_raw_figer_types():
@@ -38,5 +37,11 @@ def list_figer_types():
     return figer_types
 
 
-if __name__ == '__main__':
-    print(list_raw_figer_types())
+def list_top275_cw_types():
+    cw_top_types = []
+    with open(path_settings.CW_TOP250_TYPES_FILE, 'r') as list_f:
+        for line in list_f:
+            cw_top_type = line.rstrip('\n')
+            cw_top_types.append(cw_top_type)
+
+    return cw_top_types
