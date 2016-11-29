@@ -22,11 +22,12 @@ np.random.seed(0)  # for debugging
 
 
 class KerasNERModel(Model):
-    def __init__(self):
+    def __init__(self, tagger=None):
         self.model = None
 
         self.w2v_reader = Word2VecReader()  # TODO: compare with saving python object that is less flexible
         self.t2v_reader = Tag2VecReader()
+        self.tagger = tagger
         self.s2e = Sentence2Entities(auto_detect=True)  # when all migrated to BIO tag, pass True
 
         self.batch_generator = None  # can be a parameter of methods
@@ -76,7 +77,7 @@ class KerasNERModel(Model):
     # TRAINING
     def train(self, use_generator=True, resume_train=False):
 
-        batch_generator = BatchGenerator(self.w2v_reader, self.t2v_reader)
+        batch_generator = BatchGenerator(self.w2v_reader, self.t2v_reader, self.tagger)
         self.batch_generator = batch_generator
 
         dropout = ns.DROPOUT

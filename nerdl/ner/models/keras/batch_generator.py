@@ -5,9 +5,10 @@ from settings import settings
 
 
 class BatchGenerator:
-    def __init__(self, word2vec_reader, tag2vec_reader):
+    def __init__(self, word2vec_reader, tag2vec_reader, tagger=None):
         self.word2vec_reader = word2vec_reader
         self.tag2vec_reader = tag2vec_reader
+        self.tagger = tagger
 
         self.training_fp = path_settings.TRAINING_FILE
         self.test_fp = path_settings.TEST_FILE
@@ -61,8 +62,12 @@ class BatchGenerator:
                             yield (X, Y)
                     else:
                         try:
-                            word, tag = line.replace('\n', '').split('\t')
-                            word_tag_list.append((word, tag))
+                            word, tags = line.replace('\n', '').split('\t')
+                            if self.tagger is not None:
+                                # TODO: entity detection also: change to 'remove_bi_tag=True' and split also on '-'
+                                tags = self.tagger.tag_string(tags, remove_bi_tag=True)
+                                tags = tags.split(',')
+                            word_tag_list.append((word, tags))
                         except ValueError as e:
                             print('Error at sentence #{}.\nError message: {}.\nLine: {}.'
                                   .format(sentence_num, e.message, line))

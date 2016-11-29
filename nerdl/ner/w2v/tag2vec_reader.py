@@ -74,17 +74,22 @@ class Tag2VecReader:
         return self.tag2vec_map[tag]
 
     def encode_tags_list(self, tags):
-        if len(tags) <= 1:
+        tags_len = len(tags)
+
+        if tags_len == 1:
             tags_vector = self.tag2vec_map[tags[0]]  # avoid useless calculations, not strictly needed
-        else:
+        elif tags_len != 0:
             tags_vector = self.encode_multiple_tags(tags)
+        else:
+            tags_vector = self.tag2vec_map['O']
+            # raise ValueError
 
         return tags_vector
 
     def encode_multiple_tags(self, tags):
         vector = [0] * self.nb_classes
 
-        for tag in tags.split(','):
+        for tag in tags:
             current_vector = list(self.tag2vec_map[tag])
             vector = map(sum, zip(vector, current_vector))
 
