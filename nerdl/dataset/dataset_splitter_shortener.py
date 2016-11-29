@@ -10,6 +10,7 @@ class DatasetSplitterShortener:
         self.test_fp = test_fp
 
     def split_and_shorten(self, min_len=15, max_len=50, test_perc=0.2, sentence_nb=0, print_every=100000):
+        curr_sentence_nb = 0
         processed_sentences_nb = 0
         tagged_words = []
 
@@ -19,6 +20,7 @@ class DatasetSplitterShortener:
                     word, tag = line.rstrip().split('\t')
                     tagged_words.append((word, tag))
                 else:
+                    curr_sentence_nb += 1
                     sentence_len = len(tagged_words)
                     if min_len <= sentence_len <= max_len:
                         if random.uniform(0, 1) > test_perc:
@@ -32,13 +34,16 @@ class DatasetSplitterShortener:
 
                         processed_sentences_nb += 1
 
-                        if processed_sentences_nb % print_every == 0:
-                            print('Writing Sentence #{}/{}.'.format(processed_sentences_nb, sentence_nb))
+                        if print_every != 0 and processed_sentences_nb % print_every == 0:
+                            print('Writing Sentence #{}/{}, {} processed.'
+                                  .format(processed_sentences_nb, sentence_nb, curr_sentence_nb))
 
                         if processed_sentences_nb == sentence_nb:
-                            print('Wrote #{}/{} sentences.'.format(processed_sentences_nb, sentence_nb))
+                            print('Wrote #{}/{} sentences, {} processed.'
+                                  .format(processed_sentences_nb, sentence_nb, curr_sentence_nb))
                             return
 
                     tagged_words = []  # reset current sentence in any case
 
-        print('Wrote ALL sentences. (#{}/{})'.format(processed_sentences_nb, sentence_nb))
+        print('Wrote ALL sentences. (#{}/{}, {} processed)'
+              .format(processed_sentences_nb, sentence_nb, curr_sentence_nb))
