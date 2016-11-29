@@ -3,7 +3,15 @@
 
 !data/*
 data/*/*
-!.gitkeep
+!data/cw/cw-top275-annotated-types.tsv
+!data/dataset/cw-dataset/cw-dataset-cw-tags-example.tsv
+!data/dataset/figer-dataset/figer-dataset-cw-tags.tsv
+!data/dataset/figer-dataset/figer-dataset-figer-tags.tsv
+!data/figer/*
+!data/mid/mid_name_types_example.tsv
+!data/word2vec/cw/.gitkeep
+!data/word2vec/figer/.gitkeep
+!*.gitkeep
 
 settings/net_settings.py
 settings/settings.py
