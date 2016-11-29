@@ -9,6 +9,7 @@ MIDNAMES_FILE = os.path.join(MID_ROOT, 'mid_name_types.tsv')
 
 CW_CORPUS_FILE = os.path.join(DATA_ROOT, 'cw', 'cw_1_corpus.tsv')
 CW_CORPUS_FILE_EXAMPLE = os.path.join(DATA_ROOT, 'cw', 'cw_1_corpus_example.tsv')
+CW_TOP250_TYPES_FILE = os.path.join(DATA_ROOT, 'cw', 'cw-top275-annotated-types.tsv')
 
 MODEL_ROOT = os.path.join(DATA_ROOT, 'model')
 MODEL_FILE = os.path.join(MODEL_ROOT, 'model.h5')
