@@ -2,6 +2,22 @@ class Tagger:
     def __init__(self):
         pass
 
+    def tag_string(self, tag_string, remove_bi_tag=False):
+        if 'B-' in tag_string or 'I-' in tag_string:
+            bio, tags_string = tag_string.split('-')
+            tags = tag_string.split(',')
+            tags = self.tag(tags)
+            if remove_bi_tag:
+                complete_tags_string = ','.join(tags)
+            else:
+                complete_tags_string = bio + '-' + ','.join(tags)
+        else:
+            tags = tag_string.split(',')
+            tags = self.tag(tags)
+            complete_tags_string = ','.join(tags)
+
+        return complete_tags_string
+
     def tag(self, entity_types):
         """
 
