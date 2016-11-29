@@ -26,7 +26,7 @@ def list_figer_types():
     with open(path_settings.FIGER_ENTITY_MAPPING, 'r') as mapping_f:
         for line in mapping_f:
             freebase_type, figer_type = line.rstrip('\n').split('\t')
-            figer_type = figer_type.replace('/', '', 1).replace('/', '.').upper()
+            figer_type = figer_type.replace('/', '', 1).replace('/', '.')
 
             if figer_type in figer_types:
                 figer_types[figer_type] += 1

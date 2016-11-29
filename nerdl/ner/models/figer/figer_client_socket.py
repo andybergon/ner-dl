@@ -46,7 +46,6 @@ def format_prediction(prediction):
                 tag, score = tag_score.split('@')
                 tag = tag.replace('/', '', 1)
                 tag = tag.replace('/', '.')
-                tag = tag.upper()
 
             tags_scores_formatted.append((tag, score))
 

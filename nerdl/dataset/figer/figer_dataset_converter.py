@@ -13,7 +13,7 @@ class FigerDatasetConverter:
                 if line != '\n':
                     word, tags = line.rstrip().split('\t')
                     if tags != 'O':
-                        tags = tags.replace('/', '', 1).replace(',/', ',').replace('/', '.').upper()
+                        tags = tags.replace('/', '', 1).replace(',/', ',').replace('/', '.')
                         tags = tags.split(',')
                         tags = self.tagger.tag(tags)
                     f_out.write('{}\t{}\n'.format(word, tags))

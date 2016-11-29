@@ -13,8 +13,8 @@ class FigerTagger(Tagger):
         with open(self.mapping_file, 'rt') as mapping_f:
             for line in mapping_f:
                 freebase_type, figer_type = line.rstrip('\n').split('\t')
-                freebase_type = freebase_type.replace('/', '', 1).replace('/', '.').upper()
-                figer_type = figer_type.replace('/', '', 1).replace('/', '.').upper()
+                freebase_type = freebase_type.replace('/', '', 1).replace('/', '.')
+                figer_type = figer_type.replace('/', '', 1).replace('/', '.')
                 self.freebase2figer_map[freebase_type] = figer_type
 
     def tag(self, entity_types):
