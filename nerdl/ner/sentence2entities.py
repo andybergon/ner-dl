@@ -1,19 +1,36 @@
 class Sentence2Entities:
-    def __init__(self):
-        pass
+    def __init__(self, is_bio=True, auto_detect=False):
+        self.is_bio = is_bio
+        self.auto_detect = auto_detect
+
+    def convert_to_entities(self, word_tag):
+        if self.auto_detect:
+            is_bio = check_tags(word_tag)
+            self.is_bio = is_bio
+
+        if self.is_bio:
+            return self.convert_bio_to_entities(word_tag)
+        else:
+            return self.convert_not_bio_to_entities(word_tag)
 
     def convert_not_bio_to_entities(self, word_tag):
+        """
+
+        :param word_tag: [('Barack', ['/person', '/person/politician']), ('Obama', ['/person', '/person/politician']]
+        :return:
+        """
         entity_and_type = []
         current_entity = []
         is_prev_tag_entity = False
 
         for word, tag in word_tag:
-            if tag != 'O':
+            if tag != ['O']:
                 if not is_prev_tag_entity:  # first word of entity
                     is_prev_tag_entity = True
                     current_entity.append((word, tag))
                 else:  # middle word of entity
                     current_entity.append((word, tag))
+                    # TODO: don't recognize 2 types near as different. check if types different, no one in common
             else:
                 if is_prev_tag_entity:
                     is_prev_tag_entity = False
@@ -36,6 +53,11 @@ class Sentence2Entities:
 
     # TODO: check edge cases
     def convert_bio_to_entities(self, word_tag):
+        """
+
+        :param word_tag: [('Barack', 'B-/person'), ('Obama', 'I-/person')]
+        :return:
+        """
         entity_and_type = []
         current_entity = []
 
@@ -45,7 +67,7 @@ class Sentence2Entities:
                 if bio == 'B':
                     if len(current_entity) == 0:
                         current_entity = [(word, tag)]  # can append instead
-                    else:
+                    else:  # B tag after B tag
                         words, types = zip(*current_entity)
                         entity_word = ' '.join(words)
                         entity_types = calculate_types_bio(types)
@@ -97,4 +119,14 @@ def calculate_types(types):
 
 def calculate_types_bio(types):
     # TODO: check that all types are equal
-    return types[0]
+    return types[0].split(',')
+
+
+def check_tags(word_tag):
+    types = [i[1] for i in word_tag]
+
+    for type in types:
+        if 'B-' in type or 'I-' in type:
+            return True
+
+    return False

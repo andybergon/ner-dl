@@ -1,16 +1,17 @@
 from __future__ import division
 
-from nerdl.dataset.dataset_iterator import DatasetIterator
-from nerdl.ner.sentence2entities import Sentence2Entities
 from settings import settings
 
 
 class EvaluatorEntities:
-    def __init__(self, dataset_correct_fp, dataset_predict_fp):
+    def __init__(self, sentence_iterator_correct, sentence_iterator_predict, correct_s2e, predict_s2e):
         self.class_list = settings.EVALUATION_CLASS_LIST
 
-        self.di_correct = DatasetIterator(dataset_correct_fp)
-        self.di_predict = DatasetIterator(dataset_predict_fp)
+        self.si_correct = sentence_iterator_correct
+        self.si_predict = sentence_iterator_predict
+
+        self.correct_s2e = correct_s2e
+        self.predict_s2e = predict_s2e
 
         # loose micro correct stats, for Recall. 0 not present in predict, 1 present in predict.
         self.lmi_correct = {}
@@ -24,7 +25,7 @@ class EvaluatorEntities:
             self.lmi_correct[tag_class] = [0, 0]
             self.lmi_predict[tag_class] = [0, 0]
 
-    def evaluate_model(self, test_sentences_nb=1000, print_every=100):
+    def evaluate(self, test_sentences_nb=1000, print_every=100):
         """
 
         :param test_sentences_nb: Sentences to test. 0 for all test file.
@@ -33,14 +34,12 @@ class EvaluatorEntities:
         """
         sentence_num = 0
 
-        s2e = Sentence2Entities()
+        while self.si_correct.is_file_open or self.si_predict.is_file_open:
+            sent_correct = self.si_correct.next()
+            sent_predict = self.si_predict.next()
 
-        while self.di_correct.is_file_open or self.di_predict.is_file_open:
-            sent_correct = self.di_correct.next()
-            sent_predict = self.di_predict.next()
-
-            entities_correct = s2e.convert_bio_to_entities(sent_correct)
-            entities_predict = s2e.convert_bio_to_entities(sent_predict)
+            entities_correct = self.correct_s2e.convert_to_entities(sent_correct)
+            entities_predict = self.predict_s2e.convert_to_entities(sent_predict)
 
             # self.calculate_strict(word_tag_prediction)
             # self.calculate_loose_macro(word_tag_prediction)
@@ -72,34 +71,36 @@ class EvaluatorEntities:
     def calculate_loose_micro(self, entities_tags_correct, entities_tags_predict):
 
         # RECALL
+        entities_predict = [i[0] for i in entities_tags_predict]
         for entity, types in entities_tags_correct:
-            entities_predict = [i[0] for i in entities_tags_predict]
             if entity in entities_predict:
-                types_predict = [i[1] for i in entities_tags_predict if i[0] == entity]
-                for type in types.split(','):
+                # TODO: manage duplicate entities, removing entity from entities
+                types_predict = [i[1] for i in entities_tags_predict if i[0] == entity][0]
+                for type in types:
                     if type in types_predict:
                         self.lmi_correct[type][1] += 1
                     else:
                         self.lmi_correct[type][0] += 1
             else:
-                # pass  # comment for: entity not found == don't count
-                for type in types:
-                    self.lmi_correct[type][0] += 1
+                # for type in types:
+                #     self.lmi_correct[type][0] += 1
+                pass  # comment for: entity not found == don't count
 
         # PRECISION
+        entities_correct = [i[0] for i in entities_tags_correct]
         for entity, types in entities_tags_predict:
-            entities_correct = [i[0] for i in entities_tags_correct]
             if entity in entities_correct:
-                types_correct = [i[1] for i in entities_tags_correct if i[0] == entity]
-                for type in types.split(','):
+                # TODO: manage duplicate entities, removing entity from entities
+                types_correct = [i[1] for i in entities_tags_correct if i[0] == entity][0]
+                for type in types:
                     if type in types_correct:
                         self.lmi_predict[type][1] += 1
                     else:
                         self.lmi_predict[type][0] += 1
             else:
-                # pass  # comment for: entity not found == don't count
-                for type in types:
-                    self.lmi_predict[type][0] += 1
+                # for type in types:
+                #     self.lmi_predict[type][0] += 1
+                pass  # comment for: entity not found == don't count
 
     def print_stats(self):
         return self.print_loose_micro_stats()
@@ -123,8 +124,8 @@ class EvaluatorEntities:
 
         print('--------------------------------------------------')
         print('LOOSE MICRO STATS')
-        print('Correct entities found: {}/{} - {:.0%}'.format(correct_yes, correct_no, correct_perc))
-        print('Predicted entities correct: {}/{} - {:.0%}'.format(predict_yes, predict_no, predict_perc))
+        print('Correct tags found: {}/{} - {:.0%}'.format(correct_yes, correct_no, correct_perc))
+        print('Predicted tags correct: {}/{} - {:.0%}'.format(predict_yes, predict_no, predict_perc))
         print('Precision:\t{}\nRecall:\t{}\nF1 Score:\t{}'.format(predict_perc, correct_perc, f1_score))
         print('--------------------------------------------------')
 

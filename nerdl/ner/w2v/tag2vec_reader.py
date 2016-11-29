@@ -189,8 +189,7 @@ class Tag2VecReader:
                     break
 
             if len(word_pred_tags) > 1:
-                pass
-                # word_pred_tags = clean_tags(word_pred_tags)
+                word_pred_tags = clean_tags(word_pred_tags)
             elif len(word_pred_tags) < 1:
                 word_pred_tags = ['O']
 

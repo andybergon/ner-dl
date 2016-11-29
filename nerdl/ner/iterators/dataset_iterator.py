@@ -1,4 +1,7 @@
-class DatasetIterator:
+from nerdl.ner.iterators.sentences_iterator import SentencesIterator
+
+
+class DatasetIterator(SentencesIterator):
     def __init__(self, file_fp):
         self.file_fp = file_fp
         self.is_file_open = None
@@ -32,7 +35,7 @@ class DatasetIterator:
 
         if line == '':
             self.close_file()
-            return word_tag
+            return word_tag  # can be omitted
         elif line == '\n' or line == '\t\n':
             return word_tag
         else:

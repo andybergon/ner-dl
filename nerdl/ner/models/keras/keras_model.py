@@ -11,6 +11,7 @@ from keras.regularizers import l2
 
 from batch_generator import BatchGenerator
 from nerdl.ner.models.model import Model
+from nerdl.ner.sentence2entities import Sentence2Entities
 from nerdl.ner.utils import tokenizer
 from nerdl.ner.w2v.tag2vec_reader import Tag2VecReader
 from nerdl.ner.w2v.word2vec_reader import Word2VecReader
@@ -26,6 +27,7 @@ class KerasNERModel(Model):
 
         self.w2v_reader = Word2VecReader()  # TODO: compare with saving python object that is less flexible
         self.t2v_reader = Tag2VecReader()
+        self.s2e = Sentence2Entities(auto_detect=True)  # when all migrated to BIO tag, pass True
 
         self.batch_generator = None  # can be a parameter of methods
 
@@ -154,9 +156,18 @@ class KerasNERModel(Model):
                     self.save_only_model()
 
     # PREDICTION
+    # TODO: fix
+    def predict_entities(self, sentence):
+        tagged_sentence = self.predict_sentence(sentence, False)
+        return self.s2e.convert_to_entities(tagged_sentence)
+
+    # TODO: fix
+    def predict_tokenized_entities(self, tokenized_sentence):
+        tagged_sentence = self.predict_tokenized_sentence(tokenized_sentence, False)
+        return self.s2e.convert_to_entities(tagged_sentence)
+
     def predict_sentence(self, sentence, pad=False):
         tokenized_sentence = tokenizer.tokenize_in_words(sentence)
-
         return self.predict_tokenized_sentence(tokenized_sentence, pad)
 
     def predict_tokenized_sentence(self, tokenized_sentence, pad=False):

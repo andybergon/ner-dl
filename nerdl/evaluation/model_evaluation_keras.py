@@ -1,4 +1,4 @@
-from nerdl.evaluation.model_evaluation_multi_label import EvaluatorMultiLabel
+from nerdl.evaluation.model_evaluation_tags_multi_label import EvaluatorMultiLabel
 from settings import settings
 
 

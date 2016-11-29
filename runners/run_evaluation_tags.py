@@ -1,7 +1,7 @@
 import time
 
 from nerdl.evaluation.model_evaluation_keras import EvaluatorKerasMultiLabel
-from nerdl.evaluation.model_evaluation_multi_label import EvaluatorMultiLabel
+from nerdl.evaluation.model_evaluation_tags_multi_label import EvaluatorMultiLabel
 from nerdl.ner.models.figer.figer_model import FigerNERModel
 from nerdl.ner.models.keras.keras_model import KerasNERModel
 from settings import path_settings
