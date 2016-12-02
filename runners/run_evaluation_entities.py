@@ -41,7 +41,7 @@ print('<< Loaded model in {} seconds.\n'.format(str(end_import_model - start_imp
 ########################################
 # settings.EVALUATION_CLASS_LIST
 
-settings.EVALUATION_CLASS_LIST = settings.FIGER_CLASS_LIST
+settings.EVALUATION_CLASS_LIST = settings.FIGER_OLD_CLASS_LIST
 
 dataset_correct_fp = path_settings.FIGER_GOLD_BIO_FILE
 di = DatasetIterator(dataset_correct_fp)

@@ -5,12 +5,16 @@ from nerdl.evaluation.model_evaluation_tags_multi_label import EvaluatorMultiLab
 from nerdl.ner.models.figer.figer_model import FigerNERModel
 from nerdl.ner.models.keras.keras_model import KerasNERModel
 from settings import path_settings
+from settings import settings
 
 start = time.time()  # can use time.clock()
 
 ################################################################################
+# settings.EVALUATION_CLASS_LIST
 # path_settings.WORD2VEC_TXT_FILE
 # path_settings.TEST_FILE
+
+settings.EVALUATION_CLASS_LIST = settings.FIGER_OLD_CLASS_LIST
 
 # path_settings.WORD2VEC_TXT_FILE = path_settings.CW_W2V_TXT_FILE.replace('.txt', '-old.txt')
 path_settings.WORD2VEC_TXT_FILE = path_settings.FIGER_W2V_TXT_FILE
