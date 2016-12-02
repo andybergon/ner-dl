@@ -25,8 +25,37 @@ KERAS_THRESHOLD_NB = 0.1
 KERAS_TAG_CLEANER = 'O-prevail-or-remove'  # 'O-prevail-or-remove', 'remove-O-not-alone-and-less', 'remove-O-not-alone'
 
 # class lists
+# STANFORD
 STANFORD_THREE_CLASS_LIST = ['LOC', 'PER', 'ORG', 'O', 'NIL']
 STANFORD_FOUR_CLASS_LIST = ['LOC', 'PER', 'ORG', 'MISC', 'O', 'NIL']
+
+# FIGER
+FIGER_ONLY_TYPES = ['art', 'art.film', 'astral_body', 'award', 'biology', 'body_part', 'broadcast.tv_channel',
+                    'broadcast_network', 'broadcast_program', 'building', 'building.airport', 'building.dam',
+                    'building.hospital', 'building.hotel', 'building.library', 'building.power_station',
+                    'building.restaurant', 'building.sports_facility', 'building.theater', 'chemistry',
+                    'computer.algorithm', 'computer.programming_language', 'disease', 'education.department',
+                    'education.educational_degree', 'event', 'event.attack', 'event.election',
+                    'event.military_conflict', 'event.natural_disaster', 'event.protest', 'event.sports_event',
+                    'event.terrorist_attack', 'finance.currency', 'finance.stock_exchange', 'food', 'game',
+                    'geography.glacier', 'geography.island', 'geography.mountain', 'god', 'government.government',
+                    'government.political_party', 'government_agency', 'internet.website', 'language', 'law',
+                    'living_thing', 'livingthing.animal', 'location', 'location.body_of_water', 'location.bridge',
+                    'location.cemetery', 'location.city', 'location.country', 'location.county', 'location.province',
+                    'medicine.drug', 'medicine.medical_treatment', 'medicine.symptom',
+                    'metropolitan_transit.transit_line', 'military', 'music', 'news_agency', 'newspaper',
+                    'organization', 'organization.airline', 'organization.company',
+                    'organization.educational_institution', 'organization.fraternity_sorority',
+                    'organization.sports_league', 'organization.sports_team', 'organization.terrorist_organization',
+                    'park', 'people.ethnicity', 'person', 'person.actor', 'person.architect', 'person.artist',
+                    'person.athlete', 'person.author', 'person.coach', 'person.director', 'person.doctor',
+                    'person.engineer', 'person.monarch', 'person.musician', 'person.politician',
+                    'person.religious_leader', 'person.soldier', 'person.terrorist', 'play', 'product',
+                    'product.airplane', 'product.camera', 'product.car', 'product.computer', 'product.engine_device',
+                    'product.instrument', 'product.mobile_phone', 'product.ship', 'product.spacecraft',
+                    'product.weapon', 'rail.railway', 'religion.religion', 'software', 'time', 'title', 'train',
+                    'transit', 'transportation.road', 'visual_art.color', 'written_work']
+FIGER_CLASS_LIST = FIGER_ONLY_TYPES + ['MISC', 'O', 'NIL']
 
 FIGER_ONLY_OLD_TYPES = ['PERSON.POLITICIAN', 'EVENT.PROTEST', 'PARK', 'FINANCE.CURRENCY', 'LOCATION.PROVINCE',
                         'EVENT.ELECTION', 'PRODUCT.CAR', 'LOCATION.CEMETERY', 'LOCATION.BRIDGE', 'NEWS_AGENCY',
@@ -88,6 +117,7 @@ FIGER_RAW_ONLY_TYPES = ['/art', '/art/film', '/astral_body', '/award', '/biology
                         '/transportation/road', '/visual_art/color', '/written_work']
 FIGER_RAW_CLASS_LIST = FIGER_RAW_ONLY_TYPES + ['MISC', 'O', 'NIL']
 
+# CW
 CW_TOP275_TYPES = ['american_football.football_coach', 'american_football.football_player',
                    'american_football.football_team', 'amusement_parks.park', 'amusement_parks.ride',
                    'architecture.architect', 'architecture.architectural_structure_owner',

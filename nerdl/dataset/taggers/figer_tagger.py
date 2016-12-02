@@ -5,11 +5,16 @@ from tagger import Tagger
 class FigerTagger(Tagger):
     def __init__(self):
         self.mapping_file = path_settings.FIGER_ENTITY_MAPPING
-        self.freebase2figer_map = {}  # e.g. AMUSEMENT_PARKS.PARK -> PARK
+        self.freebase2figer_map = {}  # e.g. amusement_parks.park -> PARK
 
         self.initialize_map()
 
     def initialize_map(self):
+        """
+        Populate map.
+        /american_football/football_coach	/person/coach => american_football.football_coach	person.coach
+        :return:
+        """
         with open(self.mapping_file, 'r') as mapping_f:
             for line in mapping_f:
                 freebase_type, figer_type = line.rstrip('\n').split('\t')
@@ -36,7 +41,7 @@ class FigerTagger(Tagger):
 
         figer_types = sorted(set(figer_types))
 
-        if len(figer_types) == 0:
-            figer_types.append('MISC')
+        if len(figer_types) == 0:  # error case
+            figer_types.append('MISC')  # or 'O'
 
         return figer_types
