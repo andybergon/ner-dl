@@ -1,7 +1,7 @@
 *.pyc
 .idea/
 
-!*.gitkeep
+#!*.gitkeep
 
 settings/net_settings.py
 settings/settings.py
@@ -33,8 +33,14 @@ stanford-ner-2014-08-27
 /data/model/
 /data/sentences/figer/
 /data/sentences/cw/
-/data/test/
+/data/test/*
 !/data/test/figer-gold/
-/data/training/
+/data/training/*
 /data/type-distribution/
 /data/word2vec/
+/data/training/bkp/
+/data/training/stanford/
+
+!*.gitkeep
+!.gitkeep
+
