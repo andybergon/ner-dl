@@ -1,16 +1,6 @@
 *.pyc
 .idea/
 
-!data/*
-data/*/*
-!data/cw/cw-top275-annotated-types.tsv
-!data/dataset/cw-dataset/cw-dataset-cw-tags-example.tsv
-!data/dataset/figer-dataset/figer-dataset-cw-tags.tsv
-!data/dataset/figer-dataset/figer-dataset-figer-tags.tsv
-!data/figer/*
-!data/mid/mid_name_types_example.tsv
-!data/word2vec/cw/.gitkeep
-!data/word2vec/figer/.gitkeep
 !*.gitkeep
 
 settings/net_settings.py
@@ -19,3 +9,32 @@ settings/settings.py
 runner.py
 
 stanford-ner-2014-08-27
+
+
+# OLD
+#!data/*
+#data/*/*
+#!data/cw/cw-top275-annotated-types.tsv
+#!data/dataset/cw-dataset/cw-dataset-cw-tags-example.tsv
+#!data/dataset/figer-dataset/figer-dataset-cw-tags.tsv
+#!data/dataset/figer-dataset/figer-dataset-figer-tags.tsv
+#!data/figer/*
+#!data/mid/mid_name_types_example.tsv
+#!data/word2vec/cw/.gitkeep
+#!data/word2vec/figer/.gitkeep
+
+/data/cw/cw_1_corpus_100k.tsv
+/data/cw/cw_1_corpus.tsv
+/data/dataset/cw-dataset/cw-dataset-cw-tags.tsv
+/data/dataset/figer-dataset/figer-dataset-figer-tags.tsv
+/data/dataset/figer-dataset/figer-dataset-cw-tags.tsv
+/data/distribution/
+/data/mid/mid_name_types.tsv
+/data/model/
+/data/sentences/figer/
+/data/sentences/cw/
+/data/test/
+!/data/test/figer-gold/
+/data/training/
+/data/type-distribution/
+/data/word2vec/
