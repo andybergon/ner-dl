@@ -33,6 +33,7 @@ def list_figer_types():
                 figer_types[figer_type] = 1
 
     figer_types = figer_types.keys()
+    figer_types.sort()
 
     return figer_types
 
