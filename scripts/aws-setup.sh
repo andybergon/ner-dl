@@ -1,15 +1,16 @@
 #!/bin/bash
 # set -x;
 
-# RUN FROM "scripts" FOLDER
-
 # sudo yum update -y
 # sudo yum install git -y
 # git clone https://github.com/andybergon/ner-dl.git
 
-# sudo apt-get install awscli # depends on AMI
+echo RUN FROM 'scripts' FOLDER!
+echo RUN AS '. ./aws-setup.sh' OR 'source ./aws-setup.sh' TO MAKE EXPORT COMMANDS WORK
+# cd $HOME/ner-dl/scripts; . ./aws-setup.sh
 
 echo 'Please, copy ".aws" folder manually'
+# sudo apt-get install awscli # depends on AMI
 ./aws-s3-download.sh
 
 cp ../settings/settings.py.example ../settings/settings.py
@@ -41,7 +42,7 @@ conda install -c CCXD keras -y # 1.1.1
 # pip search keras # 1.1.1
 # pip install keras
 
-mkdir $HOME/.keras
+mkdir -p $HOME/.keras
 cp ./keras.json $HOME/.keras/keras.json
 
 export PYTHONPATH=$HOME/ner-dl

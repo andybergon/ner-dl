@@ -23,6 +23,14 @@ start = time.time()  # can use time.clock()
 # figer_gold_converter.convert_figer_gold_to_bio()
 # figer_gold_converter.convert_figer_gold_to_not_bio()
 ################################################################################
+dataset_fp = path_settings.CW_DATASET_CW_TAGS_FILE
+train_fp = path_settings.CW_TRAIN_FILE
+test_fp = path_settings.CW_TEST_FILE
+
+# dataset_fp = path_settings.CW_DATASET_CW_TAGS_FILE
+# train_fp = path_settings.CW_DATASET_CW_TAGS_FILE.replace('.tsv', '-example.tsv')
+# test_fp = path_settings.CW_TEST_FILE.replace('.tsv', '-example.tsv')
+
 # dataset_fp = path_settings.FIGER_DATASET_FG_TAGS_FILE
 # train_fp = path_settings.FIGER_TRAIN_FILE
 # test_fp = path_settings.FIGER_TEST_FILE
@@ -31,21 +39,13 @@ start = time.time()  # can use time.clock()
 # train_fp = path_settings.FIGER_DATASET_CW_TAGS_FILE.replace('.tsv', '-example.tsv')
 # test_fp = path_settings.FIGER_TEST_FILE.replace('.tsv', '-example.tsv')
 
-dataset_fp = path_settings.FIGER_DATASET_FG_TAGS_FILE
-train_fp = path_settings.FIGER_DATASET_FG_TAGS_FILE.replace('.tsv', '-example.tsv')
-test_fp = path_settings.FIGER_TEST_FILE.replace('.tsv', '-example.tsv')
-
-# dataset_fp = path_settings.CW_DATASET_CW_TAGS_FILE
-# train_fp = path_settings.CW_TRAIN_FILE
-# test_fp = path_settings.CW_TEST_FILE
-
-# dataset_fp = path_settings.CW_DATASET_CW_TAGS_FILE
-# train_fp = path_settings.CW_DATASET_CW_TAGS_FILE.replace('.tsv', '-example.tsv')
-# test_fp = path_settings.CW_TEST_FILE.replace('.tsv', '-example.tsv')
+# dataset_fp = path_settings.FIGER_DATASET_FG_TAGS_FILE
+# train_fp = path_settings.FIGER_DATASET_FG_TAGS_FILE.replace('.tsv', '-example.tsv')
+# test_fp = path_settings.FIGER_TEST_FILE.replace('.tsv', '-example.tsv')
 
 dss = DatasetSplitterShortener(dataset_fp, train_fp, test_fp)
-dss.split_and_shorten(sentence_nb=1000, print_every=0, min_len=1, max_len=50, test_perc=0)
-# dss.split_and_shorten(sentence_nb=2400000, print_every=200000, min_len=1, max_len=50, test_perc=0.2)
+# dss.split_and_shorten(sentence_nb=1000, print_every=0, min_len=1, max_len=50, test_perc=0)
+dss.split_and_shorten(sentence_nb=2400000, print_every=200000, min_len=1, max_len=50, test_perc=0.2)
 ################################################################################
 
 end = time.time()
