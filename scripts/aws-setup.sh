@@ -4,7 +4,7 @@
 # RUN FROM "scripts" FOLDER
 
 # sudo yum update -y
-# sudo yum install git
+# sudo yum install git -y
 # git clone https://github.com/andybergon/ner-dl.git
 
 # sudo apt-get install awscli # depends on AMI
@@ -18,6 +18,7 @@ mkdir ../data/model/ # check
 
 wget https://repo.continuum.io/archive/Anaconda2-4.2.0-Linux-x86_64.sh
 bash Anaconda2-4.2.0-Linux-x86_64.sh -b -p $HOME/anaconda2 # -b -p == auto-yes
+rm Anaconda2-4.2.0-Linux-x86_64.sh
 # source ~/.bashrc # if manual and yes at export
 export PATH=$HOME/anaconda2/bin:$PATH
 

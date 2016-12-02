@@ -1,23 +1,16 @@
 #!/bin/bash
 # set -x;
 
-# install anaconda
+wget https://repo.continuum.io/archive/Anaconda2-4.2.0-Linux-x86_64.sh
+bash Anaconda2-4.2.0-Linux-x86_64.sh -b -p $HOME/anaconda2 # -b -p == auto-yes
+# source ~/.bashrc # if manual and yes at export
+export PATH=$HOME/anaconda2/bin:$PATH
 
-conda upgrade --all
+conda upgrade --all -y
 
 conda create -n py27 python=2.7 anaconda
 conda create -n py35 python=3.5 anaconda
 
 source activate py27
 
-conda install nltk -n py27
-
-
-# tensorflow
-conda install -c conda-forge tensorflow -n py27 # 0.10.0
-
-# theano
-conda install -c conda-forge theano -n py27
-
-# keras
-conda install -c conda-forge keras -n py27 # 1.0.7
+# use part of aws-setup.sh
