@@ -3,7 +3,7 @@ from __future__ import division
 from settings import settings
 
 
-class EvaluatorEntities:
+class EvaluatorEntitiesFiles:
     def __init__(self, sentence_iterator_correct, sentence_iterator_predict, correct_s2e, predict_s2e):
         self.class_list = settings.EVALUATION_CLASS_LIST
 
