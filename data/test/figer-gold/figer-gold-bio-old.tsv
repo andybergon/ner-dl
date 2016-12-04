@@ -4,24 +4,24 @@ of	O
 professors	O
 in	O
 the	O
-UW	B-organization.educational_institution,organization
-Department	B-organization,education.department
-of	I-organization,education.department
-Chemistry	I-organization,education.department
+UW	B-ORGANIZATION.EDUCATIONAL_INSTITUTION,ORGANIZATION
+Department	B-EDUCATION.DEPARTMENT,ORGANIZATION
+of	I-EDUCATION.DEPARTMENT,ORGANIZATION
+Chemistry	I-EDUCATION.DEPARTMENT,ORGANIZATION
 are	O
 being	O
 recognized	O
 by	O
 the	O
-American	B-organization
-Association	I-organization
-for	I-organization
-the	I-organization
-Advancement	I-organization
-of	I-organization
-Science	I-organization
+American	B-ORGANIZATION
+Association	I-ORGANIZATION
+for	I-ORGANIZATION
+the	I-ORGANIZATION
+Advancement	I-ORGANIZATION
+of	I-ORGANIZATION
+Science	I-ORGANIZATION
 (	O
-AAAS	B-organization
+AAAS	B-ORGANIZATION
 )	O
 for	O
 their	O
@@ -35,7 +35,7 @@ community	O
 .	O
 
 The	O
-AAAS	B-organization
+AAAS	B-ORGANIZATION
 is	O
 the	O
 largest	O
@@ -49,12 +49,12 @@ publishes	O
 journals	O
 such	O
 as	O
-Science	B-written_work
+Science	B-WRITTEN_WORK
 ,	O
 and	O
-Science	B-written_work
-Translational	I-written_work
-Medicine	I-written_work
+Science	B-WRITTEN_WORK
+Translational	I-WRITTEN_WORK
+Medicine	I-WRITTEN_WORK
 .	O
 
 Last	O
@@ -68,9 +68,9 @@ of	O
 its	O
 members	O
 as	O
-Fellows	B-title
+Fellows	B-TITLE
 of	O
-AAAS	B-organization
+AAAS	B-ORGANIZATION
 ,	O
 an	O
 honor	O
@@ -111,7 +111,7 @@ the	O
 individuals	O
 elected	O
 are	O
-UW	B-organization.educational_institution,organization
+UW	B-ORGANIZATION.EDUCATIONAL_INSTITUTION,ORGANIZATION
 faculty	O
 members	O
 .	O
@@ -120,7 +120,7 @@ members	O
 Election	O
 to	O
 the	O
-AAAS	B-organization
+AAAS	B-ORGANIZATION
 is	O
 a	O
 very	O
@@ -132,8 +132,8 @@ said	O
 chemistry	O
 department	O
 chair	O
-Paul	B-person
-Hopkins	I-person
+Paul	B-PERSON
+Hopkins	I-PERSON
 .	O
 
 “	O
@@ -149,7 +149,7 @@ awards	O
 .	O
 ”	O
 
-Hopkins	B-person
+Hopkins	B-PERSON
 said	O
 four	O
 fellow	O
@@ -252,27 +252,27 @@ are	O
 part	O
 of	O
 the	O
-UW	B-organization.educational_institution,organization
-Department	B-education.department
-of	I-education.department
-Chemistry	I-education.department
+UW	B-ORGANIZATION.EDUCATIONAL_INSTITUTION,ORGANIZATION
+Department	B-EDUCATION.DEPARTMENT
+of	I-EDUCATION.DEPARTMENT
+Chemistry	I-EDUCATION.DEPARTMENT
 :	O
-Daniel	B-person
-T.	I-person
-Chiu	I-person
+Daniel	B-PERSON
+T.	I-PERSON
+Chiu	I-PERSON
 ,	O
-Daniel	B-person
-R.	I-person
-Gamelin	I-person
+Daniel	B-PERSON
+R.	I-PERSON
+Gamelin	I-PERSON
 ,	O
-Karen	B-person
-I.	I-person
-Goldberg	I-person
+Karen	B-PERSON
+I.	I-PERSON
+Goldberg	I-PERSON
 ,	O
 and	O
-Bruce	B-person
-H.	I-person
-Robinson	I-person
+Bruce	B-PERSON
+H.	I-PERSON
+Robinson	I-PERSON
 .	O
 
 “	O
@@ -290,11 +290,11 @@ this	O
 way	O
 ,	O
 ”	O
-Gamelin	B-person
+Gamelin	B-PERSON
 said	O
 .	O
 
-Hopkins	B-person
+Hopkins	B-PERSON
 explained	O
 this	O
 year	O
@@ -323,8 +323,8 @@ he	O
 said	O
 .	O
 
-Bruce	B-person
-Robinson	I-person
+Bruce	B-PERSON
+Robinson	I-PERSON
 is	O
 a	O
 theorist	O
@@ -347,7 +347,7 @@ years	O
 
 Currently	O
 ,	O
-Gamelin	B-person,person.author
+Gamelin	B-PERSON,PERSON.AUTHOR
 is	O
 researching	O
 the	O
@@ -355,7 +355,7 @@ synthesis	O
 of	O
 nanomaterials	O
 ;	O
-Chiu	B-person
+Chiu	B-PERSON
 is	O
 working	O
 on	O
@@ -366,7 +366,7 @@ with	O
 lasers	O
 ;	O
 and	O
-Goldberg	B-person
+Goldberg	B-PERSON
 is	O
 exploring	O
 inorganic	O
@@ -433,21 +433,21 @@ to	O
 attend	O
 the	O
 annual	O
-Fellows	B-event
-Forum	I-event
+Fellows	B-EVENT
+Forum	I-EVENT
 ,	O
 held	O
 this	O
 year	O
 in	O
-Vancouver	B-location.city,location
+Vancouver	B-LOCATION,LOCATION.CITY
 ,	O
-B.C	B-location.province,location
+B.C	B-LOCATION,LOCATION.PROVINCE
 .	O
 
-The	B-event
-Fellows	I-event
-Forum	I-event
+The	B-EVENT
+Fellows	I-EVENT
+Forum	I-EVENT
 ,	O
 concerned	O
 in	O
@@ -499,16 +499,16 @@ It	O
 will	O
 take	O
 place	O
-Feb.	B-time
-16	I-time
-–	I-time
-20	I-time
+Feb.	B-TIME
+16	I-TIME
+–	I-TIME
+20	I-TIME
 .	O
 
 Some	O
 of	O
 the	O
-UW	B-organization.educational_institution,organization
+UW	B-ORGANIZATION.EDUCATIONAL_INSTITUTION,ORGANIZATION
 ’s	O
 Fellows	O
 believe	O
@@ -549,8 +549,8 @@ problems	O
 ”	O
 said	O
 professor	O
-Charles	B-person,person.author
-Campbell	I-person,person.author
+Charles	B-PERSON,PERSON.AUTHOR
+Campbell	I-PERSON,PERSON.AUTHOR
 ,	O
 who	O
 was	O
@@ -581,43 +581,43 @@ elected	O
 UW-based	O
 fellows	O
 include	O
-E.	B-person
-Virginia	I-person
-Armbrust	I-person
+E.	B-PERSON
+Virginia	I-PERSON
+Armbrust	I-PERSON
 of	O
 the	O
-School	B-organization,organization.educational_institution
-of	I-organization,organization.educational_institution
-Oceanography	I-organization,organization.educational_institution
+School	B-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+of	I-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+Oceanography	I-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
 ,	O
-Neil	B-person
-M.	I-person
-Nathanson	I-person
+Neil	B-PERSON
+M.	I-PERSON
+Nathanson	I-PERSON
 of	O
 the	O
-Department	B-organization,education.department
-of	I-organization,education.department
-Pharmacology	I-organization,education.department
+Department	B-ORGANIZATION,EDUCATION.DEPARTMENT
+of	I-ORGANIZATION,EDUCATION.DEPARTMENT
+Pharmacology	I-ORGANIZATION,EDUCATION.DEPARTMENT
 ,	O
-Danny	B-person
-Shen	I-person
+Danny	B-PERSON
+Shen	I-PERSON
 and	O
-Jashvant	B-person
-Unadkat	I-person
+Jashvant	B-PERSON
+Unadkat	I-PERSON
 of	O
 the	O
-School	B-organization,organization.educational_institution
-of	I-organization,organization.educational_institution
-Pharmacy	I-organization,organization.educational_institution
+School	B-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+of	I-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+Pharmacy	I-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
 ,	O
 and	O
-Michael	B-person
-Schick	I-person
+Michael	B-PERSON
+Schick	I-PERSON
 of	O
 the	O
-Department	B-organization,education.department
-of	I-organization,education.department
-Physics	I-organization,education.department
+Department	B-ORGANIZATION,EDUCATION.DEPARTMENT
+of	I-ORGANIZATION,EDUCATION.DEPARTMENT
+Physics	I-ORGANIZATION,EDUCATION.DEPARTMENT
 .	O
 
 A	O
@@ -642,8 +642,8 @@ a	O
 Korean	O
 nightclub	O
 in	O
-Federal	B-location.city,location
-Way	I-location.city,location
+Federal	B-LOCATION,LOCATION.CITY
+Way	I-LOCATION,LOCATION.CITY
 .	O
 
 Prosecutors	O
@@ -656,13 +656,13 @@ and	O
 others	O
 at	O
 the	O
-Blue	B-location
-Moon	I-location
+Blue	B-LOCATION
+Moon	I-LOCATION
 ,	O
 31140	O
-Pacific	B-transportation.road,location
-Highway	I-transportation.road,location
-South	I-transportation.road,location
+Pacific	B-LOCATION,TRANSPORTATION.ROAD
+Highway	I-LOCATION,TRANSPORTATION.ROAD
+South	I-LOCATION,TRANSPORTATION.ROAD
 ,	O
 were	O
 recruiting	O
@@ -705,12 +705,12 @@ living	O
 expenses	O
 ,	O
 the	O
-U.S.	B-organization,government_agency
-Attorney	I-organization,government_agency
-’s	I-organization,government_agency
-Office	I-organization,government_agency
+U.S.	B-ORGANIZATION,GOVERNMENT_AGENCY
+Attorney	I-ORGANIZATION,GOVERNMENT_AGENCY
+’s	I-ORGANIZATION,GOVERNMENT_AGENCY
+Office	I-ORGANIZATION,GOVERNMENT_AGENCY
 announced	O
-Friday	B-time
+Friday	B-TIME
 .	O
 
 The	O
@@ -720,7 +720,7 @@ issued	O
 a	O
 12-count	O
 indictment	O
-Wednesday	B-time
+Wednesday	B-TIME
 against	O
 eight	O
 men	O
@@ -729,8 +729,8 @@ women	O
 associated	O
 with	O
 the	O
-Blue	B-location
-Moon	I-location
+Blue	B-LOCATION
+Moon	I-LOCATION
 .	O
 
 The	O
@@ -774,19 +774,19 @@ search	O
 warrants	O
 on	O
 the	O
-Blue	B-location
-Moon	I-location
+Blue	B-LOCATION
+Moon	I-LOCATION
 and	O
 several	O
 homes	O
-Thursday	B-time
+Thursday	B-TIME
 .	O
 
 The	O
 club	O
 was	O
 closed	O
-Friday	B-time
+Friday	B-TIME
 and	O
 might	O
 not	O
@@ -811,11 +811,11 @@ investigation	O
 headed	O
 by	O
 the	O
-U.S.	B-organization,government_agency
-Immigration	I-organization,government_agency
-and	I-organization,government_agency
-Customs	I-organization,government_agency
-Enforcement	I-organization,government_agency
+U.S.	B-GOVERNMENT_AGENCY,ORGANIZATION
+Immigration	I-GOVERNMENT_AGENCY,ORGANIZATION
+and	I-GOVERNMENT_AGENCY,ORGANIZATION
+Customs	I-GOVERNMENT_AGENCY,ORGANIZATION
+Enforcement	I-GOVERNMENT_AGENCY,ORGANIZATION
 ’s	O
 homeland	O
 security	O
@@ -840,11 +840,11 @@ their	O
 greed	O
 ,	O
 ”	O
-U.S.	B-title
-Attorney	I-title
-Jenny	B-person
-A.	I-person
-Durkan	I-person
+U.S.	B-TITLE
+Attorney	I-TITLE
+Jenny	B-PERSON
+A.	I-PERSON
+Durkan	I-PERSON
 said	O
 .	O
 
@@ -871,7 +871,7 @@ six	O
 of	O
 the	O
 accused	O
-Thursday	B-time
+Thursday	B-TIME
 morning	O
 ,	O
 including	O
@@ -880,13 +880,13 @@ club	O
 ’s	O
 owner	O
 ,	O
-Chang	B-person
-Young	I-person
-Kim	I-person
+Chang	B-PERSON
+Young	I-PERSON
+Kim	I-PERSON
 ,	O
 a	O
 58-year-old	O
-Milton	B-location.city,location
+Milton	B-LOCATION,LOCATION.CITY
 resident	O
 ;	O
 and	O
@@ -894,14 +894,14 @@ his	O
 wife	O
 ,	O
 35-year-old	O
-Yeun	B-person
-Jeong	I-person
-Mun	I-person
+Yeun	B-PERSON
+Jeong	I-PERSON
+Mun	I-PERSON
 .	O
 
 Investigators	O
 suspect	O
-Mun	B-person
+Mun	B-PERSON
 worked	O
 as	O
 a	O
@@ -917,17 +917,17 @@ said	O
 
 Also	O
 arrested	O
-Thursday	B-time
+Thursday	B-TIME
 were	O
 :	O
-Miyoung	B-person
-Roberts	I-person
+Miyoung	B-PERSON
+Roberts	I-PERSON
 ,	O
 40	O
 ,	O
 of	O
-Federal	B-location.city,location
-Way	I-location.city,location
+Federal	B-LOCATION,LOCATION.CITY
+Way	I-LOCATION,LOCATION.CITY
 ;	O
 accused	O
 of	O
@@ -940,14 +940,14 @@ the	O
 club	O
 .	O
 
-Jung	B-person
-San	I-person
-So	I-person
+Jung	B-PERSON
+San	I-PERSON
+So	I-PERSON
 ,	O
 55	O
 ,	O
 of	O
-Seattle	B-location.city,location
+Seattle	B-LOCATION.CITY,LOCATION
 ;	O
 suspected	O
 of	O
@@ -958,14 +958,14 @@ club	O
 manager	O
 .	O
 
-Raymond	B-person
-Jung	I-person
+Raymond	B-PERSON
+Jung	I-PERSON
 ,	O
 51	O
 ,	O
 of	O
-Federal	B-location.city,location
-Way	I-location.city,location
+Federal	B-LOCATION.CITY,LOCATION
+Way	I-LOCATION.CITY,LOCATION
 ;	O
 accused	O
 of	O
@@ -978,15 +978,15 @@ were	O
 housed	O
 .	O
 
-Kwang	B-person
-Frank	I-person
-Lee	I-person
+Kwang	B-PERSON
+Frank	I-PERSON
+Lee	I-PERSON
 ,	O
 57	O
 ,	O
 of	O
-Federal	B-location.city,location
-Way	I-location.city,location
+Federal	B-LOCATION.CITY,LOCATION
+Way	I-LOCATION.CITY,LOCATION
 ;	O
 accused	O
 of	O
@@ -1006,7 +1006,7 @@ scheme	O
 During	O
 court	O
 appearances	O
-Thursday	B-time
+Thursday	B-TIME
 ,	O
 the	O
 six	O
@@ -1025,27 +1025,27 @@ Two	O
 other	O
 defendants	O
 –	O
-Sung	B-person
-Hee	I-person
-Han	I-person
+Sung	B-PERSON
+Hee	I-PERSON
+Han	I-PERSON
 and	O
-Hee	B-person
-Jae	I-person
-Cho	I-person
+Hee	B-PERSON
+Jae	I-PERSON
+Cho	I-PERSON
 ,	O
 both	O
 40	O
 and	O
 of	O
-Federal	B-location.city,location
-Way	I-location.city,location
+Federal	B-LOCATION.CITY,LOCATION
+Way	I-LOCATION.CITY,LOCATION
 –	O
 still	O
 are	O
 sought	O
 .	O
 
-Han	B-person
+Han	B-PERSON
 is	O
 suspected	O
 of	O
@@ -1055,11 +1055,11 @@ assistant	O
 madam	O
 at	O
 the	O
-Blue	B-location
-Moon	I-location
+Blue	B-LOCATION
+Moon	I-LOCATION
 ,	O
 and	O
-Cho	B-person
+Cho	B-PERSON
 is	O
 a	O
 former	O
@@ -1072,12 +1072,12 @@ prosecutors	O
 
 Investigators	O
 suspect	O
-Cho	B-person
+Cho	B-PERSON
 is	O
 in	O
 the	O
-Los	B-location.city,location
-Angeles	I-location.city,location
+Los	B-LOCATION,LOCATION.CITY
+Angeles	I-LOCATION,LOCATION.CITY
 area	O
 .	O
 
@@ -1087,12 +1087,12 @@ investigating	O
 the	O
 club	O
 in	O
-November	B-time
-2009	I-time
+November	B-TIME
+2009	I-TIME
 .	O
 
-Seattle	B-organization,government_agency
-police	I-organization,government_agency
+Seattle	B-GOVERNMENT_AGENCY,ORGANIZATION
+police	I-GOVERNMENT_AGENCY,ORGANIZATION
 detectives	O
 had	O
 been	O
@@ -1127,7 +1127,7 @@ charges	O
 ,	O
 prosecutors	O
 suspect	O
-Kim	B-person
+Kim	B-PERSON
 ,	O
 the	O
 club	O
@@ -1145,7 +1145,7 @@ the	O
 case	O
 .	O
 
-Kim	B-person
+Kim	B-PERSON
 offered	O
 $	O
 15,000	O
@@ -1172,14 +1172,14 @@ to	O
 come	O
 to	O
 the	O
-United	B-location.country,location
-States	I-location.country,location
+United	B-LOCATION,LOCATION.COUNTRY
+States	I-LOCATION,LOCATION.COUNTRY
 ,	O
 prosecutors	O
 said	O
 .	O
 
-Kim	B-person
+Kim	B-PERSON
 has	O
 been	O
 charged	O
@@ -1193,9 +1193,9 @@ bribery	O
 accusations	O
 .	O
 
-Seattle	B-government.government
-City	I-government.government
-Council	I-government.government
+Seattle	B-GOVERNMENT.GOVERNMENT
+City	I-GOVERNMENT.GOVERNMENT
+Council	I-GOVERNMENT.GOVERNMENT
 members	O
 said	O
 Friday	O
@@ -1203,9 +1203,9 @@ they	O
 are	O
 troubled	O
 that	O
-Mayor	B-person.politician,person
-Mike	I-person.politician,person
-McGinn	I-person.politician,person
+Mayor	B-PERSON,PERSON.POLITICIAN
+Mike	I-PERSON,PERSON.POLITICIAN
+McGinn	I-PERSON,PERSON.POLITICIAN
 would	O
 hire	O
 a	O
@@ -1228,11 +1228,11 @@ that	O
 could	O
 draw	O
 an	O
-NBA	B-organization,organization.sports_league
+NBA	B-ORGANIZATION.SPORTS_LEAGUE,ORGANIZATION
 team	O
 back	O
 to	O
-Seattle	B-location.city,location
+Seattle	B-LOCATION.CITY,LOCATION
 —	O
 without	O
 conferring	O
@@ -1254,10 +1254,10 @@ But	O
 if	O
 they	O
 [	O
-the	B-government_agency
-Mayor	I-government_agency
-'s	I-government_agency
-Office	I-government_agency
+the	B-GOVERNMENT_AGENCY
+Mayor	I-GOVERNMENT_AGENCY
+'s	I-GOVERNMENT_AGENCY
+Office	I-GOVERNMENT_AGENCY
 ]	O
 felt	O
 this	O
@@ -1287,12 +1287,12 @@ point	O
 ,	O
 "	O
 said	O
-Councilmember	B-person.politician,person
-Richard	I-person.politician,person
-Conlin	I-person.politician,person
+Councilmember	B-PERSON,PERSON.POLITICIAN
+Richard	I-PERSON,PERSON.POLITICIAN
+Conlin	I-PERSON,PERSON.POLITICIAN
 .	O
 
-McGinn	B-person
+McGinn	B-PERSON
 agreed	O
 to	O
 a	O
@@ -1300,7 +1300,7 @@ $	O
 19,500-per-month	O
 contract	O
 in	O
-July	B-time
+July	B-TIME
 with	O
 a	O
 nationally	O
@@ -1308,11 +1308,11 @@ prominent	O
 sports-facilities	O
 consultant	O
 ,	O
-Carl	B-person
-Hirsh	I-person
+Carl	B-PERSON
+Hirsh	I-PERSON
 .	O
 
-McGinn	B-person
+McGinn	B-PERSON
 is	O
 allowed	O
 to	O
@@ -1338,7 +1338,7 @@ council	O
 knew	O
 nothing	O
 of	O
-Hirsh	B-person
+Hirsh	B-PERSON
 's	O
 hiring	O
 ,	O
@@ -1359,15 +1359,15 @@ acquired	O
 property	O
 in	O
 the	O
-Sodo	B-location
-District	I-location
+Sodo	B-LOCATION
+District	I-LOCATION
 ,	O
 until	O
-The	B-organization,organization.company,news_agency
-Seattle	I-organization,organization.company,news_agency
-Times	I-organization,organization.company,news_agency
+The	B-ORGANIZATION.COMPANY,NEWS_AGENCY,ORGANIZATION
+Seattle	I-ORGANIZATION.COMPANY,NEWS_AGENCY,ORGANIZATION
+Times	I-ORGANIZATION.COMPANY,NEWS_AGENCY,ORGANIZATION
 in	O
-December	B-time
+December	B-TIME
 was	O
 about	O
 to	O
@@ -1384,10 +1384,10 @@ opportunity	O
 to	O
 bring	O
 an	O
-NBA	B-organization,organization.sports_league
+NBA	B-ORGANIZATION.SPORTS_LEAGUE,ORGANIZATION
 team	O
 to	O
-Seattle	B-location.city,location
+Seattle	B-LOCATION.CITY,LOCATION
 .	O
 
 "	O
@@ -1416,14 +1416,14 @@ proposal	O
 ,	O
 "	O
 said	O
-Councilmember	B-person.politician,person
-Sally	I-person.politician,person
-Clark	I-person.politician,person
+Councilmember	B-PERSON,PERSON.POLITICIAN
+Sally	I-PERSON,PERSON.POLITICIAN
+Clark	I-PERSON,PERSON.POLITICIAN
 .	O
 
-McGinn	B-person
+McGinn	B-PERSON
 said	O
-Friday	B-time
+Friday	B-TIME
 that	O
 his	O
 office	O
@@ -1448,16 +1448,16 @@ a	O
 new	O
 arena	O
 in	O
-Seattle	B-location.city,location
+Seattle	B-LOCATION.CITY,LOCATION
 .	O
 "	O
 
-The	B-organization,organization.company,news_agency
-Times	I-organization,organization.company,news_agency
+The	B-ORGANIZATION.COMPANY,NEWS_AGENCY,ORGANIZATION
+Times	I-ORGANIZATION.COMPANY,NEWS_AGENCY,ORGANIZATION
 also	O
 reported	O
 in	O
-December	B-time
+December	B-TIME
 that	O
 the	O
 investment	O
@@ -1465,22 +1465,22 @@ group	O
 is	O
 headed	O
 by	O
-San	B-location.city,location.county,location
-Francisco	I-location.city,location.county,location
+San	B-LOCATION.CITY,LOCATION,LOCATION.COUNTY
+Francisco	I-LOCATION.CITY,LOCATION,LOCATION.COUNTY
 hedge-fund	O
 manager	O
-Christopher	B-person
-Hansen	I-person
+Christopher	B-PERSON
+Hansen	I-PERSON
 ,	O
 who	O
 has	O
 family	O
 ties	O
 to	O
-Seattle	B-location.city,location
+Seattle	B-LOCATION,LOCATION.CITY
 .	O
 
-McGinn	B-person
+McGinn	B-PERSON
 said	O
 he	O
 assembled	O
@@ -1511,7 +1511,7 @@ warranted	O
 ,	O
 including	O
 hiring	O
-Hirsh	B-person
+Hirsh	B-PERSON
 .	O
 
 The	O
@@ -1523,11 +1523,11 @@ local	O
 bond	O
 attorney	O
 ,	O
-Hugh	B-person
-Spitzer	I-person
+Hugh	B-PERSON
+Spitzer	I-PERSON
 ,	O
 in	O
-September	B-time
+September	B-TIME
 to	O
 advise	O
 it	O
@@ -1538,8 +1538,8 @@ legal	O
 issues	O
 ,	O
 including	O
-Initiative	B-written_work
-91	I-written_work
+Initiative	B-WRITTEN_WORK
+91	I-WRITTEN_WORK
 ,	O
 the	O
 2006	O
@@ -1561,9 +1561,9 @@ sports	O
 venue	O
 .	O
 
-The	B-organization,organization.company,news_agency
-Seattle	I-organization,organization.company,news_agency
-Times	I-organization,organization.company,news_agency
+The	B-ORGANIZATION.COMPANY,NEWS_AGENCY,ORGANIZATION
+Seattle	I-ORGANIZATION.COMPANY,NEWS_AGENCY,ORGANIZATION
+Times	I-ORGANIZATION.COMPANY,NEWS_AGENCY,ORGANIZATION
 requested	O
 copies	O
 of	O
@@ -1574,14 +1574,14 @@ contracts	O
 under	O
 the	O
 state	O
-Public	B-law
-Records	I-law
-Act	I-law
+Public	B-LAW
+Records	I-LAW
+Act	I-LAW
 in	O
-December	B-time
+December	B-TIME
 .	O
 
-McGinn	B-person
+McGinn	B-PERSON
 's	O
 office	O
 initially	O
@@ -1593,7 +1593,7 @@ not	O
 be	O
 released	O
 until	O
-February	B-time
+February	B-TIME
 ,	O
 but	O
 changed	O
@@ -1602,7 +1602,7 @@ and	O
 made	O
 them	O
 available	O
-Friday	B-time
+Friday	B-TIME
 .	O
 
 "	O
@@ -1640,7 +1640,7 @@ and	O
 the	O
 city	O
 of	O
-Seattle	B-location.city,location
+Seattle	B-LOCATION.CITY,LOCATION
 are	O
 protected	O
 ,	O
@@ -1653,10 +1653,10 @@ public	O
 's	O
 direction	O
 through	O
-I-91	B-written_work
+I-91	B-WRITTEN_WORK
 ,	O
 "	O
-McGinn	B-person
+McGinn	B-PERSON
 said	O
 in	O
 an	O
@@ -1664,7 +1664,7 @@ emailed	O
 statement	O
 .	O
 
-McGinn	B-person
+McGinn	B-PERSON
 reiterated	O
 that	O
 the	O
@@ -1688,8 +1688,8 @@ said	O
 consulting	O
 with	O
 the	O
-City	B-government_agency
-Council	I-government_agency
+City	B-GOVERNMENT_AGENCY
+Council	I-GOVERNMENT_AGENCY
 will	O
 be	O
 my	O
@@ -1701,7 +1701,7 @@ forward	O
 .	O
 "	O
 
-Clark	B-person
+Clark	B-PERSON
 said	O
 she	O
 appreciated	O
@@ -1709,7 +1709,7 @@ that	O
 the	O
 contract	O
 with	O
-Hirsh	B-person
+Hirsh	B-PERSON
 included	O
 protecting	O
 the	O
@@ -1728,7 +1728,7 @@ We	O
 know	O
 that	O
 the	O
-Sonics	B-organization.sports_team
+Sonics	B-ORGANIZATION.SPORTS_TEAM
 left	O
 an	O
 empty	O
@@ -1760,18 +1760,18 @@ mortgage	O
 ?	O
 "	O
 
-Clark	B-person
+Clark	B-PERSON
 asked	O
 .	O
 
-Hirsh	B-person
+Hirsh	B-PERSON
 worked	O
 for	O
 former	O
-Sonics	B-organization.sports_team
+Sonics	B-ORGANIZATION.SPORTS_TEAM
 owner	O
-Howard	B-person
-Schultz	I-person
+Howard	B-PERSON
+Schultz	I-PERSON
 ,	O
 when	O
 the	O
@@ -1781,23 +1781,23 @@ evaluating	O
 how	O
 to	O
 make	O
-KeyArena	B-building,building.sports_facility,location
+KeyArena	B-BUILDING.SPORTS_FACILITY,BUILDING,LOCATION
 financially	O
 profitable	O
 .	O
 
-Schultz	B-person
+Schultz	B-PERSON
 sold	O
 the	O
 team	O
 in	O
 2006	O
 to	O
-Clay	B-person
-Bennett	I-person
+Clay	B-PERSON
+Bennett	I-PERSON
 .	O
 
-Bennett	B-person
+Bennett	B-PERSON
 said	O
 the	O
 city-owned	O
@@ -1808,15 +1808,15 @@ amenities	O
 to	O
 support	O
 an	O
-NBA	B-organization,organization.sports_league,organization.company
+NBA	B-ORGANIZATION.SPORTS_LEAGUE,ORGANIZATION,ORGANIZATION.COMPANY
 franchise	O
 and	O
 moved	O
 the	O
 team	O
 to	O
-Oklahoma	B-location.city,location
-City	I-location.city,location
+Oklahoma	B-LOCATION.CITY,LOCATION
+City	I-LOCATION.CITY,LOCATION
 after	O
 failing	O
 to	O
@@ -1833,39 +1833,39 @@ understand	O
 the	O
 challenges	O
 of	O
-KeyArena	B-building,building.sports_facility,location
+KeyArena	B-BUILDING.SPORTS_FACILITY,BUILDING,LOCATION
 and	O
 the	O
 economics	O
 of	O
 the	O
-NBA	B-organization,organization.sports_league,organization.company
+NBA	B-ORGANIZATION.SPORTS_LEAGUE,ORGANIZATION,ORGANIZATION.COMPANY
 and	O
-NHL	B-organization,organization.sports_league,organization.company
+NHL	B-ORGANIZATION.SPORTS_LEAGUE,ORGANIZATION,ORGANIZATION.COMPANY
 ,	O
 "	O
-Hirsh	B-person
+Hirsh	B-PERSON
 said	O
-Friday	B-time
+Friday	B-TIME
 .	O
 
-Hirsh	B-person
+Hirsh	B-PERSON
 ,	O
 managing	O
 partner	O
 of	O
-Stafford	B-organization
-Sports	I-organization
+Stafford	B-ORGANIZATION
+Sports	I-ORGANIZATION
 in	O
-New	B-location.province,location
-Jersey	I-location.province,location
+New	B-LOCATION,LOCATION.PROVINCE
+Jersey	I-LOCATION,LOCATION.PROVINCE
 ,	O
 has	O
 advised	O
 the	O
-San	B-organization.sports_team
-Antonio	I-organization.sports_team
-Spurs	I-organization.sports_team
+San	B-ORGANIZATION.SPORTS_TEAM
+Antonio	I-ORGANIZATION.SPORTS_TEAM
+Spurs	I-ORGANIZATION.SPORTS_TEAM
 through	O
 construction	O
 of	O
@@ -1874,8 +1874,8 @@ new	O
 arena	O
 ,	O
 the	O
-AT&T	B-building,building.sports_facility,location
-Center	I-building,building.sports_facility,location
+AT&T	B-BUILDING.SPORTS_FACILITY,BUILDING,LOCATION
+Center	I-BUILDING.SPORTS_FACILITY,BUILDING,LOCATION
 .	O
 
 He	O
@@ -1884,15 +1884,15 @@ with	O
 the	O
 city	O
 of	O
-Orlando	B-location.city,location
+Orlando	B-LOCATION,LOCATION.CITY
 to	O
 negotiate	O
 an	O
 agreement	O
 with	O
 the	O
-Orlando	B-organization,organization.sports_team
-Magic	I-organization,organization.sports_team
+Orlando	B-ORGANIZATION,ORGANIZATION.SPORTS_TEAM
+Magic	I-ORGANIZATION,ORGANIZATION.SPORTS_TEAM
 for	O
 a	O
 new	O
@@ -1905,16 +1905,16 @@ management	O
 planning	O
 a	O
 new	O
-Madison	B-building,building.sports_facility,organization.company,location
-Square	I-building,building.sports_facility,organization.company,location
-Garden	I-building,building.sports_facility,organization.company,location
+Madison	B-LOCATION,BUILDING,ORGANIZATION.COMPANY,BUILDING.SPORTS_FACILITY
+Square	I-LOCATION,BUILDING,ORGANIZATION.COMPANY,BUILDING.SPORTS_FACILITY
+Garden	I-LOCATION,BUILDING,ORGANIZATION.COMPANY,BUILDING.SPORTS_FACILITY
 in	O
-New	B-location.city,location
-York	I-location.city,location
-City	I-location.city,location
+New	B-LOCATION,LOCATION.CITY
+York	I-LOCATION.CITY,LOCATION
+City	I-LOCATION.CITY,LOCATION
 .	O
 
-Hirsh	B-person
+Hirsh	B-PERSON
 estimated	O
 it	O
 would	O
@@ -1930,11 +1930,11 @@ arena	O
 ,	O
 although	O
 the	O
-NBA	B-organization,organization.sports_league
+NBA	B-ORGANIZATION.SPORTS_LEAGUE,ORGANIZATION
 's	O
-New	B-organization,organization.sports_team
-Jersey	I-organization,organization.sports_team
-Nets	I-organization,organization.sports_team
+New	B-ORGANIZATION,ORGANIZATION.SPORTS_TEAM
+Jersey	I-ORGANIZATION,ORGANIZATION.SPORTS_TEAM
+Nets	I-ORGANIZATION,ORGANIZATION.SPORTS_TEAM
 will	O
 spend	O
 $	O
@@ -1943,7 +1943,7 @@ million	O
 on	O
 one	O
 in	O
-Brooklyn	B-location.city,location
+Brooklyn	B-LOCATION.CITY,LOCATION
 .	O
 
 A	O
@@ -1957,7 +1957,7 @@ cost	O
 of	O
 land	O
 ,	O
-Hirsh	B-person
+Hirsh	B-PERSON
 said	O
 .	O
 
@@ -1986,7 +1986,7 @@ of	O
 the	O
 parcel	O
 the	O
-Hansen	B-organization.company
+Hansen	B-ORGANIZATION.COMPANY
 investment	O
 group	O
 has	O
@@ -2003,7 +2003,7 @@ liability	O
 corporation	O
 headed	O
 by	O
-Hansen	B-organization.company
+Hansen	B-ORGANIZATION.COMPANY
 recently	O
 purchased	O
 3	O
@@ -2013,23 +2013,23 @@ the	O
 east	O
 side	O
 of	O
-Occidental	B-transportation.road,location
-Avenue	I-transportation.road,location
-South	I-transportation.road,location
+Occidental	B-LOCATION,TRANSPORTATION.ROAD
+Avenue	I-LOCATION,TRANSPORTATION.ROAD
+South	I-LOCATION,TRANSPORTATION.ROAD
 between	O
-South	B-transportation.road,location
-Massachusetts	I-transportation.road,location
+South	B-LOCATION,TRANSPORTATION.ROAD
+Massachusetts	I-LOCATION,TRANSPORTATION.ROAD
 and	O
-South	B-transportation.road,location
-Holgate	I-transportation.road,location
+South	B-LOCATION,TRANSPORTATION.ROAD
+Holgate	I-LOCATION,TRANSPORTATION.ROAD
 streets	O
 .	O
 
 Hirsh	O
 pointed	O
 to	O
-San	B-organization,organization.sports_team
-Antonio	I-organization,organization.sports_team
+San	B-ORGANIZATION,ORGANIZATION.SPORTS_TEAM
+Antonio	I-ORGANIZATION,ORGANIZATION.SPORTS_TEAM
 as	O
 an	O
 example	O
@@ -2046,9 +2046,9 @@ out	O
 financially	O
 .	O
 
-The	B-building,building.sports_facility,location
-AT&T	I-building,building.sports_facility,location
-Center	I-building,building.sports_facility,location
+The	B-LOCATION,BUILDING,BUILDING.SPORTS_FACILITY
+AT&T	I-LOCATION,BUILDING,BUILDING.SPORTS_FACILITY
+Center	I-LOCATION,BUILDING,BUILDING.SPORTS_FACILITY
 is	O
 home	O
 to	O
@@ -2056,20 +2056,20 @@ three	O
 teams	O
 —	O
 the	O
-Spurs	B-organization.sports_team
+Spurs	B-ORGANIZATION.SPORTS_TEAM
 ,	O
 the	O
-WNBA	B-organization,organization.sports_league
+WNBA	B-ORGANIZATION.SPORTS_LEAGUE,ORGANIZATION
 's	O
-Silver	B-organization.sports_team
-Stars	I-organization.sports_team
+Silver	B-ORGANIZATION.SPORTS_TEAM
+Stars	I-ORGANIZATION.SPORTS_TEAM
 and	O
 the	O
-American	B-organization,organization.sports_league
-Hockey	I-organization,organization.sports_league
-League	I-organization,organization.sports_league
+American	B-ORGANIZATION.SPORTS_LEAGUE,ORGANIZATION
+Hockey	I-ORGANIZATION.SPORTS_LEAGUE,ORGANIZATION
+League	I-ORGANIZATION.SPORTS_LEAGUE,ORGANIZATION
 's	O
-Rampage	B-organization.sports_team
+Rampage	B-ORGANIZATION.SPORTS_TEAM
 .	O
 
 It	O
@@ -2096,11 +2096,11 @@ the	O
 city	O
 and	O
 the	O
-Spurs	B-organization.sports_team
+Spurs	B-ORGANIZATION.SPORTS_TEAM
 ,	O
 with	O
-San	B-location.city,location
-Antonio	I-location.city,location
+San	B-LOCATION.CITY,LOCATION
+Antonio	I-LOCATION.CITY,LOCATION
 voters	O
 approving	O
 a	O
@@ -2128,21 +2128,21 @@ the	O
 rest	O
 ,	O
 said	O
-Rick	B-person
-Pych	I-person
+Rick	B-PERSON
+Pych	I-PERSON
 ,	O
 president	O
 of	O
 business	O
 operations	O
 for	O
-San	B-organization.sports_team
-Antonio	I-organization.sports_team
-Spurs	I-organization.sports_team
+San	B-ORGANIZATION.SPORTS_TEAM
+Antonio	I-ORGANIZATION.SPORTS_TEAM
+Spurs	I-ORGANIZATION.SPORTS_TEAM
 Sports	O
 .	O
 
-Hirsh	B-person
+Hirsh	B-PERSON
 said	O
 many	O
 pieces	O
@@ -2158,7 +2158,7 @@ new	O
 arena	O
 work	O
 in	O
-Seattle	B-location.city,location
+Seattle	B-LOCATION,LOCATION.CITY
 .	O
 
 And	O
@@ -2229,11 +2229,11 @@ the	O
 political	O
 fortunes	O
 of	O
-McGinn	B-person.politician,person
+McGinn	B-PERSON,PERSON.POLITICIAN
 ,	O
 who	O
 in	O
-August	B-time
+August	B-TIME
 lost	O
 the	O
 fight	O
@@ -2263,8 +2263,8 @@ he	O
 favored	O
 .	O
 
-Christian	B-person
-Sinderman	I-person
+Christian	B-PERSON
+Sinderman	I-PERSON
 ,	O
 a	O
 political	O
@@ -2283,7 +2283,7 @@ professional	O
 basketball	O
 returned	O
 to	O
-Seattle	B-location.city,location
+Seattle	B-LOCATION,LOCATION.CITY
 is	O
 high	O
 ,	O
@@ -2315,7 +2315,7 @@ political	O
 game-changer	O
 ,	O
 "	O
-Sinderman	B-person
+Sinderman	B-PERSON
 said	O
 .	O
 
@@ -2358,7 +2358,7 @@ Homeless	O
 children	O
 in	O
 the	O
-U-District	B-location
+U-District	B-LOCATION
 will	O
 get	O
 the	O
@@ -2374,11 +2374,11 @@ exhibit	O
 held	O
 at	O
 the	O
-UW	B-organization,location,organization.educational_institution
-School	I-organization,location,organization.educational_institution
-of	I-organization,location,organization.educational_institution
-Social	I-organization,location,organization.educational_institution
-Work	I-organization,location,organization.educational_institution
+UW	B-LOCATION,ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+School	I-LOCATION,ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+of	I-LOCATION,ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+Social	I-LOCATION,ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+Work	I-LOCATION,ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
 this	O
 winter	O
 quarter	O
@@ -2390,16 +2390,16 @@ were	O
 compiled	O
 at	O
 the	O
-Sanctuary	B-building,organization,location
-Art	I-building,organization,location
-Center	I-building,organization,location
+Sanctuary	B-LOCATION,BUILDING,ORGANIZATION
+Art	I-LOCATION,BUILDING,ORGANIZATION
+Center	I-LOCATION,BUILDING,ORGANIZATION
 ,	O
 a	O
 non-profit	O
 ,	O
-University	B-organization,location
-Lutheran	I-organization,location
-Church-based	I-organization,location
+University	B-ORGANIZATION,LOCATION
+Lutheran	I-ORGANIZATION,LOCATION
+Church-based	I-ORGANIZATION,LOCATION
 organization	O
 designed	O
 to	O
@@ -2477,8 +2477,8 @@ telling	O
 ,	O
 ”	O
 said	O
-Jamie	B-person
-Lee	I-person
+Jamie	B-PERSON
+Lee	I-PERSON
 ,	O
 director	O
 of	O
@@ -2526,9 +2526,9 @@ everywhere	O
 ”	O
 
 The	O
-Sanctuary	B-building,organization,location
-Art	I-building,organization,location
-Center	I-building,organization,location
+Sanctuary	B-LOCATION,BUILDING,ORGANIZATION
+Art	I-LOCATION,BUILDING,ORGANIZATION
+Center	I-LOCATION,BUILDING,ORGANIZATION
 also	O
 has	O
 an	O
@@ -2540,14 +2540,14 @@ is	O
 partnered	O
 with	O
 the	O
-Interagency	B-organization,organization.educational_institution
-Academy	I-organization,organization.educational_institution
+Interagency	B-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+Academy	I-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
 ,	O
 an	O
 alternative	O
 school	O
 in	O
-Seattle	B-location.city,location
+Seattle	B-LOCATION.CITY,LOCATION
 that	O
 allows	O
 young	O
@@ -2634,26 +2634,26 @@ was	O
 held	O
 at	O
 the	O
-UW	B-organization,location,organization.educational_institution
-School	I-organization,location,organization.educational_institution
-of	I-organization,location,organization.educational_institution
-Social	I-organization,location,organization.educational_institution
-Work	I-organization,location,organization.educational_institution
+UW	B-LOCATION,ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+School	I-LOCATION,ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+of	I-LOCATION,ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+Social	I-LOCATION,ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+Work	I-LOCATION,ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
 on	O
-Jan.	B-time
-11	I-time
+Jan.	B-TIME
+11	I-TIME
 ,	O
 and	O
 the	O
 showing	O
 continues	O
 until	O
-March	B-time
-15	I-time
+March	B-TIME
+15	I-TIME
 .	O
 
-Madeline	B-person
-Galbraith	I-person
+Madeline	B-PERSON
+Galbraith	I-PERSON
 ,	O
 co-chair	O
 of	O
@@ -2662,10 +2662,10 @@ art	O
 committee	O
 at	O
 the	O
-School	B-organization,organization.educational_institution
-of	I-organization,organization.educational_institution
-Social	I-organization,organization.educational_institution
-Work	I-organization,organization.educational_institution
+School	B-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+of	I-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+Social	I-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+Work	I-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
 ,	O
 said	O
 homeless	O
@@ -2745,12 +2745,12 @@ on	O
 the	O
 streets	O
 ,	O
-Galbraith	B-person
+Galbraith	B-PERSON
 said	O
 .	O
 
-Michael	B-person
-Winans	I-person
+Michael	B-PERSON
+Winans	I-PERSON
 ,	O
 co-chair	O
 of	O
@@ -2759,7 +2759,7 @@ art	O
 committee	O
 at	O
 the	O
-UW	B-organization,organization.educational_institution
+UW	B-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
 ,	O
 believes	O
 art	O
@@ -2807,7 +2807,7 @@ lives	O
 ,	O
 ”	O
 said	O
-Winans	B-person
+Winans	B-PERSON
 .	O
 
 For	O
@@ -2833,7 +2833,7 @@ rest	O
 goes	O
 to	O
 the	O
-Sanctuary	B-organization
+Sanctuary	B-ORGANIZATION
 organization	O
 ,	O
 whose	O
@@ -2898,16 +2898,16 @@ clean	O
 up	O
 ,	O
 ”	O
-Galbraith	B-person
+Galbraith	B-PERSON
 said	O
 .	O
 
-Lee	B-person
+Lee	B-PERSON
 said	O
 the	O
-Sanctuary	B-building,organization
-Art	I-building,organization
-Center	I-building,organization
+Sanctuary	B-BUILDING,ORGANIZATION
+Art	I-BUILDING,ORGANIZATION
+Center	I-BUILDING,ORGANIZATION
 gives	O
 children	O
 the	O
@@ -2932,7 +2932,7 @@ held	O
 all	O
 over	O
 the	O
-Seattle	B-location.city,location
+Seattle	B-LOCATION,LOCATION.CITY
 area	O
 sporadically	O
 throughout	O
@@ -2975,13 +2975,13 @@ hold	O
 a	O
 benefit	O
 concert	O
-Feb.	B-time
-14	I-time
+Feb.	B-TIME
+14	I-TIME
 .	O
 
 “	O
 [	O
-Sanctuary	B-organization
+Sanctuary	B-ORGANIZATION
 ]	O
 teaches	O
 creativity	O
@@ -3000,7 +3000,7 @@ going	O
 through	O
 ,	O
 ”	O
-Lee	B-person
+Lee	B-PERSON
 said	O
 .	O
 
@@ -3023,8 +3023,8 @@ women	O
 head	O
 basketball	O
 coach	O
-Kevin	B-person,person.coach
-McGuff	I-person,person.coach
+Kevin	B-PERSON,PERSON.COACH
+McGuff	I-PERSON,PERSON.COACH
 anticipated	O
 his	O
 team	O
@@ -3054,7 +3054,7 @@ has	O
 suddenly	O
 left	O
 the	O
-Huskies	B-organization,organization.sports_team
+Huskies	B-ORGANIZATION.SPORTS_TEAM,ORGANIZATION
 surprisingly	O
 thin	O
 in	O
@@ -3066,16 +3066,16 @@ Saturday	O
 ’s	O
 game	O
 against	O
-Washington	B-organization,organization.sports_team
-State	I-organization,organization.sports_team
+Washington	B-ORGANIZATION,ORGANIZATION.SPORTS_TEAM
+State	I-ORGANIZATION,ORGANIZATION.SPORTS_TEAM
 in	O
-Pullman	B-location
+Pullman	B-LOCATION
 ,	O
-Wash.	B-location.province,location
+Wash.	B-LOCATION,LOCATION.PROVINCE
 ,	O
 where	O
 the	O
-UW	B-organization,organization.educational_institution
+UW	B-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
 will	O
 attempt	O
 to	O
@@ -3086,7 +3086,7 @@ winning	O
 streak	O
 against	O
 the	O
-Cougars	B-organization,organization.sports_team
+Cougars	B-ORGANIZATION.SPORTS_TEAM,ORGANIZATION
 .	O
 
 The	O
@@ -3095,24 +3095,24 @@ cause	O
 for	O
 concern	O
 for	O
-McGuff	B-person
+McGuff	B-PERSON
 is	O
 the	O
 bruised	O
 hamstring	O
-Regina	B-person,person.athlete
-Rogers	I-person,person.athlete
+Regina	B-PERSON,PERSON.ATHLETE
+Rogers	I-PERSON,PERSON.ATHLETE
 suffered	O
 against	O
-Utah	B-organization,organization.sports_team
+Utah	B-ORGANIZATION,ORGANIZATION.SPORTS_TEAM
 last	O
-Saturday	B-time
+Saturday	B-TIME
 .	O
 
-Rogers	B-person,person.athlete
+Rogers	B-PERSON,PERSON.ATHLETE
 ,	O
 the	O
-UW	B-organization,organization.educational_institution
+UW	B-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
 ’s	O
 leading	O
 scorer	O
@@ -3134,8 +3134,8 @@ a	O
 game-time	O
 decision	O
 against	O
-Washington	B-organization,organization.sports_team
-State	I-organization,organization.sports_team
+Washington	B-ORGANIZATION.SPORTS_TEAM,ORGANIZATION
+State	I-ORGANIZATION.SPORTS_TEAM,ORGANIZATION
 .	O
 
 “	O
@@ -3151,7 +3151,7 @@ right	O
 now	O
 ,	O
 ”	O
-Rogers	B-person
+Rogers	B-PERSON
 said	O
 of	O
 potentially	O
@@ -3178,8 +3178,8 @@ play	O
 
 Alone	O
 ,	O
-Rogers	B-person
-’	I-person
+Rogers	B-PERSON
+’	I-PERSON
 potential	O
 absence	O
 would	O
@@ -3203,8 +3203,8 @@ tear	O
 suffered	O
 by	O
 forward	O
-Marjie	B-person,person.athlete
-Heard	I-person,person.athlete
+Marjie	B-PERSON,PERSON.ATHLETE
+Heard	I-PERSON,PERSON.ATHLETE
 earlier	O
 this	O
 week	O
@@ -3215,8 +3215,8 @@ likelihood	O
 that	O
 freshman	O
 forward	O
-Talia	B-person,person.athlete
-Walton	I-person,person.athlete
+Talia	B-PERSON,PERSON.ATHLETE
+Walton	I-PERSON,PERSON.ATHLETE
 will	O
 miss	O
 the	O
@@ -3231,7 +3231,7 @@ medical	O
 redshirt	O
 ,	O
 the	O
-Huskies	B-organization,organization.sports_team
+Huskies	B-ORGANIZATION.SPORTS_TEAM,ORGANIZATION
 might	O
 be	O
 left	O
@@ -3248,12 +3248,12 @@ ready	O
 to	O
 go	O
 against	O
-Washington	B-organization,organization.sports_team
-State	I-organization,organization.sports_team
+Washington	B-ORGANIZATION.SPORTS_TEAM,ORGANIZATION
+State	I-ORGANIZATION.SPORTS_TEAM,ORGANIZATION
 .	O
 
 If	O
-Rogers	B-person
+Rogers	B-PERSON
 is	O
 unable	O
 to	O
@@ -3275,14 +3275,14 @@ on	O
 two	O
 seniors	O
 ,	O
-Mackenzie	B-person,person.athlete
-Argens	I-person,person.athlete
+Mackenzie	B-PERSON,PERSON.ATHLETE
+Argens	I-PERSON,PERSON.ATHLETE
 and	O
-Mollie	B-person,person.athlete
-Williams	I-person,person.athlete
+Mollie	B-PERSON,PERSON.ATHLETE
+Williams	I-PERSON,PERSON.ATHLETE
 .	O
 
-Argens	B-person
+Argens	B-PERSON
 has	O
 been	O
 a	O
@@ -3307,13 +3307,13 @@ her	O
 scoring	O
 against	O
 the	O
-Cougars	B-organization.sports_team
+Cougars	B-ORGANIZATION.SPORTS_TEAM
 with	O
-Rogers	B-person,person.athlete
+Rogers	B-PERSON,PERSON.ATHLETE
 out	O
 .	O
 
-Williams	B-person
+Williams	B-PERSON
 ,	O
 meanwhile	O
 ,	O
@@ -3322,7 +3322,7 @@ been	O
 part	O
 of	O
 the	O
-UW	B-organization,organization.educational_institution
+UW	B-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
 ’s	O
 revolving	O
 door	O
@@ -3350,7 +3350,7 @@ others	O
 .	O
 
 With	O
-Heard	B-person,person.athlete
+Heard	B-PERSON,PERSON.ATHLETE
 done	O
 for	O
 the	O
@@ -3371,7 +3371,7 @@ rotation	O
 .	O
 
 The	O
-Huskies	B-organization.sports_team
+Huskies	B-ORGANIZATION.SPORTS_TEAM
 could	O
 n’t	O
 have	O
@@ -3394,12 +3394,12 @@ a	O
 deep	O
 ,	O
 experienced	O
-Cougar	B-organization.sports_team
+Cougar	B-ORGANIZATION.SPORTS_TEAM
 team	O
-Saturday	B-time
+Saturday	B-TIME
 ,	O
 the	O
-UW	B-organization.sports_team
+UW	B-ORGANIZATION.SPORTS_TEAM
 will	O
 begin	O
 preparing	O
@@ -3414,15 +3414,15 @@ season	O
 ,	O
 into	O
 the	O
-Bay	B-location
-Area	I-location
+Bay	B-LOCATION
+Area	I-LOCATION
 to	O
 play	O
 No.	O
 4	O
-Stanford	B-organization.sports_team
+Stanford	B-ORGANIZATION.SPORTS_TEAM
 and	O
-Cal	B-organization.sports_team
+Cal	B-ORGANIZATION.SPORTS_TEAM
 .	O
 
 But	O
@@ -3434,7 +3434,7 @@ focus	O
 is	O
 on	O
 the	O
-Cougars	B-organization.sports_team
+Cougars	B-ORGANIZATION.SPORTS_TEAM
 and	O
 extending	O
 that	O
@@ -3443,7 +3443,7 @@ winning	O
 streak	O
 .	O
 
-McGuff	B-person
+McGuff	B-PERSON
 ,	O
 though	O
 ,	O
@@ -3512,8 +3512,8 @@ wrong	O
 thing	O
 .	O
 
-Washington	B-organization.sports_team
-State	I-organization.sports_team
+Washington	B-ORGANIZATION.SPORTS_TEAM
+State	I-ORGANIZATION.SPORTS_TEAM
 ’s	O
 an	O
 excellent	O
@@ -3539,8 +3539,8 @@ court	O
 .	O
 ”	O
 
-The	B-organization.sports_team
-Cougars	I-organization.sports_team
+The	B-ORGANIZATION.SPORTS_TEAM
+Cougars	I-ORGANIZATION.SPORTS_TEAM
 ,	O
 led	O
 by	O
@@ -3548,8 +3548,8 @@ former	O
 UW	O
 head	O
 coach	O
-June	B-person,person.coach
-Daugherty	I-person,person.coach
+June	B-PERSON,PERSON.COACH
+Daugherty	I-PERSON,PERSON.COACH
 ,	O
 have	O
 six	O
@@ -3566,8 +3566,8 @@ game	O
 .	O
 
 Unlike	O
-the	B-organization.sports_team
-Huskies	I-organization.sports_team
+the	B-ORGANIZATION.SPORTS_TEAM
+Huskies	I-ORGANIZATION.SPORTS_TEAM
 ,	O
 who	O
 of	O
@@ -3576,12 +3576,12 @@ have	O
 mainly	O
 relied	O
 on	O
-Rogers	B-person,person.athlete
+Rogers	B-PERSON,PERSON.ATHLETE
 and	O
 point	O
 guard	O
-Jazmine	B-person,person.athlete
-Davis	I-person,person.athlete
+Jazmine	B-PERSON,PERSON.ATHLETE
+Davis	I-PERSON,PERSON.ATHLETE
 to	O
 carry	O
 the	O
@@ -3601,7 +3601,7 @@ That	O
 fact	O
 ,	O
 as	O
-McGuff	B-person
+McGuff	B-PERSON
 discussed	O
 ,	O
 can	O
@@ -3670,14 +3670,14 @@ shots	O
 ”	O
 
 If	O
-Rogers	B-person,person.athlete
+Rogers	B-PERSON,PERSON.ATHLETE
 is	O
 in	O
 the	O
 game	O
 ,	O
 the	O
-Huskies	B-organization.sports_team
+Huskies	B-ORGANIZATION.SPORTS_TEAM
 will	O
 be	O
 much	O
@@ -3686,7 +3686,7 @@ equipped	O
 to	O
 match	O
 the	O
-Cougars	B-organization.sports_team
+Cougars	B-ORGANIZATION.SPORTS_TEAM
 in	O
 that	O
 aspect	O
@@ -3708,8 +3708,8 @@ to	O
 try	O
 to	O
 beat	O
-Washington	B-organization.sports_team,location
-State	I-organization.sports_team,location
+Washington	B-LOCATION,ORGANIZATION.SPORTS_TEAM
+State	I-LOCATION,ORGANIZATION.SPORTS_TEAM
 at	O
 its	O
 own	O
@@ -3719,10 +3719,10 @@ game	O
 .	O
 
 Outside	O
-Safeway	B-building,organization.company
+Safeway	B-ORGANIZATION.COMPANY,BUILDING
 in	O
 the	O
-U-District	B-location
+U-District	B-LOCATION
 ,	O
 students	O
 pass	O
@@ -3753,8 +3753,8 @@ him	O
 .	O
 
 "	O
-Real	B-written_work
-Change	I-written_work
+Real	B-WRITTEN_WORK
+Change	I-WRITTEN_WORK
 ?	O
 "	O
 
@@ -3794,8 +3794,8 @@ guy	O
 to	O
 most	O
 ,	O
-Edward	B-person
-McClain	I-person
+Edward	B-PERSON
+McClain	I-PERSON
 has	O
 been	O
 sitting	O
@@ -3834,7 +3834,7 @@ Change	O
 guy	O
 ,	O
 ”	O
-McClain	B-person
+McClain	B-PERSON
 was	O
 a	O
 student	O
@@ -3851,32 +3851,32 @@ He	O
 was	O
 born	O
 in	O
-Jackson	B-location
-,	I-location
-Miss.	I-location
+Jackson	B-LOCATION
+,	I-LOCATION
+Miss.	I-LOCATION
 ,	O
 but	O
 was	O
 raised	O
 in	O
-Chicago	B-location.city,location
+Chicago	B-LOCATION,LOCATION.CITY
 .	O
 
 He	O
 has	O
 a	O
-bachelor	B-education.educational_degree
-’s	I-education.educational_degree
-degree	I-education.educational_degree
+bachelor	B-EDUCATION.EDUCATIONAL_DEGREE
+’s	I-EDUCATION.EDUCATIONAL_DEGREE
+degree	I-EDUCATION.EDUCATIONAL_DEGREE
 in	O
 political	O
 science	O
 and	O
 sociology	O
 from	O
-Northern	B-organization,location,organization.educational_institution
-Illinois	I-organization,location,organization.educational_institution
-University	I-organization,location,organization.educational_institution
+Northern	B-LOCATION,ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+Illinois	I-LOCATION,ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+University	I-LOCATION,ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
 and	O
 other	O
 credit	O
@@ -3884,10 +3884,10 @@ hours	O
 in	O
 microeconomics	O
 from	O
-Concordia	B-organization.educational_institution,location,organization
-University	I-organization.educational_institution,location,organization
+Concordia	B-ORGANIZATION.EDUCATIONAL_INSTITUTION,LOCATION,ORGANIZATION
+University	I-ORGANIZATION.EDUCATIONAL_INSTITUTION,LOCATION,ORGANIZATION
 in	O
-Canada	B-location.country,location
+Canada	B-LOCATION,LOCATION.COUNTRY
 .	O
 
 He	O
@@ -3895,7 +3895,7 @@ was	O
 a	O
 caseworker	O
 in	O
-Minnesota	B-location.province,location
+Minnesota	B-LOCATION,LOCATION.PROVINCE
 but	O
 left	O
 the	O
@@ -3931,7 +3931,7 @@ After	O
 18	O
 years	O
 ,	O
-McClain	B-person
+McClain	B-PERSON
 is	O
 still	O
 consistently	O
@@ -3941,12 +3941,12 @@ the	O
 top	O
 sellers	O
 for	O
-Real	B-written_work
-Change	I-written_work
+Real	B-WRITTEN_WORK
+Change	I-WRITTEN_WORK
 .	O
 
 “	O
-Ed	B-person
+Ed	B-PERSON
 is	O
 one	O
 of	O
@@ -3956,7 +3956,7 @@ success	O
 stories	O
 ,	O
 ”	O
-Harris	B-person
+Harris	B-PERSON
 said	O
 .	O
 
@@ -3973,8 +3973,8 @@ stories	O
 
 Employees	O
 of	O
-Real	B-organization.company
-Change	I-organization.company
+Real	B-ORGANIZATION.COMPANY
+Change	I-ORGANIZATION.COMPANY
 work	O
 as	O
 their	O
@@ -3983,7 +3983,7 @@ bosses	O
 .	O
 
 For	O
-McClain	B-person
+McClain	B-PERSON
 ,	O
 this	O
 means	O
@@ -4048,7 +4048,7 @@ $	O
 100	O
 ,	O
 ”	O
-McClain	B-person
+McClain	B-PERSON
 said	O
 .	O
 
@@ -4125,7 +4125,7 @@ a	O
 dull	O
 moment	O
 ,	O
-McClain	B-person
+McClain	B-PERSON
 said	O
 .	O
 
@@ -4175,10 +4175,10 @@ here	O
 .	O
 ”	O
 
-Sara	B-person
-Osborne	I-person
+Sara	B-PERSON
+Osborne	I-PERSON
 ,	O
-Safeway	B-organization,organization.company
+Safeway	B-ORGANIZATION.COMPANY,ORGANIZATION
 ’s	O
 public	O
 and	O
@@ -4223,12 +4223,12 @@ a	O
 complaint	O
 .	O
 
-Osborne	B-person
+Osborne	B-PERSON
 said	O
 the	O
 customers	O
 know	O
-McClain	B-person
+McClain	B-PERSON
 and	O
 the	O
 employees	O
@@ -4246,18 +4246,18 @@ been	O
 cases	O
 in	O
 which	O
-McClain	B-person
+McClain	B-PERSON
 will	O
 chase	O
 down	O
 shoplifters	O
 from	O
-Safeway	B-organization,organization.company,location
+Safeway	B-LOCATION,ORGANIZATION,ORGANIZATION.COMPANY
 .	O
 
 “	O
 [	O
-McClain	B-person
+McClain	B-PERSON
 ]	O
 has	O
 been	O
@@ -4272,7 +4272,7 @@ long	O
 time	O
 ,	O
 ”	O
-Osborne	B-person
+Osborne	B-PERSON
 said	O
 .	O
 
@@ -4301,12 +4301,12 @@ customers	O
 .	O
 ”	O
 
-McClain	B-person
+McClain	B-PERSON
 began	O
 his	O
 work	O
 outside	O
-Safeway	B-organization,organization.company
+Safeway	B-ORGANIZATION.COMPANY,ORGANIZATION
 in	O
 the	O
 beginning	O
@@ -4322,7 +4322,7 @@ retirement	O
 age	O
 now	O
 ,	O
-McClain	B-person
+McClain	B-PERSON
 plans	O
 to	O
 continue	O
@@ -4393,11 +4393,11 @@ that	O
 .	O
 ”	O
 
-The	B-organization
-Seattle	I-organization
-Coalition	I-organization
-on	I-organization
-Homelessness	I-organization
+The	B-ORGANIZATION
+Seattle	I-ORGANIZATION
+Coalition	I-ORGANIZATION
+on	I-ORGANIZATION
+Homelessness	I-ORGANIZATION
 counted	O
 2,442	O
 people	O
@@ -4406,7 +4406,7 @@ on	O
 the	O
 streets	O
 of	O
-Seattle	B-location.city,location
+Seattle	B-LOCATION.CITY,LOCATION
 last	O
 year	O
 in	O
@@ -4423,7 +4423,7 @@ one	O
 of	O
 them	O
 ,	O
-McClain	B-person
+McClain	B-PERSON
 tries	O
 to	O
 give	O
@@ -4535,7 +4535,7 @@ the	O
 sidewalk	O
 next	O
 to	O
-McClain	B-person
+McClain	B-PERSON
 was	O
 a	O
 container	O
@@ -4560,7 +4560,7 @@ his	O
 chair	O
 .	O
 
-McClain	B-person
+McClain	B-PERSON
 often	O
 does	O
 this	O
@@ -4582,12 +4582,12 @@ for	O
 the	O
 employees	O
 at	O
-Safeway	B-location.city,organization.company,location,organization
+Safeway	B-LOCATION,LOCATION.CITY,ORGANIZATION,ORGANIZATION.COMPANY
 as	O
 well	O
 as	O
-Real	B-organization.company
-Change	I-organization.company
+Real	B-ORGANIZATION.COMPANY
+Change	I-ORGANIZATION.COMPANY
 to	O
 show	O
 his	O
@@ -4698,10 +4698,10 @@ back	O
 .	O
 ”	O
 
-McClain	B-person
+McClain	B-PERSON
 sat	O
 outside	O
-Safeway	B-building,organization,organization.company
+Safeway	B-ORGANIZATION,ORGANIZATION.COMPANY,BUILDING
 in	O
 heavy	O
 gear	O
@@ -4804,17 +4804,17 @@ Change	O
 Students	O
 from	O
 the	O
-UW	B-organization,location,organization.educational_institution
-School	I-organization,location,organization.educational_institution
-of	I-organization,location,organization.educational_institution
-Law	I-organization,location,organization.educational_institution
-Innocence	I-organization,location,organization.educational_institution
-Project	I-organization,location,organization.educational_institution
-Northwest	I-organization,location,organization.educational_institution
-(	I-organization,location,organization.educational_institution
-IPNW	I-organization,location,organization.educational_institution
-)	I-organization,location,organization.educational_institution
-Clinic	I-organization,location,organization.educational_institution
+UW	B-LOCATION,ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+School	I-LOCATION,ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+of	I-LOCATION,ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+Law	I-LOCATION,ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+Innocence	I-LOCATION,ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+Project	I-LOCATION,ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+Northwest	I-LOCATION,ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+(	I-LOCATION,ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+IPNW	I-LOCATION,ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+)	I-LOCATION,ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+Clinic	I-LOCATION,ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
 will	O
 testify	O
 in	O
@@ -4832,13 +4832,13 @@ individuals	O
 wrongfully	O
 convicted	O
 in	O
-Washington	B-location.province,location
-State	I-location.province,location
+Washington	B-LOCATION,LOCATION.PROVINCE
+State	I-LOCATION,LOCATION.PROVINCE
 .	O
 
-House	B-law
-Bill	I-law
-2221	I-law
+House	B-LAW
+Bill	I-LAW
+2221	I-LAW
 aims	O
 to	O
 assist	O
@@ -4904,29 +4904,29 @@ record	O
 UW	O
 law	O
 students	O
-Amy	B-person
-Shebeck	I-person
+Amy	B-PERSON
+Shebeck	I-PERSON
 ,	O
-Thomas	B-person
-Hudson	I-person
+Thomas	B-PERSON
+Hudson	I-PERSON
 ,	O
-Caroline	B-person
-Bercier	I-person
+Caroline	B-PERSON
+Bercier	I-PERSON
 ,	O
 and	O
-Michael	B-person
-Windle	I-person
+Michael	B-PERSON
+Windle	I-PERSON
 will	O
 testify	O
 during	O
 the	O
-House	B-event
-Committee	I-event
-on	I-event
-Judiciary	I-event
-’s	I-event
-public	I-event
-hearing	I-event
+House	B-EVENT
+Committee	I-EVENT
+on	I-EVENT
+Judiciary	I-EVENT
+’s	I-EVENT
+public	I-EVENT
+hearing	I-EVENT
 today	O
 .	O
 
@@ -4939,18 +4939,18 @@ of	O
 a	O
 partnership	O
 between	O
-IPNW	B-organization
+IPNW	B-ORGANIZATION
 and	O
-UW	B-organization,location
-Law	I-organization,location
-’s	I-organization,location
-Legislative	I-organization,location
-Advocacy	I-organization,location
-Clinic	I-organization,location
+UW	B-LOCATION,ORGANIZATION
+Law	I-LOCATION,ORGANIZATION
+’s	I-LOCATION,ORGANIZATION
+Legislative	I-LOCATION,ORGANIZATION
+Advocacy	I-LOCATION,ORGANIZATION
+Clinic	I-LOCATION,ORGANIZATION
 .	O
 
 The	O
-IPNW	B-organization
+IPNW	B-ORGANIZATION
 grew	O
 from	O
 a	O
@@ -4982,7 +4982,7 @@ this	O
 year	O
 .	O
 
-Shebeck	B-person
+Shebeck	B-PERSON
 ,	O
 a	O
 second-year	O
@@ -5028,7 +5028,7 @@ hoping	O
 to	O
 convince	O
 the	O
-Legislature	B-organization
+Legislature	B-ORGANIZATION
 …	O
 the	O
 moral	O
@@ -5048,7 +5048,7 @@ done	O
 ,	O
 ”	O
 said	O
-Hudson	B-person
+Hudson	B-PERSON
 ,	O
 also	O
 a	O
@@ -5134,11 +5134,11 @@ money	O
 ,	O
 ”	O
 said	O
-Lara	B-person
-Zarowsky	I-person
+Lara	B-PERSON
+Zarowsky	I-PERSON
 ,	O
 the	O
-IPNW	B-organization
+IPNW	B-ORGANIZATION
 policy	O
 staff-attorney	O
 who	O
@@ -5178,7 +5178,7 @@ The	O
 law	O
 students	O
 helped	O
-Zarowsky	B-person
+Zarowsky	B-PERSON
 draft	O
 the	O
 bill	O
@@ -5190,15 +5190,15 @@ alongside	O
 the	O
 students	O
 are	O
-Ted	B-person
-Bradford	I-person
+Ted	B-PERSON
+Bradford	I-PERSON
 ,	O
-Alan	B-person
-Northrop	I-person
+Alan	B-PERSON
+Northrop	I-PERSON
 ,	O
 and	O
-Larry	B-person
-Davis	I-person
+Larry	B-PERSON
+Davis	I-PERSON
 ,	O
 exonerees	O
 that	O
@@ -5208,7 +5208,7 @@ with	O
 the	O
 help	O
 of	O
-IPNW	B-organization
+IPNW	B-ORGANIZATION
 .	O
 
 All	O
@@ -5234,7 +5234,7 @@ very	O
 compelling	O
 ,	O
 ”	O
-Shebeck	B-person
+Shebeck	B-PERSON
 said	O
 .	O
 
@@ -5271,7 +5271,7 @@ them	O
 .	O
 ”	O
 
-Bradford	B-person
+Bradford	B-PERSON
 was	O
 convicted	O
 of	O
@@ -5286,22 +5286,22 @@ the	O
 first	O
 person	O
 in	O
-Washington	B-location.province,location
+Washington	B-LOCATION,LOCATION.PROVINCE
 to	O
 be	O
 acquitted	O
 by	O
 the	O
-Court	B-government_agency
-of	I-government_agency
-Appeals	I-government_agency
+Court	B-GOVERNMENT_AGENCY
+of	I-GOVERNMENT_AGENCY
+Appeals	I-GOVERNMENT_AGENCY
 based	O
 on	O
 DNA	O
 testing	O
 .	O
 
-Northrop	B-person
+Northrop	B-PERSON
 —	O
 who	O
 is	O
@@ -5313,7 +5313,7 @@ CNN	O
 documentary	O
 —	O
 and	O
-Davis	B-person
+Davis	B-PERSON
 each	O
 served	O
 17	O
@@ -5345,7 +5345,7 @@ were	O
 acquitted	O
 .	O
 
-Shebeck	B-person
+Shebeck	B-PERSON
 said	O
 eyewitness	O
 identification	O
@@ -5396,7 +5396,7 @@ been	O
 working	O
 for	O
 the	O
-IPNW	B-organization
+IPNW	B-ORGANIZATION
 clinic	O
 since	O
 this	O
@@ -5408,9 +5408,9 @@ multiple	O
 work	O
 sessions	O
 with	O
-Rep.	B-person.politician,person
-Tina	I-person.politician,person
-Orwall	I-person.politician,person
+Rep.	B-PERSON,PERSON.POLITICIAN
+Tina	I-PERSON,PERSON.POLITICIAN
+Orwall	I-PERSON,PERSON.POLITICIAN
 ,	O
 who	O
 sponsors	O
@@ -5419,7 +5419,7 @@ compensation	O
 statute	O
 .	O
 
-Hudson	B-person
+Hudson	B-PERSON
 said	O
 the	O
 students	O
@@ -5495,7 +5495,7 @@ wrongly	O
 convicted	O
 ,	O
 ”	O
-Hudson	B-person
+Hudson	B-PERSON
 said	O
 .	O
 
@@ -5526,9 +5526,9 @@ do	O
 .	O
 ”	O
 
-Shebeck	B-person
+Shebeck	B-PERSON
 said	O
-Northrop	B-person
+Northrop	B-PERSON
 had	O
 three	O
 children	O
@@ -5606,15 +5606,15 @@ garnished	O
 .	O
 ”	O
 
-Shebeck	B-person
+Shebeck	B-PERSON
 and	O
-Hudson	B-person
+Hudson	B-PERSON
 took	O
 an	O
 interest	O
 in	O
 the	O
-IPNW	B-organization
+IPNW	B-ORGANIZATION
 because	O
 of	O
 their	O
@@ -5628,7 +5628,7 @@ government	O
 .	O
 
 For	O
-Zarowsky	B-person
+Zarowsky	B-PERSON
 ,	O
 no	O
 longer	O
@@ -5720,7 +5720,7 @@ that	O
 ?	O
 ”	O
 
-Zarowsky	B-person
+Zarowsky	B-PERSON
 said	O
 some	O
 states	O
@@ -5753,8 +5753,8 @@ done	O
 and	O
 ,	O
 in	O
-Washington	B-location.province,location
-state	I-location.province,location
+Washington	B-LOCATION,LOCATION.PROVINCE
+state	I-LOCATION,LOCATION.PROVINCE
 ,	O
 almost	O
 none	O
@@ -5766,7 +5766,7 @@ been	O
 done	O
 ,	O
 ”	O
-Zarowsky	B-person
+Zarowsky	B-PERSON
 said	O
 .	O
 
@@ -5789,7 +5789,7 @@ entrenched	O
 .	O
 ”	O
 
-Hudson	B-person
+Hudson	B-PERSON
 said	O
 the	O
 use	O
@@ -5823,7 +5823,7 @@ trumping	O
 science	O
 ,	O
 ”	O
-Hudson	B-person
+Hudson	B-PERSON
 said	O
 .	O
 
@@ -5839,7 +5839,7 @@ evidence	O
 must	O
 change	O
 ,	O
-Zarowsky	B-person
+Zarowsky	B-PERSON
 said	O
 ,	O
 and	O
@@ -5886,8 +5886,8 @@ things	O
 .	O
 ”	O
 
-Marek	B-person,person.artist
-Wieczorek	I-person,person.artist
+Marek	B-PERSON,PERSON.ARTIST
+Wieczorek	I-PERSON,PERSON.ARTIST
 ,	O
 UW	O
 associate	O
@@ -5907,20 +5907,20 @@ In	O
 ,	O
 he	O
 curated	O
-“	B-art
-The	B-art
-Desire	I-art
-of	I-art
-the	I-art
-Museum	I-art
+“	B-ART
+The	B-ART
+Desire	I-ART
+of	I-ART
+the	I-ART
+Museum	I-ART
 ”	O
 at	O
 the	O
-Whitney	B-building,organization,location
-Museum	I-building,organization,location
+Whitney	B-LOCATION,ORGANIZATION,BUILDING
+Museum	I-LOCATION,ORGANIZATION,BUILDING
 in	O
-New	B-location.city,location
-York	I-location.city,location
+New	B-LOCATION,LOCATION.CITY
+York	I-LOCATION,LOCATION.CITY
 .	O
 
 It	O
@@ -5932,7 +5932,7 @@ a	O
 passion	O
 to	O
 which	O
-Wieczorek	B-person
+Wieczorek	B-PERSON
 would	O
 devote	O
 most	O
@@ -5952,17 +5952,17 @@ my	O
 first	O
 year	O
 in	O
-New	B-location.city,location
-York	I-location.city,location
+New	B-LOCATION,LOCATION.CITY
+York	I-LOCATION,LOCATION.CITY
 ,	O
 fresh	O
 out	O
 of	O
 the	O
-Netherlands	B-location.country,location
+Netherlands	B-LOCATION,LOCATION.COUNTRY
 ,	O
 ”	O
-Wieczorek	B-person
+Wieczorek	B-PERSON
 said	O
 .	O
 
@@ -5991,8 +5991,8 @@ an	O
 institution	O
 under	O
 the	O
-Freudian	B-person
-lens	I-person
+Freudian	B-PERSON
+lens	I-PERSON
 .	O
 ”	O
 
@@ -6002,12 +6002,12 @@ a	O
 student	O
 in	O
 the	O
-Whitney	B-organization,organization.educational_institution
-Museum	I-organization,organization.educational_institution
-’s	I-organization,organization.educational_institution
-Independent	I-organization,organization.educational_institution
-Study	I-organization,organization.educational_institution
-Program	I-organization,organization.educational_institution
+Whitney	B-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+Museum	I-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+’s	I-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+Independent	I-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+Study	I-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+Program	I-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
 at	O
 the	O
 time	O
@@ -6037,14 +6037,14 @@ held	O
 an	O
 affinity	O
 :	O
-Carel	B-person,person.artist
-Balth	I-person,person.artist
+Carel	B-PERSON,PERSON.ARTIST
+Balth	I-PERSON,PERSON.ARTIST
 .	O
 
-Wieczorek	B-person
+Wieczorek	B-PERSON
 first	O
 met	O
-Balth	B-person
+Balth	B-PERSON
 when	O
 he	O
 was	O
@@ -6053,8 +6053,8 @@ a	O
 graduate	O
 student	O
 in	O
-New	B-location.city,location
-York	I-location.city,location
+New	B-LOCATION,LOCATION.CITY
+York	I-LOCATION,LOCATION.CITY
 .	O
 
 His	O
@@ -6062,25 +6062,25 @@ first	O
 publication	O
 was	O
 on	O
-Balth	B-person
+Balth	B-PERSON
 ’s	O
 “	O
-Laser	B-art
-Paintings	I-art
+Laser	B-ART
+Paintings	I-ART
 .	O
 ”	O
 
 Since	O
 then	O
 ,	O
-Wieczorek	B-person
+Wieczorek	B-PERSON
 has	O
 visited	O
-Balth	B-person
+Balth	B-PERSON
 ’s	O
 studio	O
 near	O
-Amsterdam	B-location.city,location
+Amsterdam	B-LOCATION,LOCATION.CITY
 many	O
 times	O
 .	O
@@ -6101,7 +6101,7 @@ publishing	O
 something	O
 ,	O
 ”	O
-Wieczorek	B-person
+Wieczorek	B-PERSON
 said	O
 .	O
 
@@ -6146,23 +6146,23 @@ such	O
 an	O
 exhibition	O
 ,	O
-Wieczorek	B-person
+Wieczorek	B-PERSON
 has	O
 collaborated	O
 with	O
 the	O
-Henry	B-building,location
-Art	I-building,location
-Gallery	I-building,location
+Henry	B-LOCATION,BUILDING
+Art	I-LOCATION,BUILDING
+Gallery	I-LOCATION,BUILDING
 to	O
 feature	O
 26	O
 pieces	O
 of	O
-Balth	B-person
+Balth	B-PERSON
 ’s	O
 “	O
-Videowatercolors	B-art
+Videowatercolors	B-ART
 .	O
 ”	O
 
@@ -6171,9 +6171,9 @@ pieces	O
 came	O
 from	O
 the	O
-Henry	B-building,location
-Art	I-building,location
-Gallery	I-building,location
+Henry	B-LOCATION,BUILDING
+Art	I-LOCATION,BUILDING
+Gallery	I-LOCATION,BUILDING
 collections	O
 that	O
 he	O
@@ -6181,7 +6181,7 @@ felt	O
 would	O
 coordinate	O
 with	O
-Balth	B-person
+Balth	B-PERSON
 ’s	O
 works	O
 .	O
@@ -6205,8 +6205,8 @@ four	O
 or	O
 five	O
 of	O
-Wieczorek	B-person
-’s	I-person
+Wieczorek	B-PERSON
+’s	I-PERSON
 former	O
 students	O
 before	O
@@ -6222,7 +6222,7 @@ is	O
 the	O
 culmination	O
 of	O
-Marek	B-person
+Marek	B-PERSON
 ’s	O
 classwork	O
 for	O
@@ -6232,13 +6232,13 @@ quarter	O
 ,	O
 ”	O
 said	O
-Betsey	B-person,person.artist
-Brock	I-person,person.artist
+Betsey	B-PERSON,PERSON.ARTIST
+Brock	I-PERSON,PERSON.ARTIST
 ,	O
 the	O
-Henry	B-building,location
-Art	I-building,location
-Gallery	I-building,location
+Henry	B-LOCATION,BUILDING
+Art	I-LOCATION,BUILDING
+Gallery	I-LOCATION,BUILDING
 ’s	O
 associate	O
 director	O
@@ -6271,9 +6271,9 @@ curriculum	O
 .	O
 
 For	O
-Wieczorek	B-person
+Wieczorek	B-PERSON
 ,	O
-Balth	B-person
+Balth	B-PERSON
 ’s	O
 work	O
 is	O
@@ -6291,9 +6291,9 @@ as	O
 intermedia	O
 .	O
 
-Wieczorek	B-person
+Wieczorek	B-PERSON
 said	O
-Balth	B-person
+Balth	B-PERSON
 addresses	O
 the	O
 question	O
@@ -6317,7 +6317,7 @@ media	O
 ”	O
 
 “	O
-Balth	B-person
+Balth	B-PERSON
 ’s	O
 work	O
 ,	O
@@ -6332,7 +6332,7 @@ of	O
 all	O
 ,	O
 ”	O
-Wieczorek	B-person
+Wieczorek	B-PERSON
 said	O
 .	O
 
@@ -6343,7 +6343,7 @@ what	O
 I	O
 love	O
 about	O
-Balth	B-person
+Balth	B-PERSON
 ’s	O
 art	O
 .	O
@@ -6356,7 +6356,7 @@ between	O
 .	O
 ”	O
 
-Balth	B-person
+Balth	B-PERSON
 sometimes	O
 uses	O
 digital	O
@@ -6416,16 +6416,16 @@ one	O
 of	O
 his	O
 “	O
-Videowatercolor	B-art
+Videowatercolor	B-ART
 ”	O
 pieces	O
 ,	O
 “	O
-Moving	B-art
-II	I-art
+Moving	B-ART
+II	I-ART
 ,	O
 ”	O
-Balth	B-person
+Balth	B-PERSON
 simply	O
 rotates	O
 an	O
@@ -6458,7 +6458,7 @@ certain	O
 way	O
 ,	O
 ”	O
-Wieczorek	B-person
+Wieczorek	B-PERSON
 said	O
 .	O
 
@@ -6482,9 +6482,9 @@ piece	O
 .	O
 ”	O
 
-Wieczorek	B-person
+Wieczorek	B-PERSON
 said	O
-Balth	B-person
+Balth	B-PERSON
 also	O
 plays	O
 with	O
@@ -6498,17 +6498,17 @@ perception	O
 ”	O
 
 In	O
-Balth	B-person
+Balth	B-PERSON
 ’s	O
 work	O
 “	O
-Artwork	B-art
-without	I-art
-the	I-art
-Tulipman	I-art
+Artwork	B-ART
+without	I-ART
+the	I-ART
+Tulipman	I-ART
 ,	O
 ”	O
-Balth	B-person
+Balth	B-PERSON
 took	O
 a	O
 Polaroid	O
@@ -6548,7 +6548,7 @@ on	O
 fire	O
 .	O
 
-Wieczorek	B-person
+Wieczorek	B-PERSON
 calls	O
 it	O
 “	O
@@ -6558,7 +6558,7 @@ light	O
 ”	O
 saying	O
 that	O
-Balth	B-person
+Balth	B-PERSON
 is	O
 “	O
 casting	O
@@ -6587,7 +6587,7 @@ see	O
 light	O
 ,	O
 ”	O
-Wieczorek	B-person
+Wieczorek	B-PERSON
 said	O
 .	O
 
@@ -6595,11 +6595,11 @@ In	O
 an	O
 interview	O
 with	O
-The	B-organization,organization.company,written_work,news_agency
-Seattle	I-organization,organization.company,written_work,news_agency
-Times	I-organization,organization.company,written_work,news_agency
+The	B-ORGANIZATION,ORGANIZATION.COMPANY,WRITTEN_WORK,NEWS_AGENCY
+Seattle	I-ORGANIZATION,ORGANIZATION.COMPANY,WRITTEN_WORK,NEWS_AGENCY
+Times	I-ORGANIZATION,ORGANIZATION.COMPANY,WRITTEN_WORK,NEWS_AGENCY
 ,	O
-Balth	B-person
+Balth	B-PERSON
 said	O
 his	O
 intention	O
@@ -6631,13 +6631,13 @@ about	O
 his	O
 pieces	O
 ,	O
-Wieczorek	B-person
+Wieczorek	B-PERSON
 said	O
 ,	O
 helped	O
 him	O
 understand	O
-Balth	B-person
+Balth	B-PERSON
 ’s	O
 intentions	O
 behind	O
@@ -6647,7 +6647,7 @@ work	O
 
 However	O
 ,	O
-Wieczorek	B-person
+Wieczorek	B-PERSON
 said	O
 the	O
 curator	O
@@ -6722,7 +6722,7 @@ In	O
 the	O
 end	O
 ,	O
-Wieczorek	B-person
+Wieczorek	B-PERSON
 said	O
 knowing	O
 the	O
@@ -6785,10 +6785,10 @@ been	O
 tabled	O
 by	O
 the	O
-ASUW	B-organization
-Board	I-organization
-of	I-organization
-Directors	I-organization
+ASUW	B-ORGANIZATION
+Board	I-ORGANIZATION
+of	I-ORGANIZATION
+Directors	I-ORGANIZATION
 ,	O
 many	O
 students	O
@@ -6798,8 +6798,8 @@ a	O
 new	O
 commission	O
 representing	O
-South	B-people.ethnicity,location
-Asian	I-people.ethnicity,location
+South	B-PEOPLE.ETHNICITY,LOCATION
+Asian	I-PEOPLE.ETHNICITY,LOCATION
 student	O
 groups	O
 would	O
@@ -6822,11 +6822,11 @@ constituent	O
 organizations	O
 under	O
 the	O
-Asian	B-organization
-Student	I-organization
-Commission	I-organization
+Asian	B-ORGANIZATION
+Student	I-ORGANIZATION
+Commission	I-ORGANIZATION
 (	O
-ASC	B-organization
+ASC	B-ORGANIZATION
 )	O
 .	O
 
@@ -6836,30 +6836,30 @@ encompassing	O
 RSOs	O
 ,	O
 the	O
-ASC	B-organization
+ASC	B-ORGANIZATION
 represents	O
 the	O
 widest	O
 community	O
 under	O
 the	O
-ASUW	B-organization
-Joint	I-organization
-Commission	I-organization
-Committee	I-organization
+ASUW	B-ORGANIZATION
+Joint	I-ORGANIZATION
+Commission	I-ORGANIZATION
+Committee	I-ORGANIZATION
 .	O
 
-Divya	B-person
-Ramachandra	I-person
+Divya	B-PERSON
+Ramachandra	I-PERSON
 ,	O
 secretary	O
 of	O
 the	O
-Indian	B-organization
-Student	I-organization
-Association	I-organization
+Indian	B-ORGANIZATION
+Student	I-ORGANIZATION
+Association	I-ORGANIZATION
 (	O
-ISA	B-organization
+ISA	B-ORGANIZATION
 )	O
 ,	O
 said	O
@@ -6869,7 +6869,7 @@ broad	O
 community	O
 covered	O
 in	O
-ASC	B-organization
+ASC	B-ORGANIZATION
 makes	O
 it	O
 difficult	O
@@ -6885,8 +6885,8 @@ others	O
 
 “	O
 The	O
-South	B-location
-Asian	I-location
+South	B-LOCATION
+Asian	I-LOCATION
 student	O
 groups	O
 and	O
@@ -6896,8 +6896,8 @@ very	O
 different	O
 than	O
 the	O
-East	B-location
-Asian	I-location
+East	B-LOCATION
+Asian	I-LOCATION
 student	O
 groups	O
 and	O
@@ -6921,7 +6921,7 @@ these	O
 groups	O
 ,	O
 ”	O
-Ramachandra	B-person
+Ramachandra	B-PERSON
 said	O
 .	O
 
@@ -6937,7 +6937,7 @@ to	O
 go	O
 to	O
 other	O
-ASC	B-organization
+ASC	B-ORGANIZATION
 events	O
 because	O
 they	O
@@ -6979,7 +6979,7 @@ Despite	O
 these	O
 views	O
 ,	O
-Ramachandra	B-person
+Ramachandra	B-PERSON
 said	O
 she	O
 personally	O
@@ -7010,7 +7010,7 @@ other	O
 cultures	O
 ,	O
 ”	O
-Ramashandra	B-person
+Ramashandra	B-PERSON
 said	O
 .	O
 
@@ -7044,13 +7044,13 @@ campus	O
 ”	O
 
 The	O
-ASUW	B-organization
+ASUW	B-ORGANIZATION
 bill	O
 regarding	O
 a	O
 proposed	O
-South	B-location
-Asian	I-location
+South	B-LOCATION
+Asian	I-LOCATION
 commission	O
 created	O
 a	O
@@ -7070,10 +7070,10 @@ the	O
 community	O
 .	O
 
-Jonathan	B-person
-Winn	I-person
+Jonathan	B-PERSON
+Winn	I-PERSON
 ,	O
-ASUW	B-organization
+ASUW	B-ORGANIZATION
 director	O
 of	O
 diversity	O
@@ -7129,17 +7129,17 @@ was	O
 something	O
 that	O
 the	O
-ASUW	B-organization
+ASUW	B-ORGANIZATION
 would	O
 take	O
 on	O
 ,	O
 ”	O
-Winn	B-person
+Winn	B-PERSON
 said	O
 .	O
 
-Winn	B-person
+Winn	B-PERSON
 said	O
 he	O
 was	O
@@ -7171,10 +7171,10 @@ a	O
 decision	O
 .	O
 
-ASC	B-organization
-Director	B-person
-Melvin	I-person
-Taing	I-person
+ASC	B-ORGANIZATION
+Director	B-PERSON
+Melvin	I-PERSON
+Taing	I-PERSON
 said	O
 that	O
 because	O
@@ -7212,8 +7212,8 @@ forum	O
 will	O
 be	O
 held	O
-Jan.	B-time
-18	I-time
+Jan.	B-TIME
+18	I-TIME
 for	O
 students	O
 to	O
@@ -7225,7 +7225,7 @@ matter	O
 Discussion	O
 between	O
 the	O
-ASC	B-organization
+ASC	B-ORGANIZATION
 constituents	O
 has	O
 been	O
@@ -7237,7 +7237,7 @@ a	O
 large	O
 community	O
 ,	O
-Taing	B-person
+Taing	B-PERSON
 said	O
 .	O
 
@@ -7247,17 +7247,17 @@ statistics	O
 released	O
 by	O
 the	O
-UW	B-organization
-Office	I-organization
-of	I-organization
-the	I-organization
-Registrar	I-organization
+UW	B-ORGANIZATION
+Office	I-ORGANIZATION
+of	I-ORGANIZATION
+the	I-ORGANIZATION
+Registrar	I-ORGANIZATION
 last	O
 quarter	O
 ,	O
-Asian	B-people.ethnicity
+Asian	B-PEOPLE.ETHNICITY
 and	O
-Asian-American	B-people.ethnicity
+Asian-American	B-PEOPLE.ETHNICITY
 students	O
 currently	O
 make	O
@@ -7280,7 +7280,7 @@ current	O
 student	O
 body	O
 ,	O
-ASC	B-organization
+ASC	B-ORGANIZATION
 has	O
 been	O
 overflowing	O
@@ -7296,7 +7296,7 @@ the	O
 first	O
 time	O
 the	O
-ASC	B-organization
+ASC	B-ORGANIZATION
 community	O
 has	O
 been	O
@@ -7310,19 +7310,19 @@ student	O
 groups	O
 split	O
 from	O
-ASC	B-organization
+ASC	B-ORGANIZATION
 in	O
 order	O
 to	O
 form	O
 the	O
-Pacific	B-organization
-Islander	I-organization
-Student	I-organization
-Commission	I-organization
+Pacific	B-ORGANIZATION
+Islander	I-ORGANIZATION
+Student	I-ORGANIZATION
+Commission	I-ORGANIZATION
 .	O
 
-Taing	B-person
+Taing	B-PERSON
 said	O
 that	O
 some	O
@@ -7370,10 +7370,10 @@ done	O
 at	O
 all	O
 with	O
-ASC	B-organization
+ASC	B-ORGANIZATION
 ,	O
 ”	O
-Taing	B-person
+Taing	B-PERSON
 said	O
 .	O
 
@@ -7383,8 +7383,8 @@ people	O
 have	O
 felt	O
 that	O
-South	B-people.ethnicity,location
-Asian	I-people.ethnicity,location
+South	B-PEOPLE.ETHNICITY,LOCATION
+Asian	I-PEOPLE.ETHNICITY,LOCATION
 people	O
 have	O
 been	O
@@ -7392,9 +7392,9 @@ left	O
 out	O
 of	O
 the	O
-Asian	B-organization
-Student	I-organization
-Commission	I-organization
+Asian	B-ORGANIZATION
+Student	I-ORGANIZATION
+Commission	I-ORGANIZATION
 and	O
 that	O
 they	O
@@ -7409,11 +7409,11 @@ represented	O
 well	O
 in	O
 the	O
-ASC	B-organization
+ASC	B-ORGANIZATION
 .	O
 ”	O
 
-Taing	B-person
+Taing	B-PERSON
 said	O
 the	O
 new	O
@@ -7462,7 +7462,7 @@ same	O
 page	O
 ,	O
 ”	O
-Taing	B-person
+Taing	B-PERSON
 said	O
 .	O
 
@@ -7482,7 +7482,7 @@ resources	O
 .	O
 ”	O
 
-Ramachandra	B-person
+Ramachandra	B-PERSON
 said	O
 she	O
 believes	O
@@ -7498,13 +7498,13 @@ events	O
 ,	O
 such	O
 as	O
-Bhangra	B-event
-Bash	I-event
+Bhangra	B-EVENT
+Bash	I-EVENT
 .	O
 
 “	O
-Bhangra	B-event
-Bash	I-event
+Bhangra	B-EVENT
+Bash	I-EVENT
 used	O
 to	O
 be	O
@@ -7544,15 +7544,15 @@ a	O
 group	O
 ,	O
 ”	O
-Ramachandra	B-person
+Ramachandra	B-PERSON
 said	O
 .	O
 
 “	O
 Having	O
 the	O
-South	B-people.ethnicity,location
-Asian	I-people.ethnicity,location
+South	B-PEOPLE.ETHNICITY,LOCATION
+Asian	I-PEOPLE.ETHNICITY,LOCATION
 student	O
 commission	O
 would	O
@@ -7624,7 +7624,7 @@ issues	O
 .	O
 
 “	O
-Seattle	B-location.city,location
+Seattle	B-LOCATION.CITY,LOCATION
 is	O
 one	O
 of	O
@@ -7666,21 +7666,21 @@ health	O
 ,	O
 ”	O
 said	O
-William	B-person
-Heisel	I-person
+William	B-PERSON
+Heisel	I-PERSON
 ,	O
 a	O
 representative	O
 at	O
 the	O
-Institute	B-organization
-for	I-organization
-Health	I-organization
-Metrics	I-organization
-and	I-organization
-Evaluation	I-organization
+Institute	B-ORGANIZATION
+for	I-ORGANIZATION
+Health	I-ORGANIZATION
+Metrics	I-ORGANIZATION
+and	I-ORGANIZATION
+Evaluation	I-ORGANIZATION
 (	O
-IHME	B-organization
+IHME	B-ORGANIZATION
 )	O
 .	O
 
@@ -7688,12 +7688,12 @@ UW	O
 staff	O
 from	O
 the	O
-Foster	B-organization,organization.educational_institution
-School	I-organization,organization.educational_institution
-of	I-organization,organization.educational_institution
-Business	I-organization,organization.educational_institution
+Foster	B-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+School	I-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+of	I-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+Business	I-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
 and	O
-IHME	B-organization
+IHME	B-ORGANIZATION
 helped	O
 create	O
 the	O
@@ -7704,18 +7704,18 @@ is	O
 sponsored	O
 by	O
 the	O
-Global	B-organization
-Health	I-organization
-Nexus	I-organization
+Global	B-ORGANIZATION
+Health	I-ORGANIZATION
+Nexus	I-ORGANIZATION
 —	O
 an	O
 initiative	O
 of	O
 the	O
-Washington	B-organization
-Global	I-organization
-Health	I-organization
-Alliance	I-organization
+Washington	B-ORGANIZATION
+Global	I-ORGANIZATION
+Health	I-ORGANIZATION
+Alliance	I-ORGANIZATION
 that	O
 works	O
 to	O
@@ -7736,16 +7736,16 @@ committee	O
 members	O
 used	O
 the	O
-Foster	B-organization,organization.educational_institution
-School	I-organization,organization.educational_institution
-of	I-organization,organization.educational_institution
-Business	I-organization,organization.educational_institution
+Foster	B-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+School	I-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+of	I-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+Business	I-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
 ’	O
 annual	O
-Global	B-event
-Social	I-event
-Entrepreneurship	I-event
-Competition	I-event
+Global	B-EVENT
+Social	I-EVENT
+Entrepreneurship	I-EVENT
+Competition	I-EVENT
 (	O
 GSEC	O
 )	O
@@ -7829,7 +7829,7 @@ health	O
 perspective	O
 ,	O
 ”	O
-Heisel	B-person
+Heisel	B-PERSON
 said	O
 .	O
 
@@ -7881,7 +7881,7 @@ to	O
 their	O
 solution	O
 in	O
-March	B-time
+March	B-TIME
 .	O
 
 Part	O
@@ -7936,11 +7936,11 @@ organization	O
 such	O
 as	O
 the	O
-Bill	B-organization
-&	I-organization
-Melinda	I-organization
-Gates	I-organization
-Foundation	I-organization
+Bill	B-ORGANIZATION
+&	I-ORGANIZATION
+Melinda	I-ORGANIZATION
+Gates	I-ORGANIZATION
+Foundation	I-ORGANIZATION
 ;	O
 the	O
 international	O
@@ -7950,13 +7950,13 @@ organization	O
 PATH	O
 ;	O
 the	O
-Seattle	B-building,building.hospital,location
-Children	I-building,building.hospital,location
-’s	I-building,building.hospital,location
-Hospital	I-building,building.hospital,location
+Seattle	B-LOCATION,BUILDING,BUILDING.HOSPITAL
+Children	I-LOCATION,BUILDING,BUILDING.HOSPITAL
+’s	I-LOCATION,BUILDING,BUILDING.HOSPITAL
+Hospital	I-LOCATION,BUILDING,BUILDING.HOSPITAL
 ,	O
 and	O
-IHME	B-organization
+IHME	B-ORGANIZATION
 ,	O
 a	O
 UW	O
@@ -7996,7 +7996,7 @@ their	O
 career	O
 ,	O
 ”	O
-Heisel	B-person
+Heisel	B-PERSON
 said	O
 .	O
 
@@ -8064,8 +8064,8 @@ topic	O
 is	O
 what	O
 freshman	O
-Jamie	B-person
-Choe	I-person
+Jamie	B-PERSON
+Choe	I-PERSON
 chose	O
 .	O
 
@@ -8112,14 +8112,14 @@ dirty	O
 water	O
 .	O
 
-Choe	B-person
+Choe	B-PERSON
 ’s	O
 team	O
 ,	O
 dubbed	O
 “	O
-Ali	B-organization
-Baba	I-organization
+Ali	B-ORGANIZATION
+Baba	I-ORGANIZATION
 ,	O
 ”	O
 hopes	O
@@ -8134,7 +8134,7 @@ in	O
 countries	O
 such	O
 as	O
-India	B-location.country,location
+India	B-LOCATION,LOCATION.COUNTRY
 ,	O
 which	O
 is	O
@@ -8164,15 +8164,15 @@ other	O
 places	O
 ,	O
 ”	O
-Choe	B-person
+Choe	B-PERSON
 said	O
 .	O
 
 UW	O
 faculty	O
 member	O
-Alyssa	B-person
-Taylor	I-person
+Alyssa	B-PERSON
+Taylor	I-PERSON
 instructed	O
 the	O
 students	O
@@ -8189,7 +8189,7 @@ last	O
 quarter	O
 .	O
 
-Taylor	B-person
+Taylor	B-PERSON
 said	O
 the	O
 contest	O
@@ -8294,19 +8294,19 @@ was	O
 palpable	O
 when	O
 state	O
-Adirondack	B-organization,government_agency
-Park	I-organization,government_agency
-Agency	I-organization,government_agency
+Adirondack	B-ORGANIZATION,GOVERNMENT_AGENCY
+Park	I-ORGANIZATION,GOVERNMENT_AGENCY
+Agency	I-ORGANIZATION,GOVERNMENT_AGENCY
 commissioners	O
 approved	O
 a	O
 permit	O
 for	O
 the	O
-Adirondack	B-building.hotel
-Club	I-building.hotel
-and	I-building.hotel
-Resort	I-building.hotel
+Adirondack	B-BUILDING.HOTEL
+Club	I-BUILDING.HOTEL
+and	I-BUILDING.HOTEL
+Resort	I-BUILDING.HOTEL
 Friday	O
 morning	O
 .	O
@@ -8314,8 +8314,8 @@ morning	O
 After	O
 Executive	O
 Director	O
-Terry	B-person
-Martino	I-person
+Terry	B-PERSON
+Martino	I-PERSON
 announced	O
 the	O
 final	O
@@ -8334,8 +8334,8 @@ erupted	O
 from	O
 the	O
 many	O
-Tupper	B-person
-Lakers	I-person
+Tupper	B-PERSON
+Lakers	I-PERSON
 and	O
 local	O
 government	O
@@ -8343,7 +8343,7 @@ representatives	O
 packed	O
 into	O
 the	O
-APA	B-organization
+APA	B-ORGANIZATION
 's	O
 board	O
 room	O
@@ -8391,16 +8391,16 @@ historic	O
 moment	O
 ,	O
 "	O
-Gerald	B-person
-Delaney	I-person
+Gerald	B-PERSON
+Delaney	I-PERSON
 ,	O
 chairman	O
 of	O
 the	O
-Local	B-organization
-Government	I-organization
-Review	I-organization
-Board	I-organization
+Local	B-ORGANIZATION
+Government	I-ORGANIZATION
+Review	I-ORGANIZATION
+Board	I-ORGANIZATION
 ,	O
 said	O
 during	O
@@ -8443,18 +8443,18 @@ and	O
 turns	O
 in	O
 the	O
-Michael	B-person
-Scaringe	I-person
+Michael	B-PERSON
+Scaringe	I-PERSON
 rape	O
 case	O
 ended	O
 with	O
-Franklin	B-government_agency
-County	I-government_agency
-Court	I-government_agency
-Judge	B-person
-Robert	I-person
-Main	I-person
+Franklin	B-GOVERNMENT_AGENCY
+County	I-GOVERNMENT_AGENCY
+Court	I-GOVERNMENT_AGENCY
+Judge	B-PERSON
+Robert	I-PERSON
+Main	I-PERSON
 declaring	O
 a	O
 mistrial	O
@@ -8467,13 +8467,13 @@ late	O
 Friday	O
 afternoon	O
 after	O
-Scaringe	B-person
+Scaringe	B-PERSON
 dismissed	O
-Brian	B-person
-Barrett	I-person
+Brian	B-PERSON
+Barrett	I-PERSON
 of	O
-Lake	B-location.city,location
-Placid	I-location.city,location
+Lake	B-LOCATION.CITY,LOCATION
+Placid	I-LOCATION.CITY,LOCATION
 as	O
 one	O
 of	O
@@ -8485,8 +8485,8 @@ attorneys	O
 "	O
 This	O
 afternoon	O
-Judge	B-person
-Main	I-person
+Judge	B-PERSON
+Main	I-PERSON
 granted	O
 a	O
 defense	O
@@ -8499,8 +8499,8 @@ mistrial	O
 county	O
 Court	O
 Clerk	O
-Bruce	B-person
-Cox	I-person
+Bruce	B-PERSON
+Cox	I-PERSON
 said	O
 in	O
 a	O
@@ -8528,15 +8528,15 @@ counsel	O
 .	O
 "	O
 
-Barrett	B-person
+Barrett	B-PERSON
 had	O
 represented	O
 the	O
 former	O
-Saranac	B-organization
-Lake	I-organization
-Youth	I-organization
-Center	I-organization
+Saranac	B-ORGANIZATION
+Lake	I-ORGANIZATION
+Youth	I-ORGANIZATION
+Center	I-ORGANIZATION
 director	O
 since	O
 he	O
@@ -8557,13 +8557,13 @@ the	O
 center	O
 .	O
 
-Barrett	B-person
+Barrett	B-PERSON
 brought	O
 on	O
-Mary	B-person
-Rain	I-person
+Mary	B-PERSON
+Rain	I-PERSON
 of	O
-Ogdensburg	B-location.city,location
+Ogdensburg	B-LOCATION.CITY,LOCATION
 as	O
 his	O
 co-counsel	O
@@ -8577,7 +8577,7 @@ last	O
 year	O
 .	O
 
-Barrett	B-person
+Barrett	B-PERSON
 confirmed	O
 to	O
 the	O
@@ -8586,7 +8586,7 @@ earlier	O
 this	O
 afternoon	O
 that	O
-Scaringe	B-person
+Scaringe	B-PERSON
 had	O
 dismissed	O
 him	O
@@ -8630,14 +8630,14 @@ afternoon	O
 .	O
 
 "	O
-Mr.	B-person
-Scaringe	I-person
+Mr.	B-PERSON
+Scaringe	I-PERSON
 opted	O
 to	O
 continue	O
 with	O
-Ms.	B-person
-Rain	I-person
+Ms.	B-PERSON
+Rain	I-PERSON
 ,	O
 and	O
 I	O
@@ -8650,7 +8650,7 @@ luck	O
 .	O
 "	O
 
-Rain	B-person
+Rain	B-PERSON
 declined	O
 to	O
 speak	O
@@ -8661,7 +8661,7 @@ about	O
 the	O
 circumstances	O
 surrounding	O
-Barrett	B-person
+Barrett	B-PERSON
 's	O
 departure	O
 or	O
@@ -8676,7 +8676,7 @@ left	O
 the	O
 courthouse	O
 with	O
-Scaringe	B-person
+Scaringe	B-PERSON
 and	O
 his	O
 family	O
@@ -8690,8 +8690,8 @@ Enterprise	O
 was	O
 notified	O
 that	O
-Judge	B-person
-Main	I-person
+Judge	B-PERSON
+Main	I-PERSON
 had	O
 declared	O
 a	O
@@ -8705,7 +8705,7 @@ left	O
 a	O
 message	O
 with	O
-Rain	B-person
+Rain	B-PERSON
 that	O
 had	O
 n't	O
@@ -8717,12 +8717,12 @@ press	O
 time	O
 .	O
 
-Scaringe	B-person
+Scaringe	B-PERSON
 's	O
 decision	O
 to	O
 dismiss	O
-Barrett	B-person
+Barrett	B-PERSON
 came	O
 one	O
 day	O
@@ -8763,8 +8763,8 @@ resume	O
 Friday	O
 morning	O
 ,	O
-Judge	B-person
-Main	I-person
+Judge	B-PERSON
+Main	I-PERSON
 sent	O
 the	O
 jury	O
@@ -8817,8 +8817,8 @@ the	O
 trial	O
 .	O
 
-Spencer	B-person,person.doctor
-Anderson	I-person,person.doctor
+Spencer	B-PERSON,PERSON.DOCTOR
+Anderson	I-PERSON,PERSON.DOCTOR
 was	O
 in	O
 veterinary	O
@@ -8827,8 +8827,8 @@ when	O
 he	O
 joined	O
 the	O
-U.S.	B-military,organization
-Army	I-military,organization
+U.S.	B-MILITARY,ORGANIZATION
+Army	I-MILITARY,ORGANIZATION
 in	O
 2000	O
 .	O
@@ -8842,7 +8842,7 @@ noted	O
 
 The	O
 33-year-old	O
-Billings	B-location.city,location
+Billings	B-LOCATION.CITY,LOCATION
 native	O
 enlisted	O
 as	O
@@ -8873,7 +8873,7 @@ veterinarian	O
 ,	O
 ”	O
 said	O
-Spencer	B-person,person.soldier
+Spencer	B-PERSON,PERSON.SOLDIER
 ,	O
 as	O
 he	O
@@ -8888,13 +8888,13 @@ his	O
 military	O
 graduation	O
 ,	O
-Spencer	B-person,person.soldier
+Spencer	B-PERSON,PERSON.SOLDIER
 spent	O
 three	O
 years	O
 tending	O
 the	O
-Army	B-military,organization
+Army	B-MILITARY,ORGANIZATION
 ’s	O
 dogs	O
 and	O
@@ -8906,18 +8906,18 @@ year	O
 of	O
 that	O
 in	O
-Iraq	B-location.country,location
+Iraq	B-LOCATION.COUNTRY,LOCATION
 .	O
 
 The	O
 “	O
 working	O
 ”	O
-German	B-living_thing,livingthing.animal
-shepherds	I-living_thing,livingthing.animal
+German	B-LIVING_THING,LIVINGTHING.ANIMAL
+shepherds	I-LIVING_THING,LIVINGTHING.ANIMAL
 and	O
-Belgian	B-living_thing,livingthing.animal
-malinois	I-living_thing,livingthing.animal
+Belgian	B-LIVING_THING,LIVINGTHING.ANIMAL
+malinois	I-LIVING_THING,LIVINGTHING.ANIMAL
 he	O
 cared	O
 for	O
@@ -8938,10 +8938,10 @@ standing	O
 in	O
 his	O
 year-old	O
-Baxter	B-building,building.hospital
-Creek	I-building,building.hospital
-Veterinary	I-building,building.hospital
-Clinic	I-building,building.hospital
+Baxter	B-BUILDING,BUILDING.HOSPITAL
+Creek	I-BUILDING,BUILDING.HOSPITAL
+Veterinary	I-BUILDING,BUILDING.HOSPITAL
+Clinic	I-BUILDING,BUILDING.HOSPITAL
 .	O
 
 He	O
@@ -9010,7 +9010,7 @@ civilian	O
 work	O
 ,	O
 ”	O
-Spencer	B-person
+Spencer	B-PERSON
 said	O
 .	O
 
@@ -9019,21 +9019,21 @@ serving	O
 he	O
 taught	O
 himself	O
-acupuncture	B-medicine.medical_treatment
+acupuncture	B-MEDICINE.MEDICAL_TREATMENT
 .	O
 
 When	O
 he	O
 left	O
 the	O
-Army	B-military,organization
+Army	B-MILITARY,ORGANIZATION
 ,	O
-Spencer	B-person,person.soldier
+Spencer	B-PERSON,PERSON.SOLDIER
 got	O
 a	O
 job	O
 in	O
-Bozeman	B-location.city,location
+Bozeman	B-LOCATION.CITY,LOCATION
 ,	O
 where	O
 he	O
@@ -9075,7 +9075,7 @@ that	O
 way	O
 ,	O
 ”	O
-Spencer	B-person
+Spencer	B-PERSON
 said	O
 .	O
 
@@ -9101,19 +9101,19 @@ true	O
 devotees	O
 .	O
 
-Jennifer	B-person
-Leight	I-person
+Jennifer	B-PERSON
+Leight	I-PERSON
 has	O
 been	O
 bringing	O
 her	O
 17-year-old	O
-Newfoundland	B-living_thing,livingthing.animal
+Newfoundland	B-LIVING_THING,LIVINGTHING.ANIMAL
 ,	O
 Barley	O
 ,	O
 to	O
-Spencer	B-person
+Spencer	B-PERSON
 since	O
 June	O
 .	O
@@ -9132,7 +9132,7 @@ spinal	O
 arthritis	O
 .	O
 
-Leight	B-person
+Leight	B-PERSON
 was	O
 skeptical	O
 about	O
@@ -9181,7 +9181,7 @@ barely	O
 walking	O
 ,	O
 ”	O
-Leight	B-person
+Leight	B-PERSON
 said	O
 .	O
 
@@ -9208,8 +9208,8 @@ a	O
 power	O
 line	O
 in	O
-Bridger	B-location
-Canyon	I-location
+Bridger	B-LOCATION
+Canyon	I-LOCATION
 on	O
 Sunday	O
 morning	O
@@ -9223,17 +9223,17 @@ customers	O
 ,	O
 including	O
 the	O
-Bridger	B-location
-Bowl	I-location
-ski	I-location
-area	I-location
+Bridger	B-LOCATION
+Bowl	I-LOCATION
+ski	I-LOCATION
+area	I-LOCATION
 .	O
 
-Northwestern	B-organization,organization.company
-Energy	I-organization,organization.company
+Northwestern	B-ORGANIZATION,ORGANIZATION.COMPANY
+Energy	I-ORGANIZATION,ORGANIZATION.COMPANY
 spokeswoman	O
-Claudia	B-person
-Rapkoch	I-person
+Claudia	B-PERSON
+Rapkoch	I-PERSON
 said	O
 the	O
 outage	O
@@ -9266,8 +9266,8 @@ the	O
 outage	O
 shut	O
 down	O
-Bridger	B-location
-Bowl	I-location
+Bridger	B-LOCATION
+Bowl	I-LOCATION
 for	O
 the	O
 rest	O
@@ -9284,13 +9284,13 @@ the	O
 ski	O
 area	O
 's	O
-Facebook	B-organization,internet.website,organization.company
+Facebook	B-INTERNET.WEBSITE,ORGANIZATION.COMPANY,ORGANIZATION
 page	O
 .	O
 
 Officials	O
 at	O
-Bridger	B-organization,organization.company
+Bridger	B-ORGANIZATION,ORGANIZATION.COMPANY
 could	O
 not	O
 be	O
@@ -9305,7 +9305,7 @@ Earlier	O
 this	O
 month	O
 ,	O
-Sony	B-organization,organization.company
+Sony	B-ORGANIZATION,ORGANIZATION.COMPANY
 released	O
 the	O
 first	O
@@ -9329,7 +9329,7 @@ storage	O
 options	O
 .	O
 
-Sony	B-organization,organization.company
+Sony	B-ORGANIZATION,ORGANIZATION.COMPANY
 has	O
 now	O
 announced	O
@@ -9348,7 +9348,7 @@ cards	O
 
 The	O
 flagship	O
-UHS-I	B-product
+UHS-I	B-PRODUCT
 series	O
 will	O
 be	O
@@ -9379,7 +9379,7 @@ $	O
 a	O
 pop	O
 ,	O
-Sony	B-organization,organization.company
+Sony	B-ORGANIZATION,ORGANIZATION.COMPANY
 has	O
 also	O
 treated	O
@@ -9401,11 +9401,11 @@ March	O
 
 Also	O
 at	O
-CES	B-event
+CES	B-EVENT
 ,	O
 the	O
-SD	B-organization
-Association	I-organization
+SD	B-ORGANIZATION
+Association	I-ORGANIZATION
 announced	O
 a	O
 new	O
@@ -9416,7 +9416,7 @@ communications	O
 across	O
 all	O
 the	O
-SD	B-product
+SD	B-PRODUCT
 cards	O
 .	O
 
@@ -9425,7 +9425,7 @@ the	O
 huge	O
 popularity	O
 of	O
-EyeFi	B-product
+EyeFi	B-PRODUCT
 cards	O
 ,	O
 this	O
@@ -9500,11 +9500,11 @@ change	O
 
 According	O
 to	O
-PhotographyBlog	B-internet.website
+PhotographyBlog	B-INTERNET.WEBSITE
 ,	O
-SanDisk	B-organization,organization.company
+SanDisk	B-ORGANIZATION,ORGANIZATION.COMPANY
 and	O
-Lexar	B-organization,organization.company
+Lexar	B-ORGANIZATION,ORGANIZATION.COMPANY
 have	O
 no	O
 immediate	O
@@ -9520,7 +9520,7 @@ cards	O
 
 Speaking	O
 at	O
-CES	B-event
+CES	B-EVENT
 ,	O
 both	O
 companies	O
@@ -9539,7 +9539,7 @@ near	O
 future	O
 ,	O
 and	O
-Lexar	B-organization,organization.company
+Lexar	B-ORGANIZATION,ORGANIZATION.COMPANY
 pointed	O
 out	O
 that	O
@@ -9550,7 +9550,7 @@ card	O
 is	O
 faster	O
 than	O
-Sony	B-organization,organization.company
+Sony	B-ORGANIZATION,ORGANIZATION.COMPANY
 's	O
 XQD	O
 .	O
@@ -9566,7 +9566,7 @@ near	O
 the	O
 capital	O
 of	O
-Port-au-Prince	B-location.city,location
+Port-au-Prince	B-LOCATION.CITY,LOCATION
 ,	O
 most	O
 of	O
@@ -9577,7 +9577,7 @@ see	O
 coming	O
 out	O
 of	O
-Haiti	B-location.country,location
+Haiti	B-LOCATION.COUNTRY,LOCATION
 show	O
 damage	O
 and	O
@@ -9596,15 +9596,15 @@ is	O
 something	O
 American	O
 photographer	O
-Maggie	B-person,person.artist
-Steber	I-person,person.artist
+Maggie	B-PERSON,PERSON.ARTIST
+Steber	I-PERSON,PERSON.ARTIST
 (	O
 who	O
 has	O
 been	O
 shooting	O
 in	O
-Haiti	B-location.country,location
+Haiti	B-LOCATION.COUNTRY,LOCATION
 for	O
 30	O
 years	O
@@ -9618,7 +9618,7 @@ organizations	O
 like	O
 the	O
 nonprofit	O
-FotoKonbit	B-organization
+FotoKonbit	B-ORGANIZATION
 ,	O
 where	O
 she	O
@@ -9635,8 +9635,8 @@ was	O
 characterized	O
 by	O
 the	O
-United	B-organization
-Nations	I-organization
+United	B-ORGANIZATION
+Nations	I-ORGANIZATION
 as	O
 “	O
 the	O
@@ -9655,7 +9655,7 @@ have	O
 been	O
 slow	O
 ,	O
-Steber	B-person
+Steber	B-PERSON
 wants	O
 the	O
 world	O
@@ -9677,10 +9677,10 @@ offer	O
 
 Students	O
 in	O
-FotoKonbit	B-organization
+FotoKonbit	B-ORGANIZATION
 workshops	O
 used	O
-Holga	B-product,product.camera
+Holga	B-PRODUCT,PRODUCT.CAMERA
 cameras	O
 to	O
 document	O
@@ -9721,7 +9721,7 @@ When	O
 you	O
 see	O
 what	O
-Haitians	B-location.country,location
+Haitians	B-LOCATION.COUNTRY,LOCATION
 think	O
 is	O
 beautiful	O
@@ -9734,7 +9734,7 @@ profound	O
 ,	O
 ”	O
 says	O
-Steber	B-person
+Steber	B-PERSON
 ,	O
 “	O
 you	O
@@ -9758,7 +9758,7 @@ in	O
 the	O
 hands	O
 of	O
-Haitians	B-location.country,location
+Haitians	B-LOCATION.COUNTRY,LOCATION
 give	O
 them	O
 the	O
@@ -10008,22 +10008,22 @@ study	O
 is	O
 from	O
 the	O
-College	B-organization,organization.educational_institution
-of	I-organization,organization.educational_institution
-Medical	I-organization,organization.educational_institution
-,	I-organization,organization.educational_institution
-Veterinary	I-organization,organization.educational_institution
-&	I-organization,organization.educational_institution
-Life	I-organization,organization.educational_institution
-Sciences	I-organization,organization.educational_institution
+College	B-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+of	I-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+Medical	I-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+,	I-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+Veterinary	I-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+&	I-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+Life	I-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+Sciences	I-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
 ,	O
-University	B-organization,organization.educational_institution
-of	I-organization,organization.educational_institution
-Glasgow	I-organization,organization.educational_institution
+University	B-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+of	I-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
+Glasgow	I-ORGANIZATION,ORGANIZATION.EDUCATIONAL_INSTITUTION
 ,	O
-Glasgow	B-location.city,location
+Glasgow	B-LOCATION.CITY,LOCATION
 ,	O
-UK	B-location.country,location
+UK	B-LOCATION.COUNTRY,LOCATION
 .	O
 
 Questionnaires	O
@@ -10034,17 +10034,17 @@ all	O
 members	O
 of	O
 the	O
-Companion	B-organization
-Animal	I-organization
-Society	I-organization
+Companion	B-ORGANIZATION
+Animal	I-ORGANIZATION
+Society	I-ORGANIZATION
 ,	O
 part	O
 of	O
 the	O
-New	B-organization
-Zealand	I-organization
-Veterinary	I-organization
-Association	I-organization
+New	B-ORGANIZATION
+Zealand	I-ORGANIZATION
+Veterinary	I-ORGANIZATION
+Association	I-ORGANIZATION
 .	O
 
 The	O
@@ -10329,8 +10329,8 @@ kept	O
 as	O
 pets	O
 in	O
-New	B-location.country,location
-Zealand	I-location.country,location
+New	B-LOCATION.COUNTRY,LOCATION
+Zealand	I-LOCATION.COUNTRY,LOCATION
 is	O
 required	O
 for	O
@@ -10375,9 +10375,9 @@ to	O
 pain	O
 recognition	O
 ,	O
-anaesthesia	B-medicine.symptom
+anaesthesia	B-MEDICINE.SYMPTOM
 and	O
-analgesia	B-medicine.symptom
+analgesia	B-MEDICINE.SYMPTOM
 in	O
 rabbits	O
 and	O
@@ -10429,14 +10429,14 @@ study	O
 is	O
 from	O
 the	O
-Unitec	B-organization.educational_institution,organization
-Institute	I-organization.educational_institution,organization
-of	I-organization.educational_institution,organization
-Technology	I-organization.educational_institution,organization
+Unitec	B-ORGANIZATION.EDUCATIONAL_INSTITUTION,ORGANIZATION
+Institute	I-ORGANIZATION.EDUCATIONAL_INSTITUTION,ORGANIZATION
+of	I-ORGANIZATION.EDUCATIONAL_INSTITUTION,ORGANIZATION
+Technology	I-ORGANIZATION.EDUCATIONAL_INSTITUTION,ORGANIZATION
 ,	O
-Auckland	B-location.city,location
+Auckland	B-LOCATION.CITY,LOCATION
 ,	O
-New	B-location.country,location
-Zealand	I-location.country,location
+New	B-LOCATION.COUNTRY,LOCATION
+Zealand	I-LOCATION.COUNTRY,LOCATION
 .	O
 
