@@ -1,0 +1,1208 @@
+m.05qck	Presidential Medal of Freedom	award.award_category,award.award,book.book_subject
+m.03fkrc	National Medal of Arts	award.award_category
+m.0pjfj	Iron Cross	award.award_category
+m.068gn	Purple Heart	award.award_category
+m.025_12q	Christopher Award	award.award_category,award.award
+m.04xj_l	Cole Prize	award.award,award.award_category
+m.01_4mn	Rockstar Games	fictional_universe.fictional_character_creator,cvg.cvg_developer,cvg.cvg_publisher,music.record_label,organization.organization,award.award_nominee,business.business_operation,award.award_winner,business.employer,internet.website_owner
+m.03nqnk3	BAFTA Fellowship	award.award_category
+m.01w7n7	Order of Merit	award.award_category
+m.04qy5	Legion of Merit	award.award_category,award.award_winner
+m.02cqwf	Honorary degree	education.educational_degree,award.award_category
+m.01sjwk	Spingarn Medal	award.award_category,book.book_subject
+m.05zwvkt	Austrian Decoration for Science and Art	award.award_category
+m.01f2y9	Order of the British Empire	award.award_category
+m.02phb1w	Goldene Kamera	award.award_category,award.award
+m.05qg5q	Richard Dawkins Award	award.award,award.award_category
+m.0384z9	Air Medal	award.award_category
+m.0b6gx7m	Sokolov Award	award.award_category
+m.02kyjn	Mackay Trophy	award.award_category
+m.0gj99jq	Steiger Award	award.award,award.award_category
+m.093h8d	Silver Buffalo Award	award.award_category,award.award
+m.01yl0z	Charlemagne Prize	award.award_category
+m.04g4dx	Order of Polonia Restituta	award.award_category,award.award
+m.04q77zw	Lister Medal	award.award,award.award_category
+m.0cpx13	Knuth Prize	award.award,award.award_category,symbols.namesake
+m.0by0dj	Centenary Medal	award.award_category
+m.02017v	Alfred I. duPont–Columbia University Award	award.award_category
+m.026yk9y	PATH	organization.organization,business.business_operation,award.award_winner,business.employer
+m.03_190	Conrad N. Hilton Foundation	award.award_category,organization.organization
+m.0b9cll	Medal for Merit	award.award_category
+m.09zxpv	Broyles Award	award.award_category
+m.04jmdcf	Riverton Prize	award.award_category
+m.07jtc3	Woodrow Wilson Awards	award.award_category,symbols.namesake
+m.05ltq6	Erasmus Prize	award.award,award.award_category,symbols.namesake
+m.025fm2	Padma Bhushan	award.award_category
+m.0268dqd	Sylvanus Thayer Award	award.award_category,symbols.namesake
+m.026bjbq	Australian Sports Medal	award.award_category
+m.01kpt	Bronze Star Medal	award.award_category
+m.07sb60v	Harvey Prize	award.award,award.award_category
+m.03gypqb	Laetare Medal	award.award_category
+m.0h1p4g8	Dirac Medal of the ICTP	award.award,award.award_category,symbols.namesake
+m.0j677d0	Swedish Academy Nordic Prize	award.award_category
+m.026lf97	Massey Medal	award.award_category
+m.080h_70	Haskins Medal	award.award_category
+m.01pqzr	National Endowment for the Arts	award.award_category,award.award_presenting_organization,organization.organization,government.government_agency,award.award_winner,business.employer
+m.060q6b	Presidential Citizens Medal	award.award_category
+m.02gh_8	Military Cross	award.award_category
+m.08633j	Davy Medal	award.award_category
+m.079sf	Silver Star	award.award_category
+m.0gh6jbl	Medal of Freedom	award.award_category
+m.0gxsml	Kalidas Samman	award.award_category,award.award
+m.04hyh7	National Humanities Medal	award.award_category
+m.0pcm54v	Rungstedlund Award	award.award_category
+m.0154yf	Legion of Honour	award.award_category
+m.0h46h7	Punjab Medal	award.award_category
+m.04lf3q	Military Medal	award.award_category
+m.0gc48v	Golden Foot	award.award_category,award.award,sports.sports_award_type
+m.023jhh	Ballon d'Or	award.award,award.award_category
+m.05vc71	Royal Medal	award.award_category
+m.03qndg_	Gullruten	award.award_category
+m.0h6gtp	Ruth Lilly Poetry Prize	award.award,award.award_category
+m.02nb35	IEEE Medal of Honor	award.award,award.award_category
+m.0hh7q	ASCAP	award.award_category,award.award_presenting_organization,organization.organization,organization.organization_member,business.employer
+m.02wvjhz	Whitehead Prize	award.award_category,award.award
+m.06zrp44	Franklin Medal	award.award_category
+m.02g2x6	Israel Prize	award.award_category
+m.016zlv	Distinguished Flying Cross	award.award_category
+m.029293	Padma Shri Awards	award.award_category
+m.0h1d2y7	Banga Bibhushan	award.award_category
+m.05h5nb8	Golden Bear	award.award_category
+m.0cstmx	Henri Poincaré Prize	award.award,award.award_category
+m.02658cj	Praemium Imperiale	award.award,award.award_category
+m.0ch1k7s	Ovid Prize	award.award_category
+m.0jwym18	William Bate Hardy Prize	award.award_category
+m.0gyrd_	Morrish Medal	award.award_category
+m.04jb6mv	Tamil Nadu State Film Award for Best Actor	award.award_category
+m.02d1w_	Navy Cross	award.award_category
+m.06v5jq	Crystal Globe	award.award_category
+m.08f6c0	Georg Büchner Prize	award.award_category,award.award
+m.0805nxh	FIL Award	award.award,award.award_category
+m.05hwzx	Polar Medal	award.award_category
+m.02rvnzs	The Nichols-Chancellor's Medal	award.award_category
+m.0br_j0j	AMA Foundation Leadership Award	award.award_category
+m.027lc7	Japan Prize	award.award_category,award.award
+m.0789r6	Golden Lion	award.award_category
+m.03y893	Order of the Crown	royalty.noble_title,award.award_category
+m.05q5p2j	NASA Exceptional Public Service Medal	award.award_category
+m.04236x	Sakharov Prize	award.award_category,award.award_presenting_organization
+m.02vmz03	Efficiency Medal	award.award_category
+m.0fd82y	Goethe Medal	award.award_category,award.award
+m.02l1h1	Ford C. Frick Award	award.award_category,symbols.namesake
+m.02g2mc	Saturn Award	award.award_category,award.award
+m.03nn2q1	Stanislavsky Award	award.award,award.award_category
+m.06w4gtv	Gottschalk Medal	award.award_category
+m.07wgm	Federalist Party	organization.organization,business.employer,government.political_party
+m.07wf9	Democratic-Republican Party	organization.organization,government.political_party,business.employer
+m.07wdw	Whig Party	organization.membership_organization,organization.organization,government.political_party,book.book_subject,business.employer
+m.0d075m	Democratic Party	organization.organization,book.book_subject,government.political_party,business.employer
+m.07wbk	Republican Party	organization.membership_organization,organization.organization,government.political_party,book.book_subject,business.employer
+m.01fml	Liberal Party	organization.organization,book.author,government.political_party,business.employer
+m.06g8vm	Centre Party	organization.organization,government.political_party,business.employer
+m.07y1l	Anti-Masonic Party	organization.organization,government.political_party,business.employer
+m.020lwv	Jacksonian Democratic Party	organization.organization,government.political_party,business.employer
+m.017__2	People's Party	organization.organization,government.political_party
+m.075qbd2	Independent	organization.organization,government.political_party,business.employer
+m.04lfg4	Conservative Party	organization.organization,government.political_party,business.employer
+m.0l8lg	One Nation	organization.organization,business.employer,government.political_party
+m.015fgb	Progress Party	organization.organization,government.political_party,business.employer
+m.01qt1v	Christian Democratic Party	organization.organization,book.periodical_publisher,government.political_party,business.employer
+m.013_5c	New Zealand Labour Party	organization.organization,government.political_party,business.employer
+m.06dwq5	Progressive Party	organization.organization,business.employer,government.political_party
+m.01qdcv	Socialist Party	organization.organization,organization.organization_member,government.political_party,business.employer
+m.0h9d1	Christian Democratic Appeal	organization.organization,government.political_party,business.employer
+m.03d08r	Conservative Party of Quebec	organization.organization,business.employer,government.political_party
+m.04c9vz	Reform Party of Alberta	organization.organization,business.employer,government.political_party
+m.0gjd7kz	National Liberal Party	organization.organization,government.political_party,business.employer
+m.0pbrx	Anti-Revolutionary Party	organization.organization,business.employer,government.political_party
+m.020912	Republican Labour Party	organization.organization,business.employer,government.political_party
+m.02c_3q	Unionist Party	organization.organization,business.employer,government.political_party
+m.01c9x	Labour Party	organization.organization,book.author,organization.organization_member,business.employer,government.political_party
+m.0gdj2	Bloc Québécois	organization.organization,government.political_party,business.employer
+m.01m_p5	Labour Party	organization.organization,government.political_party,business.employer
+m.01lvd0	Labour Party	organization.organization,book.periodical_publisher,organization.organization_member,government.political_party,business.employer
+m.01ptvq	SWAPO	military.military_combatant,organization.organization,government.political_party
+m.0x2hn	Progressive Conservative Party of Canada	organization.organization,government.political_party,business.employer
+m.0gg6s	Social Democratic Party of Germany	organization.membership_organization,organization.organization,organization.organization_member,government.political_party,business.employer
+m.05l5n	Oxford	organization.organization_scope,location.location,location.place_with_neighborhoods,fictional_universe.fictional_setting,film.film_location,location.statistical_region,travel.travel_destination,symbols.name_source,location.citytown,location.administrative_division,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,book.book_subject
+m.08966	Zürich	organization.organization_scope,location.location,location.place_with_neighborhoods,film.film_location,location.statistical_region,travel.travel_destination,location.citytown,location.administrative_division,business.business_location,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,business.employer,government.governmental_jurisdiction
+m.0691tj	El Campello	location.location,location.statistical_region,location.citytown
+m.02m77	Edinburgh	organization.organization_scope,location.location,location.place_with_neighborhoods,film.film_location,location.statistical_region,travel.travel_destination,location.citytown,location.administrative_division,business.business_location,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,book.book_subject,business.employer,government.governmental_jurisdiction
+m.020vch5	Wyncote	location.location,location.hud_county_place,location.statistical_region
+m.036rn3	Chambly	location.location,location.statistical_region,business.employer,location.citytown
+m.03m9cp8	Waldersbach	location.location,location.statistical_region,location.citytown
+m.0w073	Amstelveen	organization.organization_scope,location.location,location.administrative_division,location.statistical_region,travel.travel_destination,location.citytown
+m.0l2rj	San Diego County	location.location,organization.organization_scope,location.place_with_neighborhoods,location.statistical_region,location.us_county,location.administrative_division,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.01xlyy	Haslemere	location.location,location.administrative_division,location.statistical_region,location.citytown
+m.0b_yz	Reading	organization.organization_scope,location.location,film.film_location,location.statistical_region,travel.travel_destination,location.citytown,location.administrative_division,sports.sports_team_location,business.employer
+m.0_q8q	Hot Springs	location.location,location.hud_county_place,location.statistical_region,location.citytown
+m.0f4sdq	St. Anne Convent	location.location
+m.0zmrm	Doylestown	location.location,location.hud_county_place,location.capital_of_administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,location.citytown,government.governmental_jurisdiction
+m.09pxc	Palermo	location.location,sports.sports_team_location,location.capital_of_administrative_division,location.statistical_region,people.place_of_interment,periodicals.newspaper_circulation_area,travel.travel_destination,location.citytown,symbols.name_source
+m.031y2	Florence	location.location,fictional_universe.fictional_setting,location.statistical_region,travel.travel_destination,protected_sites.listed_site,symbols.name_source,location.citytown,award.ranked_item,sports.sports_team_location,location.capital_of_administrative_division,book.book_subject
+m.03902	Geneva	location.location,fictional_universe.fictional_setting,location.capital_of_administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,location.citytown,government.governmental_jurisdiction
+m.0gg07y	Stamford Hospital	location.location,medicine.hospital
+m.0xlg8	Springfield Township	location.location,location.statistical_region,location.citytown
+m.07_pf	Venice	location.location,fictional_universe.fictional_setting,film.film_location,location.statistical_region,travel.travel_destination,protected_sites.listed_site,location.citytown,location.administrative_division,location.capital_of_administrative_division,book.book_subject,government.governmental_jurisdiction
+m.05qtj	Paris	organization.organization_scope,location.location,symbols.namesake,film.film_location,travel.travel_destination,location.citytown,location.administrative_division,government.governmental_jurisdiction,location.place_with_neighborhoods,fictional_universe.fictional_setting,location.statistical_region,symbols.name_source,film.film_subject,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,book.book_subject
+m.054y8	Mainz	location.location,fictional_universe.fictional_setting,location.statistical_region,travel.travel_destination,location.citytown,location.administrative_division,sports.sports_team_location,location.capital_of_administrative_division,government.governmental_jurisdiction
+m.010mmb	Halifax	location.location,location.hud_county_place,location.capital_of_administrative_division,location.statistical_region,location.citytown
+m.0q7dv	Geneva	location.location,location.hud_county_place,location.capital_of_administrative_division,location.statistical_region,location.citytown
+m.0sfwz	Chester	location.location,location.hud_county_place,location.capital_of_administrative_division,location.statistical_region,location.citytown
+m.0y74x	Fayette	location.location,location.statistical_region,location.citytown
+m.0y27y	East Rockaway	location.location,location.hud_county_place,location.statistical_region,location.citytown
+m.0ybkj	Glens Falls	location.location,location.hud_county_place,sports.sports_team_location,location.statistical_region,periodicals.newspaper_circulation_area,location.citytown
+m.0m75g	Sheffield	organization.organization_scope,location.location,location.statistical_region,travel.travel_destination,location.citytown,location.administrative_division,sports.sports_team_location,periodicals.newspaper_circulation_area,business.employer,government.governmental_jurisdiction
+m.0nbfm	Marylebone	location.location,location.statistical_region,location.citytown
+m.04yj4y	Mansfield Woodhouse	location.location,location.statistical_region,location.citytown
+m.06y57	Sydney	location.location,organization.organization_scope,symbols.namesake,film.film_location,location.statistical_region,travel.travel_destination,location.citytown,location.administrative_division,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,government.governmental_jurisdiction
+m.059rby	New York	meteorology.cyclone_affected_area,organization.organization_scope,location.location,fictional_universe.fictional_setting,film.film_location,government.political_district,location.statistical_region,travel.travel_destination,location.citytown,location.administrative_division,business.business_location,sports.sports_team_location,periodicals.newspaper_circulation_area,book.book_subject,business.employer,government.governmental_jurisdiction
+m.03c101	Nilsiä	location.location,location.statistical_region,location.citytown
+m.010pf7	Abingdon	location.location,location.hud_county_place,location.capital_of_administrative_division,location.statistical_region,business.employer,location.citytown
+m.0hvlp	Hove	location.location,location.statistical_region,location.citytown
+m.019fh	Buffalo	location.location,organization.organization_scope,location.place_with_neighborhoods,location.hud_county_place,fictional_universe.fictional_setting,location.statistical_region,travel.travel_destination,location.citytown,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.023n6x	Summerside	location.location,location.capital_of_administrative_division,location.statistical_region,location.citytown
+m.0177z	Brussels	organization.organization_scope,location.location,location.administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,location.citytown
+m.01nl79	Flushing	location.location,location.neighborhood,location.statistical_region
+m.01v_69	Bowood House	location.location,architecture.structure
+m.0d060g	Canada	biology.breed_origin,location.location,organization.organization_scope,royalty.kingdom,film.film_location,organization.organization_member,military.military_combatant,olympics.olympic_participating_country,organization.organization_founder,sports.sport_country,government.governmental_jurisdiction,location.country,fictional_universe.fictional_setting,location.statistical_region,film.film_subject,sports.sports_team_location,periodicals.newspaper_circulation_area,book.book_subject
+m.01b8jj	Brisbane	organization.organization_scope,location.location,fictional_universe.fictional_setting,sports.sports_team_location,business.business_location,location.capital_of_administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,business.employer,location.citytown
+m.03qnx6	Mayne Island	location.location,geography.island,location.statistical_region
+m.0166dk	Luoyang	location.location,location.administrative_division,location.statistical_region,location.citytown
+m.03s0l5	Thames	location.location,location.statistical_region,travel.travel_destination,location.citytown
+m.02yc5b	Christchurch	location.location,location.administrative_division,sports.sports_team_location,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,business.employer,location.citytown,government.governmental_jurisdiction
+m.022426	Ryde	location.location,location.statistical_region,location.citytown
+m.0tzls	Holyoke	location.location,location.hud_county_place,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,location.citytown
+m.06_kh	Santa Monica	location.location,location.hud_county_place,film.film_location,periodicals.newspaper_circulation_area,location.statistical_region,travel.travel_destination,business.employer,location.citytown,government.governmental_jurisdiction
+m.0z6v0	Tonkawa	location.location,location.hud_county_place,location.statistical_region,location.citytown
+m.05bkf	Nuremberg	location.location,location.administrative_division,film.film_location,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,location.citytown,government.governmental_jurisdiction
+m.0h7h6	Toronto	location.location,organization.organization_scope,location.place_with_neighborhoods,fictional_universe.fictional_setting,film.film_location,location.statistical_region,travel.travel_destination,location.citytown,location.administrative_division,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,business.employer,government.governmental_jurisdiction
+m.0337k0	Lingfield	location.location,location.administrative_division,location.statistical_region,location.citytown
+m.0101_s	Whitesboro	location.location,location.hud_county_place,location.statistical_region,location.citytown
+m.01gk3x	Isfahan	location.location,location.administrative_division,sports.sports_team_location,award.ranked_item,location.statistical_region,travel.travel_destination,location.citytown
+m.0b2mc	Thessaloniki	location.location,location.administrative_division,sports.sports_team_location,location.capital_of_administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,protected_sites.listed_site,location.citytown
+m.06mddj	Addlestone	location.location,location.statistical_region,location.citytown
+m.01ksrj	Truro	location.location,location.capital_of_administrative_division,location.statistical_region,travel.travel_destination,location.citytown
+m.0qlrh	Atlantic City	location.location,organization.organization_scope,location.hud_county_place,location.statistical_region,travel.travel_destination,location.citytown,periodicals.newspaper_circulation_area,business.employer,book.book_subject,government.governmental_jurisdiction
+m.02qjb7z	Halifax	location.location,sports.sports_team_location,location.capital_of_administrative_division,organization.organization_member,periodicals.newspaper_circulation_area,location.statistical_region,travel.travel_destination,location.citytown
+m.0150n	Bonn	location.location,sports.sports_team_location,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,location.citytown,government.governmental_jurisdiction
+m.06mzp	Switzerland	biology.breed_origin,organization.organization_scope,location.location,location.country,fictional_universe.fictional_setting,film.film_location,organization.organization_member,location.statistical_region,travel.travel_destination,symbols.name_source,olympics.olympic_participating_country,organization.organization_founder,sports.sports_team_location,sports.sport_country,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.0853g	Wellington	location.location,film.film_location,location.statistical_region,travel.travel_destination,location.citytown,location.administrative_division,sports.sports_team_location,periodicals.newspaper_circulation_area,business.employer,book.book_subject,government.governmental_jurisdiction
+m.0blr4	Hotel Chelsea	location.location,film.film_location,architecture.structure,protected_sites.listed_site
+m.063tw6	Montmagny	location.location,location.statistical_region,location.citytown
+m.04sqj	Mexico City	organization.organization_scope,location.location,fictional_universe.fictional_setting,film.film_location,government.political_district,location.statistical_region,travel.travel_destination,protected_sites.listed_site,location.citytown,location.administrative_division,sports.sports_team_location,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.03hhydw	Ischilín Department	location.location,location.administrative_division,location.statistical_region
+m.013ty1	Waupun	location.location,location.statistical_region,location.citytown
+m.09gq1	Totnes	location.location,location.administrative_division,location.statistical_region,location.citytown
+m.0rh6k	Washington, D.C.	location.location,organization.organization_scope,symbols.namesake,film.film_location,travel.travel_destination,location.citytown,location.administrative_division,government.governmental_jurisdiction,location.place_with_neighborhoods,location.hud_county_place,fictional_universe.fictional_setting,location.statistical_region,sports.sports_team_location,periodicals.newspaper_circulation_area,book.book_subject,business.employer
+m.04jpl	London	location.location,organization.organization_scope,film.film_location,travel.travel_destination,location.citytown,location.administrative_division,business.business_location,education.educational_institution_campus,government.governmental_jurisdiction,location.place_with_neighborhoods,fictional_universe.fictional_setting,location.statistical_region,symbols.name_source,sports.sports_team_location,periodicals.newspaper_circulation_area,business.employer,book.book_subject
+m.03rjj	Italy	biology.breed_origin,location.location,organization.organization_scope,media_common.netflix_genre,film.film_location,organization.organization_member,travel.travel_destination,military.military_combatant,olympics.olympic_participating_country,location.administrative_division,business.business_location,organization.organization_founder,sports.sport_country,government.governmental_jurisdiction,location.country,fictional_universe.fictional_setting,location.statistical_region,symbols.name_source,sports.sports_team_location,periodicals.newspaper_circulation_area,book.book_subject,business.employer
+m.016lpx	O'Connell Street	location.location
+m.0ftjx	Sofia	organization.organization_scope,location.location,location.administrative_division,film.film_location,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,location.statistical_region,location.citytown,government.governmental_jurisdiction
+m.0k2fj	Saint-Germain-en-Laye	location.location,location.statistical_region,location.citytown
+m.036r8q	Saint-Constant	location.location,location.statistical_region,location.citytown
+m.097ll4	Ormstown	location.location,location.statistical_region,location.citytown
+m.02h6_6p	Munich	location.location,organization.organization_scope,film.film_location,location.statistical_region,travel.travel_destination,location.citytown,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,government.governmental_jurisdiction
+m.05gl6k	Newington Green	location.location
+m.03m56wf	Castagnola	location.location,location.administrative_division,location.statistical_region
+m.0k6bt	Leuven	location.location,location.administrative_division,sports.sports_team_location,location.statistical_region,book.book_subject,protected_sites.listed_site,location.citytown
+m.0y5ng	Richfield	location.location,location.statistical_region,location.citytown
+m.0106dv	Waco	location.location,location.hud_county_place,sports.sports_team_location,location.capital_of_administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,location.citytown,government.governmental_jurisdiction
+m.09ptd5	Flesherton	location.location,location.statistical_region,location.citytown
+m.02_286	New York City	location.location,organization.organization_scope,symbols.namesake,film.film_location,government.political_district,travel.travel_destination,location.citytown,location.administrative_division,business.business_location,award.award_winner,government.governmental_jurisdiction,location.place_with_neighborhoods,location.hud_county_place,fictional_universe.fictional_setting,location.statistical_region,film.film_subject,sports.sports_team_location,periodicals.newspaper_circulation_area,business.employer,book.book_subject
+m.01914	Beijing	organization.organization_scope,location.location,film.film_location,location.statistical_region,travel.travel_destination,location.citytown,location.administrative_division,business.business_location,periodicals.newspaper_circulation_area,book.book_subject,business.employer,government.governmental_jurisdiction
+m.06pr6	Saint Petersburg	organization.organization_scope,location.location,symbols.namesake,film.film_location,organization.organization_member,location.statistical_region,travel.travel_destination,protected_sites.listed_site,symbols.name_source,location.citytown,location.administrative_division,business.business_location,sports.sports_team_location,award.award_winner,periodicals.newspaper_circulation_area,book.book_subject,business.employer,government.governmental_jurisdiction
+m.0cy07	Canterbury	location.location,location.statistical_region,travel.travel_destination,business.employer,location.citytown
+m.0ccbfj	Lockeport	location.location,location.statistical_region,location.citytown
+m.06drg4	St. Vincent's University Hospital	location.location,medicine.hospital,architecture.structure
+m.07dfq9	Harbour Grace	location.location,location.statistical_region,location.citytown
+m.0fthl	Santo Domingo	location.location,location.capital_of_administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,location.citytown
+m.02vk755	Lysekil	location.location,location.statistical_region,location.citytown
+m.02rqplw	Thomery	location.location,location.statistical_region,location.citytown
+m.05460l	Chyhyryn	location.location,location.statistical_region,location.citytown
+m.0gywq3z	Punta Ballena	location.location
+m.04lpkr	Dunkeld	location.location,location.statistical_region,location.citytown
+m.09zm8s	Streat	location.location,location.administrative_division,location.statistical_region,location.citytown
+m.04swd	Moscow	organization.organization_scope,location.location,film.film_location,location.statistical_region,travel.travel_destination,location.citytown,location.administrative_division,business.business_location,sports.sports_team_location,award.award_winner,periodicals.newspaper_circulation_area,book.book_subject,business.employer,government.governmental_jurisdiction
+m.01dgw0	San Pedro Sula	location.location,location.statistical_region,travel.travel_destination,location.citytown
+m.0rd73	New Canaan	location.location,location.statistical_region,travel.travel_destination,location.citytown
+m.06c62	Rome	organization.organization_scope,location.location,symbols.namesake,location.country,fictional_universe.fictional_setting,film.film_location,government.political_district,location.statistical_region,travel.travel_destination,protected_sites.listed_site,location.citytown,location.administrative_division,film.film_subject,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,business.employer,book.book_subject
+m.0278zk	Esquimalt	location.location,location.statistical_region,location.citytown
+m.0fydw	Antwerp	location.location,film.film_location,location.statistical_region,travel.travel_destination,location.citytown,location.administrative_division,sports.sports_team_location,periodicals.newspaper_circulation_area,business.employer,government.governmental_jurisdiction
+m.0cffd	Ferrara	location.location,location.administrative_division,film.film_location,location.capital_of_administrative_division,location.statistical_region,protected_sites.listed_site,location.citytown
+m.013rkq	Kyrenia	location.location,film.film_location,location.capital_of_administrative_division,location.statistical_region,location.citytown
+m.0nl7m	London Borough of Lambeth	location.location,location.administrative_division,location.statistical_region
+m.020vqp	Bridport	location.location,location.administrative_division,location.statistical_region,travel.travel_destination,location.citytown
+m.030qb3t	Los Angeles	organization.organization_scope,location.location,location.place_with_neighborhoods,location.hud_county_place,fictional_universe.fictional_setting,film.film_location,location.statistical_region,travel.travel_destination,location.citytown,location.administrative_division,film.film_subject,sports.sports_team_location,business.business_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,business.employer,book.book_subject,government.governmental_jurisdiction
+m.0fg1g	Haifa	location.location,location.capital_of_administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,location.citytown,government.governmental_jurisdiction
+m.03rk0	India	biology.breed_origin,meteorology.cyclone_affected_area,organization.organization_scope,location.location,media_common.netflix_genre,film.film_location,organization.organization_member,travel.travel_destination,military.military_combatant,olympics.olympic_participating_country,business.business_location,organization.organization_founder,sports.sport_country,government.governmental_jurisdiction,organization.organization_sector,location.country,fictional_universe.fictional_setting,location.statistical_region,film.film_subject,sports.sports_team_location,periodicals.newspaper_circulation_area,business.employer,book.book_subject
+m.0k3p	Amsterdam	organization.organization_scope,location.location,location.place_with_neighborhoods,film.film_location,location.statistical_region,travel.travel_destination,symbols.name_source,location.citytown,location.administrative_division,sports.sports_team_location,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.01lfy	Copenhagen	location.location,location.place_with_neighborhoods,film.film_location,location.statistical_region,travel.travel_destination,symbols.name_source,location.citytown,location.administrative_division,film.film_subject,business.business_location,sports.sports_team_location,periodicals.newspaper_circulation_area,business.employer
+m.0jyw	Ankara	location.location,location.administrative_division,sports.sports_team_location,film.film_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,location.statistical_region,travel.travel_destination,location.citytown,government.governmental_jurisdiction
+m.05ksh	Ottawa	organization.organization_scope,location.location,location.place_with_neighborhoods,film.film_location,government.political_district,location.statistical_region,travel.travel_destination,location.citytown,award.award_nominee,sports.sports_team_location,periodicals.newspaper_circulation_area,government.governmental_jurisdiction
+m.052bw	Manchester	location.location,organization.organization_scope,fictional_universe.fictional_setting,location.statistical_region,protected_sites.listed_site,travel.travel_destination,location.citytown,symbols.name_source,location.administrative_division,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.01v8c	Cologne	location.location,film.film_location,location.statistical_region,travel.travel_destination,location.citytown,location.administrative_division,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.03npfdy	Saint-Alban-de-Montbel	location.location
+m.048j2f	Ross	location.location,location.statistical_region,location.citytown
+m.071vr	San Diego	location.location,organization.organization_scope,location.place_with_neighborhoods,organization.organization_sector,location.hud_county_place,film.film_location,location.statistical_region,travel.travel_destination,symbols.name_source,location.citytown,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.0rtv	Algiers	location.location,location.administrative_division,film.film_location,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,book.book_subject,protected_sites.listed_site,location.citytown
+m.0lbrb	Perth	location.location,location.statistical_region,location.citytown
+m.06jctp	Barrington	location.location,location.statistical_region,location.citytown
+m.05sb1	Pakistan	biology.breed_origin,meteorology.cyclone_affected_area,organization.organization_scope,location.location,location.country,organization.organization_member,location.statistical_region,travel.travel_destination,military.military_combatant,olympics.olympic_participating_country,organization.organization_founder,sports.sports_team_location,sports.sport_country,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.06gmr	Rio de Janeiro	location.location,organization.organization_scope,location.place_with_neighborhoods,film.film_location,location.statistical_region,travel.travel_destination,location.citytown,location.administrative_division,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.01v4dg	Bad Ragaz	location.location,location.administrative_division,location.statistical_region,location.citytown
+m.04qdj	Lausanne	location.location,location.place_with_neighborhoods,location.administrative_division,location.capital_of_administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,location.citytown
+m.0284jb	North Hollywood	organization.organization_scope,location.location,location.neighborhood,location.statistical_region
+m.07ypt	Victoria	location.location,symbols.namesake,location.capital_of_administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,location.citytown,government.governmental_jurisdiction
+m.05zs7rd	Yamaska, Quebec	location.location,location.statistical_region,location.citytown
+m.0fq8f	Luxembourg	location.location,location.capital_of_administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,business.employer,location.citytown
+m.0rzp1	Thomaston	location.location,location.hud_county_place,location.statistical_region,periodicals.newspaper_circulation_area,location.citytown
+m.0255md	Pictou	location.location,location.capital_of_administrative_division,location.statistical_region,location.citytown
+m.095gvh	Burgh	location.location,location.administrative_division,location.statistical_region,location.citytown
+m.0ffmp	Odessa	organization.organization_scope,location.location,sports.sports_team_location,location.statistical_region,periodicals.newspaper_circulation_area,award.award_winner,travel.travel_destination,location.citytown
+m.01vqq1	New Westminster	organization.organization_scope,location.location,film.film_location,sports.sports_team_location,location.statistical_region,periodicals.newspaper_circulation_area,business.employer,location.citytown
+m.09ctj	Norfolk	organization.organization_scope,location.location,location.administrative_division,location.statistical_region,government.governmental_jurisdiction
+m.0g9f56	Dolo	location.location,location.statistical_region,location.citytown
+m.0bpjq1	Ryley	location.location,location.capital_of_administrative_division,location.statistical_region,location.citytown
+m.02n0ys	Murska Sobota	location.location,location.administrative_division,location.statistical_region,location.citytown
+m.02hb64	Château de Vincennes	location.location,architecture.structure
+m.0bpdlm	Annadale Grammar School	education.educational_institution,organization.organization,education.school,business.employer
+m.02h7qr	Towson University	location.location,education.educational_institution,organization.organization,book.newspaper_owner,book.periodical_publisher,award.ranked_item,education.educational_institution_campus,award.award_winner,business.employer
+m.0byl3l	Piner High School	education.educational_institution,organization.organization,business.employer,education.school
+m.0dx9p1	St. John's Preparatory School	education.educational_institution,organization.organization,business.employer,education.school
+m.055wc2	King's College, Aberdeen	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.0lk0l	University of Paris	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.01rk2p	Little Rock Central High School	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,architecture.structure,education.school,protected_sites.listed_site,business.employer
+m.0l9nq	École Centrale Paris	location.location,education.educational_institution,organization.organization,organization.organization_founder,education.educational_institution_campus,business.employer
+m.07szy	University of Michigan	location.location,protected_sites.governing_body_of_protected_sites,organization.organization_member,architecture.architectural_structure_owner,education.educational_institution,organization.organization,organization.organization_founder,award.ranked_item,book.periodical_publisher,award.award_winner,education.educational_institution_campus,business.employer
+m.0bq_cv	Derby High School, Greater Manchester	education.educational_institution,organization.organization,business.employer,education.school
+m.075__nd	Grafton High School	location.location,education.educational_institution,organization.organization,business.employer,education.school
+m.02r58ln	Brunswick South Primary School	education.educational_institution,organization.organization,education.school,business.employer
+m.0408_4	Little Red School House	education.educational_institution,organization.organization,business.business_operation,education.school,business.employer
+m.089114	Athens School of Fine Arts	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.0cqh4x	Ursuline High School	education.educational_institution,organization.organization,education.school,business.employer
+m.04gd8j	Santa Monica College	location.location,education.educational_institution,organization.organization,broadcast.radio_station_owner,education.educational_institution_campus,business.brand,business.employer
+m.03wlfv	Williston Northampton School	location.location,education.educational_institution,organization.organization,business.business_operation,education.educational_institution_campus,education.school,business.employer
+m.026wkbm	Tormead School	location.location,education.educational_institution,organization.organization,business.employer
+m.02pn5fz	Queen Margaret's School, York	location.location,education.educational_institution,organization.organization,business.employer
+m.07cg94	Townsend Harris High School	education.educational_institution,organization.organization,business.employer,education.school
+m.0cqwjm	Valencia High School	education.educational_institution,organization.organization,education.school,business.employer
+m.060_1n	Bishop Kelley High School	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer,education.school
+m.019kx6	Dragon School	education.educational_institution,organization.organization,education.school,business.employer
+m.0dzbl	Eton College	location.location,education.educational_institution,organization.organization,business.business_operation,education.educational_institution_campus,business.employer,education.school
+m.02r6nk7	Wendell Phillips Academy High School	education.educational_institution,organization.organization,education.school,business.employer
+m.029fvh	West Texas A&M University	location.location,education.educational_institution,organization.organization,award.ranked_item,education.educational_institution_campus,award.award_winner,business.employer
+m.02qw_v	Hobart and William Smith Colleges	location.location,education.educational_institution,organization.organization,award.ranked_item,business.business_operation,organization.organization_member,education.educational_institution_campus,business.employer
+m.02hdpx	Choate Rosemary Hall	education.educational_institution,organization.organization,education.school,business.employer
+m.01_sqv	Royal Military College of Canada	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.0268bpp	El Capitan High School	education.educational_institution,organization.organization,education.school,business.employer
+m.01r45j	Kean University	location.location,education.educational_institution,organization.organization,award.ranked_item,education.educational_institution_campus,business.employer
+m.05295q	Commonwealth School	education.educational_institution,organization.organization,business.business_operation,education.school,business.employer
+m.0gkpc1	St Kieran's College	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.02ln0t	Leeds Grammar School	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,education.school,business.employer
+m.04ft20	Achimota School	education.educational_institution,organization.organization,education.school,business.employer
+m.01fpvz	Yale College	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.01bn7d	University of Hawaii	education.educational_institution,organization.organization,organization.organization_member,business.employer
+m.04nr4b	Ponevezh Yeshiva	location.location,education.educational_institution,organization.organization,business.employer
+m.02rff2	Georgetown University Law Center	location.location,education.educational_institution,organization.organization,book.periodical_publisher,award.ranked_item,education.educational_institution_campus,business.employer
+m.01qkc9	Washington-Lee High School	education.educational_institution,organization.organization,education.school,business.employer
+m.09qgpz	St. Thomas More School	education.educational_institution,organization.organization,business.employer,education.school
+m.0b3mqq	Century College	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.07w0v	University of Texas at Austin	location.location,business.business_operation,organization.organization_member,internet.website_owner,architecture.architectural_structure_owner,education.educational_institution,organization.organization,broadcast.radio_station_owner,book.newspaper_owner,award.ranked_item,book.periodical_publisher,education.educational_institution_campus,business.employer,book.book_subject
+m.021_sb	Eastern Washington University	location.location,symbols.namesake,education.educational_institution,organization.organization,award.ranked_item,education.educational_institution_campus,business.employer
+m.02lv2v	Pace University	location.location,education.educational_institution,organization.organization,award.ranked_item,business.business_operation,education.educational_institution_campus,business.employer
+m.0dt_vk	Plainview – Old Bethpage John F. Kennedy High School	symbols.namesake,education.educational_institution,organization.organization,education.school,business.employer
+m.09cs14	Westfield High School	location.location,education.educational_institution,organization.organization,education.school,business.employer
+m.0138t4	Trinity Hall, Cambridge	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.02s8qk	Duquesne University	location.location,education.educational_institution,organization.organization,award.ranked_item,education.educational_institution_campus,business.employer,internet.website_owner
+m.01w3v	Cornell University	symbols.namesake,organization.organization_member,symbols.name_source,architecture.architectural_structure_owner,education.educational_institution,organization.organization,computer.software_developer,award.ranked_item,book.periodical_publisher,organization.organization_founder,book.author,book.book_subject,business.employer
+m.0m0mlwl	University of Montenegro Faculty of Economics	location.location,education.educational_institution,organization.organization,business.employer
+m.080yk	Victoria University, Toronto	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.0gwt7w	Faculty of Electrical Engineering and Computing, University of Zagreb	education.educational_institution,organization.organization,business.employer
+m.026svfh	Nightingale-Bamford School	education.educational_institution,organization.organization,business.business_operation,education.school,business.employer
+m.04j_d7	Central High School	education.educational_institution,organization.organization,business.employer,education.school
+m.01rqn8	Brentwood School, Essex	education.educational_institution,organization.organization,education.school,business.employer
+m.01clyb	Magdalene College, Cambridge	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.015ln1	Dulwich College	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,education.school,business.employer
+m.07rgnc	North Springs Charter School of Arts and Sciences	location.location,education.educational_institution,organization.organization,education.school,business.employer
+m.07tds	University of Pennsylvania	organization.organization_scope,location.location,film.film_location,business.business_operation,organization.organization_member,internet.website_owner,education.educational_institution,organization.organization,broadcast.radio_station_owner,award.ranked_item,book.periodical_publisher,organization.organization_founder,education.educational_institution_campus,business.employer
+m.08qnnv	Indiana University	business.business_operation,architecture.architectural_structure_owner,education.educational_institution,organization.organization,computer.software_developer,award.ranked_item,book.periodical_publisher,book.author,business.employer
+m.08j3yg	Academy of Contemporary Music	education.educational_institution,organization.organization,award.award_winner,business.employer
+m.06ch1_	Hillsborough High School	location.location,education.educational_institution,organization.organization,education.school,business.employer
+m.06rkfs	Franklin & Marshall College	location.location,symbols.namesake,education.educational_institution,organization.organization,award.ranked_item,business.business_operation,education.educational_institution_campus,business.employer
+m.03qzc6	Southern Utah University	location.location,education.educational_institution,organization.organization,award.ranked_item,education.educational_institution_campus,business.employer
+m.02jqc9	Repton School	education.educational_institution,organization.organization,education.school,business.employer
+m.07sj01	Ananda College	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,education.school,business.employer
+m.04j3bn	Royal Grammar School, Newcastle	education.educational_institution,organization.organization,business.employer,education.school
+m.0ccrw9	Beaumont College	education.educational_institution,organization.organization,business.employer,education.school
+m.027q53h	Immaculate Conception Seminary School of Theology	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.04bb18	University of Havana	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.019vsw	Harrow School	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer,education.school
+m.092gkv	Saint Francis High School	education.educational_institution,organization.organization,education.school,business.employer
+m.04lwtx	Pangbourne College	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,education.school,business.employer
+m.06dd4k	St. Paul's College	education.educational_institution,organization.organization,business.employer
+m.02_cqs	Ampleforth College	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer,education.school
+m.06y70_	Wesley College	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,education.school,business.employer
+m.05c30yj	East Providence High School	education.educational_institution,organization.organization,education.school,business.employer
+m.043kg20	Aurora College	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.02cttt	University at Buffalo	location.location,education.educational_institution,organization.organization,award.ranked_item,organization.organization_member,education.educational_institution_campus,business.employer
+m.075wjt	Hawken School	location.location,education.educational_institution,organization.organization,business.business_operation,education.school,business.employer
+m.0266_hq	St. Michael's High School	education.educational_institution,organization.organization,education.school,business.employer
+m.0bt8p8	Bakersfield College	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.095njx	Sorbonne	location.location,education.educational_institution,organization.organization,architecture.structure,business.employer
+m.0bd8gm	Poly Prep Country Day School	education.educational_institution,organization.organization,business.business_operation,education.school,business.employer
+m.01n1pp	University of Bologna	location.location,education.educational_institution,organization.organization,book.periodical_publisher,business.sponsor,education.educational_institution_campus,business.employer,internet.website_owner
+m.062p2r	Kingston Grammar School	location.location,education.educational_institution,organization.organization,education.school,business.employer
+m.0bx8pn	University of North Carolina at Chapel Hill	organization.organization_scope,location.location,education.educational_institution,organization.organization,award.ranked_item,organization.organization_member,business.employer
+m.04lfbp4	Richard King High School	education.educational_institution,organization.organization,education.school,business.employer
+m.03kf1m	Bedford Modern School	education.educational_institution,organization.organization,education.school,business.employer
+m.0ch21g	Point Grey Secondary School	education.educational_institution,organization.organization,education.school,business.employer
+m.04dptq	The Leys School	education.educational_institution,organization.organization,education.school,business.employer
+m.0g8fs	United States Naval Academy	location.location,education.educational_institution,organization.organization,book.author,award.ranked_item,education.educational_institution_campus,protected_sites.listed_site,business.employer
+m.08smvy	LDS Business College	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.02cw8s	Conservatoire de Paris	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.0269p8v	International School of Luxembourg	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.047fkt_	Norwegian National Academy of Theatre	education.educational_institution,organization.organization,business.employer
+m.09f2j	University of California, Los Angeles	location.location,film.production_company,organization.organization_member,business.business_operation,internet.website_owner,architecture.architectural_structure_owner,education.educational_institution,organization.organization,award.ranked_item,education.educational_institution_campus,business.employer
+m.0ylsr	Corpus Christi College, Oxford	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.07thl	University of Bergen	location.location,education.educational_institution,organization.organization,award.ranked_item,education.educational_institution_campus,business.employer
+m.05f8dcp	National Academy of Music	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.028w4z	Clifton College	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,education.school,business.employer
+m.07x3r8	Elgin High School	education.educational_institution,organization.organization,business.employer,education.school
+m.077v4q	Point Loma Nazarene University	location.location,education.educational_institution,organization.organization,award.ranked_item,education.educational_institution_campus,business.employer
+m.01qv9m	Arkansas State University	location.location,education.educational_institution,organization.organization,award.ranked_item,organization.organization_member,education.educational_institution_campus,business.employer
+m.01722w	Westminster School	education.educational_institution,organization.organization,education.school,business.employer
+m.0dbns	Winchester College	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,education.school,business.employer
+m.07vgd	University of California	education.educational_institution,organization.organization,business.employer
+m.07sr_x	Mount Carmel High School	education.educational_institution,organization.organization,education.school,business.employer
+m.0bsnm	Concordia University	location.location,education.educational_institution,organization.organization,organization.organization_member,education.educational_institution_campus,business.employer
+m.0b75hs	Fredric G. Levin College of Law	location.location,education.educational_institution,organization.organization,book.periodical_publisher,award.ranked_item,education.educational_institution_campus,business.employer
+m.0d5fb	Rugby School	education.educational_institution,organization.organization,fictional_universe.fictional_setting,film.film_subject,fictional_universe.fictional_employer,book.book_subject,education.school,business.employer
+m.01t8lq	Lawrence University	location.location,education.educational_institution,organization.organization,award.ranked_item,education.educational_institution_campus,business.employer
+m.09gd7tn	Thomas Jefferson High School	location.location,education.educational_institution,organization.organization,business.employer,protected_sites.listed_site,education.school,architecture.structure
+m.0bvmxm	Heath Grammar School	location.location,education.educational_institution,organization.organization,education.school,business.employer
+m.0gk7z	University of Bristol	location.location,education.educational_institution,organization.organization,award.ranked_item,education.educational_institution_campus,book.book_subject,business.employer
+m.0bwk711	University of Belgrade School of Medicine	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.02583l	Osgoode Hall Law School	location.location,education.educational_institution,organization.organization,book.periodical_publisher,education.educational_institution_campus,business.employer
+m.0dq15x	Upper St. Clair High School	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,education.school,business.employer
+m.03wv2g	Mercer University	location.location,education.educational_institution,organization.organization,award.ranked_item,education.educational_institution_campus,business.employer
+m.01r3y2	Miami University	location.location,education.educational_institution,organization.organization,award.ranked_item,education.educational_institution_campus,business.employer
+m.05h9h_	Harlaw Academy	education.educational_institution,organization.organization,protected_sites.listed_site,education.school,business.employer
+m.03fdv7	The Second City	education.educational_institution,organization.organization,award.award_winner,book.book_subject,business.employer
+m.02pq1w2	Faculdade de Direito da Universidade de São Paulo	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.0dy0ch	Highline High School	education.educational_institution,organization.organization,education.school,business.employer
+m.0220q6	University of Illinois at Urbana–Champaign	location.location,organization.organization_member,architecture.architectural_structure_owner,education.educational_institution,organization.organization,award.ranked_item,book.periodical_publisher,education.educational_institution_campus,book.book_subject,business.employer
+m.05bk47	Overbrook High School	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer,education.school,protected_sites.listed_site
+m.096qv4	Palm Beach State College	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.0gkkf	Jesus College, Cambridge	symbols.namesake,education.educational_institution,organization.organization,business.employer
+m.027lrxm	Sonoma Valley High School	location.location,education.educational_institution,organization.organization,education.school,business.employer
+m.035vp6	Irvine High School	education.educational_institution,organization.organization,education.school,business.employer
+m.052nd	McGill University	location.location,organization.organization_member,education.educational_institution,organization.organization,award.ranked_item,book.periodical_publisher,education.educational_institution_campus,business.employer
+m.0ymcz	St John's College, Oxford	architecture.architectural_structure_owner,education.educational_institution,organization.organization,business.employer
+m.027mbmt	Altrincham Grammar School for Boys	education.educational_institution,organization.organization,education.school,business.employer
+m.01cyd5	Phillips Exeter Academy	education.educational_institution,organization.organization,business.business_operation,education.school,business.employer
+m.0hpv3	Yeshiva University	location.location,education.educational_institution,organization.organization,book.periodical_publisher,award.ranked_item,business.business_operation,education.educational_institution_campus,business.employer
+m.015q8z	Manhattan Christian College	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.0bjqh	School of the Art Institute of Chicago	location.location,education.educational_institution,organization.organization,award.award_nominee,education.educational_institution_campus,award.award_winner,business.employer
+m.084wvj	John Muir High School	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,education.school,business.employer
+m.063yl8w	Norwegian Military College	education.educational_institution,organization.organization,business.employer
+m.050kyt	Prince of Wales College	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.09331w	The Bishop David Brown School	education.educational_institution,organization.organization,business.employer
+m.0c2xmj	Colegio San Agustín	education.educational_institution,organization.organization,education.school,business.employer
+m.02w0tvh	St. Mary's Catholic High School, Menston	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,education.school,business.employer
+m.0464rr	Académie Colarossi	education.educational_institution,organization.organization,business.employer
+m.09d2cs	Aiken High School	education.educational_institution,organization.organization,education.school,business.employer
+m.0c5_ts	Bishop Vesey's Grammar School	location.location,education.educational_institution,organization.organization,education.school,business.employer
+m.07wjk	University of Toronto	location.location,organization.organization_member,internet.website_owner,architecture.architectural_structure_owner,education.educational_institution,organization.organization,award.ranked_item,book.periodical_publisher,education.educational_institution_campus,business.employer
+m.057d4r	University of Zambia	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.01flrh	Moody Bible Institute	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.09fs6d	Madeira School	education.educational_institution,organization.organization,business.business_operation,education.school,business.employer
+m.03dtmp	Royal High School, Edinburgh	education.educational_institution,organization.organization,education.school,business.employer
+m.0d_kl9	Dulwich Prep London	location.location,education.educational_institution,organization.organization,business.employer
+m.01hl_w	University of Western Australia	location.location,education.educational_institution,award.award_presenting_organization,organization.organization,metropolitan_transit.transit_stop,award.ranked_item,education.educational_institution_campus,business.employer
+m.0gg2yh	Withrow High School	location.location,education.educational_institution,organization.organization,business.employer,education.school,protected_sites.listed_site,architecture.structure
+m.021q2j	Polytechnic Institute of New York University	location.location,education.educational_institution,organization.organization,award.ranked_item,business.business_operation,education.educational_institution_campus,business.employer
+m.067sf6	Chaparral High School	education.educational_institution,organization.organization,education.school,business.employer
+m.0512lt	National Cathedral School	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,education.school,business.employer
+m.026gvfj	Lee Strasberg Theatre and Film Institute	education.educational_institution,organization.organization,business.employer
+m.0crf6_1	INSAS	education.educational_institution,organization.organization,business.employer
+m.0765t_w	Antioch High School	education.educational_institution,organization.organization,education.school,business.employer
+m.019vvv	Merchant Taylors' School, Northwood	education.educational_institution,organization.organization,education.school,business.employer
+m.0gjv_	University of London	location.location,architecture.architectural_structure_owner,education.educational_institution,organization.organization,book.periodical_publisher,education.educational_institution_campus,business.employer
+m.0l0wv	Rochester Institute of Technology	location.location,education.educational_institution,organization.organization,award.ranked_item,business.business_operation,education.educational_institution_campus,award.award_winner,business.employer
+m.0418d0	Hampden–Sydney College	location.location,education.educational_institution,organization.organization,award.ranked_item,business.business_operation,education.educational_institution_campus,business.employer
+m.02kzfw	London Business School	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.017cy9	University of British Columbia	location.location,film.film_location,internet.website_owner,education.educational_institution,organization.organization,award.ranked_item,book.periodical_publisher,education.educational_institution_campus,business.employer
+m.0f9dmm	Charles D. Owen High School	education.educational_institution,organization.organization,education.school,business.employer
+m.0c50w2	Handsworth Secondary School	education.educational_institution,organization.organization,education.school,business.employer
+m.05p1qx	Geelong Grammar School	education.educational_institution,organization.organization,education.school,business.employer
+m.01vmv_	Queen's University Belfast	location.location,education.educational_institution,organization.organization,award.ranked_item,education.educational_institution_campus,business.employer
+m.07vk2	University of Sydney	location.location,education.educational_institution,organization.organization,award.award_nominee,award.ranked_item,education.educational_institution_campus,business.employer
+m.02jfqx	West Los Angeles College	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.07xl2f	Moeller High School	education.educational_institution,organization.organization,education.school,business.employer
+m.01sgyx	Sydney Boys High School	education.educational_institution,organization.organization,education.school,business.employer
+m.09w33r	Washington Park High School	education.educational_institution,organization.organization,business.employer,education.school
+m.01s7pm	University of Texas at El Paso	location.location,education.educational_institution,organization.organization,award.ranked_item,education.educational_institution_campus,business.employer
+m.027ynzq	Northmor High School	education.educational_institution,organization.organization,education.school,business.employer
+m.0bwfn	New York University	organization.organization_scope,location.location,business.business_operation,organization.organization_member,architecture.architectural_structure_owner,education.educational_institution,award.award_presenting_organization,organization.organization,award.ranked_item,award.award_winner,education.educational_institution_campus,periodicals.newspaper_circulation_area,business.employer
+m.02qmk3h	Basic Education High School No. 1 Dagon	education.educational_institution,organization.organization,business.employer,education.school
+m.01605c	Monmouth College	location.location,education.educational_institution,organization.organization,award.ranked_item,education.educational_institution_campus,business.employer
+m.0262w1	St. Albans School	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,education.school,business.employer
+m.083ly5	Ballarat Grammar School	education.educational_institution,organization.organization,business.employer,education.school
+m.01lcp9	St. Michael's College School	education.educational_institution,organization.organization,education.school,business.employer
+m.02ptzqg	Norwich School	location.location,education.educational_institution,organization.organization,education.school,business.employer
+m.07th_	Blindern	location.location,education.educational_institution,organization.organization,film.production_company,book.periodical_publisher,organization.organization_founder,award.ranked_item,education.educational_institution_campus,business.employer,internet.website_owner
+m.01g0p5	Royal Academy of Music	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.09s08s	Islamia College	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.0db4jz	Beaverton High School	education.educational_institution,organization.organization,education.school,business.employer
+m.04_5x3	Magdalen College School, Oxford	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer,education.school
+m.0278z4_	John Burroughs High School	education.educational_institution,organization.organization,education.school,business.employer
+m.019vw5	St Paul's School, London	education.educational_institution,organization.organization,education.school,business.employer
+m.01w5m	Columbia University	organization.organization_scope,location.location,symbols.namesake,organization.organization_member,internet.website_owner,architecture.architectural_structure_owner,education.educational_institution,award.award_presenting_organization,organization.organization,book.author,award.ranked_item,book.periodical_publisher,organization.organization_founder,book.book_subject,business.employer
+m.05wwmg	Anglican Church Grammar School	education.educational_institution,organization.organization,business.employer,education.school
+m.031q3w	Horace Mann School	education.educational_institution,organization.organization,education.school,business.employer
+m.024v8c	Griffith University	education.educational_institution,organization.organization,business.employer
+m.09yjxs	Ardingly College	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,education.school,business.employer
+m.0gdvz7	University of Nebraska–Lincoln College of Law	location.location,education.educational_institution,organization.organization,award.ranked_item,education.educational_institution_campus,business.employer
+m.027ykph	Milton-Union High School	education.educational_institution,organization.organization,business.employer,education.school
+m.077s67	Merchiston Castle School	education.educational_institution,organization.organization,education.school,business.employer
+m.02wbk81	Edgbaston High School	education.educational_institution,organization.organization,education.school,business.employer
+m.015401	University of Tehran	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.09wv__	Art Students League of New York	education.educational_institution,organization.organization,business.business_operation,education.school,business.employer
+m.02gn8s	Pasadena City College	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,award.award_winner,business.employer
+m.06rk28	Lakeview Centennial High School	education.educational_institution,organization.organization,education.school,business.employer
+m.06rt4b	Abingdon School	education.educational_institution,organization.organization,education.school,business.employer
+m.01qgr3	University of Tennessee	location.location,education.educational_institution,organization.organization,award.ranked_item,education.educational_institution_campus,award.award_winner,business.employer,internet.website_owner
+m.06g96s	Academy of Fine Arts, Munich	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.05yy45	Jarvis Collegiate Institute	education.educational_institution,organization.organization,education.school,business.employer
+m.090r53	Monkton Combe School	education.educational_institution,organization.organization,education.school,business.employer
+m.067zgy	St Edward's School, Oxford	education.educational_institution,organization.organization,education.school,business.employer
+m.03jjh2	Mount St. Mary's University	location.location,symbols.namesake,education.educational_institution,organization.organization,award.ranked_item,business.business_operation,education.educational_institution_campus,business.employer
+m.02vpm81	National Theatre, Melbourne	location.location,education.educational_institution,organization.organization,architecture.structure,business.employer,travel.tourist_attraction
+m.0h1fj7q	Myrtle Beach High School	location.location,education.educational_institution,organization.organization,education.school,business.employer
+m.0407dn	Bradfield College	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,education.school,business.employer
+m.02vrglb	Northwestern Military and Naval Academy	education.educational_institution,organization.organization,business.employer
+m.07bnjw	St. Thomas Aquinas High School	education.educational_institution,organization.organization,business.employer,education.school
+m.02rgdnp	Trinity Laban Conservatoire of Music and Dance	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.0f8tys	Corvallis High School	education.educational_institution,organization.organization,education.school,business.employer
+m.02ps55	University of Hull	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.02yxsb	Royal School of Mines	education.educational_institution,organization.organization,business.employer
+m.03h0qnc	Park House School	education.educational_institution,organization.organization,business.employer,education.school
+m.021z2k	Universidade Federal de Minas Gerais	location.location,education.educational_institution,organization.organization,film.production_company,award.ranked_item,business.business_operation,education.educational_institution_campus,business.employer
+m.02vq0lk	Scripps Ranch High School	education.educational_institution,organization.organization,business.employer,education.school
+m.0dryp8n	Mercer Area Middle-High School	education.educational_institution,organization.organization,education.school,business.employer
+m.013807	San Francisco State University	location.location,education.educational_institution,organization.organization,award.ranked_item,education.educational_institution_campus,business.employer
+m.0983v0	Brother Rice High School	education.educational_institution,organization.organization,education.school,business.employer
+m.02g839	Berklee College of Music	location.location,education.educational_institution,organization.organization,award.ranked_item,business.business_operation,education.educational_institution_campus,business.employer
+m.02ljdw	USC School of Cinematic Arts	location.location,education.educational_institution,organization.organization,award.award_nominee,business.employer,internet.website_owner
+m.03jh1l	The Dalton School	education.educational_institution,organization.organization,education.school,business.employer
+m.02pvzss	Rancho Cotate High School	education.educational_institution,organization.organization,education.school,business.employer
+m.0cl43q	Peabody High School	location.location,education.educational_institution,organization.organization,award.award_nominee,education.educational_institution_campus,education.school,business.employer
+m.0bh9ly	St John's Marlborough	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.0cb3vj	Liverpool College of Art	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,architecture.structure,business.employer
+m.02c3rj	Guy's Hospital	location.location,medicine.hospital,education.educational_institution,organization.organization,book.periodical_publisher,education.educational_institution_campus,business.employer
+m.05n752	The Westminster Schools	education.educational_institution,organization.organization,business.business_operation,business.employer,education.school
+m.01w885	United States Army Command and General Staff College	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.05l5q_	Hobart College, Tasmania	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,education.school,business.employer
+m.01n4w_	Washington and Lee University	location.location,organization.organization_scope,symbols.namesake,business.business_operation,award.ranked_list,education.educational_institution,organization.organization,award.ranked_item,book.periodical_publisher,education.educational_institution_campus,business.employer
+m.09sdq0	Joint Service Defence College	education.educational_institution,organization.organization,business.employer
+m.08fm0b	Southington High School	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,education.school,business.employer
+m.04js2j	Stowe School	education.educational_institution,organization.organization,business.employer,education.school
+m.02rlt6	American Academy in Rome	education.educational_institution,award.award_presenting_organization,organization.organization,business.employer
+m.01jq34	University of Maryland, College Park	location.location,film.production_company,organization.organization_member,education.educational_institution,organization.organization,award.ranked_item,award.award_winner,education.educational_institution_campus,book.book_subject,business.employer
+m.03818y	Clark Atlanta University	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.01wdl3	University of Alabama	location.location,education.educational_institution,organization.organization,book.newspaper_owner,award.ranked_item,education.educational_institution_campus,business.employer
+m.0f8wmd	William T. Dwyer High School	education.educational_institution,organization.organization,education.school,business.employer
+m.0g1y4n	Baylor Law School	location.location,education.educational_institution,organization.organization,award.ranked_item,education.educational_institution_campus,business.employer
+m.0bxvfk	Redwood High School	education.educational_institution,organization.organization,education.school,business.employer
+m.0dddwj	Methodist Ladies' College, Perth	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,education.school,business.employer
+m.015zyd	California Institute of the Arts	location.location,film.production_company,film.film_location,business.business_operation,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.02kbtf	Hamilton College	location.location,education.educational_institution,organization.organization,award.ranked_item,education.educational_institution_campus,business.employer
+m.0d4ryv	Cleveland High School	education.educational_institution,organization.organization,education.school,business.employer
+m.08t8wk	Foothill High School	education.educational_institution,organization.organization,education.school,business.employer
+m.0f102	University of Idaho	location.location,education.educational_institution,organization.organization,book.periodical_publisher,award.ranked_item,education.educational_institution_campus,award.award_winner,business.employer
+m.0279x01	Columbia High School	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,education.school,business.employer
+m.0fm16z	Queen Elizabeth High School, Carmarthen	education.educational_institution,organization.organization,business.employer,education.school
+m.01lckm	St. Michael's College, Toronto	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.05_dg6	University of Ouagadougou	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.0ymgk	Worcester College, Oxford	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,business.employer
+m.07wm6	University of Manitoba	location.location,education.educational_institution,organization.organization,award.ranked_item,education.educational_institution_campus,business.employer
+m.01ptt7	University of Kentucky	location.location,architecture.architectural_structure_owner,education.educational_institution,organization.organization,award.ranked_item,business.employer
+m.0b__h8m	Claude High School	location.location,education.educational_institution,organization.organization,education.school,business.employer
+m.09zvkt	Filer High School	location.location,education.educational_institution,organization.organization,education.educational_institution_campus,education.school,business.employer
+m.0gdm1	Amherst College	location.location,education.educational_institution,organization.organization,award.ranked_item,education.educational_institution_campus,business.employer,symbols.name_source
+m.03cjjw9	Palmerston North Intermediate Normal School	education.educational_institution,organization.organization,business.employer
+m.01qhm_	German American	people.ethnicity
+m.0jt85pd	Greeks	people.ethnicity
+m.03bkbh	Irish people	people.ethnicity,book.book_subject
+m.047ch9x	Afro-Jamaican	people.ethnicity
+m.02c31t	Lithuanians	people.ethnicity
+m.018hlv	Flemish people	people.ethnicity
+m.064pj	Persian people	people.ethnicity
+m.071x0k	Filipino	people.ethnicity
+m.0fz6b	Hmong people	people.ethnicity
+m.048z7l	Jewish American	people.ethnicity,book.book_subject
+m.0222qb	Italian people	people.ethnicity
+m.027hhf	Arbëreshë people	people.ethnicity
+m.09zyn5	Norwegians	people.ethnicity
+m.07bch9	Scottish American	people.ethnicity
+m.041rx	Jewish people	people.ethnicity,military.military_combatant,film.film_subject,book.book_subject
+m.022dp5	Polish American	people.ethnicity
+m.03lmx1	Scottish people	people.ethnicity
+m.0g6ff	Russian	people.ethnicity,book.book_subject
+m.02tbv6	Montenegrins	people.ethnicity
+m.08qxcx	Iranian Armenians	people.ethnicity
+m.0j6x8	Indigenous Australians	people.ethnicity,film.film_subject,book.book_subject
+m.0fqp6zk	Bengali Hindus	people.ethnicity
+m.01nft3	Assyrian people	people.ethnicity
+m.01p7s6	Poles	people.ethnicity
+m.03d26m9	Hondurans	people.ethnicity
+m.0fc2cq	Banjar people	people.ethnicity
+m.09k5jvk	Mexican people	people.ethnicity
+m.063k3h	Scotch-Irish American	people.ethnicity
+m.0dqqwy	Danish American	people.ethnicity
+m.07lv5x	Bahamian American	people.ethnicity
+m.01h4n	Basques	people.ethnicity
+m.02jvpv	Kiwi	people.ethnicity
+m.0268_k	Danes	people.ethnicity,book.book_subject
+m.0bms44	Louisiana Creole people	people.ethnicity
+m.013y54	Han Chinese	people.ethnicity,book.book_subject
+m.0dryh9k	Indian people	people.ethnicity
+m.0j4w_	Croats	people.ethnicity
+m.0432mrk	Indigenous peoples of the Americas	people.ethnicity,military.military_combatant,book.book_subject
+m.03kbr	Hindu	people.ethnicity,religion.religion,book.book_subject
+m.02r_qms	Brazilians	people.ethnicity
+m.04nbqd	Indo people	people.ethnicity
+m.04_35x	Samoans	people.ethnicity
+m.032j30	Native Hawaiians	people.ethnicity,book.book_subject
+m.013xrm	Germans	people.ethnicity,military.military_combatant
+m.0jt7v76	Palestinian people	people.ethnicity,military.military_combatant,film.film_subject
+m.01l0ty	Tibetan people	people.ethnicity
+m.0d29z	Overseas Chinese	people.ethnicity
+m.0c41n	Acadians	people.ethnicity,symbols.namesake
+m.04wysy	Dalit	people.ethnicity
+m.013b7g	Sephardi Jews	people.ethnicity
+m.01267	Albanians	people.ethnicity
+m.02kr2h	Circassians	people.ethnicity
+m.033tf_	Irish American	people.ethnicity,book.book_subject
+m.03vghh	Portuguese people	people.ethnicity
+m.0dbxy	Cherokee	people.ethnicity,military.military_combatant,book.book_subject
+m.087dz_	Gamilaraay	people.ethnicity
+m.03ttfc	Spanish people	people.ethnicity
+m.01g0y_	Ojibwe	people.ethnicity
+m.02q386h	Asturians	people.ethnicity
+m.0zn1bnk	West Indian	people.ethnicity
+m.02p5zsd	Luxembourgers	people.ethnicity
+m.0fp4n	Tatars	people.ethnicity,military.military_combatant
+m.0gcp7x	Iranian Azerbaijanis	people.ethnicity
+m.01kg2v	Brahmin	people.ethnicity
+m.07f7h7	Sara people	people.ethnicity
+m.04c28	Kurds	people.ethnicity,book.book_subject
+m.03y6p0	Tamang people	people.ethnicity
+m.09fhsg	Maltese people	people.ethnicity
+m.05748	Māori people	people.ethnicity
+m.022fdt	Armenians	people.ethnicity
+m.012c1l	French Canadian	people.ethnicity,book.book_subject
+m.09743	Pashtun	people.ethnicity
+m.0g0x7_	Gujarati people	people.ethnicity
+m.01btfz	Purépecha people	people.ethnicity
+m.0g6g7	Serbs	people.ethnicity
+m.09tqq8q	Ghanaian people	people.ethnicity
+m.01trsl	First Nations	people.ethnicity
+m.013s2p	Bosniaks	people.ethnicity
+m.0401rq	Kamba people	people.ethnicity
+m.012f86	Ukrainians	people.ethnicity
+m.01xhh5	Koreans	people.ethnicity
+m.01hd_l	Yaqui	people.ethnicity
+m.01g7zj	Mexican American	people.ethnicity
+m.0bpjh3	Bengali people	people.ethnicity
+m.02w7gg	English people	people.ethnicity,tv.tv_genre,book.book_subject
+m.09c7w0	United States of America	biology.breed_origin,meteorology.cyclone_affected_area,organization.organization_scope,location.location,film.film_location,organization.organization_member,travel.travel_destination,military.military_combatant,olympics.olympic_participating_country,location.administrative_division,organization.organization_founder,business.business_location,sports.sport_country,government.governmental_jurisdiction,organization.organization_sector,location.country,fictional_universe.fictional_setting,location.statistical_region,symbols.name_source,film.film_subject,sports.sports_team_location,periodicals.newspaper_circulation_area,book.book_subject,business.employer
+m.027rn	Dominican Republic	meteorology.cyclone_affected_area,organization.organization_scope,location.location,location.country,organization.organization_member,location.statistical_region,travel.travel_destination,olympics.olympic_participating_country,location.administrative_division,sports.sports_team_location,organization.organization_founder,sports.sport_country,book.book_subject,government.governmental_jurisdiction
+m.07ssc	United Kingdom	biology.breed_origin,organization.organization_scope,location.location,royalty.kingdom,media_common.netflix_genre,film.film_location,organization.organization_member,military.military_combatant,olympics.olympic_participating_country,location.administrative_division,organization.organization_founder,sports.sport_country,government.governmental_jurisdiction,location.country,fictional_universe.fictional_setting,location.statistical_region,sports.sports_team_location,periodicals.newspaper_circulation_area,book.book_subject
+m.014tss	Kingdom of Great Britain	organization.organization_scope,location.location,military.military_combatant,royalty.kingdom,location.country,location.statistical_region,book.book_subject,government.governmental_jurisdiction
+m.02vzc	Finland	biology.breed_origin,organization.organization_scope,location.location,location.country,organization.organization_member,location.statistical_region,travel.travel_destination,military.military_combatant,olympics.olympic_participating_country,location.administrative_division,sports.sports_team_location,organization.organization_founder,sports.sport_country,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.059j2	Netherlands	biology.breed_origin,location.location,organization.organization_scope,royalty.kingdom,media_common.netflix_genre,film.film_location,organization.organization_member,military.military_combatant,olympics.olympic_participating_country,location.administrative_division,organization.organization_founder,sports.sport_country,government.governmental_jurisdiction,location.country,location.statistical_region,symbols.name_source,sports.sports_team_location,periodicals.newspaper_circulation_area,book.book_subject
+m.0j5g9	Wales	biology.breed_origin,organization.organization_scope,location.location,location.country,fictional_universe.fictional_setting,film.film_location,location.statistical_region,travel.travel_destination,military.military_combatant,location.administrative_division,sports.sports_team_location,periodicals.newspaper_circulation_area,sports.sport_country,book.book_subject,government.governmental_jurisdiction
+m.0jdd	Afghanistan	biology.breed_origin,location.location,organization.organization_scope,location.country,fictional_universe.fictional_setting,organization.organization_member,location.statistical_region,military.military_combatant,olympics.olympic_participating_country,location.administrative_division,film.film_subject,sports.sports_team_location,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.0154j	Belgium	biology.breed_origin,location.location,organization.organization_scope,royalty.kingdom,media_common.netflix_genre,location.country,film.film_location,organization.organization_member,location.statistical_region,travel.travel_destination,symbols.name_source,military.military_combatant,olympics.olympic_participating_country,sports.sports_team_location,organization.organization_founder,periodicals.newspaper_circulation_area,sports.sport_country,book.book_subject,government.governmental_jurisdiction
+m.0jgd	Argentina	biology.breed_origin,organization.organization_scope,location.location,media_common.netflix_genre,location.country,fictional_universe.fictional_setting,film.film_location,organization.organization_member,location.statistical_region,travel.travel_destination,military.military_combatant,olympics.olympic_participating_country,location.administrative_division,organization.organization_founder,sports.sports_team_location,sports.sport_country,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.06q1r	Scotland	biology.breed_origin,location.location,organization.organization_scope,film.film_location,government.political_district,travel.travel_destination,olympics.olympic_participating_country,location.administrative_division,sports.sport_country,government.governmental_jurisdiction,location.country,fictional_universe.fictional_setting,location.statistical_region,film.film_subject,sports.sports_team_location,periodicals.newspaper_circulation_area,book.book_subject
+m.02jx1	England	biology.breed_origin,organization.organization_scope,location.location,film.film_location,travel.travel_destination,military.military_combatant,olympics.olympic_participating_country,location.administrative_division,sports.sport_country,government.governmental_jurisdiction,location.country,fictional_universe.fictional_setting,location.statistical_region,symbols.name_source,film.film_subject,sports.sports_team_location,periodicals.newspaper_circulation_area,book.book_subject
+m.0d0vqn	Sweden	biology.breed_origin,organization.organization_scope,location.location,royalty.kingdom,film.film_location,organization.organization_member,government.political_district,travel.travel_destination,military.military_combatant,olympics.olympic_participating_country,organization.organization_founder,sports.sport_country,government.governmental_jurisdiction,location.country,fictional_universe.fictional_setting,location.statistical_region,sports.sports_team_location,periodicals.newspaper_circulation_area,business.employer,book.book_subject
+m.06frc	Roman Republic	location.location,location.country,location.statistical_region,government.governmental_jurisdiction
+m.01n8qg	Solomon Islands	meteorology.cyclone_affected_area,location.location,symbols.namesake,royalty.kingdom,location.country,organization.organization_member,location.statistical_region,travel.travel_destination,olympics.olympic_participating_country,location.administrative_division,sports.sports_team_location,book.book_subject,government.governmental_jurisdiction
+m.03b79	German Empire	organization.organization_scope,location.location,military.military_combatant,royalty.kingdom,location.country,olympics.olympic_participating_country,location.statistical_region,book.book_subject,government.governmental_jurisdiction
+m.0k6nt	Denmark	biology.breed_origin,organization.organization_scope,location.location,royalty.kingdom,location.country,government.political_district,organization.organization_member,location.statistical_region,travel.travel_destination,symbols.name_source,military.military_combatant,olympics.olympic_participating_country,location.administrative_division,organization.organization_founder,sports.sports_team_location,sports.sport_country,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.0f8l9c	France	biology.breed_origin,organization.organization_scope,location.location,media_common.netflix_genre,film.film_location,organization.organization_member,travel.travel_destination,military.military_combatant,olympics.olympic_participating_country,organization.organization_founder,sports.sport_country,government.governmental_jurisdiction,location.country,fictional_universe.fictional_setting,location.statistical_region,symbols.name_source,sports.sports_team_location,periodicals.newspaper_circulation_area,book.book_subject
+m.05b4w	Norway	biology.breed_origin,location.location,organization.organization_scope,royalty.kingdom,film.film_location,organization.organization_member,travel.travel_destination,military.military_combatant,olympics.olympic_participating_country,location.administrative_division,organization.organization_founder,sports.sport_country,government.governmental_jurisdiction,location.country,fictional_universe.fictional_setting,location.statistical_region,sports.sports_team_location,periodicals.newspaper_circulation_area,book.book_subject
+m.05qhw	Poland	biology.breed_origin,organization.organization_scope,location.location,media_common.netflix_genre,film.film_location,organization.organization_member,travel.travel_destination,military.military_combatant,olympics.olympic_participating_country,business.business_location,organization.organization_founder,sports.sport_country,government.governmental_jurisdiction,location.country,fictional_universe.fictional_setting,location.statistical_region,symbols.name_source,sports.sports_team_location,periodicals.newspaper_circulation_area,business.employer,book.book_subject
+m.056vv	Montenegro	location.location,organization.organization_scope,location.country,organization.organization_member,location.statistical_region,travel.travel_destination,military.military_combatant,olympics.olympic_participating_country,sports.sports_team_location,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.06bnz	Russia	biology.breed_origin,meteorology.cyclone_affected_area,organization.organization_scope,location.location,media_common.netflix_genre,organization.organization_member,travel.travel_destination,military.military_combatant,olympics.olympic_participating_country,location.administrative_division,organization.organization_founder,sports.sport_country,government.governmental_jurisdiction,location.country,fictional_universe.fictional_setting,location.statistical_region,sports.sports_team_location,periodicals.newspaper_circulation_area,book.book_subject
+m.0d0kn	Georgia	biology.breed_origin,organization.organization_scope,location.location,location.country,fictional_universe.fictional_setting,film.film_location,organization.organization_member,location.statistical_region,olympics.olympic_participating_country,location.administrative_division,sports.sports_team_location,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.0345h	Germany	biology.breed_origin,organization.organization_scope,location.location,media_common.netflix_genre,film.film_location,organization.organization_member,government.political_district,travel.travel_destination,military.military_combatant,olympics.olympic_participating_country,broadcast.tv_station_owner,location.administrative_division,business.business_location,organization.organization_founder,sports.sport_country,government.governmental_jurisdiction,location.country,fictional_universe.fictional_setting,location.statistical_region,symbols.name_source,sports.sports_team_location,periodicals.newspaper_circulation_area,book.book_subject,business.employer
+m.07t21	Ukraine	biology.breed_origin,organization.organization_scope,location.location,film.film_location,organization.organization_member,travel.travel_destination,military.military_combatant,olympics.olympic_participating_country,location.administrative_division,organization.organization_founder,sports.sport_country,government.governmental_jurisdiction,location.country,fictional_universe.fictional_setting,location.statistical_region,sports.sports_team_location,periodicals.newspaper_circulation_area,book.book_subject
+m.015qh	Bulgaria	biology.breed_origin,location.location,organization.organization_scope,film.film_location,organization.organization_member,travel.travel_destination,military.military_combatant,olympics.olympic_participating_country,business.business_location,sports.sport_country,government.governmental_jurisdiction,location.country,location.statistical_region,sports.sports_team_location,periodicals.newspaper_circulation_area,business.employer,book.book_subject
+m.016wzw	Peru	biology.breed_origin,organization.organization_scope,location.location,location.country,fictional_universe.fictional_setting,film.film_location,organization.organization_member,location.statistical_region,travel.travel_destination,military.military_combatant,olympics.olympic_participating_country,location.administrative_division,organization.organization_founder,sports.sports_team_location,sports.sport_country,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.06cmp	Roman Empire	location.location,military.military_combatant,location.country,fictional_universe.fictional_setting,film.film_subject,location.statistical_region,book.book_subject,government.governmental_jurisdiction
+m.01ycx0	Polish–Lithuanian Commonwealth	location.location,military.military_combatant,royalty.kingdom,location.country,location.statistical_region
+m.05vz3zq	Soviet Union	biology.breed_origin,location.location,organization.organization_scope,location.country,organization.organization_member,location.statistical_region,military.military_combatant,olympics.olympic_participating_country,film.film_subject,organization.organization_founder,sports.sports_team_location,sports.sport_country,book.book_subject,government.governmental_jurisdiction
+m.06v36	Swaziland	location.location,royalty.kingdom,location.country,organization.organization_member,location.statistical_region,travel.travel_destination,olympics.olympic_participating_country,sports.sports_team_location,organization.organization_founder,book.book_subject,government.governmental_jurisdiction
+m.01znc_	Turkey	biology.breed_origin,organization.organization_scope,location.location,location.country,film.film_location,organization.organization_member,location.statistical_region,travel.travel_destination,military.military_combatant,olympics.olympic_participating_country,organization.organization_founder,sports.sports_team_location,sports.sport_country,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.04sj3	Madagascar	biology.breed_origin,meteorology.cyclone_affected_area,organization.organization_scope,location.location,location.country,film.film_location,organization.organization_member,location.statistical_region,travel.travel_destination,olympics.olympic_participating_country,sports.sports_team_location,book.book_subject,government.governmental_jurisdiction
+m.03gj2	Hungary	biology.breed_origin,location.location,organization.organization_scope,film.film_location,organization.organization_member,travel.travel_destination,military.military_combatant,olympics.olympic_participating_country,location.administrative_division,organization.organization_founder,sports.sport_country,government.governmental_jurisdiction,location.country,fictional_universe.fictional_setting,location.statistical_region,sports.sports_team_location,periodicals.newspaper_circulation_area,book.book_subject,business.employer
+m.04hqz	Lebanon	organization.organization_scope,location.location,location.country,fictional_universe.fictional_setting,organization.organization_member,location.statistical_region,military.military_combatant,olympics.olympic_participating_country,sports.sports_team_location,organization.organization_founder,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.06mkj	Spain	biology.breed_origin,location.location,organization.organization_scope,royalty.kingdom,media_common.netflix_genre,film.film_location,organization.organization_member,travel.travel_destination,military.military_combatant,olympics.olympic_participating_country,location.administrative_division,business.business_location,organization.organization_founder,sports.sport_country,government.governmental_jurisdiction,location.country,location.statistical_region,sports.sports_team_location,periodicals.newspaper_circulation_area,book.book_subject,business.employer
+m.01mk6	Czechoslovakia	biology.breed_origin,organization.organization_scope,location.location,aviation.aircraft_owner,location.country,fictional_universe.fictional_setting,organization.organization_member,location.statistical_region,military.military_combatant,olympics.olympic_participating_country,organization.organization_founder,sports.sports_team_location,book.book_subject,government.governmental_jurisdiction
+m.035qy	Greece	biology.breed_origin,location.location,organization.organization_scope,media_common.netflix_genre,film.film_location,organization.organization_member,travel.travel_destination,military.military_combatant,olympics.olympic_participating_country,organization.organization_founder,sports.sport_country,government.governmental_jurisdiction,location.country,fictional_universe.fictional_setting,location.statistical_region,film.film_subject,sports.sports_team_location,periodicals.newspaper_circulation_area,book.book_subject
+m.03h2c	Honduras	meteorology.cyclone_affected_area,location.location,location.country,organization.organization_member,location.statistical_region,travel.travel_destination,olympics.olympic_participating_country,film.film_subject,sports.sports_team_location,organization.organization_founder,book.book_subject,government.governmental_jurisdiction
+m.03f2w	East Germany	organization.organization_scope,location.location,location.country,organization.organization_member,location.statistical_region,architecture.architectural_structure_owner,olympics.olympic_participating_country,film.film_subject,sports.sports_team_location,sports.sport_country,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.0b90_r	Mexico	biology.breed_origin,meteorology.cyclone_affected_area,organization.organization_scope,location.location,media_common.netflix_genre,film.film_location,organization.organization_member,travel.travel_destination,military.military_combatant,olympics.olympic_participating_country,location.administrative_division,business.business_location,organization.organization_founder,sports.sport_country,government.governmental_jurisdiction,location.country,fictional_universe.fictional_setting,location.statistical_region,sports.sports_team_location,periodicals.newspaper_circulation_area,book.book_subject,business.employer
+m.05v8c	Philippines	meteorology.cyclone_affected_area,organization.organization_scope,location.location,media_common.netflix_genre,location.country,film.film_location,organization.organization_member,location.statistical_region,travel.travel_destination,military.military_combatant,olympics.olympic_participating_country,organization.organization_founder,sports.sports_team_location,periodicals.newspaper_circulation_area,book.book_subject,business.employer,government.governmental_jurisdiction
+m.01rxw	Congo	biology.breed_origin,location.location,location.country,organization.organization_member,location.statistical_region,olympics.olympic_participating_country,location.administrative_division,sports.sports_team_location,book.book_subject,government.governmental_jurisdiction
+m.0hzlz	South Africa	biology.breed_origin,organization.organization_scope,location.location,location.country,film.film_location,organization.organization_member,location.statistical_region,travel.travel_destination,military.military_combatant,olympics.olympic_participating_country,film.film_subject,organization.organization_founder,sports.sports_team_location,sports.sport_country,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.05bcl	Northern Ireland	organization.organization_scope,location.location,location.country,fictional_universe.fictional_setting,film.film_location,location.statistical_region,olympics.olympic_participating_country,location.administrative_division,sports.sports_team_location,sports.sport_country,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.017cw	Byzantine Empire	location.location,military.military_combatant,location.country,location.statistical_region,book.book_subject,government.governmental_jurisdiction
+m.0cdbq	Russian Empire	location.location,organization.organization_scope,royalty.kingdom,location.country,fictional_universe.fictional_setting,location.statistical_region,military.military_combatant,olympics.olympic_participating_country,book.book_subject,government.governmental_jurisdiction
+m.0h44w	Mandatory Palestine	location.location,location.country,film.film_location,location.statistical_region,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.0ctw_b	New Zealand	biology.breed_origin,meteorology.cyclone_affected_area,organization.organization_scope,location.location,royalty.kingdom,film.film_location,organization.organization_member,travel.travel_destination,military.military_combatant,olympics.olympic_participating_country,location.administrative_division,organization.organization_founder,sports.sport_country,government.governmental_jurisdiction,organization.organization_sector,location.country,fictional_universe.fictional_setting,location.statistical_region,sports.sports_team_location,periodicals.newspaper_circulation_area,book.book_subject,business.employer
+m.0d05w3	China	biology.breed_origin,meteorology.cyclone_affected_area,location.location,organization.organization_scope,royalty.kingdom,media_common.netflix_genre,film.film_location,organization.organization_member,travel.travel_destination,military.military_combatant,olympics.olympic_participating_country,organization.organization_founder,sports.sport_country,government.governmental_jurisdiction,education.field_of_study,location.country,fictional_universe.fictional_setting,location.statistical_region,film.film_subject,sports.sports_team_location,periodicals.newspaper_circulation_area,book.book_subject
+m.01mjq	Czech Republic	biology.breed_origin,organization.organization_scope,location.location,media_common.netflix_genre,location.country,organization.organization_member,business.sponsor,location.statistical_region,travel.travel_destination,olympics.olympic_participating_country,location.administrative_division,organization.organization_founder,business.business_location,sports.sports_team_location,sports.sport_country,book.book_subject,business.employer,government.governmental_jurisdiction
+m.04v3q	Malta	biology.breed_origin,location.location,organization.organization_scope,location.country,film.film_location,organization.organization_member,location.statistical_region,travel.travel_destination,olympics.olympic_participating_country,location.administrative_division,organization.organization_founder,sports.sports_team_location,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.0dclg	Philadelphia	organization.organization_scope,location.location,location.place_with_neighborhoods,location.hud_county_place,fictional_universe.fictional_setting,film.film_location,location.statistical_region,people.place_of_interment,travel.travel_destination,location.citytown,award.award_presenting_organization,location.administrative_division,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.073z49	Hoshiarpur	location.location,location.statistical_region,location.citytown
+m.0cbvc2	West Point Grey	location.location,location.neighborhood
+m.01z52t	Motherwell	location.location,sports.sports_team_location,location.capital_of_administrative_division,location.statistical_region,location.citytown
+m.031lxg	Ightham Mote	location.location,architecture.structure
+m.0y1rf	Rochester	location.location,organization.organization_scope,location.hud_county_place,fictional_universe.fictional_setting,location.statistical_region,travel.travel_destination,location.citytown,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,business.employer,government.governmental_jurisdiction
+m.02fpfx	Mutare	location.location,film.film_location,location.statistical_region,travel.travel_destination,location.citytown
+m.01531	The Bronx	organization.organization_scope,location.location,location.place_with_neighborhoods,fictional_universe.fictional_setting,film.film_location,government.political_district,location.statistical_region,travel.travel_destination,location.us_county,location.administrative_division,business.business_location,sports.sports_team_location,periodicals.newspaper_circulation_area,business.employer,book.book_subject
+m.01q1j	Cornwall	location.location,organization.organization_scope,film.film_location,location.statistical_region,protected_sites.listed_site,location.administrative_division,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.024bt7	Pointe-Claire	location.location,location.statistical_region,location.citytown
+m.02dtg	Detroit	organization.organization_scope,location.location,location.place_with_neighborhoods,symbols.namesake,location.hud_county_place,film.film_location,location.statistical_region,travel.travel_destination,location.citytown,film.film_subject,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.01wm54	Matsusaka	location.location,location.statistical_region,location.citytown
+m.035560	Ahoghill	location.location,location.statistical_region,location.citytown
+m.017vdg	Ayr	location.location,location.capital_of_administrative_division,location.statistical_region,travel.travel_destination,location.citytown
+m.0nn83	Jefferson County	location.location,symbols.namesake,location.administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,location.us_county
+m.015cj9	Cheltenham	location.location,location.administrative_division,sports.sports_team_location,location.statistical_region,travel.travel_destination,location.citytown
+m.0nc2s	St Pancras, London	location.location
+m.0rlww	Monticello	location.location,location.hud_county_place,location.capital_of_administrative_division,location.statistical_region,location.citytown
+m.0dq16	Albany	location.location,organization.organization_scope,location.place_with_neighborhoods,location.hud_county_place,fictional_universe.fictional_setting,location.statistical_region,travel.travel_destination,location.citytown,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,government.governmental_jurisdiction
+m.042jn1	Carei	location.location,location.statistical_region,location.citytown
+m.0tz14	Haverhill	location.location,location.hud_county_place,location.statistical_region,periodicals.newspaper_circulation_area,location.citytown
+m.0_skz	Elk Point	location.location,location.hud_county_place,location.statistical_region,location.citytown
+m.0jcg8	Derbyshire	location.location,location.administrative_division,sports.sports_team_location,location.statistical_region,periodicals.newspaper_circulation_area,government.governmental_jurisdiction
+m.01sn3	Cleveland	location.location,organization.organization_scope,location.place_with_neighborhoods,location.hud_county_place,fictional_universe.fictional_setting,film.film_location,government.political_district,location.statistical_region,travel.travel_destination,location.citytown,location.administrative_division,sports.sports_team_location,business.business_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,book.book_subject,business.employer,government.governmental_jurisdiction
+m.0d6hn	Havana	location.location,location.administrative_division,film.film_location,location.statistical_region,travel.travel_destination,location.citytown
+m.05dlvh	Nzérékoré	location.location,location.administrative_division,location.statistical_region,location.citytown
+m.01m1_t	New Britain	location.location,location.hud_county_place,film.film_location,location.statistical_region,travel.travel_destination,location.citytown
+m.0498y	Kentucky	meteorology.cyclone_affected_area,location.location,organization.organization_scope,fictional_universe.fictional_setting,film.film_location,government.political_district,location.statistical_region,location.administrative_division,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.0jpvq	Benevento	location.location,location.capital_of_administrative_division,location.statistical_region,location.citytown
+m.03ykpv	Akhalkalaki	location.location,location.statistical_region,location.citytown
+m.0hvm_	Ayrshire	organization.organization_scope,location.location,location.administrative_division,sports.sports_team_location,location.statistical_region
+m.0gp6wk	Omuta	location.location,location.statistical_region,location.citytown
+m.01y937	Lower East Side	location.location,location.neighborhood,film.film_location,book.book_subject,protected_sites.listed_site
+m.055d0y	Kermanshah	location.location,location.statistical_region,location.citytown
+m.0pmhy	Nola	location.location,location.statistical_region,location.citytown
+m.0ccvx	Queens	organization.organization_scope,location.location,location.place_with_neighborhoods,fictional_universe.fictional_setting,location.statistical_region,travel.travel_destination,location.us_county,location.administrative_division,periodicals.newspaper_circulation_area,book.book_subject,business.employer,government.governmental_jurisdiction
+m.02gptq	Troon,South Ayrshire	location.location,location.statistical_region,location.citytown
+m.06vbd	Syria	organization.organization_scope,location.location,location.country,organization.organization_member,location.statistical_region,military.military_combatant,olympics.olympic_participating_country,sports.sports_team_location,organization.organization_founder,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.0y4n8	Blooming Grove	location.location,location.statistical_region,location.citytown
+m.0zlgm	Reading	location.location,organization.organization_scope,location.hud_county_place,sports.sports_team_location,location.capital_of_administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,location.citytown,government.governmental_jurisdiction
+m.0r_xc	Kaneohe	location.location,film.film_location,location.statistical_region,location.citytown
+m.069yjp	Coaticook	location.location,location.statistical_region,location.citytown
+m.051xn1	Calabar	location.location,location.statistical_region,location.citytown
+m.01mdcj	Pittsford	location.location,location.statistical_region,location.citytown
+m.05s808	El Puerto de Santa María	location.location,location.statistical_region,location.citytown
+m.019jlq	Darjeeling	location.location,location.statistical_region,travel.travel_destination,location.citytown
+m.010d61	Medford Township	location.location,location.statistical_region,location.citytown
+m.0fs29	Port of Spain	location.location,location.administrative_division,periodicals.newspaper_circulation_area,location.statistical_region,location.citytown
+m.03qlqq3	Gournay-en-Bray	location.location,location.statistical_region,location.citytown
+m.0pc7r	Worcester	location.location,location.hud_county_place,government.political_district,location.statistical_region,travel.travel_destination,location.citytown,location.administrative_division,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,government.governmental_jurisdiction
+m.05p7m2k	Zeitoun, Gaza	location.location
+m.071rj9	Birbhum district	location.location,location.administrative_division,location.statistical_region,location.citytown
+m.04czh0m	Torsåker, Hofors	location.location,location.statistical_region,location.citytown
+m.0zdfp	Medford	location.location,location.hud_county_place,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,location.statistical_region,location.citytown,government.governmental_jurisdiction
+m.0cg4lw	Killearn	location.location,location.statistical_region,location.citytown
+m.011w4n	Nancy	location.location,film.film_location,location.capital_of_administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,protected_sites.listed_site,location.citytown
+m.04mwcd	Enniskerry	location.location,film.film_location,location.statistical_region,travel.travel_destination,location.citytown
+m.02ly_	Essex	location.location,organization.organization_scope,film.film_location,location.statistical_region,travel.travel_destination,location.administrative_division,sports.sports_team_location,periodicals.newspaper_circulation_area,government.governmental_jurisdiction
+m.0h3lb9g	Leninsky District, Volgograd Oblast	location.location
+m.0102c	Afyonkarahisar	location.location,location.capital_of_administrative_division,location.statistical_region,travel.travel_destination,location.citytown
+m.0c5nv	Burgos	location.location,location.capital_of_administrative_division,location.statistical_region,location.citytown
+m.0nrzz	Keokuk County	location.location,location.administrative_division,location.statistical_region,book.book_subject,location.us_county
+m.0vm5t	Southfield	location.location,location.hud_county_place,location.statistical_region,periodicals.newspaper_circulation_area,location.citytown
+m.012wgb	Ireland	biology.breed_origin,organization.organization_scope,location.location,geography.island,fictional_universe.fictional_setting,film.film_location,location.statistical_region,travel.travel_destination,location.administrative_division,film.film_subject,periodicals.newspaper_circulation_area,book.book_subject
+m.0947l	Milan	government.government_office_or_title,location.location,organization.organization_scope,film.film_location,government.political_district,location.statistical_region,travel.travel_destination,location.citytown,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area
+m.056_y	Madrid	organization.organization_scope,location.location,location.place_with_neighborhoods,fictional_universe.fictional_setting,film.film_location,government.political_district,location.statistical_region,travel.travel_destination,location.citytown,location.administrative_division,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.0n96z	London Borough of Hackney	location.location,location.administrative_division,location.statistical_region,location.citytown
+m.0bhd_3	Huanggang	location.location,location.administrative_division,location.statistical_region,location.citytown
+m.0b2lw	Saint Paul	location.location,location.place_with_neighborhoods,symbols.namesake,location.statistical_region,travel.travel_destination,location.citytown,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.0189y8	Steinkjer	location.location,location.statistical_region,periodicals.newspaper_circulation_area,location.citytown
+m.06w92	Sicily	location.location,geography.island,fictional_universe.fictional_setting,film.film_location,location.statistical_region,travel.travel_destination,location.administrative_division,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.019pcs	Ethiopia	organization.organization_scope,location.location,location.country,organization.organization_member,location.statistical_region,travel.travel_destination,military.military_combatant,olympics.olympic_participating_country,sports.sports_team_location,organization.organization_founder,sports.sport_country,book.book_subject,government.governmental_jurisdiction
+m.0y6bc	Nyack	location.location,location.hud_county_place,film.film_location,location.statistical_region,location.citytown
+m.03qhdgg	Labarthe, Tarn-et-Garonne	location.location,location.statistical_region,location.citytown
+m.0hyxv	Glasgow	organization.organization_scope,location.location,fictional_universe.fictional_setting,film.film_location,location.statistical_region,travel.travel_destination,location.citytown,location.administrative_division,sports.sports_team_location,award.award_winner,periodicals.newspaper_circulation_area,business.employer,government.governmental_jurisdiction
+m.01mp9v	Oshkosh	location.location,organization.organization_scope,location.hud_county_place,film.film_location,location.statistical_region,travel.travel_destination,location.citytown,location.capital_of_administrative_division,business.employer,government.governmental_jurisdiction
+m.04n3l	Long Island	meteorology.cyclone_affected_area,location.location,organization.organization_scope,geography.island,fictional_universe.fictional_setting,film.film_location,location.statistical_region,business.business_location,periodicals.newspaper_circulation_area,book.book_subject,business.employer,government.governmental_jurisdiction
+m.013gwb	Springfield	location.location,location.hud_county_place,sports.sports_team_location,location.capital_of_administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,location.citytown,government.governmental_jurisdiction
+m.03rt9	Republic of Ireland	location.location,organization.organization_scope,location.country,fictional_universe.fictional_setting,organization.organization_member,location.statistical_region,olympics.olympic_participating_country,location.administrative_division,sports.sports_team_location,organization.organization_founder,periodicals.newspaper_circulation_area,sports.sport_country,business.employer,book.book_subject,government.governmental_jurisdiction
+m.09cpb	Dorset	organization.organization_scope,location.location,location.administrative_division,film.film_location,location.statistical_region,periodicals.newspaper_circulation_area,symbols.name_source,government.governmental_jurisdiction
+m.094vy	Yorkshire	organization.organization_scope,location.location,location.administrative_division,sports.sports_team_location,location.statistical_region,periodicals.newspaper_circulation_area,book.book_subject
+m.0s69k	Aurora	location.location,location.hud_county_place,film.film_location,periodicals.newspaper_circulation_area,location.statistical_region,location.citytown,government.governmental_jurisdiction
+m.05l64	Oslo	location.location,location.place_with_neighborhoods,location.administrative_division,film.film_location,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,location.citytown
+m.0d6br	Sussex	location.location,location.administrative_division,sports.sports_team_location,location.statistical_region,periodicals.newspaper_circulation_area,book.book_subject
+m.0233ff	St Leonards	location.location,location.statistical_region,location.citytown
+m.010p4k	Marion	location.location,symbols.namesake,location.hud_county_place,location.capital_of_administrative_division,location.statistical_region,location.citytown
+m.02plnsn	Atpadi	location.location
+m.02y_47j	Ödeshög	location.location,location.statistical_region,location.citytown
+m.0hf7l	Düsseldorf	location.location,sports.sports_team_location,location.capital_of_administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,location.citytown,government.governmental_jurisdiction
+m.013mtk	Kilgore	location.location,location.statistical_region,periodicals.newspaper_circulation_area,location.citytown
+m.01ybv0	Aston	location.location
+m.0824r	Wisconsin	organization.organization_scope,location.location,fictional_universe.fictional_setting,film.film_location,government.political_district,location.statistical_region,travel.travel_destination,location.administrative_division,periodicals.newspaper_circulation_area,book.book_subject,business.employer,government.governmental_jurisdiction
+m.014vm4	Hangzhou	location.location,location.administrative_division,location.capital_of_administrative_division,location.statistical_region,travel.travel_destination,book.book_subject,location.citytown
+m.08c_pb	Cascante	location.location,location.statistical_region,location.citytown
+m.0yqqm	Borås	location.location,location.statistical_region,periodicals.newspaper_circulation_area,location.citytown
+m.017_4z	Chelmsford	location.location,location.capital_of_administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,location.citytown
+m.0y0tv	Henderson	location.location,location.statistical_region,location.citytown
+m.013q9n	Wuchang District	location.location,location.administrative_division,location.statistical_region,location.citytown
+m.0ny1p	Zhejiang	location.location,location.administrative_division,location.statistical_region,book.book_subject,government.governmental_jurisdiction
+m.07c1lm	Vacoas-Phoenix	location.location,location.administrative_division,location.statistical_region,location.citytown
+m.09btk	Trondheim	location.location,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,location.citytown
+m.09tlh	Nottingham	organization.organization_scope,location.location,fictional_universe.fictional_setting,film.film_location,location.statistical_region,travel.travel_destination,location.citytown,location.administrative_division,sports.sports_team_location,periodicals.newspaper_circulation_area,government.governmental_jurisdiction
+m.06wxw	St. Louis	location.location,location.place_with_neighborhoods,location.hud_county_place,fictional_universe.fictional_setting,film.film_location,business.business_operation,location.statistical_region,travel.travel_destination,location.us_county,location.citytown,symbols.name_source,organization.organization,location.administrative_division,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,government.governmental_jurisdiction
+m.0xxn4	Johnson City	location.location,location.statistical_region,location.citytown
+m.01773g	Stavanger	location.location,location.statistical_region,travel.travel_destination,location.citytown
+m.0k9g	Aberdeenshire	location.location,location.administrative_division,location.statistical_region,travel.travel_destination
+m.02jwv8	Andover	location.location,location.statistical_region,location.citytown
+m.015z0v	Lanarkshire	location.location,location.administrative_division,location.statistical_region
+m.034lk7	Staunton city	location.location,location.hud_county_place,location.statistical_region,location.us_county,travel.travel_destination,location.citytown,location.administrative_division,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,government.governmental_jurisdiction
+m.0rg4d	Canterbury	location.location,location.statistical_region,travel.travel_destination,location.citytown
+m.0cc56	Manhattan	organization.organization_scope,location.location,location.place_with_neighborhoods,fictional_universe.fictional_setting,film.film_location,government.political_district,location.statistical_region,travel.travel_destination,location.administrative_division,periodicals.newspaper_circulation_area,book.book_subject,business.employer,government.governmental_jurisdiction
+m.02x2c7	Prahran	location.location,location.statistical_region,location.citytown
+m.0fhzf	Belgrade	location.location,location.place_with_neighborhoods,location.administrative_division,sports.sports_team_location,film.film_location,periodicals.newspaper_circulation_area,location.statistical_region,travel.travel_destination,location.citytown,government.governmental_jurisdiction
+m.09_76k	Poolewe	location.location,location.statistical_region,location.citytown
+m.01g8fr	Colmar	location.location,location.capital_of_administrative_division,location.statistical_region,travel.travel_destination,location.citytown
+m.01q0l	Constantinople	location.location,fictional_universe.fictional_setting,location.statistical_region,book.book_subject,location.citytown
+m.053bkw	Ardwick	location.location,location.neighborhood
+m.0mnpf	King and Queen County	location.location,location.administrative_division,location.statistical_region,location.us_county
+m.0r0vc	Rolling Hills	location.location,location.hud_county_place,location.statistical_region,location.citytown
+m.0g0rp	Worcester	location.location,location.administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,location.citytown
+m.0n1rj	Tampa	organization.organization_scope,location.location,location.place_with_neighborhoods,location.hud_county_place,location.statistical_region,travel.travel_destination,location.citytown,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,business.employer,book.book_subject,government.governmental_jurisdiction
+m.0gk_6r9	Hakadal	location.location
+m.0mx3k	Multnomah County	location.location,location.administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,location.us_county,government.governmental_jurisdiction
+m.0j4p5	Bedfordshire	organization.organization_scope,location.location,location.administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,government.governmental_jurisdiction
+m.0nq_b	Islington	location.location,location.administrative_division,location.statistical_region,location.citytown
+m.0rf_d	Hebron	location.location,location.statistical_region,periodicals.newspaper_circulation_area,location.citytown
+m.02lf_x	Aichi Prefecture	location.location,location.administrative_division,location.statistical_region,periodicals.newspaper_circulation_area
+m.0463hxh	Balapitiya	location.location
+m.0pmp2	Quebec City	organization.organization_scope,location.location,location.statistical_region,travel.travel_destination,protected_sites.listed_site,location.citytown,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,government.governmental_jurisdiction
+m.0yc6d	Lewisboro	location.location,location.statistical_region,location.citytown
+m.09hrq1	Pilot Mound	location.location,location.statistical_region,location.citytown
+m.088cp	York	organization.organization_scope,location.location,fictional_universe.fictional_setting,location.administrative_division,sports.sports_team_location,periodicals.newspaper_circulation_area,location.statistical_region,travel.travel_destination,location.citytown
+m.04s1q1	Karoo	location.location
+m.0fhsz	Naples	location.location,organization.organization_scope,film.film_location,location.statistical_region,travel.travel_destination,protected_sites.listed_site,symbols.name_source,location.citytown,location.administrative_division,sports.sports_team_location,location.capital_of_administrative_division,book.book_subject
+m.0pfd9	Ipswich	location.location,organization.organization_scope,government.political_district,location.statistical_region,travel.travel_destination,location.citytown,location.administrative_division,sports.sports_team_location,government.governmental_jurisdiction
+m.02w1dv	Handsworth, West Midlands	location.location,location.statistical_region,location.citytown
+m.0185vh	Elverum	location.location,location.statistical_region,location.citytown
+m.0403f5	Fethard-on-Sea	location.location,location.statistical_region,location.citytown
+m.02cft	Dublin	organization.organization_scope,location.location,fictional_universe.fictional_setting,film.film_location,location.statistical_region,travel.travel_destination,location.citytown,location.administrative_division,sports.sports_team_location,periodicals.newspaper_circulation_area,book.book_subject,business.employer,government.governmental_jurisdiction
+m.06jpd_	Rampton	location.location,location.administrative_division,location.statistical_region,location.citytown
+m.0gqfy	Nagoya	location.location,location.capital_of_administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,location.citytown,government.governmental_jurisdiction
+m.01h09p	Bishopbriggs	location.location,location.statistical_region,location.citytown
+m.05fky	North Dakota	organization.organization_scope,location.location,location.administrative_division,government.political_district,periodicals.newspaper_circulation_area,location.statistical_region,book.book_subject,government.governmental_jurisdiction
+m.0dbdy	Lancashire	organization.organization_scope,location.location,fictional_universe.fictional_setting,location.administrative_division,sports.sports_team_location,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination
+m.06bnzg	Montague	location.location,location.statistical_region,location.citytown
+m.0yx74	Hattiesburg	location.location,location.hud_county_place,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,location.statistical_region,travel.travel_destination,location.citytown,government.governmental_jurisdiction
+m.0rdg0	Enfield	organization.organization_scope,location.location,location.statistical_region,periodicals.newspaper_circulation_area,location.citytown
+m.096g3	Bologna	organization.organization_scope,location.location,location.administrative_division,film.film_location,sports.sports_team_location,location.capital_of_administrative_division,location.statistical_region,travel.travel_destination,location.citytown
+m.01y3wj	Korea under Japanese rule	location.location,location.country,location.statistical_region
+m.0dhdp	Leicester	location.location,organization.organization_scope,location.statistical_region,travel.travel_destination,location.citytown,location.administrative_division,sports.sports_team_location,periodicals.newspaper_circulation_area,government.governmental_jurisdiction
+m.0kf_mvq	Marton, Shropshire	location.location
+m.06dfg	Rwanda	organization.organization_scope,location.location,location.country,olympics.olympic_participating_country,film.film_subject,sports.sports_team_location,organization.organization_member,location.statistical_region,travel.travel_destination,government.governmental_jurisdiction
+m.018534	Spydeberg	location.location,location.statistical_region,location.citytown
+m.02hvvb	Mount Forest, Ontario	location.location,location.statistical_region,location.citytown
+m.036gzp	Middlesex Centre	location.location
+m.08zmsf	Little Falls	location.location,location.statistical_region,periodicals.newspaper_circulation_area,location.citytown
+m.0n9r8	Hampstead	location.location,fictional_universe.fictional_setting,government.political_district,periodicals.newspaper_circulation_area,location.statistical_region,travel.travel_destination,location.citytown
+m.083hsk	Bramcote	location.location,location.statistical_region,location.citytown
+m.027zyn4	Nieuwendam	location.location,location.statistical_region,location.citytown
+m.015y2q	Pune	organization.organization_scope,location.location,film.film_location,sports.sports_team_location,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,location.citytown,government.governmental_jurisdiction
+m.02nht7	Downham	location.location
+m.0345yb	Dungarvan	location.location,location.capital_of_administrative_division,location.statistical_region,location.citytown
+m.0dn9yq	Saint-Agapit, Quebec	location.location,location.statistical_region,location.citytown
+m.0ch1_kd	Kalvi	location.location
+m.01wl84	Chilliwack	location.location,location.capital_of_administrative_division,location.statistical_region,travel.travel_destination,location.citytown,government.governmental_jurisdiction
+m.0l3n4	Lancaster County	location.location,location.administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,location.us_county
+m.05zhg	Peterborough	location.location,location.administrative_division,sports.sports_team_location,periodicals.newspaper_circulation_area,location.statistical_region,travel.travel_destination,business.employer,location.citytown
+m.01xl3c	Federated Malay States	location.location
+m.02nbcp	Monaghan	location.location,location.administrative_division,location.capital_of_administrative_division,location.statistical_region,location.citytown
+m.064n2x	Jessore District	location.location,location.administrative_division,location.statistical_region
+m.01zsfx	Bulawayo	location.location,location.administrative_division,film.film_location,location.statistical_region,travel.travel_destination,location.citytown
+m.01d88c	Ahmedabad	location.location,organization.organization_scope,location.statistical_region,travel.travel_destination,location.citytown,business.business_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,business.employer,government.governmental_jurisdiction
+m.0_pxn	Mitchell	location.location,location.hud_county_place,location.statistical_region,travel.travel_destination,location.citytown
+m.01_d4	Chicago	organization.organization_scope,location.location,location.place_with_neighborhoods,location.hud_county_place,fictional_universe.fictional_setting,film.film_location,location.statistical_region,travel.travel_destination,location.citytown,symbols.name_source,location.administrative_division,business.business_location,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,book.book_subject,business.employer,government.governmental_jurisdiction
+m.01ppq	Cyprus	location.location,organization.organization_scope,location.country,organization.organization_member,location.statistical_region,travel.travel_destination,symbols.name_source,olympics.olympic_participating_country,sports.sports_team_location,periodicals.newspaper_circulation_area,sports.sport_country,book.book_subject,government.governmental_jurisdiction
+m.0t930	Erie	location.location,location.hud_county_place,location.capital_of_administrative_division,location.statistical_region,location.citytown
+m.05k_3x	Oxshott	location.location,location.statistical_region,location.citytown
+m.0zj64	Swissvale	location.location,location.hud_county_place,location.statistical_region,location.citytown
+m.09h2cf	Birzeit	location.location,location.statistical_region,location.citytown
+m.07vq0l	Casale Monferrato	location.location,location.statistical_region,location.citytown
+m.0k98ql7	Ölçek, Ardahan	location.location
+m.0wc8x	Zoeterwoude	location.location,location.administrative_division,location.statistical_region,location.citytown
+m.01zkgw	Bridgend	location.location,sports.sports_team_location,location.statistical_region,location.citytown
+m.064z95	Tulchyn	location.location,location.statistical_region,location.citytown
+m.0g14f	Staffordshire	location.location,location.administrative_division,location.statistical_region,periodicals.newspaper_circulation_area
+m.01snm	Cincinnati	organization.organization_scope,location.location,location.place_with_neighborhoods,symbols.namesake,location.hud_county_place,location.statistical_region,travel.travel_destination,location.citytown,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,business.employer,government.governmental_jurisdiction
+m.01qv6v	Gjirokastër	location.location,location.statistical_region,travel.travel_destination,location.citytown
+m.07cfx	Tasmania	location.location,organization.organization_scope,symbols.namesake,film.film_location,government.political_district,location.statistical_region,travel.travel_destination,location.administrative_division,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.0dyl9	Milwaukee	location.location,location.place_with_neighborhoods,location.hud_county_place,film.film_location,location.statistical_region,travel.travel_destination,location.citytown,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,government.governmental_jurisdiction
+m.021npd	Scarborough, North Yorkshire	organization.organization_scope,location.location,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,location.citytown
+m.0chgzm	Melbourne	organization.organization_scope,location.location,symbols.namesake,film.film_location,location.statistical_region,travel.travel_destination,location.citytown,location.administrative_division,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,business.employer,government.governmental_jurisdiction
+m.03f_dg	Kalamata	location.location,location.administrative_division,location.capital_of_administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,location.citytown
+m.02_zd0	Cidra	location.location,location.hud_county_place,location.administrative_division,location.statistical_region,location.us_county,location.citytown,government.governmental_jurisdiction
+m.0d0ynw	Hetland	location.location,location.statistical_region,location.citytown
+m.03s5t	Idaho	organization.organization_scope,location.location,location.administrative_division,government.political_district,location.statistical_region,business.employer,book.book_subject,symbols.name_source,government.governmental_jurisdiction
+m.0b6hvw	Ustyuzhna	location.location,location.statistical_region,location.citytown
+m.0261pnq	Skjeberg	location.location,location.statistical_region,location.citytown
+m.024lnr	Rickmansworth	location.location,location.statistical_region,location.citytown
+m.0978r	Cambridge	organization.organization_scope,location.location,location.statistical_region,travel.travel_destination,symbols.name_source,location.citytown,location.administrative_division,sports.sports_team_location,periodicals.newspaper_circulation_area,book.book_subject,business.employer,government.governmental_jurisdiction
+m.03lrc	Hampshire	location.location,location.administrative_division,sports.sports_team_location,organization.organization_member,location.statistical_region,travel.travel_destination,symbols.name_source
+m.0b1jgp	Załęże	location.location
+m.04cjn	Karachi	organization.organization_scope,location.location,location.administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,location.citytown
+m.01lfvj	Cremona	location.location,location.capital_of_administrative_division,location.statistical_region,location.citytown
+m.0f_f7	Charente-Maritime	location.location,location.administrative_division,location.statistical_region
+m.0mnst	Halifax County	location.location,location.administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,location.us_county
+m.01dzq6	Richmond, London	organization.organization_scope,location.location,sports.sports_team_location,location.statistical_region,travel.travel_destination,location.citytown
+m.0v060	New Braintree	location.location,location.statistical_region,location.citytown
+m.01kq5	Ballarat	location.location,location.administrative_division,location.statistical_region,travel.travel_destination,location.citytown
+m.04p3c	Leeds	organization.organization_scope,location.location,location.administrative_division,sports.sports_team_location,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,location.citytown,government.governmental_jurisdiction
+m.0dlqv	Santiago	organization.organization_scope,location.location,location.place_with_neighborhoods,film.film_location,location.capital_of_administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,location.citytown
+m.01mnpf	Viroqua	location.location,location.capital_of_administrative_division,location.statistical_region,location.citytown
+m.02x85m5	West Dean, West Sussex	location.location,location.administrative_division,location.statistical_region
+m.0145v_	Béthune	location.location,location.statistical_region,location.citytown
+m.0dkg9x	Saint-Vallier, Quebec	location.location,location.statistical_region,location.citytown
+m.01_dpt	Sackville	location.location,location.statistical_region,business.employer,location.citytown
+m.0mts3	Bedford County	location.location,location.administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,location.us_county
+m.0ft08	Limassol	location.location,film.film_location,sports.sports_team_location,location.capital_of_administrative_division,location.statistical_region,travel.travel_destination,location.citytown
+m.03spz	Israel	biology.breed_origin,organization.organization_scope,location.location,media_common.netflix_genre,film.film_location,organization.organization_member,travel.travel_destination,military.military_combatant,olympics.olympic_participating_country,location.administrative_division,sports.sport_country,government.governmental_jurisdiction,location.country,location.statistical_region,sports.sports_team_location,periodicals.newspaper_circulation_area,book.book_subject
+m.0y030	Alabama	location.location,location.statistical_region,location.citytown
+m.02kbsr	Hyde	location.location,location.statistical_region,location.citytown
+m.0_3cs	Allentown	organization.organization_scope,location.location,location.hud_county_place,location.capital_of_administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,location.citytown,government.governmental_jurisdiction
+m.01505k	Aleppo	location.location,location.administrative_division,location.statistical_region,protected_sites.listed_site,travel.travel_destination,location.citytown
+m.021wvg	Bray	location.location,film.film_location,sports.sports_team_location,location.statistical_region,location.citytown
+m.01hbbt	Rarotonga	location.location,geography.island,location.statistical_region
+m.01wqq_	Hirado	location.location,location.statistical_region,location.citytown
+m.0ftn8	Tunis	location.location,location.administrative_division,location.statistical_region,travel.travel_destination,protected_sites.listed_site,location.citytown,government.governmental_jurisdiction
+m.018b45	Overhalla	location.location,location.statistical_region,location.citytown
+m.01s2jm	Kozani	location.location,location.administrative_division,location.capital_of_administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,location.citytown
+m.01nh1c	Dudley	location.location,location.statistical_region,travel.travel_destination,location.citytown
+m.0f04c	Palo Alto	location.location,organization.organization_scope,location.hud_county_place,fictional_universe.fictional_setting,location.statistical_region,travel.travel_destination,location.citytown,periodicals.newspaper_circulation_area,business.employer,government.governmental_jurisdiction
+m.018d93	Sandnessjøen	location.location,location.statistical_region,location.citytown
+m.02tgvy	Novo Mesto	location.location,location.administrative_division,sports.sports_team_location,location.statistical_region,location.citytown
+m.02z93w_	Villada	location.location,location.statistical_region,location.citytown
+m.061k5	Parma	location.location,location.administrative_division,sports.sports_team_location,location.capital_of_administrative_division,location.statistical_region,location.citytown
+m.0ftlx	Tehran	location.location,location.administrative_division,sports.sports_team_location,film.film_location,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,book.book_subject,location.citytown,government.governmental_jurisdiction
+m.07z1m	Virginia	meteorology.cyclone_affected_area,organization.organization_scope,location.location,organization.organization_sector,symbols.namesake,fictional_universe.fictional_setting,government.political_district,location.statistical_region,symbols.name_source,location.administrative_division,periodicals.newspaper_circulation_area,book.book_subject,business.employer,government.governmental_jurisdiction
+m.02f2cz	Hurley	location.location,location.administrative_division,location.statistical_region,location.citytown
+m.080h2	Vancouver	organization.organization_scope,location.location,location.place_with_neighborhoods,symbols.namesake,fictional_universe.fictional_setting,film.film_location,government.political_district,location.statistical_region,travel.travel_destination,location.citytown,architecture.architectural_structure_owner,location.administrative_division,sports.sports_team_location,business.business_location,periodicals.newspaper_circulation_area,business.employer,government.governmental_jurisdiction
+m.02vtt48	Tiddington, Warwickshire	location.location,location.statistical_region
+m.05tbn	Pennsylvania	meteorology.cyclone_affected_area,organization.organization_scope,location.location,symbols.namesake,fictional_universe.fictional_setting,film.film_location,government.political_district,location.statistical_region,symbols.name_source,location.administrative_division,periodicals.newspaper_circulation_area,business.employer,book.book_subject,government.governmental_jurisdiction
+m.0hx5f	Durham, England	organization.organization_scope,location.location,periodicals.newspaper_circulation_area,location.statistical_region,travel.travel_destination,location.citytown
+m.0d_kd	Suffolk County	organization.organization_scope,location.location,location.administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,location.us_county,government.governmental_jurisdiction
+m.027hryh	Queen Charlotte's and Chelsea Hospital	location.location,medicine.hospital
+m.019fc4	Coimbatore	location.location,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,location.citytown
+m.01xnz3	Goshen	location.location,location.statistical_region,location.citytown
+m.0ftms	Thimphu	location.location,sports.sports_team_location,location.capital_of_administrative_division,location.statistical_region,periodicals.newspaper_circulation_area,travel.travel_destination,location.citytown
+m.01z2sn	Wrexham	organization.organization_scope,location.location,location.capital_of_administrative_division,location.statistical_region,travel.travel_destination,location.citytown
+m.026jq9n	Nidubrolu	location.location
+m.027sjl	Echo Park	location.location,location.neighborhood,location.statistical_region
+m.0z2lx	New Philadelphia	location.location,location.hud_county_place,location.capital_of_administrative_division,location.statistical_region,location.citytown
+m.0dt4ht	Saint-Valery	location.location,location.statistical_region,location.citytown
+m.013yq	Atlanta	organization.organization_scope,location.location,location.place_with_neighborhoods,location.hud_county_place,fictional_universe.fictional_setting,film.film_location,location.statistical_region,travel.travel_destination,location.citytown,sports.sports_team_location,business.business_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,business.employer,book.book_subject,government.governmental_jurisdiction
+m.0sbf4	Sumner	location.location,location.hud_county_place,location.statistical_region,location.citytown
+m.091ykk	Shaunavon	location.location,location.statistical_region,location.citytown
+m.0t_35	Littleton	location.location,location.statistical_region,location.citytown
+m.01w2v	Cairo	location.location,fictional_universe.fictional_setting,film.film_location,location.statistical_region,travel.travel_destination,protected_sites.listed_site,location.citytown,location.administrative_division,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,book.book_subject
+m.018djs	Brantford	location.location,sports.sports_team_location,location.statistical_region,travel.travel_destination,location.citytown,government.governmental_jurisdiction
+m.02brc	Dartmouth	location.location,location.administrative_division,government.political_district,location.statistical_region,travel.travel_destination,location.citytown
+m.01m0rb	Galați	location.location,sports.sports_team_location,location.capital_of_administrative_division,location.statistical_region,location.citytown
+m.0179d1	Prescott	location.location,location.statistical_region,location.citytown
+m.0y7r7	Hornellsville	location.location,location.statistical_region,location.citytown
+m.02gw_w	Croydon	location.location,location.statistical_region,travel.travel_destination,location.citytown
+m.0zl0w	Caernarvon Township	location.location,location.statistical_region,location.citytown
+m.06w51v	Yurihonjo	location.location,location.statistical_region,location.citytown
+m.0749bj	Abdeen Palace	architecture.museum,location.location,architecture.structure,travel.tourist_attraction
+m.01k5qd	Opava	location.location,location.capital_of_administrative_division,location.statistical_region,location.citytown
+m.0167q3	Bridgeport	organization.organization_scope,location.location,location.place_with_neighborhoods,location.hud_county_place,film.film_location,periodicals.newspaper_circulation_area,location.statistical_region,travel.travel_destination,location.citytown,government.governmental_jurisdiction
+m.0hsqf	Seoul	location.location,organization.organization_scope,location.place_with_neighborhoods,film.film_location,location.statistical_region,travel.travel_destination,location.citytown,location.administrative_division,sports.sports_team_location,award.award_winner,periodicals.newspaper_circulation_area,book.book_subject
+m.0c8wxp	Catholicism	visual_art.art_period_movement,religion.religion,book.book_subject
+m.05sfs	Protestantism	education.field_of_study,military.military_combatant,film.film_subject,religion.religion,book.book_subject
+m.0dtdq	Jehovah's Witnesses	film.film_subject,religion.religion,book.book_subject
+m.05k5z	Nichiren Buddhism	religion.religion
+m.01ld4n	Congregational church	religion.religion
+m.051kv	Methodism	religion.religion
+m.02vxy_	Roman Catholic Church	architecture.architectural_structure_owner,organization.organization,religion.religion,organization.organization_founder,book.book_subject,business.employer
+m.0flw86	Islam	education.field_of_study,film.film_subject,religion.religion,book.book_subject
+m.04pk9	Lutheranism	people.ethnicity,religion.religion,book.book_subject
+m.01lp8	Christianity	education.field_of_study,organization.organization_sector,film.film_genre,religion.religion,media_common.literary_genre,book.book_subject
+m.019cr	Baptists	religion.religion,book.book_subject
+m.0631_	Presbyterianism	religion.religion
+m.05w5d	Pentecostalism	religion.religion
+m.06gjr	Raëlism	organization.organization,religion.religion,business.employer
+m.03_gx	Judaism	education.field_of_study,organization.organization_sector,media_common.netflix_genre,film.film_subject,religion.religion,book.book_subject
+m.023sbm	Umbanda	religion.religion
+m.072w0	Seventh-day Adventist Church	organization.organization,book.periodical_publisher,religion.religion,organization.organization_founder
+m.092bf5	Buddhism	education.field_of_study,influence.influence_node,film.film_subject,religion.religion,media_common.literary_genre,book.book_subject
+m.02t7t	Evangelicalism	religion.religion
+m.0n2g	Anglicanism	religion.religion
+m.04y29	Muslim	film.film_subject,religion.religion,book.book_subject
+m.0bk_9	Rastafari movement	religion.religion
+m.025t7ly	Quakers	religion.religion,book.book_subject
+m.01t7j	Calvinism	religion.religion,book.book_subject
+m.07mfk	Theravada	education.educational_institution,organization.organization,religion.religion,business.employer
+m.026fns	Latter Day Saint movement	religion.religion,book.book_subject
+m.06pq6	Shia Islam	religion.religion,book.book_subject
+m.0xns7	Christian Science	organization.organization,religion.religion
+m.07w8f	Unitarian Universalism	religion.religion
+m.01cjt	Bahá'í Faith	religion.religion,book.book_subject
+m.01cj3p	Spiritualism	religion.religion,media_common.literary_genre,book.book_subject
+m.05my9	Orthodox Judaism	film.film_subject,religion.religion,book.book_subject
+m.07gvx	Taoism	religion.religion,book.book_subject
+m.09_r16	Melbourne Ice	organization.organization,sports.sports_team
+m.04wmvz	Los Angeles Angels of Anaheim	sports.professional_sports_team,organization.organization,sports.sports_team,award.award_nominee,award.award_winner
+m.0kwv2	Athletic Bilbao	organization.organization,sports.sports_team,soccer.football_team
+m.04lh6	Liverpool	organization.organization_scope,location.location,fictional_universe.fictional_setting,film.film_location,location.statistical_region,travel.travel_destination,protected_sites.listed_site,location.citytown,symbols.name_source,location.administrative_division,sports.sports_team_location,location.capital_of_administrative_division,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.02b0yz	Colchester United F.C.	organization.organization,sports.sports_team,award.award_nominee,award.award_winner,soccer.football_team
+m.0jnq8	Los Angeles Kings	sports.professional_sports_team,sports.sports_team,award.award_nominee,award.award_winner,business.employer
+m.016gp5	Reading F.C.	sports.sports_award_winner,organization.organization,sports.sports_team,award.award_nominee,award.award_winner,soccer.football_team
+m.03lsq	Houston Texans	sports.professional_sports_team,american_football.football_team,sports.sports_team,award.award_nominee
+m.08bn2z	Paniliakos F.C.	organization.organization,sports.sports_team,business.employer,soccer.football_team
+m.02pp1	England national football team	organization.organization,sports.sports_team,award.award_winner,soccer.football_team
+m.02b1k5	Hereford United F.C.	organization.organization,sports.sports_team,soccer.football_team
+m.0j6tr	Toronto Maple Leafs	sports.professional_sports_team,organization.organization,sports.sports_team,award.award_nominee,business.employer
+m.088_kf	U.S. Grosseto F.C.	organization.organization,sports.sports_team,business.employer,soccer.football_team
+m.0bl8l	Aston Villa F.C.	organization.organization,sports.sports_team,soccer.football_team
+m.06rpd	San Diego Chargers	sports.professional_sports_team,american_football.football_team,sports.sports_team,award.award_nominee,business.employer
+m.0jmh7	San Antonio Spurs	sports.professional_sports_team,sports.sports_team,basketball.basketball_team,award.award_nominee,award.award_winner
+m.05pbnht	Las Vegas Locomotives	american_football.football_team,sports.sports_team
+m.09z4rh	Bramley Buffaloes	organization.organization,sports.sports_team
+m.01z1r	Charlton Athletic F.C.	organization.organization,sports.professional_sports_team,sports.sports_team,award.award_nominee,award.award_winner,business.employer,soccer.football_team
+m.0jnng	Minnesota Wild	sports.professional_sports_team,organization.organization,sports.sports_team,award.award_winner
+m.03mg3l	PFC Litex Lovech	organization.organization,sports.sports_team,soccer.football_team
+m.02896	Dallas Cowboys	sports.professional_sports_team,american_football.football_team,sports.sports_team,film.person_or_entity_appearing_in_film,film.film_subject,award.award_nominee,award.award_winner,book.book_subject
+m.03l7qs	Raith Rovers F.C.	organization.organization,sports.sports_team,business.employer,soccer.football_team
+m.0408w03	Bangkok F.C.	organization.organization,sports.sports_team,soccer.football_team
+m.01bdxz	Torquay United F.C.	organization.organization,sports.sports_team,business.employer,soccer.football_team
+m.0xbm	Arsenal F.C.	sports.sports_award_winner,sports.professional_sports_team,organization.organization,sports.sports_team,business.business_operation,award.award_winner,book.book_subject,business.employer,soccer.football_team
+m.0bszz	Montreal Canadiens	sports.professional_sports_team,organization.organization,sports.sports_team,book.book_subject,business.employer
+m.05tfm	Pittsburgh Steelers	sports.professional_sports_team,organization.organization,american_football.football_team,sports.sports_team,film.person_or_entity_appearing_in_film,award.award_nominee,business.brand,award.award_winner,business.employer
+m.03fmyg	Íþróttabandalag Akraness	organization.organization,sports.sports_team,business.employer,soccer.football_team
+m.04g815	Plymouth Albion R.F.C.	sports.sports_team
+m.061xq	Pittsburgh Pirates	sports.professional_sports_team,organization.organization,sports.sports_team,business.brand,award.award_winner
+m.01ync	Colorado Rockies	sports.professional_sports_team,sports.sports_team,book.book_subject,business.employer
+m.01j48s	D.C. United	organization.organization,sports.sports_team,soccer.football_team
+m.02ryc8t	Portland Pythons	sports.sports_team,soccer.football_team
+m.02b1yn	Ayr United F.C.	organization.organization,sports.sports_team,soccer.football_team
+m.01d5z	Boston Red Sox	sports.professional_sports_team,sports.sports_team,film.person_or_entity_appearing_in_film,film.film_subject,award.award_nominee,award.award_winner,book.book_subject
+m.05z_b__	International Allies F.C.	organization.organization,sports.sports_team,business.employer,soccer.football_team
+m.06x76	St. Louis Rams	sports.professional_sports_team,organization.organization,american_football.football_team,sports.sports_team,film.person_or_entity_appearing_in_film,tv.tv_actor,award.award_nominee,award.award_winner,business.employer
+m.02b15h	Doncaster Rovers F.C.	organization.organization,sports.sports_team,award.award_nominee,award.award_winner,soccer.football_team
+m.06lkg8	Eastbourne Borough F.C.	organization.organization,sports.sports_team,business.employer,soccer.football_team
+m.05z8c9	Landskrona BoIS	organization.organization,sports.sports_team,business.employer,soccer.football_team
+m.0jmk7	Los Angeles Lakers	sports.professional_sports_team,organization.organization,sports.sports_team,basketball.basketball_team,award.award_nominee,business.business_operation,award.award_winner,business.employer
+m.03qlh8w	Akritas Chlorakas	organization.organization,sports.sports_team,soccer.football_team
+m.03sbdx	Scarborough F.C.	organization.organization,sports.sports_team,business.employer,soccer.football_team
+m.05_jnj	Club of Remo	sports.sports_team,soccer.football_team
+m.09tgp2	Rugby Town F.C.	sports.sports_team,business.employer,soccer.football_team
+m.04lw2b	HC Dynamo Moscow	organization.organization,sports.sports_team
+m.09tv2x	Dartford F.C.	organization.organization,sports.sports_team,business.employer,soccer.football_team
+m.08z67p	MTK Budapest FC	sports.sports_team,soccer.football_team
+m.01yjl	Chicago Cubs	sports.professional_sports_team,sports.sports_team,award.award_nominee,book.book_subject
+m.01jv_6	BC Lions	sports.professional_sports_team,sports.sports_team,american_football.football_team
+m.01d6g	Baltimore Orioles	sports.professional_sports_team,sports.sports_team
+m.01cwq9	Port Vale F.C.	organization.organization,sports.sports_team,soccer.football_team
+m.0b934c	Ħamrun Spartans F.C.	organization.organization,sports.sports_team,soccer.football_team
+m.03wtlx	Connacht Rugby	sports.professional_sports_team,organization.organization,sports.sports_team,business.employer
+m.0jnrk	San Jose Sharks	sports.professional_sports_team,organization.organization,sports.sports_team,business.employer
+m.03m1n	Houston Astros	sports.professional_sports_team,sports.sports_team,award.award_nominee,business.employer
+m.01j_jh	Bristol Rovers F.C.	organization.organization,sports.sports_team,soccer.football_team
+m.0b94kb	Hastings United F.C.	organization.organization,sports.sports_team,business.employer,soccer.football_team
+m.03whyfd	A.F.C. Liverpool	sports.sports_team,soccer.football_team
+m.0n1d4	St Kilda Football Club	organization.organization,sports.sports_team
+m.02b10g	Stockport County F.C.	organization.organization,sports.sports_team,award.award_nominee,soccer.football_team
+m.061d_5	Club Atlético Atlanta	organization.organization,sports.sports_team,soccer.football_team
+m.05tg3	Philadelphia Eagles	sports.professional_sports_team,organization.organization,american_football.football_team,sports.sports_team,tv.tv_actor,award.award_nominee,award.award_winner,business.employer,book.book_subject
+m.05zl3y7	Stilon Gorzów Wielkopolski	organization.organization,sports.sports_team,soccer.football_team
+m.027pwl	Bradford City A.F.C.	organization.organization,sports.sports_team,award.award_nominee,award.award_winner,soccer.football_team
+m.068s4x	Toronto Falcons	sports.sports_team,soccer.football_team
+m.015_z1	Gillingham F.C.	organization.organization,sports.sports_team,soccer.football_team
+m.06rny	San Francisco 49ers	organization.organization,sports.professional_sports_team,sports.sports_team,american_football.football_team,film.person_or_entity_appearing_in_film,award.award_nominee,award.award_winner,business.employer
+m.01xn6gh	Gaziantep Büyükşehir Belediyespor	organization.organization,sports.sports_team,soccer.football_team
+m.07cq7d	Club Atlético Huracán	organization.organization,sports.sports_team,soccer.football_team
+m.04jc58	RBC Roosendaal	organization.organization,sports.sports_team,soccer.football_team
+m.078szn	Gimnasia y Esgrima de Jujuy	organization.organization,sports.sports_team,business.employer,soccer.football_team
+m.08lssh	Club Atlético Nueva Chicago	organization.organization,sports.sports_team,soccer.football_team
+m.01lpxn	Winnipeg Blue Bombers	sports.professional_sports_team,organization.organization,american_football.football_team,sports.sports_team
+m.02b0xq	A.F.C. Bournemouth	organization.organization,sports.sports_team,award.award_nominee,award.award_winner,soccer.football_team
+m.0j47s	Rangers F.C.	organization.organization,sports.sports_team,business.business_operation,business.employer,soccer.football_team
+m.03nlvw5	Fall River Rovers	organization.organization,sports.sports_team,soccer.football_team
+m.0kz4w	Bologna F.C. 1909	organization.organization,sports.sports_team,soccer.football_team
+m.0jnl5	Washington Capitals	sports.professional_sports_team,sports.sports_team
+m.04v8k9	Crusaders F.C.	organization.organization,sports.sports_team,soccer.football_team
+m.03l7_n	Peterhead F.C.	organization.organization,sports.sports_team,soccer.football_team
+m.0jml5	Phoenix Suns	sports.professional_sports_team,sports.sports_team,basketball.basketball_team,tv.tv_actor
+m.02lj5_	Cronulla-Sutherland Sharks	sports.sports_team
+m.02dhym	Penrith Panthers	sports.professional_sports_team,sports.sports_team
+m.01kwhf	Norwich City F.C.	sports.sports_award_winner,organization.organization,sports.sports_team,award.award_nominee,award.award_winner,business.employer,soccer.football_team
+m.03kgss	Newport Gwent Dragons	organization.organization,sports.sports_team
+m.01h0b0	Partick Thistle F.C.	organization.organization,sports.sports_team,soccer.football_team
+m.026bhcs	BC Dynamo Moscow	organization.organization,sports.sports_team,basketball.basketball_team
+m.03h7n2	Warrington Wolves	organization.organization,sports.sports_team
+m.02b153	Darlington F.C.	organization.organization,sports.sports_team,soccer.football_team
+m.03lb76	FC St. Pauli	organization.organization,sports.sports_team,soccer.football_team
+m.01slc	Chicago White Sox	sports.professional_sports_team,sports.sports_team,award.award_nominee
+m.01xn7x1	Leeds United F.C.	sports.sports_award_winner,organization.organization,sports.sports_team,award.award_nominee,soccer.football_team
+m.0jmcb	Toronto Raptors	sports.professional_sports_team,award.award_nominated_work,sports.sports_team,basketball.basketball_team
+m.0bv1z0	Beylerbeyi S.K.	organization.organization,sports.sports_team,business.employer,soccer.football_team
+m.07clhx	Stamford A.F.C.	sports.sports_team,business.employer,soccer.football_team
+m.0crfbr7	Pittsburgh Power	sports.sports_team
+m.06qm95	FC Emmen	organization.organization,sports.sports_team,soccer.football_team
+m.04knvh	Shamrock Rovers F.C.	organization.organization,sports.sports_team,soccer.football_team
+m.0w1g1hb	FC Obolon Kyiv	organization.organization,sports.sports_team
+m.0ggxmz	Racing Métro 92	sports.sports_team
+m.03x6rj	AEK Athens F.C.	organization.organization,sports.sports_team,soccer.football_team
+m.01tqfs	Sheffield United F.C.	sports.sports_team,award.award_nominee,soccer.football_team
+m.063_lw0	HB Køge	organization.organization,sports.sports_team,business.employer,soccer.football_team
+m.08wt7x	Rocester F.C.	sports.sports_team,business.employer,soccer.football_team
+m.01lj1t	Minnesota Thunder	organization.organization,sports.sports_team,soccer.football_team
+m.07qdxb	Swansea RFC	organization.organization,sports.sports_team
+m.02wwjy3	FK Metalac Gornji Milanovac	organization.organization,sports.sports_team,soccer.football_team
+m.05g49	New York Jets	sports.professional_sports_team,organization.organization,american_football.football_team,sports.sports_team,tv.tv_actor,award.award_nominee,award.award_winner,business.employer
+m.07l8x	Texas Rangers	sports.professional_sports_team,sports.sports_team,award.award_nominee,business.employer
+m.084l5	Washington Redskins	sports.professional_sports_team,organization.organization,american_football.football_team,sports.sports_team,film.person_or_entity_appearing_in_film,business.business_operation,business.employer
+m.050fh	Manchester United F.C.	sports.sports_award_winner,business.sponsored_recipient,sports.professional_sports_team,organization.organization,sports.sports_team,award.award_nominee,award.award_winner,business.employer,soccer.football_team
+m.051vz	Milwaukee Brewers	organization.organization,sports.professional_sports_team,sports.sports_team,business.employer
+m.0kqbh	PSV Eindhoven	sports.sports_award_winner,organization.organization,sports.sports_team,business.employer,soccer.football_team
+m.01k2xy	San Jose Earthquakes	organization.organization,sports.sports_team,soccer.football_team
+m.01ypc	Cincinnati Reds	sports.professional_sports_team,organization.organization,sports.sports_team
+m.04x3vs	Guarani FC	organization.organization,sports.sports_team,soccer.football_team
+m.06mkqn	Enyimba International F.C.	organization.organization,sports.sports_team,soccer.football_team
+m.08xb5v	Bury Town F.C.	sports.sports_team,business.employer,soccer.football_team
+m.0dq24s	MFK Košice	organization.organization,sports.sports_team,soccer.football_team
+m.0x2p	Atlanta Braves	organization.organization,sports.professional_sports_team,sports.sports_team,award.award_nominee
+m.02b149	Carlisle United F.C.	organization.organization,sports.sports_team,soccer.football_team
+m.09l9wf	Leek Town F.C.	organization.organization,sports.sports_team,business.employer,soccer.football_team
+m.01yhm	Cleveland Indians	sports.professional_sports_team,sports.sports_team,tv.tv_actor
+m.0jmfv	Memphis Grizzlies	sports.professional_sports_team,sports.sports_team,basketball.basketball_team,award.award_nominee
+m.01rl_3	Middlesbrough F.C.	sports.professional_sports_team,organization.organization,sports.sports_team,award.award_nominee,award.award_winner,soccer.football_team
+m.0j8sq	Montreal Alouettes	sports.professional_sports_team,sports.sports_team,american_football.football_team,business.employer
+m.02gjt4	Milton Keynes Dons F.C.	organization.organization,sports.sports_team,award.award_nominee,award.award_winner,soccer.football_team
+m.08zsgc	Burgess Hill Town F.C.	sports.sports_team,business.employer,soccer.football_team
+m.0jmhr	Utah Jazz	sports.professional_sports_team,sports.sports_team,basketball.basketball_team,tv.tv_actor,business.employer
+m.07ycgl	Paykan F.C.	organization.organization,sports.sports_team,business.employer,soccer.football_team
+m.070xg	Seattle Seahawks	organization.organization,sports.professional_sports_team,sports.sports_team,american_football.football_team,award.award_nominee,award.award_winner
+m.02b16p	Lincoln City F.C.	organization.organization,sports.sports_team,award.award_nominee,business.employer,soccer.football_team
+m.0403nnf	Dayton Dynamo	sports.sports_team,soccer.football_team
+m.0hvjr	Tottenham Hotspur F.C.	sports.sports_award_winner,organization.organization,sports.sports_team,award.award_winner,business.employer,soccer.football_team
+m.05gg4	New York Giants	sports.professional_sports_team,american_football.football_team,sports.sports_team,film.person_or_entity_appearing_in_film,award.award_nominee,award.award_winner,business.employer
+m.051q5	Minnesota Vikings	sports.professional_sports_team,american_football.football_team,sports.sports_team,film.person_or_entity_appearing_in_film,tv.tv_actor
+m.01xvb	Cleveland Browns	sports.professional_sports_team,organization.organization,american_football.football_team,sports.sports_team,award.award_winner
+m.0jm3b	Brooklyn Nets	sports.professional_sports_team,sports.sports_team,basketball.basketball_team,tv.tv_actor,award.award_nominee,business.employer
+m.0k_l4	Southampton F.C.	sports.sports_award_winner,organization.organization,sports.sports_team,award.award_nominee,soccer.football_team
+m.0lr76	Phoenix Mercury	sports.professional_sports_team,organization.organization,sports.sports_team,basketball.basketball_team
+m.03j70t	F.C. Copenhagen	sports.professional_sports_team,organization.organization,sports.sports_team,business.employer,soccer.football_team
+m.06l22	Real Madrid C.F.	organization.organization,sports.sports_team,award.award_nominee,business.business_operation,soccer.football_team
+m.04mjl	Los Angeles Dodgers	sports.professional_sports_team,organization.organization,sports.sports_team,film.person_or_entity_appearing_in_film,award.award_nominee,award.award_winner,book.book_subject
+m.02__x	Miami Marlins	sports.professional_sports_team,organization.organization,sports.sports_team,award.award_nominee
+m.01y3c	Carolina Panthers	sports.professional_sports_team,american_football.football_team,sports.sports_team,tv.tv_actor,award.award_nominee,award.award_winner
+m.05zyvf2	Tatabánya KC	organization.organization,sports.sports_team
+m.03jb2n	Eintracht Frankfurt	organization.organization,sports.sports_team,business.employer,soccer.football_team
+m.04z7yx	Anadolu Efes S.K.	business.sponsored_recipient,organization.organization,sports.sports_team,basketball.basketball_team
+m.07k3m3	K.V. Oostende	organization.organization,sports.sports_team,business.employer,soccer.football_team
+m.077qn	Serbia	biology.breed_origin,organization.organization_scope,location.location,location.country,organization.organization_member,location.statistical_region,travel.travel_destination,military.military_combatant,olympics.olympic_participating_country,organization.organization_founder,sports.sports_team_location,sports.sport_country,periodicals.newspaper_circulation_area,book.book_subject,government.governmental_jurisdiction
+m.01jdxj	Aberdeen F.C.	organization.organization,sports.sports_team,soccer.football_team
+m.05g76	New York Mets	sports.professional_sports_team,organization.organization,sports.sports_team,film.film_subject,award.award_nominee,business.business_operation,business.employer
+m.088hr5	S.S.D. Pro Sesto Calcio	organization.organization,sports.sports_team,business.employer,soccer.football_team
+m.02d02	Detroit Tigers	sports.professional_sports_team,sports.sports_team,award.award_nominee,business.employer
+m.0hmtk	New York Rangers	sports.professional_sports_team,sports.sports_team,award.award_nominee,award.award_winner
+m.026x_1	Sydney Roosters	sports.sports_team
+m.02c_4	Detroit Lions	sports.professional_sports_team,organization.organization,american_football.football_team,sports.sports_team,film.person_or_entity_appearing_in_film,book.book_subject,business.employer
+m.0dnl3j	Nîmes Olympique	organization.organization,sports.sports_team,soccer.football_team
+m.02gtm4	Hanshin Tigers	sports.sports_team,business.employer
+m.0gyt1bl	Canton Charge	organization.organization,sports.sports_team,basketball.basketball_team
+m.01rly6	Blackburn Rovers F.C.	sports.sports_team,soccer.football_team
+m.04mrfv	Perth Glory FC	organization.organization,sports.sports_team,soccer.football_team
+m.0cqt41	New York Yankees	sports.professional_sports_team,organization.organization,sports.sports_team,film.person_or_entity_appearing_in_film,film.film_subject,award.award_nominee,award.award_winner,book.book_subject,business.employer
+m.04gw938	Guerreros de Oaxaca	sports.sports_team
+m.05xvj	Philadelphia Phillies	sports.professional_sports_team,organization.organization,sports.sports_team,tv.tv_actor,award.award_nominee,business.employer
+m.0182r9	Sheffield Wednesday F.C.	organization.organization,sports.professional_sports_team,sports.sports_team,award.award_nominee,business.employer,soccer.football_team
+m.05m_8	Oakland Athletics	sports.professional_sports_team,organization.organization,sports.sports_team,business.business_operation,business.employer
+m.04043ry	Washington Kastles	sports.professional_sports_team,sports.sports_team,business.employer
+m.02b0zt	Hartlepool United F.C.	organization.organization,sports.sports_team,award.award_nominee,award.award_winner,soccer.football_team
+m.05g3v	New Orleans Saints	organization.organization,sports.professional_sports_team,sports.sports_team,american_football.football_team,award.award_nominee,business.brand,award.award_winner
+m.01y3v	Chicago Bears	award.award_presenting_organization,sports.professional_sports_team,american_football.football_team,sports.sports_team,film.person_or_entity_appearing_in_film,award.award_nominee,award.award_winner
+m.07147	San Diego Padres	sports.professional_sports_team,organization.organization,sports.sports_team,award.award_winner,business.employer
+m.0284h6	Millwall F.C.	organization.organization,sports.sports_team,award.award_nominee,business.employer,soccer.football_team
+m.05cwq4	Cirencester Town F.C.	sports.sports_team,business.employer,soccer.football_team
+m.02yfnd	Wasps RFC	sports.professional_sports_team,sports.sports_team,travel.tourist_attraction
+m.02b19t	Burton Albion F.C.	sports.sports_team,award.award_nominee,business.employer,soccer.football_team
+m.03_8bb	Rotherham R.U.F.C.	organization.organization,sports.sports_team
+m.0bs31sl	Montreal Impact	organization.organization,sports.sports_team,soccer.football_team
+m.0dyb8d	Celano F.C. Marsica	organization.organization,sports.sports_team,soccer.football_team
+m.04ltf	Liverpool F.C.	sports.sports_award_winner,sports.professional_sports_team,organization.organization,sports.sports_team,award.award_nominee,award.award_winner,business.employer,soccer.football_team
+m.08vk_r	Genoa C.F.C.	organization.organization,sports.sports_team,soccer.football_team
+m.03lpp_	Washington Nationals	sports.professional_sports_team,sports.sports_team
+m.049f88	Vicenza Calcio	organization.organization,sports.sports_team,soccer.football_team
+m.07l8f	Tampa Bay Rays	sports.professional_sports_team,sports.sports_team,tv.tv_actor,award.award_nominee
+m.02b1hb	Dagenham & Redbridge F.C.	organization.organization,sports.sports_team,award.award_nominee,soccer.football_team
+m.01nvlc	Winnipeg Jets	organization.organization,sports.sports_team
+m.049n7	Kansas City Royals	sports.professional_sports_team,organization.organization,sports.sports_team,business.business_operation,business.employer
+m.01kc4s	Cambridge United F.C.	organization.organization,sports.sports_team,soccer.football_team
+m.02jgm0	NAC Breda	organization.organization,sports.sports_team,soccer.football_team
+m.051wf	Montreal Expos	sports.professional_sports_team,sports.sports_team
+m.09rlbv	Düsseldorfer EG	organization.organization,sports.sports_team
+m.0hcm7	Accrington Stanley F.C.	organization.organization,sports.sports_team,soccer.football_team
+m.05l71	Oakland Raiders	organization.organization,sports.professional_sports_team,sports.sports_team,american_football.football_team,film.person_or_entity_appearing_in_film,tv.tv_actor,film.film_subject,business.employer
+m.02rh_0	S.L. Benfica	organization.organization,sports.sports_team,business.business_operation,business.employer,soccer.football_team
+m.02b0_m	Peterborough United F.C.	organization.organization,sports.sports_team,soccer.football_team
+m.05g3b	New England Patriots	sports.professional_sports_team,american_football.football_team,sports.sports_team,film.person_or_entity_appearing_in_film,tv.tv_actor,award.award_nominee,award.award_winner,book.book_subject,business.employer
+m.05pcr	Ottawa Senators	sports.professional_sports_team,organization.organization,sports.sports_team
+m.02p6lm8	Capitanes de Arecibo	organization.organization,sports.sports_team,business.employer
+m.01k6zy	Edmonton Eskimos	american_football.football_team,sports.sports_team
+m.02b168	Leyton Orient F.C.	organization.organization,sports.sports_team,award.award_nominee,award.award_winner,soccer.football_team
+m.06xdd0	Ashington A.F.C.	sports.sports_team,soccer.football_team
+m.01kj5h	Blackpool F.C.	organization.organization,sports.sports_team,soccer.football_team
+m.0j2pg	Brighton & Hove Albion F.C.	organization.organization,sports.sports_team,award.award_nominee,award.award_winner,soccer.football_team
+m.043b_5	Quebec Nordiques	organization.organization,sports.sports_team,business.business_operation,business.employer
+m.03mytj	Ashford Town F.C.	sports.sports_team,soccer.football_team
+m.03c93sg	Rumney RFC	organization.organization,sports.sports_team
+m.0bh9_tg	Piráti Chomutov	organization.organization,sports.sports_team
+m.05q8f6_	Ayutthaya F.C.	organization.organization,sports.sports_team,business.employer,soccer.football_team
+m.02b1mc	Stevenage F.C.	sports.sports_team,award.award_nominee,award.award_winner,soccer.football_team
+m.03fhq6	FC Sheriff Tiraspol	organization.organization,sports.sports_team,soccer.football_team
+m.01xn721	Deportivo Maldonado	organization.organization,sports.sports_team,business.employer,soccer.football_team
+m.0lhp1	Real Zaragoza	organization.organization,sports.sports_team,soccer.football_team
+m.05q21y	Jilin Northeast Tigers	organization.organization,sports.sports_team,basketball.basketball_team
+m.0196bp	Sunderland A.F.C.	sports.sports_award_winner,architecture.architectural_structure_owner,organization.organization,sports.professional_sports_team,sports.sports_team,award.award_nominee,award.award_winner,business.employer,soccer.football_team
+m.03mx9r	Airbus UK Broughton F.C.	organization.organization,sports.sports_team,soccer.football_team
+m.025yp8j	Piemonte Volley	organization.organization,sports.sports_team
+m.0b2gt4	MFK Ružomberok	organization.organization,sports.sports_team,soccer.football_team
+m.01whvs	AFC Wimbledon	organization.organization,sports.sports_team,soccer.football_team
+m.0h3xlqg	Atlético Madrid Féminas	organization.organization,sports.sports_team,soccer.football_team
+m.06qft9	Club Ferro Carril Oeste	organization.organization,sports.sports_team,soccer.football_team
+m.07l2m	Tennessee Titans	sports.professional_sports_team,american_football.football_team,sports.sports_team,award.award_nominee
+m.049f05	VfL Wolfsburg	organization.organization,sports.sports_team,award.award_nominee,soccer.football_team
+m.0d7h4v	SC Young Fellows Juventus	organization.organization,sports.sports_team,soccer.football_team
+m.0jm74	Chicago Bulls	sports.professional_sports_team,sports.sports_team,basketball.basketball_team,award.award_nominee,award.award_winner
+m.07r78j	Torino F.C.	organization.organization,sports.sports_team,soccer.football_team
+m.043vc	Jacksonville Jaguars	sports.professional_sports_team,american_football.football_team,sports.sports_team,business.employer
+m.057pp2	K.A.S. Eupen	organization.organization,sports.sports_team,business.employer,soccer.football_team
+m.0wsr	Atlanta Falcons	sports.professional_sports_team,organization.organization,american_football.football_team,sports.sports_team,film.person_or_entity_appearing_in_film,award.award_nominee,business.brand,business.employer
+m.01532p	FK Bodø/Glimt	organization.organization,sports.sports_team,soccer.football_team
+m.0jm4v	Philadelphia 76ers	sports.professional_sports_team,sports.sports_team,basketball.basketball_team,award.award_winner
+m.05cvr9	Esporte Clube Juventude	organization.organization,sports.sports_team,soccer.football_team
+m.029q3k	Notts County F.C.	organization.organization,sports.sports_team,award.award_nominee,award.award_winner,soccer.football_team
+m.01ct6	Baltimore Ravens	symbols.namesake,sports.professional_sports_team,sports.sport,sports.sports_team,american_football.football_team,film.person_or_entity_appearing_in_film,tv.tv_actor,film.film_subject,award.award_nominee
+m.0487_	Kansas City Chiefs	sports.professional_sports_team,organization.organization,american_football.football_team,sports.sports_team,film.person_or_entity_appearing_in_film,award.award_nominee,award.award_winner
