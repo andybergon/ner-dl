@@ -61,3 +61,8 @@ STANFORD_NER_CLASSIFIER_4C = os.path.join(STANFORD_NER_FOLDER, 'classifiers', 'e
 STANFORD_NER_JAR = os.path.join(STANFORD_NER_FOLDER, 'stanford-ner.jar')  # can be set in CLASSPATH=
 
 EVALUATOR_LOG_FILE = os.path.join(DATA_ROOT, 'evaluation', 'evaluation.txt')  # DEPRECATED???
+
+CCD_ROOT = os.path.join(DATA_ROOT, 'column-concept-determination')
+SENTENCES_LECTOR_FILE = os.path.join(CCD_ROOT, 'sentences_lector.tsv')
+PERSON_LECTOR_FILE = os.path.join(CCD_ROOT, 'groundtruths', 'person_lector.tsv')
+OTHERS_LECTOR_FILE = os.path.join(CCD_ROOT, 'groundtruths', 'others_lector.tsv')
