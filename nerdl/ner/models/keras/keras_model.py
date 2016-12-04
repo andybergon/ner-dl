@@ -12,7 +12,9 @@ from keras.regularizers import l2
 from batch_generator import BatchGenerator
 from nerdl.ner.models.model import Model
 from nerdl.ner.sentence2entities import Sentence2Entities
+from nerdl.ner.utils import detect_entitites_in_sentence
 from nerdl.ner.utils import tokenizer
+from nerdl.ner import tagged_sentence2entities
 from nerdl.ner.w2v.tag2vec_reader import Tag2VecReader
 from nerdl.ner.w2v.word2vec_reader import Word2VecReader
 from settings import net_settings as ns
@@ -157,27 +159,42 @@ class KerasNERModel(Model):
                     self.save_only_model()
 
     # PREDICTION
+    def predict_with_stanford_detection(self, tokenized_sentence, threshold=0.1):
+        word_bio = detect_entitites_in_sentence.get_bio_tags(tokenized_sentence)
+        return self.predict_given_bio(word_bio, threshold)
+
+    def predict_given_bio(self, word_bio, threshold=0.1):
+        tokenized_sentence = [i[0] for i in word_bio]
+        X = self.w2v_reader.encode_sentence(tokenized_sentence)
+        predictions = self.model.predict(X, batch_size=1)
+        prediction_sentence = predictions[0][-len(tokenized_sentence):]
+        tags_score = self.t2v_reader.decode_with_scores(prediction_sentence, threshold)
+
+        word_tag_score = zip(tokenized_sentence, tags_score)
+
+        entity_tags_list = tagged_sentence2entities.tagged_sentence_to_entities(word_tag_score, word_bio, threshold)
+
+        return entity_tags_list
+
     # TODO: fix
     def predict_entities(self, sentence):
-        tagged_sentence = self.predict_sentence(sentence, False)
+        tagged_sentence = self.predict_sentence(sentence)
         return self.s2e.convert_to_entities(tagged_sentence)
 
     # TODO: fix
     def predict_tokenized_entities(self, tokenized_sentence):
-        tagged_sentence = self.predict_tokenized_sentence(tokenized_sentence, False)
+        tagged_sentence = self.predict_tokenized_sentence(tokenized_sentence)
         return self.s2e.convert_to_entities(tagged_sentence)
 
-    def predict_sentence(self, sentence, pad=False):
+    def predict_sentence(self, sentence):
         tokenized_sentence = tokenizer.tokenize_in_words(sentence)
-        return self.predict_tokenized_sentence(tokenized_sentence, pad)
+        return self.predict_tokenized_sentence(tokenized_sentence)
 
-    def predict_tokenized_sentence(self, tokenized_sentence, pad=False):
+    def predict_tokenized_sentence(self, tokenized_sentence):
         X = self.w2v_reader.encode_sentence(tokenized_sentence)
         predictions = self.model.predict(X, batch_size=1)
         tags = self.t2v_reader.decode_prediction(predictions[0])
-
-        if not pad:
-            tags = tags[-len(tokenized_sentence):]
+        tags = tags[-len(tokenized_sentence):]
 
         return zip(tokenized_sentence, tags)
 

@@ -95,6 +95,37 @@ class Tag2VecReader:
 
         return vector
 
+    # DECODE w/ scores
+    def decode_with_scores(self, pred_seq, threshold):
+        sentence_tag_score_list = []
+
+        for pred_word in pred_seq:
+            word_tag_score_list = []
+
+            sorted_indexes = np.argsort(pred_word)[::-1]
+
+            # for debugging
+            # index_score_type = zip(sorted_indexes, pred_word[sorted_indexes], map(self.index_to_type, sorted_indexes))
+
+            for ix in sorted_indexes:
+                score = pred_word[ix]
+
+                if score >= threshold:
+                    class_vec = np.zeros(self.nb_classes, dtype=np.int32)
+                    class_vec[ix] = 1
+
+                    if tuple(class_vec.tolist()) in self.tag2vec_map:
+                        predicted_tag = self.tag2vec_map[tuple(class_vec.tolist())]
+                        word_tag_score_list.append((predicted_tag, score))
+                    else:
+                        print('Can\'t decode tag!')
+                else:
+                    break
+
+            sentence_tag_score_list.append(word_tag_score_list)
+
+        return sentence_tag_score_list
+
     # DECODE
     def decode_prediction(self, pred_seq):
         decoder = settings.KERAS_DECODER

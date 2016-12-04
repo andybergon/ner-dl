@@ -1,7 +1,8 @@
 class Sentence2Entities:
-    def __init__(self, is_bio=True, auto_detect=False):
+    def __init__(self, is_bio=True, auto_detect=False, tagger=None):
         self.is_bio = is_bio
         self.auto_detect = auto_detect
+        self.tagger = tagger
 
     def convert_to_entities(self, word_tag):
         if self.auto_detect:
@@ -17,13 +18,16 @@ class Sentence2Entities:
         """
 
         :param word_tag: [('Barack', ['/person', '/person/politician']), ('Obama', ['/person', '/person/politician']]
-        :return:
+        :return: [('Barack Obama', ['/person', '/person/politician'])]
         """
         entity_and_type = []
         current_entity = []
         is_prev_tag_entity = False
 
         for word, tag in word_tag:
+            if self.tagger:
+                tag = self.tagger.tag_string(tag)
+
             if tag != ['O']:
                 if not is_prev_tag_entity:  # first word of entity
                     is_prev_tag_entity = True
@@ -62,12 +66,15 @@ class Sentence2Entities:
         current_entity = []
 
         for word, tag in word_tag:
+            if self.tagger:
+                tag = self.tagger.tag_string(tag)
+
             if tag != 'O':
                 bio, tag = tag.split('-')
                 if bio == 'B':
                     if len(current_entity) == 0:
                         current_entity = [(word, tag)]  # can append instead
-                    else:  # B tag after B tag
+                    else:  # B tag after B/I tag
                         words, types = zip(*current_entity)
                         entity_word = ' '.join(words)
                         entity_types = calculate_types_bio(types)

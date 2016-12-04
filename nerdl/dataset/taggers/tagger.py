@@ -3,7 +3,9 @@ class Tagger:
         pass
 
     def tag_string(self, tag_string, remove_bi_tag=False):
-        if 'B-' in tag_string or 'I-' in tag_string:
+        if 'O' in tag_string:
+            return tag_string
+        elif 'B-' in tag_string or 'I-' in tag_string:
             bio, tags_string = tag_string.split('-')
             tags = tag_string.split(',')
             tags = self.tag(tags)
