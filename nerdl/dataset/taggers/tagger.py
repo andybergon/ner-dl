@@ -6,7 +6,7 @@ class Tagger:
         if 'O' in tag_string:
             return tag_string
         elif 'B-' in tag_string or 'I-' in tag_string:
-            bio, tags_string = tag_string.split('-')
+            bio, tags_string = tag_string.split('-', 1)
             tags = tag_string.split(',')
             tags = self.tag(tags)
             if remove_bi_tag:

@@ -16,7 +16,7 @@ class DatasetConverter:
                 else:
                     for word, tag in tagged_words:
                         if 'B-' in tag or 'I-' in tag:
-                            bio, tag = tag.split('-')
+                            bio, tag = tag.split('-', 1)
                             tags = tag.split(',')
                             converted_tag = self.tagger.tag(tags)
                             converted_tag = ','.join(converted_tag)

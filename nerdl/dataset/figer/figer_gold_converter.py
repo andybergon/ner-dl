@@ -13,7 +13,7 @@ def convert_figer_gold_to_bio():
                 word, tags = line.rstrip().split('\t')
 
                 if tags != 'O':
-                    bio, tags = tags.split('-')
+                    bio, tags = tags.split('-', 1)
                     tags = tags.replace('/', '', 1).replace(',/', ',').replace('/', '.')
                     tags = bio + '-' + tags
 
@@ -29,7 +29,7 @@ def convert_figer_gold_to_not_bio():
                 word, tags = line.rstrip().split('\t')
 
                 if tags != 'O':
-                    bio, tags = tags.split('-')
+                    bio, tags = tags.split('-', 1)
                     tags = tags.replace('/', '', 1).replace(',/', ',').replace('/', '.')
 
                 out_f.write(word + '\t' + tags + '\n')

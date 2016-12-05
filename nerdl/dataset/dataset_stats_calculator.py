@@ -14,7 +14,7 @@ class DatasetStatsCalculator:
                 if line != '\n':
                     word, tag = line.rstrip().split('\t')
                     if tag != 'O':
-                        bi, tag = tag.split('-')
+                        bi, tag = tag.split('-', 1)
                         types = tag.split(',')
                         for type in types:
                             if type in type2occ:

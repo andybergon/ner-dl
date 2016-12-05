@@ -140,7 +140,7 @@ def from_bio_tag_to_bio(sent_correct):
         if biotag == 'O':
             word_bio.append((word, biotag))
         else:
-            bio = biotag.split('-')[0]
+            bio = biotag.split('-', 1)[0]
             word_bio.append((word, bio))
 
     return word_bio

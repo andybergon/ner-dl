@@ -13,8 +13,8 @@ class CWDatasetConverter:
                 if line != '\n':
                     word, tags = line.rstrip().split('\t')
                     if tags != 'O':
-                        if len(tags.split('-')) == 2:  # contains BIO tags
-                            bio, tags = tags.split('-')
+                        if 'B-' in tags or 'I-' in tags:  # contains BIO tags
+                            bio, tags = tags.split('-', 1)
                             tags = tags.replace('/', '', 1).replace(',/', ',').replace('/', '.').upper()
                             tags = tags.split(',')
                             tags = self.tagger.tag(tags)

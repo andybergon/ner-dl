@@ -70,7 +70,7 @@ class Sentence2Entities:
                 tag = self.tagger.tag_string(tag)
 
             if tag != 'O':
-                bio, tag = tag.split('-')
+                bio, tag = tag.split('-', 1)
                 if bio == 'B':
                     if len(current_entity) == 0:
                         current_entity = [(word, tag)]  # can append instead
