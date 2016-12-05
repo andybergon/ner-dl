@@ -3,11 +3,11 @@ class Tagger:
         pass
 
     def tag_string(self, tag_string, remove_bi_tag=False):
-        if 'O' in tag_string:
+        if 'O' == tag_string:
             return tag_string
         elif 'B-' in tag_string or 'I-' in tag_string:
-            bio, tags_string = tag_string.split('-', 1)
-            tags = tag_string.split(',')
+            bio, tags = tag_string.split('-', 1)
+            tags = tags.split(',')
             tags = self.tag(tags)
             if remove_bi_tag:
                 complete_tags_string = ','.join(tags)
