@@ -39,9 +39,9 @@ start = time.time()  # can use time.clock()
 
 settings.MAX_SENTENCE_LEN = 50
 
-settings.EVALUATION_CLASS_LIST = settings.TAG2VEC_CLASS_LIST = settings.CW_TOP275_CLASS_LIST
+# settings.EVALUATION_CLASS_LIST = settings.TAG2VEC_CLASS_LIST = settings.CW_TOP275_CLASS_LIST
 # settings.EVALUATION_CLASS_LIST = settings.TAG2VEC_CLASS_LIST = settings.FIGER_CLASS_LIST
-# settings.EVALUATION_CLASS_LIST = settings.TAG2VEC_CLASS_LIST = settings.STANFORD_FOUR_CLASS_LIST
+settings.EVALUATION_CLASS_LIST = settings.TAG2VEC_CLASS_LIST = settings.STANFORD_FOUR_CLASS_LIST
 
 path_settings.WORD2VEC_TXT_FILE = path_settings.CW_W2V_TXT_FILE
 dataset_correct_fp = path_settings.TEST_FILE = path_settings.CW_TEST_FILE
@@ -59,17 +59,17 @@ print('<< Loaded model in {} seconds.\n'.format(str(end_import_model - start_imp
 ##############################
 di = DatasetIterator(dataset_correct_fp)
 
-tagger = CWTop275Tagger()
+# tagger = CWTop275Tagger()
 # tagger = FigerTagger()
-# tagger = StanfordFourTagger()
+tagger = StanfordFourTagger()
 
 s2e = Sentence2Entities(is_bio=True, tagger=tagger)
 
 emt = EvaluatorMultiThreshold(di, s2e, model)
 
-thresholds = [0.001, 0.0025, 0.005, 0.0075, 0.01, 0.025, 0.05, 0.1]  # cw-275
+# thresholds = [0.001, 0.0025, 0.005, 0.0075, 0.01, 0.025, 0.05, 0.1]  # cw-275
 # thresholds = [0.025, 0.05, 0.075, 0.1, 0.15, 0.2, 0.25, 0.3]  # figer
-# thresholds = [0.025, 0.05, 0.075, 0.1, 0.15, 0.2, 0.25, 0.3]  # stanford
+thresholds = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95, 0.99]  # stanford
 
 emt.evaluate_increasing_threshold(test_sentences_nb=1000, print_every=0, thresholds=thresholds)
 ################################################################################
