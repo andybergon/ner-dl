@@ -1,5 +1,6 @@
 import time
 
+from nerdl.applications.column_concept_determination import CCD
 from nerdl.evaluation.evaluation_entities_files import EvaluatorEntitiesFiles
 from nerdl.ner.iterators.dataset_iterator import DatasetIterator
 from nerdl.ner.iterators.model_iterator import ModelIterator
@@ -33,12 +34,9 @@ start = time.time()  # can use time.clock()
 settings.MAX_SENTENCE_LEN = 50
 settings.TAG2VEC_CLASS_LIST = settings.CW_TOP275_CLASS_LIST
 
+path_settings.WORD2VEC_TXT_FILE = path_settings.CW_W2V_TXT_FILE
+# path_settings.WORD2VEC_TXT_FILE = path_settings.CW_W2V_TXT_FILE.replace('.txt', '-old.txt')
 # path_settings.WORD2VEC_TXT_FILE = path_settings.FIGER_W2V_TXT_FILE
-# path_settings.TEST_FILE = path_settings.FIGER_GOLD_NOT_BIO_FILE
-
-# path_settings.WORD2VEC_TXT_FILE = path_settings.CW_W2V_TXT_FILE
-path_settings.WORD2VEC_TXT_FILE = path_settings.CW_W2V_TXT_FILE.replace('.txt', '-old.txt')
-# path_settings.TEST_FILE = path_settings.FIGER_GOLD_NOT_BIO_FILE
 
 print('>> Loading model...')
 start_import_model = time.time()
@@ -50,10 +48,13 @@ print('<< Loaded model in {} seconds.\n'.format(str(end_import_model - start_imp
 # sentence = 'Trump is the president of the United States'
 # entities = ['Trump', 'United States']
 
-word_bio = [('Trump', 'B'), ('is', 'O'), ('the', 'O'), ('president', 'O'), ('of', 'O'), ('the', 'O'),
-            ('United', 'B'), ('States', 'I')]
-model.predict_given_bio(word_bio, 0.01)
+# word_bio = [('Trump', 'B'), ('is', 'O'), ('the', 'O'), ('president', 'O'), ('of', 'O'), ('the', 'O'),
+#             ('United', 'B'), ('States', 'I')]
+# model.predict_given_bio(word_bio, 0.01)
 
+ccd = CCD(model)
+ccd.predict_person(threshold=0.1)
+# ccd.calculate_stats()
 ########################################
 # # settings.EVALUATION_CLASS_LIST
 #

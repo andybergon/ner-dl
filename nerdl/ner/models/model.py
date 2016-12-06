@@ -5,7 +5,10 @@ class Model:
     def predict_with_stanford_detection(self, tokenized_sentence, threshold=0.1):
         pass
 
-    def predict_given_bio(self, word_bio, threshold=0.1):
+    def predict_given_bio(self, word_bio, threshold=0):
+        pass
+
+    def predict_scores_given_bio(self, word_bio):
         pass
 
     def predict_entities(self, sentence):

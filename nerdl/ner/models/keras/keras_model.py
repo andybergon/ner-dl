@@ -176,6 +176,19 @@ class KerasNERModel(Model):
 
         return entity_tags_list
 
+    def predict_scores_given_bio(self, word_bio):
+        tokenized_sentence = [i[0] for i in word_bio]
+        X = self.w2v_reader.encode_sentence(tokenized_sentence)
+        predictions = self.model.predict(X, batch_size=1)
+        prediction_sentence = predictions[0][-len(tokenized_sentence):]
+        tags_score = self.t2v_reader.decode_with_scores(prediction_sentence, 0.0001)
+
+        word_tag_score = zip(tokenized_sentence, tags_score)
+
+        entity_tags_list = tagged_sentence2entities.tagged_sentence_to_entities_score(word_tag_score, word_bio)
+
+        return entity_tags_list
+
     # TODO: fix
     def predict_entities(self, sentence):
         tagged_sentence = self.predict_sentence(sentence)
