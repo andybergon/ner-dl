@@ -62,7 +62,7 @@ def calculate_types_avg(current_entity):
     for k in type2score:
         type2score[k] /= norm_value
 
-    types_score = sorted(type2score.items(),key=lambda tup: tup[1], reverse=True)
+    types_score = sorted(type2score.items(), key=lambda tup: tup[1], reverse=True)
 
     return words, types_score
 
