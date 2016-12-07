@@ -52,9 +52,22 @@ print('<< Loaded model in {} seconds.\n'.format(str(end_import_model - start_imp
 #             ('United', 'B'), ('States', 'I')]
 # model.predict_given_bio(word_bio, 0.01)
 
+# model = None
+
+print('>> Calculating CCD...')
+start_import_model = time.time()
+
 ccd = CCD(model)
-ccd.predict_person(threshold=0.1)
+# threshold_list = [1, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4, 0.3, 0.25, 0.2, 0.1, 0.05, 0.01]
+threshold_list = [0.3]
+ccd.predict_persons_multiple_thresholds(is_person=True, person_nb=0, retrieval_threshold=0.01, threshold_list=threshold_list)
+# ccd.predict_persons_multiple_thresholds(is_person=False, person_nb=0, retrieval_threshold=0.01, threshold_list=threshold_list)
+# ccd.predict_persons(person_nb=10, min_sent=5, max_sent=250, threshold=0.5, retrieval_threshold=0.01)
 # ccd.calculate_stats()
+# ccd.get_random_persons_others_sentences(is_person=True, person_nb=0, min_sent=1, max_sent=250)
+
+end_import_model = time.time()
+print('<< CCD calculated in {} seconds.\n'.format(str(end_import_model - start_import_model)))
 ########################################
 # # settings.EVALUATION_CLASS_LIST
 #
