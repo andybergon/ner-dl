@@ -5,7 +5,7 @@ class DatasetStatsCalculator:
     def __init__(self, dataset_fp):
         self.dataset_fp = dataset_fp
 
-    def calculate_type_distribution(self, sentence_nb=0, print_every=1000000):
+    def calculate_type_distribution(self, sentence_nb=0, print_every=1000000, top_nb=30):
         type2occ = {}
         current_sentence = 0
 
@@ -25,13 +25,13 @@ class DatasetStatsCalculator:
                     current_sentence += 1
 
                     if print_every != 0 and current_sentence % print_every == 0:
-                        print_sentences_types_stats(type2occ)
+                        print_sentences_types_stats(type2occ, top_nb)
 
                     if current_sentence == sentence_nb:
-                        print_sentences_types_stats(type2occ)
+                        print_sentences_types_stats(type2occ, top_nb)
                         return
 
-            print_sentences_types_stats(type2occ)
+            print_sentences_types_stats(type2occ, top_nb)
 
         return type2occ
 
@@ -65,7 +65,7 @@ class DatasetStatsCalculator:
         return len2occ
 
 
-def print_sentences_types_stats(type2occ):
+def print_sentences_types_stats(type2occ, top_nb):
     occ_sum = 0
 
     type2occ['common.topic'] = 0  # reset, always present
@@ -74,11 +74,11 @@ def print_sentences_types_stats(type2occ):
         occ_sum += type2occ[ix]
 
     cum_perc = 0
-    top_types = sorted(type2occ.items(), key=lambda x: x[1], reverse=True)[:50]
+    top_types = sorted(type2occ.items(), key=lambda x: x[1], reverse=True)[:top_nb]
     for k, v in top_types:
         perc = v / occ_sum
         cum_perc += perc
-        print('{}\t{}\t{:.3%}\t{:.3%}'.format(k, v, perc, cum_perc))
+        print('{}\t{:.3%}\t{:.3%}'.format(k, perc, cum_perc))
 
     print('Total Types Tags: {}\nUnique Tags: {}'.format(occ_sum, len(type2occ)))
 
