@@ -1,4 +1,4 @@
-from nerdl.evaluation.evaluation_entities_model import EvaluatorEntitiesModel
+from nerdl.evaluation.entity.evaluation_entities_model import EvaluatorEntitiesModel
 
 
 class EvaluatorMultiThreshold(EvaluatorEntitiesModel):
