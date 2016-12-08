@@ -38,6 +38,8 @@ class FigerTagger(Tagger):
             if freebase_type in self.freebase2figer_map:
                 figer_type = self.freebase2figer_map[freebase_type]
                 figer_types.append(figer_type)
+            if freebase_type == 'O':
+                figer_types.append(figer_type)
 
         figer_types = sorted(set(figer_types))
 
